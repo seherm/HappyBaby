@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.aah.selectingfood.FoodSelection"
-    tools:showIn="@layout/activity_food_selection">
+    tools:context="com.aah.selectingfood.About"
+    tools:showIn="@layout/activity_about">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Food Selction Page"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="247dp" />
+        android:text="About"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="56dp" />
 </android.support.constraint.ConstraintLayout>

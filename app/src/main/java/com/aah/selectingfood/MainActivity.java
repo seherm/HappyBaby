@@ -1,5 +1,6 @@
 package com.aah.selectingfood;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -22,15 +23,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -81,17 +73,26 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_porridgeRecipes) {
-            // Handle the camera action
+            Intent intent = new Intent(this, Recipes.class);
+            startActivity(intent);
         } else if (id == R.id.nav_FAQ) {
-
+            Intent intent = new Intent(this, FAQ.class);
+            startActivity(intent);
         } else if (id == R.id.nav_settings) {
-
-        } else if (id == R.id.nav_settings) {
-
+            Intent intent = new Intent(this, Settings.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_about) {
+            Intent intent = new Intent(this, About.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void goToSelectionPage(View view) {
+        Intent intent = new Intent(this, FoodSelection.class);
+        startActivity(intent);
     }
 }
