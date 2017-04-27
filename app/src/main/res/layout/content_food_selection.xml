@@ -5,14 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.aah.selectingfood.FoodSelection"
+    tools:context="com.aah.selectingfood.FoodSelectionActivity"
     tools:showIn="@layout/activity_food_selection">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Food Selction Page"
-        tools:layout_editor_absoluteX="132dp"
-        tools:layout_editor_absoluteY="247dp" />
 </android.support.constraint.ConstraintLayout>

@@ -20,8 +20,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FoodSelection"
-            android:label="@string/title_activity_food_selection"
+            android:name=".FoodGroupSelectionActivity"
+            android:label="@string/title_activity_food_group_selection"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -29,7 +29,7 @@
                 android:value="com.aah.selectingfood.MainActivity" />
         </activity>
         <activity
-            android:name=".About"
+            android:name=".AboutActivity"
             android:label="@string/title_activity_about"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -38,7 +38,7 @@
                 android:value="com.aah.selectingfood.MainActivity" />
         </activity>
         <activity
-            android:name=".FAQ"
+            android:name=".FAQActivity"
             android:label="@string/title_activity_faq"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -47,7 +47,7 @@
                 android:value="com.aah.selectingfood.MainActivity" />
         </activity>
         <activity
-            android:name=".Settings"
+            android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -56,13 +56,21 @@
                 android:value="com.aah.selectingfood.MainActivity" />
         </activity>
         <activity
-            android:name=".Recipes"
+            android:name=".RecipesActivity"
             android:label="@string/title_activity_recipes"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.aah.selectingfood.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FoodSelectionActivity"
+            android:label="@string/title_activity_food_selection"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aah.selectingfood.FoodGroupSelectionActivity" />
         </activity>
     </application>
 

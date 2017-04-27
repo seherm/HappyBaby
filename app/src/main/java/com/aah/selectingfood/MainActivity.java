@@ -2,8 +2,6 @@ package com.aah.selectingfood;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -73,16 +71,16 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_porridgeRecipes) {
-            Intent intent = new Intent(this, Recipes.class);
+            Intent intent = new Intent(this, RecipesActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_FAQ) {
-            Intent intent = new Intent(this, FAQ.class);
+            Intent intent = new Intent(this, FAQActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_settings) {
-            Intent intent = new Intent(this, Settings.class);
+            Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_about) {
-            Intent intent = new Intent(this, About.class);
+            Intent intent = new Intent(this, AboutActivity.class);
             startActivity(intent);
         }
 
@@ -92,7 +90,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void goToSelectionPage(View view) {
-        Intent intent = new Intent(this, FoodSelection.class);
+        Intent intent = new Intent(this, FoodGroupSelectionActivity.class);
         startActivity(intent);
     }
 }
