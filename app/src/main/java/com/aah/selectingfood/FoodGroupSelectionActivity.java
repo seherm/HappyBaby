@@ -8,6 +8,8 @@ import android.view.View;
 
 public class FoodGroupSelectionActivity extends AppCompatActivity {
 
+    private String foodGroup;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,8 +19,35 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public void showLegumes(View v){
+    public void showLegumes(View v) {
         Intent intent = new Intent(this, FoodSelectionActivity.class);
+        startActivity(intent);
+    }
+
+    public void showVegetables(View v) {
+        Intent intent = new Intent(this, FoodSelectionActivity.class);
+        startActivity(intent);
+    }
+
+    public void showHerbs(View v) {
+        Intent intent = new Intent(this, FoodSelectionActivity.class);
+        startActivity(intent);
+    }
+
+    public void showCarbohydrates(View v) {
+        Intent intent = new Intent(this, FoodSelectionActivity.class);
+        startActivity(intent);
+    }
+
+    public void showFruits(View v) {
+        Intent intent = new Intent(this, FoodSelectionActivity.class);
+        startActivity(intent);
+    }
+
+    public void showOtherFoods(View v) {
+        Intent intent = new Intent(this, FoodSelectionActivity.class);
+        foodGroup = "Other Food";
+        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
         startActivity(intent);
     }
 
