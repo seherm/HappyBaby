@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.aah.selectingfood.FAQ"
+    tools:context="com.aah.selectingfood.FAQActivity"
     tools:showIn="@layout/activity_faq">
 
     <TextView

@@ -1,14 +1,12 @@
 package com.aah.selectingfood;
 
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
-public class FoodGroupSelection extends AppCompatActivity {
+public class FoodGroupSelectionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +18,8 @@ public class FoodGroupSelection extends AppCompatActivity {
     }
 
     public void showLegumes(View v){
-
-        Context context = getApplicationContext();
-        CharSequence text = "Hello toast!";
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-
+        Intent intent = new Intent(this, FoodSelectionActivity.class);
+        startActivity(intent);
     }
 
 }
