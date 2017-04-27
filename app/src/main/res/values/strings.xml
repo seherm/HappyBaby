@@ -12,4 +12,12 @@
     <string name="title_activity_faq">FAQ</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_recipes">Porridge Recipes</string>
+
+    <string name="carbohydrates">Carbohydrates</string>
+    <string name="other_food">Other Food</string>
+    <string name="fruits">Fruits</string>
+    <string name="herbs">Herbs</string>
+    <string name="legumes">Legumes</string>
+    <string name="vegetables">Vegetables</string>
+
 </resources>

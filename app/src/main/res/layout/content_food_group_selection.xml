@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.aah.selectingfood.FoodGroupSelection"
+    tools:showIn="@layout/activity_food_group_selection">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/legumesTextView"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:background="@drawable/textview_border"
+            android:gravity="center"
+            android:text="@string/legumes"
+            android:onClick="showLegumes"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="102dp" />
+
+        <Button
+            android:id="@+id/textView16"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:background="@drawable/textview_border"
+            android:gravity="center"
+            android:text="@string/vegetables"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="102dp" />
+
+        <Button
+            android:id="@+id/textView18"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:background="@drawable/textview_border"
+            android:gravity="center"
+            android:text="@string/herbs"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="102dp" />
+
+        <Button
+            android:id="@+id/textView3"
+            android:layout_width="115dp"
+            android:layout_height="106dp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:background="@drawable/textview_border"
+            android:gravity="center"
+            android:text="@string/carbohydrates"
+            android:textAlignment="center"
+            android:textSize="8sp"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="102dp" />
+
+        <Button
+            android:id="@+id/textView15"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:background="@drawable/textview_border"
+            android:gravity="center"
+            android:text="@string/fruits"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="102dp" />
+
+        <Button
+            android:id="@+id/textView8"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:background="@drawable/textview_border"
+            android:gravity="center"
+            android:text="@string/other_food"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="102dp" />
+
+    </GridLayout>
+</android.support.constraint.ConstraintLayout>

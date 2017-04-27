@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FoodSelection"
+            android:name=".FoodGroupSelection"
             android:label="@string/title_activity_food_selection"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
