@@ -80,7 +80,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
         foodToSelect.add(fruit_1);
         foodToSelect.add(fruit_2);
         foodToSelect.add(fruit_3);
-        foodToSelect.add(fruit_5);
+        foodToSelect.add(fruit_4);
         foodToSelect.add(fruit_5);
         foodToSelect.add(fruit_6);
     }
