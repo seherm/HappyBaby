@@ -7,6 +7,9 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,22 +25,18 @@ public class FoodSelectionActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
         String selected_food_group = getIntent().getStringExtra("SELECTED_FOOD_GROUP");
 
+        GridView gridview = (GridView) findViewById(R.id.foodToSelect);
+        gridview.setAdapter(new ImageAdapter(this));
 
-        Context context = getApplicationContext();
-        CharSequence text = selected_food_group;
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-
-        //TextView tv1 = (TextView)findViewById(R.id.textView3);
-        //tv1.setText(selected_food_group);
-        //setContentView(tv1);
+        gridview.setOnItemClickListener(new OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+                Toast.makeText(FoodSelectionActivity.this, "" + position,
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-
 
 }
