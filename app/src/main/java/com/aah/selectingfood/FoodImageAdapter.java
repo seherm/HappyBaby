@@ -7,20 +7,24 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import java.util.List;
+
 /**
  * Created by sebas on 28.04.2017.
  */
 
-public class ImageAdapter extends BaseAdapter {
+public class FoodImageAdapter extends BaseAdapter {
 
     private Context mContext;
+    private List<Food> mFoods;
 
-    public ImageAdapter(Context c) {
+    public FoodImageAdapter(Context c, List<Food> foods) {
         mContext = c;
+        mFoods = foods;
     }
 
     public int getCount() {
-        return mThumbIds.length;
+        return mFoods.size();
     }
 
     public Object getItem(int position) {
@@ -44,15 +48,7 @@ public class ImageAdapter extends BaseAdapter {
             imageView = (ImageView) convertView;
         }
 
-        imageView.setImageResource(mThumbIds[position]);
+        imageView.setImageResource(mFoods.get(position).getmImageId());
         return imageView;
     }
-
-    // references to our images
-    private Integer[] mThumbIds = {
-            R.drawable.fruit_0, R.drawable.fruit_1,
-            R.drawable.fruit_2, R.drawable.fruit_3,
-            R.drawable.fruit_4, R.drawable.fruit_5,
-            R.drawable.fruit_6
-    };
 }
