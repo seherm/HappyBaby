@@ -8,89 +8,113 @@
     tools:context="com.aah.selectingfood.FoodGroupSelectionActivity"
     tools:showIn="@layout/activity_food_group_selection">
 
+    <GridView
+        android:id="@+id/selectedFood"
+        android:layout_width="368dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:columnWidth="50dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        tools:layout_editor_absoluteX="8dp" />
+
     <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="289dp"
+        android:layout_marginTop="1dp"
+        android:columnCount="2"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="0dp"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:background="@drawable/textview_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_rowSpan="2"
             android:gravity="center"
-            android:text="@string/legumes"
             android:onClick="showLegumes"
+            android:text="@string/legumes"
             android:textAlignment="center"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:background="@drawable/textview_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_rowSpan="1"
             android:gravity="center"
-            android:text="@string/vegetables"
             android:onClick="showVegetables"
+            android:text="@string/vegetables"
             android:textAlignment="center"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:layout_column="0"
-            android:layout_row="1"
-            android:background="@drawable/textview_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_rowSpan="4"
             android:gravity="center"
-            android:text="@string/herbs"
             android:onClick="showHerbs"
+            android:text="@string/herbs"
             android:textAlignment="center"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="115dp"
-            android:layout_height="106dp"
-            android:layout_column="1"
-            android:layout_row="1"
-            android:background="@drawable/textview_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
             android:gravity="center"
-            android:text="@string/carbohydrates"
             android:onClick="showCarbohydrates"
+            android:text="@string/carbohydrates"
             android:textAlignment="center"
-            android:textSize="8sp"/>
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/button5"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:layout_column="0"
-            android:layout_row="2"
-            android:background="@drawable/textview_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_rowSpan="2"
             android:gravity="center"
-            android:text="@string/fruits"
             android:onClick="showFruits"
+            android:text="@string/fruits"
             android:textAlignment="center"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:layout_column="1"
-            android:layout_row="2"
-            android:background="@drawable/textview_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
             android:gravity="center"
-            android:text="@string/other_food"
             android:onClick="showOtherFoods"
+            android:text="@string/other_food"
             android:textAlignment="center"
             android:textSize="18sp" />
 
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="showOtherFoods"
+            android:text="Candy"
+            android:textAlignment="center"
+            android:textSize="18sp" />
     </GridLayout>
 </android.support.constraint.ConstraintLayout>
