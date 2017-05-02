@@ -1,6 +1,7 @@
 package com.aah.selectingfood;
 import com.aah.selectingfood.model.*;
 
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -30,8 +31,8 @@ public class FoodSelectionActivity extends AppCompatActivity {
         String selectedFoodGroup = getIntent().getStringExtra("SELECTED_FOOD_GROUP");
         addFoods(selectedFoodGroup);
 
-        foodToSelectAdapter = new FoodImageAdapter(this, foodToSelect);
-        selectedFoodAdapter = new FoodImageAdapter(this, selectedFood);
+        foodToSelectAdapter = new FoodImageAdapter(this, R.layout.grid_item_layout, foodToSelect);
+        selectedFoodAdapter = new FoodImageAdapter(this, R.layout.grid_item_layout, selectedFood);
 
         final GridView gridview1 = (GridView) findViewById(R.id.foodToSelect);
         gridview1.setAdapter(foodToSelectAdapter);
@@ -69,13 +70,13 @@ public class FoodSelectionActivity extends AppCompatActivity {
 
 
     public void addFoods(String selectedFoodGroup) {
-        Food fruit_0 = new Food("Young Coconut", "Fruit", R.drawable.fruit_0);
-        Food fruit_1 = new Food("Banana", "Fruit", R.drawable.fruit_1);
-        Food fruit_2 = new Food("Green Orange", "Fruit", R.drawable.fruit_2);
-        Food fruit_3 = new Food("Coconut", "Fruit", R.drawable.fruit_3);
-        Food fruit_4 = new Food("Mango", "Fruit", R.drawable.fruit_4);
-        Food fruit_5 = new Food("Test", "Fruit", R.drawable.fruit_5);
-        Food fruit_6 = new Food("Test", "Fruit", R.drawable.fruit_6);
+        Food fruit_0 = new Food("Young Coconut", "Fruit", R.drawable.fruit_0, BitmapFactory.decodeResource(getResources(),R.drawable.fruit_0));
+        Food fruit_1 = new Food("Banana", "Fruit", R.drawable.fruit_1, BitmapFactory.decodeResource(getResources(),R.drawable.fruit_1));
+        Food fruit_2 = new Food("Green Orange", "Fruit", R.drawable.fruit_2,BitmapFactory.decodeResource(getResources(),R.drawable.fruit_2));
+        Food fruit_3 = new Food("Coconut", "Fruit", R.drawable.fruit_3,BitmapFactory.decodeResource(getResources(),R.drawable.fruit_3));
+        Food fruit_4 = new Food("Mango", "Fruit", R.drawable.fruit_4,BitmapFactory.decodeResource(getResources(),R.drawable.fruit_4));
+        Food fruit_5 = new Food("Test", "Fruit", R.drawable.fruit_5,BitmapFactory.decodeResource(getResources(),R.drawable.fruit_5));
+        Food fruit_6 = new Food("Test", "Fruit", R.drawable.fruit_6,BitmapFactory.decodeResource(getResources(),R.drawable.fruit_6));
 
         foodToSelect.add(fruit_0);
         foodToSelect.add(fruit_1);

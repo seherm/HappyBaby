@@ -1,55 +1,59 @@
 package com.aah.selectingfood;
+
 import com.aah.selectingfood.model.*;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
+import android.app.Activity;
+import android.view.LayoutInflater;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created by sebas on 28.04.2017.
  */
 
-public class FoodImageAdapter extends BaseAdapter {
+public class FoodImageAdapter extends ArrayAdapter {
 
-    private Context mContext;
-    private List<Food> mFoods;
+    private Context context;
+    private int layoutResourceId;
+    private ArrayList<Food> foods;
 
-    public FoodImageAdapter(Context c, List<Food> foods) {
-        mContext = c;
-        mFoods = foods;
+    public FoodImageAdapter(Context context, int layoutResourceId, ArrayList<Food> foods) {
+        super(context, layoutResourceId, foods);
+        this.layoutResourceId = layoutResourceId;
+        this.context = context;
+        this.foods = foods;
     }
 
-    public int getCount() {
-        return mFoods.size();
-    }
-
-    public Object getItem(int position) {
-        return null;
-    }
-
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    // create a new ImageView for each item referenced by the Adapter
+    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView;
-        if (convertView == null) {
-            // if it's not recycled, initialize some attributes
-            imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(200, 350));
-            imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            imageView.setPadding(2, 2, 2, 2);
+        View row = convertView;
+        ViewHolder holder = null;
+
+        if (row == null) {
+            LayoutInflater inflater = ((Activity) context).getLayoutInflater();
+            row = inflater.inflate(layoutResourceId, parent, false);
+            holder = new ViewHolder();
+            holder.imageTitle = (TextView) row.findViewById(R.id.text);
+            holder.image = (ImageView) row.findViewById(R.id.image);
+            row.setTag(holder);
         } else {
-            imageView = (ImageView) convertView;
+            holder = (ViewHolder) row.getTag();
         }
 
-        imageView.setImageResource(mFoods.get(position).getmImageId());
-        return imageView;
+        Food item = foods.get(position);
+        holder.imageTitle.setText(item.getmName());
+        holder.image.setImageBitmap(item.getImage());
+        return row;
+    }
+
+    static class ViewHolder {
+        TextView imageTitle;
+        ImageView image;
     }
 }
