@@ -1,4 +1,5 @@
 package com.aah.selectingfood;
+import com.aah.selectingfood.model.*;
 
 import android.content.Context;
 import android.view.View;

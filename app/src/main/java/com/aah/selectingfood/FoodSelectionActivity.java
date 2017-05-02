@@ -1,4 +1,5 @@
 package com.aah.selectingfood;
+import com.aah.selectingfood.model.*;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

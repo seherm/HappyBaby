@@ -1,4 +1,4 @@
-package com.aah.selectingfood;
+package com.aah.selectingfood.model;
 
 /**
  * Created by sebas on 28.04.2017.
