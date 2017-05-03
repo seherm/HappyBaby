@@ -30,36 +30,43 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
 
     public void showLegumes(View v) {
         Intent intent = new Intent(this, FoodSelectionActivity.class);
+        foodGroup = "Legumes";
+        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
         startActivity(intent);
     }
 
     public void showVegetables(View v) {
         Intent intent = new Intent(this, FoodSelectionActivity.class);
+        foodGroup = "Vegetables";
+        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
         startActivity(intent);
     }
 
     public void showHerbs(View v) {
         Intent intent = new Intent(this, FoodSelectionActivity.class);
+        foodGroup = "Herbs";
+        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
         startActivity(intent);
     }
 
     public void showCarbohydrates(View v) {
         Intent intent = new Intent(this, FoodSelectionActivity.class);
+        foodGroup = "Carbohydrates";
+        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
         startActivity(intent);
     }
 
     public void showFruits(View v) {
         Intent intent = new Intent(this, FoodSelectionActivity.class);
-        startActivity(intent);
-        foodGroup = "Fruit";
+        foodGroup = "Fruits";
         intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
+        startActivity(intent);
     }
 
     public void showOtherFoods(View v) {
         Intent intent = new Intent(this, FoodSelectionActivity.class);
-        foodGroup = "Other Food";
+        foodGroup = "OtherFood";
         intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
         startActivity(intent);
     }
-
 }

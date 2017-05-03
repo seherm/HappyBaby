@@ -9,13 +9,13 @@ import android.graphics.Bitmap;
 public class Food {
 
     private String name;
-    private String type;
-    private Bitmap image;
+    private String foodGroup;
+    private int imageResourceId;
 
-    public Food(String name, String type, Bitmap image) {
+    public Food(String name, String foodGroup, int imageResourceId) {
         this.name = name;
-        this.type = type;
-        this.image = image;
+        this.foodGroup = foodGroup;
+        this.imageResourceId = imageResourceId;
     }
 
     public String getName() {
@@ -26,19 +26,19 @@ public class Food {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public String getFoodGroup() {
+        return foodGroup;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setFoodGroup(String type) {
+        this.foodGroup = type;
     }
 
-    public Bitmap getImage() {
-        return image;
+    public int getImageResourceId() {
+        return imageResourceId;
     }
 
-    public void setImage(Bitmap image) {
-        this.image = image;
+    public void setImageResourceId(int imageResourceId) {
+        this.imageResourceId = imageResourceId;
     }
 }

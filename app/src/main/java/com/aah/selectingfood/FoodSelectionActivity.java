@@ -24,8 +24,6 @@ public class FoodSelectionActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        dataManagement.createFoods(this);
-
         String selectedFoodGroup = getIntent().getStringExtra("SELECTED_FOOD_GROUP");
         dataManagement.generateFoodList(selectedFoodGroup);
 

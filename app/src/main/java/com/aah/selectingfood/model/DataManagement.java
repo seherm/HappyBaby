@@ -24,6 +24,7 @@ public class DataManagement {
         foodToSelect = new ArrayList<Food>();
         selectedFood = new ArrayList<Food>();
         allFood = new ArrayList<Food>();
+        createFoods();
     }
 
     public static final DataManagement getInstance() {
@@ -44,21 +45,25 @@ public class DataManagement {
     }
 
     public void generateFoodList(String foodGroup) {
+        foodToSelect.clear();
         for (Food food : allFood) {
-            //if (food.getType().equals(foodGroup)) {
-                foodToSelect.add(food);
-            //}
+            if (food.getFoodGroup().equals(foodGroup)) {
+                if (!selectedFood.contains(food)) {
+                    foodToSelect.add(food);
+                }
+            }
         }
     }
 
-    public void createFoods(Context context) {
-        Food apple = new Food("Apple", "Fruit", BitmapFactory.decodeResource(context.getResources(), R.drawable.apple));
-        Food banana = new Food("Banana", "Fruit", BitmapFactory.decodeResource(context.getResources(), R.drawable.banana));
-        Food grapes = new Food("Grapes", "Fruit", BitmapFactory.decodeResource(context.getResources(), R.drawable.grapes));
-        Food lemon = new Food("Lemon", "Fruit", BitmapFactory.decodeResource(context.getResources(), R.drawable.lemon));
-        Food mango = new Food("Mango", "Fruit", BitmapFactory.decodeResource(context.getResources(), R.drawable.mango));
-        Food longan = new Food("Longan", "Fruit", BitmapFactory.decodeResource(context.getResources(), R.drawable.longan));
-        Food lycee = new Food("Lycee", "Fruit", BitmapFactory.decodeResource(context.getResources(), R.drawable.lycee));
+    public void createFoods() {
+        Food apple = new Food("Apple", "Fruits", R.drawable.apple);
+        Food banana = new Food("Banana", "Fruits", R.drawable.banana);
+        Food grapes = new Food("Grapes", "Fruits", R.drawable.grapes);
+        Food lemon = new Food("Lemon", "Fruits", R.drawable.lemon);
+        Food mango = new Food("Mango", "Fruits", R.drawable.mango);
+        Food longan = new Food("Longan", "Fruits", R.drawable.longan);
+        Food lycee = new Food("Lycee", "Fruits", R.drawable.lycee);
+        Food test = new Food("Test", "OtherFood", R.drawable.santol);
 
         allFood.add(apple);
         allFood.add(banana);
@@ -67,6 +72,7 @@ public class DataManagement {
         allFood.add(mango);
         allFood.add(longan);
         allFood.add(lycee);
+        allFood.add(test);
     }
 
     public ArrayList<Food> getFoodToSelect() {
