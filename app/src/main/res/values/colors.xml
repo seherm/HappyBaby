@@ -3,7 +3,17 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="greyYellow">#D4CDC7</color>
-    <color name="purple">#324A5E</color>
+
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="pestoGreenPrimary">#00aa8d</color>
+    <color name="pestoGreenLight">#57dcbd</color>
+    <color name="pestoGreenDark">#007a60</color>
+    
+    <color name="greyBrown">#D4CDC7</color>
+    <color name="blueGreen">#324A5E</color>
+    <color name="indigoDark">#434A54</color>
+    <color name="yellow">#EAC663</color>
+
 </resources>

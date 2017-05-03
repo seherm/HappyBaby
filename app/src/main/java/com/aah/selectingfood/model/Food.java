@@ -8,40 +8,30 @@ import android.graphics.Bitmap;
 
 public class Food {
 
-    private String mName;
-    private String mType;
-    private int mImageId;
+    private String name;
+    private String type;
     private Bitmap image;
 
-    public Food(String mName, String mType, int mImageId, Bitmap image) {
-        this.mName = mName;
-        this.mType = mType;
-        this.mImageId = mImageId;
+    public Food(String name, String type, Bitmap image) {
+        this.name = name;
+        this.type = type;
         this.image = image;
     }
 
-    public String getmName() {
-        return mName;
+    public String getName() {
+        return name;
     }
 
-    public void setmName(String mName) {
-        this.mName = mName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getmType() {
-        return mType;
+    public String getType() {
+        return type;
     }
 
-    public void setmType(String mType) {
-        this.mType = mType;
-    }
-
-    public int getmImageId() {
-        return mImageId;
-    }
-
-    public void setmImageId(int mImageId) {
-        this.mImageId = mImageId;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public Bitmap getImage() {
@@ -51,5 +41,4 @@ public class Food {
     public void setImage(Bitmap image) {
         this.image = image;
     }
-
 }

@@ -47,7 +47,7 @@ public class FoodImageAdapter extends ArrayAdapter {
         }
 
         Food item = foods.get(position);
-        holder.imageTitle.setText(item.getmName());
+        holder.imageTitle.setText(item.getName());
         holder.image.setImageBitmap(item.getImage());
         return row;
     }

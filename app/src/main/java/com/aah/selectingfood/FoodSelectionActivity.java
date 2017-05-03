@@ -1,4 +1,5 @@
 package com.aah.selectingfood;
+
 import com.aah.selectingfood.model.*;
 
 import android.graphics.BitmapFactory;
@@ -9,7 +10,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -34,49 +34,47 @@ public class FoodSelectionActivity extends AppCompatActivity {
         foodToSelectAdapter = new FoodImageAdapter(this, R.layout.grid_item_layout, foodToSelect);
         selectedFoodAdapter = new FoodImageAdapter(this, R.layout.grid_item_layout, selectedFood);
 
-        final GridView gridview1 = (GridView) findViewById(R.id.foodToSelect);
-        gridview1.setAdapter(foodToSelectAdapter);
+        final GridView gridViewFoodToSelect = (GridView) findViewById(R.id.foodToSelect);
+        gridViewFoodToSelect.setAdapter(foodToSelectAdapter);
 
-        final GridView gridview2 = (GridView) findViewById(R.id.selectedFood);
-        gridview2.setAdapter(selectedFoodAdapter);
+        final GridView gridViewSelectedFood = (GridView) findViewById(R.id.selectedFood);
+        gridViewSelectedFood.setAdapter(selectedFoodAdapter);
 
-        gridview1.setOnItemClickListener(new OnItemClickListener() {
+        gridViewFoodToSelect.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 addSelectedFood(position);
-                gridview1.invalidateViews();
-                gridview1.setAdapter(foodToSelectAdapter);
-                gridview2.invalidateViews();
-                gridview2.setAdapter(selectedFoodAdapter);
+                gridViewFoodToSelect.invalidateViews();
+                gridViewFoodToSelect.setAdapter(foodToSelectAdapter);
+                gridViewSelectedFood.invalidateViews();
+                gridViewSelectedFood.setAdapter(selectedFoodAdapter);
             }
         });
 
 
-
-        gridview2.setOnItemClickListener(new OnItemClickListener() {
+        gridViewSelectedFood.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 removeSelectedFood(position);
-                gridview1.invalidateViews();
-                gridview1.setAdapter(foodToSelectAdapter);
-                gridview2.invalidateViews();
-                gridview2.setAdapter(selectedFoodAdapter);
+                gridViewFoodToSelect.invalidateViews();
+                gridViewFoodToSelect.setAdapter(foodToSelectAdapter);
+                gridViewSelectedFood.invalidateViews();
+                gridViewSelectedFood.setAdapter(selectedFoodAdapter);
             }
         });
-
 
 
     }
 
 
     public void addFoods(String selectedFoodGroup) {
-        Food apple = new Food("Apple", "Fruit", R.drawable.apple, BitmapFactory.decodeResource(getResources(),R.drawable.apple));
-        Food banana = new Food("Banana", "Fruit", R.drawable.banana, BitmapFactory.decodeResource(getResources(),R.drawable.banana));
-        Food grapes = new Food("Grapes", "Fruit", R.drawable.grapes,BitmapFactory.decodeResource(getResources(),R.drawable.grapes));
-        Food lemon = new Food("Lemon", "Fruit", R.drawable.lemon,BitmapFactory.decodeResource(getResources(),R.drawable.lemon));
-        Food mango = new Food("Mango", "Fruit", R.drawable.mango,BitmapFactory.decodeResource(getResources(),R.drawable.mango));
-        Food longan = new Food("Longan", "Fruit", R.drawable.longan,BitmapFactory.decodeResource(getResources(),R.drawable.longan));
-        Food lycee = new Food("Lycee", "Fruit", R.drawable.lycee,BitmapFactory.decodeResource(getResources(),R.drawable.lycee));
+        Food apple = new Food("Apple", "Fruit", BitmapFactory.decodeResource(getResources(), R.drawable.apple));
+        Food banana = new Food("Banana", "Fruit", BitmapFactory.decodeResource(getResources(), R.drawable.banana));
+        Food grapes = new Food("Grapes", "Fruit", BitmapFactory.decodeResource(getResources(), R.drawable.grapes));
+        Food lemon = new Food("Lemon", "Fruit", BitmapFactory.decodeResource(getResources(), R.drawable.lemon));
+        Food mango = new Food("Mango", "Fruit", BitmapFactory.decodeResource(getResources(), R.drawable.mango));
+        Food longan = new Food("Longan", "Fruit", BitmapFactory.decodeResource(getResources(), R.drawable.longan));
+        Food lycee = new Food("Lycee", "Fruit", BitmapFactory.decodeResource(getResources(), R.drawable.lycee));
 
         foodToSelect.add(apple);
         foodToSelect.add(banana);
