@@ -70,21 +70,21 @@ public class FoodSelectionActivity extends AppCompatActivity {
 
 
     public void addFoods(String selectedFoodGroup) {
-        Food fruit_0 = new Food("Young Coconut", "Fruit", R.drawable.fruit_0, BitmapFactory.decodeResource(getResources(),R.drawable.fruit_0));
-        Food fruit_1 = new Food("Banana", "Fruit", R.drawable.fruit_1, BitmapFactory.decodeResource(getResources(),R.drawable.fruit_1));
-        Food fruit_2 = new Food("Green Orange", "Fruit", R.drawable.fruit_2,BitmapFactory.decodeResource(getResources(),R.drawable.fruit_2));
-        Food fruit_3 = new Food("Coconut", "Fruit", R.drawable.fruit_3,BitmapFactory.decodeResource(getResources(),R.drawable.fruit_3));
-        Food fruit_4 = new Food("Mango", "Fruit", R.drawable.fruit_4,BitmapFactory.decodeResource(getResources(),R.drawable.fruit_4));
-        Food fruit_5 = new Food("Test", "Fruit", R.drawable.fruit_5,BitmapFactory.decodeResource(getResources(),R.drawable.fruit_5));
-        Food fruit_6 = new Food("Test", "Fruit", R.drawable.fruit_6,BitmapFactory.decodeResource(getResources(),R.drawable.fruit_6));
+        Food apple = new Food("Apple", "Fruit", R.drawable.apple, BitmapFactory.decodeResource(getResources(),R.drawable.apple));
+        Food banana = new Food("Banana", "Fruit", R.drawable.banana, BitmapFactory.decodeResource(getResources(),R.drawable.banana));
+        Food grapes = new Food("Grapes", "Fruit", R.drawable.grapes,BitmapFactory.decodeResource(getResources(),R.drawable.grapes));
+        Food lemon = new Food("Lemon", "Fruit", R.drawable.lemon,BitmapFactory.decodeResource(getResources(),R.drawable.lemon));
+        Food mango = new Food("Mango", "Fruit", R.drawable.mango,BitmapFactory.decodeResource(getResources(),R.drawable.mango));
+        Food longan = new Food("Longan", "Fruit", R.drawable.longan,BitmapFactory.decodeResource(getResources(),R.drawable.longan));
+        Food lycee = new Food("Lycee", "Fruit", R.drawable.lycee,BitmapFactory.decodeResource(getResources(),R.drawable.lycee));
 
-        foodToSelect.add(fruit_0);
-        foodToSelect.add(fruit_1);
-        foodToSelect.add(fruit_2);
-        foodToSelect.add(fruit_3);
-        foodToSelect.add(fruit_4);
-        foodToSelect.add(fruit_5);
-        foodToSelect.add(fruit_6);
+        foodToSelect.add(apple);
+        foodToSelect.add(banana);
+        foodToSelect.add(grapes);
+        foodToSelect.add(lemon);
+        foodToSelect.add(mango);
+        foodToSelect.add(longan);
+        foodToSelect.add(lycee);
     }
 
     public void addSelectedFood(int position) {
