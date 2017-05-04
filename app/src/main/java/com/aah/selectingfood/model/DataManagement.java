@@ -24,6 +24,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
+import java.util.ArrayList;
 
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 import static android.os.Build.VERSION_CODES.M;
@@ -41,6 +42,8 @@ public class DataManagement {
     private static DataManagement instance;
     private Context context;
 
+    private User user;
+
     private ArrayList<Food> foodToSelect;
     private ArrayList<Food> selectedFood;
     private ArrayList<Food> allFood;
@@ -48,6 +51,10 @@ public class DataManagement {
     private DataManagement(Context context) {
         this.context = context;
 
+        // Create user
+        user = new User();
+
+        // Create foods
         foodToSelect = new ArrayList<Food>();
         selectedFood = new ArrayList<Food>();
         allFood = new ArrayList<Food>();
@@ -105,9 +112,6 @@ public class DataManagement {
                 Node nNode = nList.item(i);
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
-                    System.out.println("name : " + eElement.getElementsByTagName("name").item(0).getTextContent());
-                    System.out.println("foodgroup : " + eElement.getElementsByTagName("foodgroup").item(0).getTextContent());
-                    System.out.println("image : " + eElement.getElementsByTagName("image").item(0).getTextContent());
                     Food tempFood = new Food(eElement.getElementsByTagName("name").item(0).getTextContent(),
                             eElement.getElementsByTagName("foodgroup").item(0).getTextContent(),
                             loadBitmapFromAssets(eElement.getElementsByTagName("image").item(0).getTextContent(), "foodImages"));
@@ -149,6 +153,10 @@ public class DataManagement {
 
     public ArrayList<Food> getAllFood() {
         return allFood;
+    }
+
+    public User getUser() {
+        return user;
     }
 }
 

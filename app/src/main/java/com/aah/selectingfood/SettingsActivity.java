@@ -1,5 +1,7 @@
 package com.aah.selectingfood;
 
+import com.aah.selectingfood.model.*;
+
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -9,10 +11,17 @@ import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.CheckBox;
+
+import com.aah.selectingfood.model.DataManagement;
 
 import java.util.Locale;
 
 public class SettingsActivity extends AppCompatActivity {
+
+    CheckBox checkBoxChildYoung;
+    CheckBox checkBoxChildMiddle;
+    CheckBox checkBoxChildOld;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +30,20 @@ public class SettingsActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        checkBoxChildYoung = (CheckBox) findViewById(R.id.checkBoxChildYoung);
+        checkBoxChildMiddle = (CheckBox) findViewById(R.id.checkBoxChildMiddle);
+        checkBoxChildOld = (CheckBox) findViewById(R.id.checkBoxChildOld);
+
+        if(DataManagement.getInstance(this).getUser().hasChildByAgeGroup("young")){
+            checkBoxChildYoung.setChecked(true);
+        }
+        if(DataManagement.getInstance(this).getUser().hasChildByAgeGroup("middle")){
+            checkBoxChildMiddle.setChecked(true);
+        }
+        if(DataManagement.getInstance(this).getUser().hasChildByAgeGroup("old")){
+            checkBoxChildOld.setChecked(true);
+        }
     }
 
     public void changeLanguage(View view) {
@@ -51,6 +74,42 @@ public class SettingsActivity extends AppCompatActivity {
         res.updateConfiguration(conf, dm);
         Intent refresh = new Intent(this, SettingsActivity.class);
         startActivity(refresh);
+    }
+
+    /*
+     * Changes the ages of the children. Possible ages are:
+     * Young: 6-8 months
+     * Middle: 9-11 months
+     * Old: 12-24 months.
+     * Multiple ages can be active at the same time.
+     */
+    public void changeChildrenAges(View view) {
+        if(checkBoxChildYoung.isChecked()){
+            if(!DataManagement.getInstance(this).getUser().hasChildByAgeGroup("young")){
+                Child child = new Child("young", "final general feedback young child");
+                DataManagement.getInstance(this).getUser().addChild(child);
+            }
+        } else {
+            DataManagement.getInstance(this).getUser().removeChildByAgeGroup("young");
+        }
+
+        if(checkBoxChildMiddle.isChecked()){
+            if(!DataManagement.getInstance(this).getUser().hasChildByAgeGroup("middle")){
+                Child child = new Child("middle", "final general feedback middle child");
+                DataManagement.getInstance(this).getUser().addChild(child);
+            }
+        } else {
+            DataManagement.getInstance(this).getUser().removeChildByAgeGroup("middle");
+        }
+
+        if(checkBoxChildOld.isChecked()){
+            if(!DataManagement.getInstance(this).getUser().hasChildByAgeGroup("old")){
+                Child child = new Child("old", "final general feedback old child");
+                DataManagement.getInstance(this).getUser().addChild(child);
+            }
+        } else {
+            DataManagement.getInstance(this).getUser().removeChildByAgeGroup("old");
+        }
     }
 
 }

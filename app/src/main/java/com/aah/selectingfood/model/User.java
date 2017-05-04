@@ -1,5 +1,7 @@
 package com.aah.selectingfood.model;
 
+import java.util.ArrayList;
+
 /**
  * Created by Manuel on 02.05.2017.
  */
@@ -9,11 +11,10 @@ public class User {
     private String imageNeutral;
     private String imageHappy;
     private String imageSad;
+    private ArrayList<Child> children = new ArrayList<Child>();
 
-    public User(String imageNeutral, String imageHappy, String imageSad){
-        this.imageNeutral = imageNeutral;
-        this.imageHappy = imageHappy;
-        this.imageSad = imageSad;
+    public User(){
+
     }
 
     public int getId() {
@@ -46,5 +47,35 @@ public class User {
 
     public void setImageSad(String imageSad) {
         this.imageSad = imageSad;
+    }
+
+    public void addChild(Child child) {
+        this.children.add(child);
+    }
+
+    public ArrayList<Child> getChildren() {
+        return children;
+    }
+
+    public Boolean hasChildByAgeGroup(String ageGroup){
+        for(Child child : children){
+            if(child.getAgeGroup().equals(ageGroup)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void removeChildByAgeGroup(String ageGroup){
+        Child childToRemove = null;
+        for(Child child : children){
+            if(child.getAgeGroup().equals(ageGroup)){
+                childToRemove = child;
+            }
+        }
+
+        if(childToRemove!=null) {
+            children.remove(childToRemove);
+        }
     }
 }
