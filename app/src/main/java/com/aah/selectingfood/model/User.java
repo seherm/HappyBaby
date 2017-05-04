@@ -6,9 +6,15 @@ package com.aah.selectingfood.model;
 
 public class User {
     private int id;
-    private String picture_neutral;
-    private String picture_happy;
-    private String picture_sad;
+    private String imageNeutral;
+    private String imageHappy;
+    private String imageSad;
+
+    public User(String imageNeutral, String imageHappy, String imageSad){
+        this.imageNeutral = imageNeutral;
+        this.imageHappy = imageHappy;
+        this.imageSad = imageSad;
+    }
 
     public int getId() {
         return id;
@@ -18,27 +24,27 @@ public class User {
         this.id = id;
     }
 
-    public String getPicture_neutral() {
-        return picture_neutral;
+    public String getImageNeutral() {
+        return imageNeutral;
     }
 
-    public void setPicture_neutral(String picture_neutral) {
-        this.picture_neutral = picture_neutral;
+    public void setImageNeutral(String imageNeutral) {
+        this.imageNeutral = imageNeutral;
     }
 
-    public String getPicture_happy() {
-        return picture_happy;
+    public String getImageHappy() {
+        return imageHappy;
     }
 
-    public void setPicture_happy(String picture_happy) {
-        this.picture_happy = picture_happy;
+    public void setImageHappy(String imageHappy) {
+        this.imageHappy = imageHappy;
     }
 
-    public String getPicture_sad() {
-        return picture_sad;
+    public String getImageSad() {
+        return imageSad;
     }
 
-    public void setPicture_sad(String picture_sad) {
-        this.picture_sad = picture_sad;
+    public void setImageSad(String imageSad) {
+        this.imageSad = imageSad;
     }
 }
