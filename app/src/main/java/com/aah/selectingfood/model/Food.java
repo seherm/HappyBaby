@@ -1,5 +1,7 @@
 package com.aah.selectingfood.model;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by Manuel on 04.05.2017.
  */
@@ -7,8 +9,8 @@ package com.aah.selectingfood.model;
 public class Food {
     private int id;
     private String name;
-    private int imageResourceId;
     private String foodGroup;
+    private Bitmap image;
     private String borderColor;
     private String backgroundColor;
     private String feedbackInstantYoungColor;
@@ -24,10 +26,10 @@ public class Food {
     private String feedbackFinalOldColor;
     private String feedbackFinalOldMessage;
 
-    public Food(String name, String foodGroup, int imageResourceId) {
+    public Food(String name, String foodGroup, Bitmap image) {
         this.name = name;
         this.foodGroup = foodGroup;
-        this.imageResourceId = imageResourceId;
+        this.image = image;
     }
 
     public int getId() {
@@ -46,12 +48,12 @@ public class Food {
         this.name = name;
     }
 
-    public int getImageResourceId() {
-        return imageResourceId;
+    public Bitmap getImage() {
+        return image;
     }
 
-    public void setImageResourceId(int imageResourceId) {
-        this.imageResourceId = imageResourceId;
+    public void setImage(Bitmap image) {
+        this.image = image;
     }
 
     public String getFoodGroup() {

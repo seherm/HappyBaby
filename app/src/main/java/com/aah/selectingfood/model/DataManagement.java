@@ -2,27 +2,36 @@ package com.aah.selectingfood.model;
 
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.app.Activity;
+import android.util.Log;
 
 import com.aah.selectingfood.R;
 
 
 import java.io.FileNotFoundException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
+import static android.os.Build.VERSION_CODES.M;
+import static java.security.AccessController.getContext;
+
 /**
  * Created by sebas on 03.05.2017.
- *
+ * <p>
  * DataManagement class is a Singleton to store
  * all objects used in different Android Activities.
  */
@@ -99,34 +108,35 @@ public class DataManagement {
                     System.out.println("name : " + eElement.getElementsByTagName("name").item(0).getTextContent());
                     System.out.println("foodgroup : " + eElement.getElementsByTagName("foodgroup").item(0).getTextContent());
                     System.out.println("image : " + eElement.getElementsByTagName("image").item(0).getTextContent());
-                    //Food tempFood = new Food(eElement.getElementsByTagName("name").item(0).getTextContent(), eElement.getElementsByTagName("foodgroup").item(0).getTextContent(), Integer.parseInt(eElement.getElementsByTagName("image").item(0).getTextContent()));
+                    Food tempFood = new Food(eElement.getElementsByTagName("name").item(0).getTextContent(),
+                            eElement.getElementsByTagName("foodgroup").item(0).getTextContent(),
+                            loadBitmapFromAssets(eElement.getElementsByTagName("image").item(0).getTextContent(), "foodImages"));
+
+                    allFood.add(tempFood);
                 }
             }
 
-        } catch(Exception e) {
+        } catch (Exception e) {
             // This will catch any exception, because they are all descended from Exception
             System.out.println("Error " + e.getMessage());
         }
+    }
 
-
-        // TODO: Remove the following and add it to XML parser above
-        Food apple = new Food("Apple", "Fruits", R.drawable.apple);
-        Food banana = new Food("Banana", "Fruits", R.drawable.banana);
-        Food grapes = new Food("Grapes", "Fruits", R.drawable.grapes);
-        Food lemon = new Food("Lemon", "Fruits", R.drawable.lemon);
-        Food mango = new Food("Mango", "Fruits", R.drawable.mango);
-        Food longan = new Food("Longan", "Fruits", R.drawable.longan);
-        Food lycee = new Food("Lycee", "Fruits", R.drawable.lycee);
-        Food test = new Food("Test", "OtherFood", R.drawable.santol);
-
-        allFood.add(apple);
-        allFood.add(banana);
-        allFood.add(grapes);
-        allFood.add(lemon);
-        allFood.add(mango);
-        allFood.add(longan);
-        allFood.add(lycee);
-        allFood.add(test);
+    public Bitmap loadBitmapFromAssets(String filename, String subFolderName) {
+        InputStream stream = null;
+        try {
+            stream = context.getAssets().open(subFolderName + "/" + filename);
+            return BitmapFactory.decodeStream(stream);
+        } catch (Exception ignored) {
+        } finally {
+            try {
+                if (stream != null) {
+                    stream.close();
+                }
+            } catch (Exception ignored) {
+            }
+        }
+        return null;
     }
 
     public ArrayList<Food> getFoodToSelect() {

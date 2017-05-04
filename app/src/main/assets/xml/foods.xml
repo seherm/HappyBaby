@@ -10,4 +10,59 @@
         <foodgroup>Fruits</foodgroup>
         <image>banana.jpg</image>
     </food>
+    <food>
+        <name>Custard Apple</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>custard_apple.jpg</image>
+    </food>
+    <food>
+        <name>Dragonfruit</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>dragonfruit.jpg</image>
+    </food>
+    <food>
+        <name>Durian</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>durian.jpg</image>
+    </food>
+    <food>
+        <name>Grapes</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>grapes.jpg</image>
+    </food>
+    <food>
+        <name>Green Bananas</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>green_bananas.jpg</image>
+    </food>
+    <food>
+        <name>Green Orange</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>green_orange.jpg</image>
+    </food>
+    <food>
+        <name>Guava</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>guava.jpg</image>
+    </food>
+    <food>
+        <name>Jackfruit</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>jackfruit.jpg</image>
+    </food>
+    <food>
+        <name>Ladyfinger Banana</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>ladyfinger_banana.jpg</image>
+    </food>
+    <food>
+        <name>Lemon</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>lemon.jpg</image>
+    </food>
+    <food>
+        <name>Lime</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>lime.jpg</image>
+    </food>
 </foods>
