@@ -88,8 +88,18 @@ public class Child {
      * @return          the resulting FeedbackActivity
      */
     public FeedbackCard giveFeedbackFinalFoodSummary(ArrayList<Food> foods) {
-        // TODO
-        return new FeedbackCard("#FFFFFF", "#000000", "title", "text", "image");
+        ArrayList<String> selectedFoodGroups = new ArrayList<String>(0);
+        for(Food food : foods){
+            if(!selectedFoodGroups.contains(food.getName())){
+                selectedFoodGroups.add(food.getName());
+            }
+        }
+
+        if(selectedFoodGroups.size()>=4) {
+            return new FeedbackCard("#FFFFFF", "#000000", "summary: good choice", "summary: good choice", "image");
+        } else {
+            return new FeedbackCard("#FFFFFF", "#000000", "summary: bad choice", "summary: bad choice", "image");
+        }
     }
 
 
@@ -100,8 +110,7 @@ public class Child {
      * @return          the resulting FeedbackActivity
      */
     public FeedbackCard giveFeedbackFinalGeneral() {
-        // TODO
-        return new FeedbackCard("#FFFFFF", "#000000", "title", "text", "image");
+        return new FeedbackCard("#FFFFFF", "#000000", "title", feedbackFinalGeneral, "image");
     }
 
 }
