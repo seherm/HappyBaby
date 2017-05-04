@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<foods>
+    <food>
+        <name>Apple</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>apple.jpg</image>
+    </food>
+    <food>
+        <name>Banana</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>banana.jpg</image>
+    </food>
+</foods>

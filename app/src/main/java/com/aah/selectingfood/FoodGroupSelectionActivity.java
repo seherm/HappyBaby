@@ -14,7 +14,7 @@ import com.aah.selectingfood.model.DataManagement;
 public class FoodGroupSelectionActivity extends AppCompatActivity {
 
     private String foodGroup;
-    private DataManagement dataManagement = DataManagement.getInstance();
+    private DataManagement dataManagement = DataManagement.getInstance(this);
     private FoodImageAdapter selectedFoodAdapter;
 
     @Override

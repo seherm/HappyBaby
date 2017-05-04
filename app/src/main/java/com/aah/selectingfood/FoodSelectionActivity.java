@@ -12,7 +12,7 @@ import android.widget.GridView;
 
 public class FoodSelectionActivity extends AppCompatActivity {
 
-    private DataManagement dataManagement = DataManagement.getInstance();
+    private DataManagement dataManagement = DataManagement.getInstance(this);
     private FoodImageAdapter foodToSelectAdapter;
     private FoodImageAdapter selectedFoodAdapter;
 
