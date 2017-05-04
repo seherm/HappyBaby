@@ -1,5 +1,7 @@
 package com.aah.selectingfood;
 
+import com.aah.selectingfood.model.*;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -35,6 +37,14 @@ public class MainActivity extends AppCompatActivity
 
         // Store context
         DataManagement dataManagement = DataManagement.getInstance(this);
+
+
+
+        // *****************************************************************************
+        // TODO: Remove this, for testing only
+        Child child = new Child("young", "final general feedback young child");
+        DataManagement.getInstance(this).getUser().addChild(child);
+        // *****************************************************************************
     }
 
     @Override
