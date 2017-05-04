@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity
 
 
         // *****************************************************************************
-        // TODO: Remove this, for testing only
+        // TODO: This is only for development.
+        // TODO: Remove this in the final version.
         Child child = new Child("young", "final general feedback young child");
         DataManagement.getInstance(this).getUser().addChild(child);
         // *****************************************************************************

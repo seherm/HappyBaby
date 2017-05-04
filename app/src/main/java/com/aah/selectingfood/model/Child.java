@@ -48,8 +48,16 @@ public class Child {
      * @return          the resulting FeedbackActivity
      */
     public FeedbackInstant giveFeedbackInstantFood(Food food) {
-        // TODO
-        return new FeedbackInstant("#FFFFFF", "#000000", "text");
+        if(ageGroup=="young") {
+            return new FeedbackInstant("#FFFFFF", "#000000", food.getFeedbackInstantYoungMessage());
+        }
+        if(ageGroup=="middle") {
+            return new FeedbackInstant("#FFFFFF", "#000000", food.getFeedbackInstantMiddleMessage());
+        }
+        if(ageGroup=="old") {
+            return new FeedbackInstant("#FFFFFF", "#000000", food.getFeedbackInstantOldMessage());
+        }
+        return null;
     }
 
     /*
@@ -60,8 +68,16 @@ public class Child {
      * @return          the resulting FeedbackActivity
      */
     public FeedbackCard giveFeedbackFinalFood(Food food) {
-        // TODO
-        return new FeedbackCard("#FFFFFF", "#000000", "title", "text", "image");
+        if(ageGroup=="young") {
+            return new FeedbackCard("#FFFFFF", "#000000", "title", food.getFeedbackFinalYoungMessage(), "image");
+        }
+        if(ageGroup=="middle") {
+            return new FeedbackCard("#FFFFFF", "#000000", "title", food.getFeedbackFinalMiddleMessage(), "image");
+        }
+        if(ageGroup=="old") {
+            return new FeedbackCard("#FFFFFF", "#000000", "title", food.getFeedbackFinalOldMessage(), "image");
+        }
+        return null;
     }
 
     /*
