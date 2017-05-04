@@ -41,11 +41,11 @@ public class Child {
     }
 
     /*
-     * Gives instant feedback based on a specific food. Depending on the age group
-     * of the child, different feedback may be returned.
+     * Gives instant FeedbackActivity based on a specific food. Depending on the age group
+     * of the child, different FeedbackActivity may be returned.
      *
-     * @param   food    a specific food the child should give feedback about
-     * @return          the resulting feedback
+     * @param   food    a specific food the child should give FeedbackActivity about
+     * @return          the resulting FeedbackActivity
      */
     public FeedbackInstant giveFeedbackInstantFood(Food food) {
         // TODO
@@ -53,11 +53,11 @@ public class Child {
     }
 
     /*
-     * Gives final feedback based on a specific food. Depending on the age group
-     * of the child, different feedback may be returned.
+     * Gives final FeedbackActivity based on a specific food. Depending on the age group
+     * of the child, different FeedbackActivity may be returned.
      *
-     * @param   food    a specific food the child should give feedback about
-     * @return          the resulting feedback
+     * @param   food    a specific food the child should give FeedbackActivity about
+     * @return          the resulting FeedbackActivity
      */
     public FeedbackCard giveFeedbackFinalFood(Food food) {
         // TODO
@@ -65,11 +65,11 @@ public class Child {
     }
 
     /*
-     * Gives a summary feedback based on a set of food. Depending on the age group
-     * of the child, different feedback may be returned.
+     * Gives a summary FeedbackActivity based on a set of food. Depending on the age group
+     * of the child, different FeedbackActivity may be returned.
      *
-     * @param   foods    a set of foods the child should give feedback about
-     * @return          the resulting feedback
+     * @param   foods    a set of foods the child should give FeedbackActivity about
+     * @return          the resulting FeedbackActivity
      */
     public FeedbackCard giveFeedbackFinalFoodSummary(ArrayList<Food> foods) {
         // TODO
@@ -78,10 +78,10 @@ public class Child {
 
 
     /*
-     * Gives a general feedback about the child and its needs. Depending on the age group
-     * of the child, different feedback may be returned.
+     * Gives a general FeedbackActivity about the child and its needs. Depending on the age group
+     * of the child, different FeedbackActivity may be returned.
      *
-     * @return          the resulting feedback
+     * @return          the resulting FeedbackActivity
      */
     public FeedbackCard giveFeedbackFinalGeneral() {
         // TODO

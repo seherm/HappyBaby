@@ -2,6 +2,8 @@ package com.aah.selectingfood;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -22,6 +24,14 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToFeedbackPage(view);
+            }
+        });
 
         selectedFoodAdapter = new FoodImageAdapter(this, R.layout.grid_item_layout, dataManagement.getSelectedFood());
         final GridView gridViewSelectedFood = (GridView) findViewById(R.id.selectedFood);
@@ -67,6 +77,11 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FoodSelectionActivity.class);
         foodGroup = "OtherFood";
         intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
+        startActivity(intent);
+    }
+
+    public void goToFeedbackPage(View view){
+        Intent intent = new Intent(this, FeedbackActivity.class);
         startActivity(intent);
     }
 }

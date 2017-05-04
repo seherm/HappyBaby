@@ -9,6 +9,9 @@ import java.util.ArrayList;
 
 /**
  * Created by sebas on 03.05.2017.
+ *
+ * DataManagement class is a Singleton to store
+ * all objects used in different Android Activities.
  */
 
 public class DataManagement {
