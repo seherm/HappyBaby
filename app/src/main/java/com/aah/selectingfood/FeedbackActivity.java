@@ -23,14 +23,9 @@ public class FeedbackActivity extends AppIntro {
         super.onCreate(savedInstanceState);
 
         // Add slides
-        addSlide(AppIntroFragment.newInstance("Card 1",
-                "Text Card 1",
-                R.drawable.ic_menu_camera,
-                Color.parseColor("#d4cdc7")));
-        addSlide(AppIntroFragment.newInstance("Card 2",
-                "Text Card 2",
-                R.drawable.ic_menu_share,
-                Color.parseColor("#d4cdc7")));
+        addSlide(SampleSlide.newInstance(R.layout.fragment_feedback));
+        addSlide(SampleSlide.newInstance(R.layout.fragment_feedback));
+        addSlide(SampleSlide.newInstance(R.layout.fragment_feedback));
 
         // Note here that we DO NOT use setContentView();
 
