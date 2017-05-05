@@ -16,7 +16,6 @@ import java.util.List;
 
 public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
 
-    //protected View view;
     private ViewPager viewPager;
     private LinearLayout pagerIndicator;
     private int dotsCount;
@@ -34,7 +33,7 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+        //Create all different feedback cards
         FeedbackCard finalFoodSummaryFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalFoodSummary(null);
         finalFoodSummaryFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("can.png","feedbackImages"));
         feedbackCards.add(finalFoodSummaryFeedback);
@@ -47,13 +46,13 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         pagerAdapter = new FeedbackViewPagerAdapter(FeedbackActivity.this, feedbackCards);
         viewPager.setAdapter(pagerAdapter);
         viewPager.setCurrentItem(0);
-        viewPager.addOnPageChangeListener((ViewPager.OnPageChangeListener) this);
+        viewPager.setPageMargin(100);
+        viewPager.addOnPageChangeListener(this);
         setUiPageViewController();
     }
 
 
     private void setUiPageViewController() {
-
         dotsCount = pagerAdapter.getCount();
         dots = new ImageView[dotsCount];
 
@@ -66,7 +65,7 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
                     LinearLayout.LayoutParams.WRAP_CONTENT
             );
 
-            params.setMargins(4, 0, 4, 0);
+            params.setMargins(20, 0, 20, 0);
 
             pagerIndicator.addView(dots[i], params);
         }
@@ -80,7 +79,6 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
     }
 
     @Override
@@ -90,12 +88,10 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         }
 
         dots[position].setImageDrawable(getResources().getDrawable(R.drawable.selecteditem_dot));
-
     }
 
 
     @Override
     public void onPageScrollStateChanged(int state) {
-
     }
 }

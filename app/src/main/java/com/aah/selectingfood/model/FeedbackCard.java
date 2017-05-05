@@ -13,7 +13,7 @@ public class FeedbackCard {
     private String text;
     private Bitmap image;
 
-    public FeedbackCard(String backgroundColor, String textColor, String text, Bitmap image){
+    public FeedbackCard(String backgroundColor, String textColor, String text, Bitmap image) {
         this.backgroundColor = backgroundColor;
         this.textColor = textColor;
         this.text = text;

@@ -19,7 +19,7 @@ import com.aah.selectingfood.model.FeedbackCard;
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 
-public class FeedbackActivityOld2 extends AppIntro {
+public class FeedbackActivityOld extends AppIntro {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
