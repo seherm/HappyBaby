@@ -69,13 +69,13 @@ public class Child {
      */
     public FeedbackCard giveFeedbackFinalFood(Food food) {
         if(ageGroup=="young") {
-            return new FeedbackCard("#FFFFFF", "#000000", "title", food.getFeedbackFinalYoungMessage(), "image");
+            return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalYoungMessage(), "image");
         }
         if(ageGroup=="middle") {
-            return new FeedbackCard("#FFFFFF", "#000000", "title", food.getFeedbackFinalMiddleMessage(), "image");
+            return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalMiddleMessage(), "image");
         }
         if(ageGroup=="old") {
-            return new FeedbackCard("#FFFFFF", "#000000", "title", food.getFeedbackFinalOldMessage(), "image");
+            return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalOldMessage(), "image");
         }
         return null;
     }
@@ -88,6 +88,9 @@ public class Child {
      * @return          the resulting FeedbackActivity
      */
     public FeedbackCard giveFeedbackFinalFoodSummary(ArrayList<Food> foods) {
+        if(foods==null){
+            return new FeedbackCard("#ac8469", "#000000", "You did not select any foods.", "image");
+        }
         ArrayList<String> selectedFoodGroups = new ArrayList<String>(0);
         for(Food food : foods){
             if(!selectedFoodGroups.contains(food.getName())){
@@ -96,9 +99,9 @@ public class Child {
         }
 
         if(selectedFoodGroups.size()>=4) {
-            return new FeedbackCard("#FFFFFF", "#000000", "summary: good choice", "summary: good choice", "image");
+            return new FeedbackCard("#a2bd87", "#000000", "[summary: good choice]", "image");
         } else {
-            return new FeedbackCard("#FFFFFF", "#000000", "summary: bad choice", "summary: bad choice", "image");
+            return new FeedbackCard("#ac8469", "#000000", "[summary: bad choice]", "image");
         }
     }
 
@@ -110,7 +113,7 @@ public class Child {
      * @return          the resulting FeedbackActivity
      */
     public FeedbackCard giveFeedbackFinalGeneral() {
-        return new FeedbackCard("#FFFFFF", "#000000", "title", feedbackFinalGeneral, "image");
+        return new FeedbackCard("#a2bd87", "#000000", feedbackFinalGeneral, "image");
     }
 
 }

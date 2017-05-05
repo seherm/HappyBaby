@@ -14,6 +14,8 @@ import android.support.annotation.Nullable;
 import android.graphics.Color;
 import android.widget.Toast;
 
+import com.aah.selectingfood.model.DataManagement;
+import com.aah.selectingfood.model.FeedbackCard;
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 
@@ -22,10 +24,13 @@ public class FeedbackActivity extends AppIntro {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Add slides
-        addSlide(SampleSlide.newInstance(R.layout.fragment_feedback));
-        addSlide(SampleSlide.newInstance(R.layout.fragment_feedback));
-        addSlide(SampleSlide.newInstance(R.layout.fragment_feedback));
+        // Add feedback slides
+        FeedbackCard finalFoodSummaryFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalFoodSummary(null);
+        addSlide(SampleSlide.newInstance(R.layout.fragment_feedback, finalFoodSummaryFeedback.getText(), finalFoodSummaryFeedback.getTextColor(), finalFoodSummaryFeedback.getBackgroundColor(), R.drawable.ic_menu_slideshow));
+
+        FeedbackCard generalAgeFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalGeneral();
+        addSlide(SampleSlide.newInstance(R.layout.fragment_feedback, generalAgeFeedback.getText(), generalAgeFeedback.getTextColor(), generalAgeFeedback.getBackgroundColor(), R.drawable.ic_menu_slideshow));
+
 
         // Note here that we DO NOT use setContentView();
 

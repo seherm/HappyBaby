@@ -8,14 +8,12 @@ public class FeedbackCard {
     private int id;
     private String backgroundColor;
     private String textColor;
-    private String title;
     private String text;
     private String image;
 
-    public FeedbackCard(String backgroundColor, String textColor, String title, String text, String image){
+    public FeedbackCard(String backgroundColor, String textColor, String text, String image){
         this.backgroundColor = backgroundColor;
         this.textColor = textColor;
-        this.title = title;
         this.text = text;
         this.image = image;
     }
@@ -42,14 +40,6 @@ public class FeedbackCard {
 
     public void setTextColor(String textColor) {
         this.textColor = textColor;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getText() {

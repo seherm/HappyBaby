@@ -84,9 +84,16 @@ public class SettingsActivity extends AppCompatActivity {
      * Multiple ages can be active at the same time.
      */
     public void changeChildrenAges(View view) {
+
+        // If no boxes are checked, return right away
+        // We do this because at least one child needs to be selected
+        if((!checkBoxChildYoung.isChecked()) && (!checkBoxChildMiddle.isChecked()) && (!checkBoxChildOld.isChecked())){
+            return;
+        }
+
         if(checkBoxChildYoung.isChecked()){
             if(!DataManagement.getInstance(this).getUser().hasChildByAgeGroup("young")){
-                Child child = new Child("young", "final general feedback young child");
+                Child child = new Child("young", "[final general feedback young child]");
                 DataManagement.getInstance(this).getUser().addChild(child);
             }
         } else {
@@ -95,7 +102,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         if(checkBoxChildMiddle.isChecked()){
             if(!DataManagement.getInstance(this).getUser().hasChildByAgeGroup("middle")){
-                Child child = new Child("middle", "final general feedback middle child");
+                Child child = new Child("middle", "[final general feedback middle child]");
                 DataManagement.getInstance(this).getUser().addChild(child);
             }
         } else {
@@ -104,7 +111,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         if(checkBoxChildOld.isChecked()){
             if(!DataManagement.getInstance(this).getUser().hasChildByAgeGroup("old")){
-                Child child = new Child("old", "final general feedback old child");
+                Child child = new Child("old", "[final general feedback old child]");
                 DataManagement.getInstance(this).getUser().addChild(child);
             }
         } else {
