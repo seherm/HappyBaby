@@ -25,6 +25,8 @@ public class FeedbackActivity extends AppIntro {
         super.onCreate(savedInstanceState);
 
         // Add feedback slides
+        // TODO: Optimize this for 1-3 children
+        // TODO: Handle duplicate feedback
         FeedbackCard finalFoodSummaryFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalFoodSummary(null);
         addSlide(SampleSlide.newInstance(R.layout.fragment_feedback, finalFoodSummaryFeedback.getText(), finalFoodSummaryFeedback.getTextColor(), finalFoodSummaryFeedback.getBackgroundColor(), R.drawable.ic_menu_slideshow));
 

@@ -14,7 +14,7 @@ public class User {
     private ArrayList<Child> children = new ArrayList<Child>();
 
     public User(){
-
+        addChild(new Child("young"));
     }
 
     public int getId() {

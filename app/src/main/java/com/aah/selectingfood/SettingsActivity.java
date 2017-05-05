@@ -93,7 +93,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         if(checkBoxChildYoung.isChecked()){
             if(!DataManagement.getInstance(this).getUser().hasChildByAgeGroup("young")){
-                Child child = new Child("young", "[final general feedback young child]");
+                Child child = new Child("young");
                 DataManagement.getInstance(this).getUser().addChild(child);
             }
         } else {
@@ -102,7 +102,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         if(checkBoxChildMiddle.isChecked()){
             if(!DataManagement.getInstance(this).getUser().hasChildByAgeGroup("middle")){
-                Child child = new Child("middle", "[final general feedback middle child]");
+                Child child = new Child("middle");
                 DataManagement.getInstance(this).getUser().addChild(child);
             }
         } else {
@@ -111,12 +111,15 @@ public class SettingsActivity extends AppCompatActivity {
 
         if(checkBoxChildOld.isChecked()){
             if(!DataManagement.getInstance(this).getUser().hasChildByAgeGroup("old")){
-                Child child = new Child("old", "[final general feedback old child]");
+                Child child = new Child("old");
                 DataManagement.getInstance(this).getUser().addChild(child);
             }
         } else {
             DataManagement.getInstance(this).getUser().removeChildByAgeGroup("old");
         }
+
+        // Store user and children
+        DataManagement.getInstance(this).storeUser(DataManagement.getInstance(this).getUser());
     }
 
 }

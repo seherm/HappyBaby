@@ -11,9 +11,19 @@ public class Child {
     private String ageGroup;
     private String feedbackFinalGeneral;
 
-    public Child(String ageGroup, String feedbackFinalGeneral){
+    public Child(String ageGroup){
         this.ageGroup = ageGroup;
-        this.feedbackFinalGeneral = feedbackFinalGeneral;
+
+
+        if(ageGroup=="young") {
+            this.feedbackFinalGeneral = "feedback general young";
+        }
+        if(ageGroup=="middle") {
+            this.feedbackFinalGeneral = "feedback general middle";
+        }
+        if(ageGroup=="old") {
+            this.feedbackFinalGeneral = "feedback general old";
+        }
     }
 
     public int getId() {

@@ -1,6 +1,7 @@
 package com.aah.selectingfood.model;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -51,8 +52,14 @@ public class DataManagement {
     private DataManagement(Context context) {
         this.context = context;
 
-        // Create user
-        user = new User();
+        // Try to load user from last time
+        user = loadUser();
+        if(user==null){
+            // No user available, create a new one
+            user = new User();
+            // Store user right away
+            storeUser(user);
+        }
 
         // Create foods
         foodToSelect = new ArrayList<Food>();
@@ -176,6 +183,69 @@ public class DataManagement {
 
     public User getUser() {
         return user;
+    }
+
+
+    /*
+    * Tries to load a user from the local shared preferences.
+    * If no user data is available, null is returned.
+    *
+    * @return          the user, or null
+    */
+    public User loadUser() {
+        SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
+        String imageNeutral = sharedPref.getString("imageNeutral", null);
+        String imageHappy = sharedPref.getString("imageHappy", null);
+        String imageSad = sharedPref.getString("imageSad", null);
+        Boolean hasChildYoung = sharedPref.getBoolean("hasChildYoung", false);
+        Boolean hasChildMiddle = sharedPref.getBoolean("hasChildMiddle", false);
+        Boolean hasChildOld = sharedPref.getBoolean("hasChildOld", false);
+
+        if(imageNeutral==null && imageHappy == null && imageSad == null && hasChildYoung == false && hasChildMiddle == false && hasChildOld == false) {
+            return null;
+        } else {
+            User user = new User();
+            user.setImageNeutral(imageNeutral);
+            user.setImageHappy(imageHappy);
+            user.setImageSad(imageSad);
+
+            if(hasChildYoung) {
+                Child child = new Child("young");
+                user.addChild(child);
+            } else {
+                user.removeChildByAgeGroup("young");
+            }
+            if(hasChildMiddle) {
+                Child child = new Child("middle");
+                user.addChild(child);
+            } else {
+                user.removeChildByAgeGroup("middle");
+            }
+            if(hasChildOld) {
+                Child child = new Child("old");
+                user.addChild(child);
+            } else {
+                user.removeChildByAgeGroup("old");
+            }
+
+            return user;
+        }
+    }
+
+    /*
+    * Stores a user and its children in the local shared preferences.
+    *
+    */
+    public void storeUser(User user) {
+        SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("imageNeutral", user.getImageNeutral());
+        editor.putString("imageHappy", user.getImageHappy());
+        editor.putString("imageSad", user.getImageSad());
+        editor.putBoolean("hasChildYoung", user.hasChildByAgeGroup("young"));
+        editor.putBoolean("hasChildMiddle", user.hasChildByAgeGroup("middle"));
+        editor.putBoolean("hasChildOld", user.hasChildByAgeGroup("old"));
+        editor.commit();
     }
 }
 
