@@ -152,6 +152,7 @@ public class DataManagement {
         }
     }
 
+
     public Bitmap loadBitmapFromAssets(String filename, String subFolderName) {
         InputStream stream = null;
         try {

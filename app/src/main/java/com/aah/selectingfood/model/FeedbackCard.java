@@ -1,5 +1,7 @@
 package com.aah.selectingfood.model;
 
+import android.graphics.Bitmap;
+
 /**
  * Created by Manuel on 04.05.2017.
  */
@@ -9,9 +11,9 @@ public class FeedbackCard {
     private String backgroundColor;
     private String textColor;
     private String text;
-    private String image;
+    private Bitmap image;
 
-    public FeedbackCard(String backgroundColor, String textColor, String text, String image){
+    public FeedbackCard(String backgroundColor, String textColor, String text, Bitmap image){
         this.backgroundColor = backgroundColor;
         this.textColor = textColor;
         this.text = text;
@@ -50,11 +52,11 @@ public class FeedbackCard {
         this.text = text;
     }
 
-    public String getImage() {
+    public Bitmap getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(Bitmap image) {
         this.image = image;
     }
 }

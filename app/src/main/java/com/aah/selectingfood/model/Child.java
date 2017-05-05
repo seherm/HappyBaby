@@ -79,13 +79,13 @@ public class Child {
      */
     public FeedbackCard giveFeedbackFinalFood(Food food) {
         if(ageGroup=="young") {
-            return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalYoungMessage(), "image");
+            return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalYoungMessage(), null);
         }
         if(ageGroup=="middle") {
-            return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalMiddleMessage(), "image");
+            return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalMiddleMessage(), null);
         }
         if(ageGroup=="old") {
-            return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalOldMessage(), "image");
+            return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalOldMessage(), null);
         }
         return null;
     }
@@ -99,7 +99,7 @@ public class Child {
      */
     public FeedbackCard giveFeedbackFinalFoodSummary(ArrayList<Food> foods) {
         if(foods==null){
-            return new FeedbackCard("#ac8469", "#000000", "You did not select any foods.", "image");
+            return new FeedbackCard("#ac8469", "#000000", "You did not select any foods.", null);
         }
         ArrayList<String> selectedFoodGroups = new ArrayList<String>(0);
         for(Food food : foods){
@@ -109,9 +109,9 @@ public class Child {
         }
 
         if(selectedFoodGroups.size()>=4) {
-            return new FeedbackCard("#a2bd87", "#000000", "[summary: good choice]", "image");
+            return new FeedbackCard("#a2bd87", "#000000", "[summary: good choice]", null);
         } else {
-            return new FeedbackCard("#ac8469", "#000000", "[summary: bad choice]", "image");
+            return new FeedbackCard("#ac8469", "#000000", "[summary: bad choice]", null);
         }
     }
 
@@ -123,7 +123,7 @@ public class Child {
      * @return          the resulting FeedbackCard
      */
     public FeedbackCard giveFeedbackFinalGeneral() {
-        return new FeedbackCard("#a2bd87", "#000000", feedbackFinalGeneral, "image");
+        return new FeedbackCard("#a2bd87", "#000000", feedbackFinalGeneral, null);
     }
 
 }
