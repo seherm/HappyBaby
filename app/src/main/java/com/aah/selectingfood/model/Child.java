@@ -52,10 +52,10 @@ public class Child {
 
     /*
      * Gives instant FeedbackActivity based on a specific food. Depending on the age group
-     * of the child, different FeedbackActivity may be returned.
+     * of the child, different Feedbacks may be returned.
      *
      * @param   food    a specific food the child should give FeedbackActivity about
-     * @return          the resulting FeedbackActivity
+     * @return          the resulting FeedbackInstant
      */
     public FeedbackInstant giveFeedbackInstantFood(Food food) {
         if(ageGroup=="young") {
@@ -72,10 +72,10 @@ public class Child {
 
     /*
      * Gives final FeedbackActivity based on a specific food. Depending on the age group
-     * of the child, different FeedbackActivity may be returned.
+     * of the child, different Feedbacks may be returned.
      *
      * @param   food    a specific food the child should give FeedbackActivity about
-     * @return          the resulting FeedbackActivity
+     * @return          the resulting FeedbackCard
      */
     public FeedbackCard giveFeedbackFinalFood(Food food) {
         if(ageGroup=="young") {
@@ -92,10 +92,10 @@ public class Child {
 
     /*
      * Gives a summary FeedbackActivity based on a set of food. Depending on the age group
-     * of the child, different FeedbackActivity may be returned.
+     * of the child, different Feedbacks may be returned.
      *
      * @param   foods    a set of foods the child should give FeedbackActivity about
-     * @return          the resulting FeedbackActivity
+     * @return          the resulting FeedbackCard
      */
     public FeedbackCard giveFeedbackFinalFoodSummary(ArrayList<Food> foods) {
         if(foods==null){
@@ -118,9 +118,9 @@ public class Child {
 
     /*
      * Gives a general FeedbackActivity about the child and its needs. Depending on the age group
-     * of the child, different FeedbackActivity may be returned.
+     * of the child, different Feedbacks may be returned.
      *
-     * @return          the resulting FeedbackActivity
+     * @return          the resulting FeedbackCard
      */
     public FeedbackCard giveFeedbackFinalGeneral() {
         return new FeedbackCard("#a2bd87", "#000000", feedbackFinalGeneral, "image");
