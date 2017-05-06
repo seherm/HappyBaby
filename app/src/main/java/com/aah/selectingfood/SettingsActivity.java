@@ -57,21 +57,21 @@ public class SettingsActivity extends AppCompatActivity {
         if(DataManagement.getInstance(this).getUser().getImageHappy()!=null){
             Bitmap imageBitmap = new ImageSaver(this).
                     setFileName(DataManagement.getInstance(this).getUser().getImageHappy()).
-                    setDirectoryName("images").
+                    setDirectoryName("childrenImages").
                     load();
             childrenImageHappy.setImageBitmap(imageBitmap);
         }
         if(DataManagement.getInstance(this).getUser().getImageNeutral()!=null){
             Bitmap imageBitmap = new ImageSaver(this).
                     setFileName(DataManagement.getInstance(this).getUser().getImageNeutral()).
-                    setDirectoryName("images").
+                    setDirectoryName("childrenImages").
                     load();
             childrenImageNeutral.setImageBitmap(imageBitmap);
         }
         if(DataManagement.getInstance(this).getUser().getImageSad()!=null){
             Bitmap imageBitmap = new ImageSaver(this).
                     setFileName(DataManagement.getInstance(this).getUser().getImageSad()).
-                    setDirectoryName("images").
+                    setDirectoryName("childrenImages").
                     load();
             childrenImageSad.setImageBitmap(imageBitmap);
         }
@@ -184,7 +184,7 @@ public class SettingsActivity extends AppCompatActivity {
             // Store image
             new ImageSaver(this).
                     setFileName("imageHappy.png").
-                    setDirectoryName("images").
+                    setDirectoryName("childrenImages").
                     save(imageBitmap);
             DataManagement.getInstance(this).getUser().setImageHappy("imageHappy.png");
 
@@ -196,9 +196,9 @@ public class SettingsActivity extends AppCompatActivity {
             // Store image
             new ImageSaver(this).
                     setFileName("imageNeutral.png").
-                    setDirectoryName("images").
+                    setDirectoryName("childrenImages").
                     save(imageBitmap);
-            DataManagement.getInstance(this).getUser().setImageNeutral("imageNeutralpng");
+            DataManagement.getInstance(this).getUser().setImageNeutral("imageNeutral.png");
 
         }else if(requestCode == 3 && resultCode == RESULT_OK){
             Bundle extras = data.getExtras();
@@ -208,7 +208,7 @@ public class SettingsActivity extends AppCompatActivity {
             // Store image
             new ImageSaver(this).
                     setFileName("imageSad.png").
-                    setDirectoryName("images").
+                    setDirectoryName("childrenImages").
                     save(imageBitmap);
             DataManagement.getInstance(this).getUser().setImageSad("imageSad.png");
         }
