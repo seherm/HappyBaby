@@ -3,6 +3,8 @@ package com.aah.selectingfood;
 import com.aah.selectingfood.model.*;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -13,11 +15,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import com.aah.selectingfood.model.DataManagement;
 
+import java.io.InputStream;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private DataManagement dataManagement;
+    ImageView imageViewChild;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +44,10 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        // Store context
-        DataManagement dataManagement = DataManagement.getInstance(this);
+        dataManagement = DataManagement.getInstance(this);
+        imageViewChild = (ImageView) findViewById(R.id.imageViewChild);
+        setChildImage();
+
     }
 
     @Override
@@ -99,5 +110,30 @@ public class MainActivity extends AppCompatActivity
     public void goToSelectionPage(View view) {
         Intent intent = new Intent(this, FoodGroupSelectionActivity.class);
         startActivity(intent);
+    }
+
+    public void setChildImage() {
+        if (dataManagement.getUser().getImageHappy() != null) {
+            Bitmap imageBitmap = new ImageSaver(this).
+                    setFileName(DataManagement.getInstance(this).getUser().getImageHappy()).
+                    setDirectoryName("childrenImages").
+                    load();
+            imageViewChild.setImageBitmap(imageBitmap);
+        } else if (dataManagement.getUser().getImageNeutral() != null) {
+            Bitmap imageBitmap = new ImageSaver(this).
+                    setFileName(DataManagement.getInstance(this).getUser().getImageNeutral()).
+                    setDirectoryName("childrenImages").
+                    load();
+            imageViewChild.setImageBitmap(imageBitmap);
+        } else if (dataManagement.getUser().getImageSad() != null) {
+            Bitmap imageBitmap = new ImageSaver(this).
+                    setFileName(DataManagement.getInstance(this).getUser().getImageSad()).
+                    setDirectoryName("childrenImages").
+                    load();
+            imageViewChild.setImageBitmap(imageBitmap);
+        } else {
+            Bitmap childDefaultImage = dataManagement.loadBitmapFromAssets("childNeutralDefault.png", "childrenImages");
+            imageViewChild.setImageBitmap(childDefaultImage);
+        }
     }
 }

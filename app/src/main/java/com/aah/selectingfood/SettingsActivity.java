@@ -54,27 +54,7 @@ public class SettingsActivity extends AppCompatActivity {
         childrenImageNeutral = (ImageButton) findViewById(R.id.imageButtonPhotoNeutral);
         childrenImageSad = (ImageButton) findViewById(R.id.imageButtonPhotoSad);
 
-        if(DataManagement.getInstance(this).getUser().getImageHappy()!=null){
-            Bitmap imageBitmap = new ImageSaver(this).
-                    setFileName(DataManagement.getInstance(this).getUser().getImageHappy()).
-                    setDirectoryName("childrenImages").
-                    load();
-            childrenImageHappy.setImageBitmap(imageBitmap);
-        }
-        if(DataManagement.getInstance(this).getUser().getImageNeutral()!=null){
-            Bitmap imageBitmap = new ImageSaver(this).
-                    setFileName(DataManagement.getInstance(this).getUser().getImageNeutral()).
-                    setDirectoryName("childrenImages").
-                    load();
-            childrenImageNeutral.setImageBitmap(imageBitmap);
-        }
-        if(DataManagement.getInstance(this).getUser().getImageSad()!=null){
-            Bitmap imageBitmap = new ImageSaver(this).
-                    setFileName(DataManagement.getInstance(this).getUser().getImageSad()).
-                    setDirectoryName("childrenImages").
-                    load();
-            childrenImageSad.setImageBitmap(imageBitmap);
-        }
+        setChildImages();
     }
 
     public void changeLanguage(View view) {
@@ -105,6 +85,30 @@ public class SettingsActivity extends AppCompatActivity {
         res.updateConfiguration(conf, dm);
         Intent refresh = new Intent(this, SettingsActivity.class);
         startActivity(refresh);
+    }
+
+    public void setChildImages(){
+        if(DataManagement.getInstance(this).getUser().getImageHappy()!=null){
+            Bitmap imageBitmap = new ImageSaver(this).
+                    setFileName(DataManagement.getInstance(this).getUser().getImageHappy()).
+                    setDirectoryName("childrenImages").
+                    load();
+            childrenImageHappy.setImageBitmap(imageBitmap);
+        }
+        if(DataManagement.getInstance(this).getUser().getImageNeutral()!=null){
+            Bitmap imageBitmap = new ImageSaver(this).
+                    setFileName(DataManagement.getInstance(this).getUser().getImageNeutral()).
+                    setDirectoryName("childrenImages").
+                    load();
+            childrenImageNeutral.setImageBitmap(imageBitmap);
+        }
+        if(DataManagement.getInstance(this).getUser().getImageSad()!=null){
+            Bitmap imageBitmap = new ImageSaver(this).
+                    setFileName(DataManagement.getInstance(this).getUser().getImageSad()).
+                    setDirectoryName("childrenImages").
+                    load();
+            childrenImageSad.setImageBitmap(imageBitmap);
+        }
     }
 
     /*

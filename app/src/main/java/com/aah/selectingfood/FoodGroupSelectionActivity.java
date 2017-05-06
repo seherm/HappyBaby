@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.aah.selectingfood.model.DataManagement;
@@ -13,7 +14,7 @@ import com.aah.selectingfood.model.DataManagement;
 public class FoodGroupSelectionActivity extends AppCompatActivity {
 
     private String foodGroup;
-    private DataManagement dataManagement = DataManagement.getInstance(this);
+    private DataManagement dataManagement;
     private FoodImageAdapter selectedFoodAdapter;
 
     @Override
@@ -32,9 +33,19 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
             }
         });
 
+        dataManagement = DataManagement.getInstance(this);
         selectedFoodAdapter = new FoodImageAdapter(this, R.layout.grid_item_layout, dataManagement.getSelectedFood());
         final GridView gridViewSelectedFood = (GridView) findViewById(R.id.selectedFood);
         gridViewSelectedFood.setAdapter(selectedFoodAdapter);
+
+        gridViewSelectedFood.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+                dataManagement.removeSelectedFood(position);
+                gridViewSelectedFood.invalidateViews();
+                gridViewSelectedFood.setAdapter(selectedFoodAdapter);
+            }
+        });
     }
 
     public void showStarches(View v) {

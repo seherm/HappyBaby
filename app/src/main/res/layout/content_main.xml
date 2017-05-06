@@ -9,31 +9,36 @@
     tools:showIn="@layout/app_bar_main">
 
     <TextView
-        android:layout_width="228dp"
-        android:layout_height="59dp"
+        android:id="@+id/textViewStartMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_margin"
         android:text="@string/start_message"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewChild"/>
+
+    <ImageView
+        android:id="@+id/imageViewChild"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu_camera"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/textView"
-        app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStartMessage"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStart"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/start"
         android:onClick="goToSelectionPage"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewChild"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.131"
-        app:layout_constraintRight_toRightOf="@+id/textView"
-        app:layout_constraintLeft_toLeftOf="@+id/textView"
-        android:layout_marginTop="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
