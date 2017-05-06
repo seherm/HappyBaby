@@ -14,7 +14,7 @@ import android.widget.GridView;
 
 public class FoodSelectionActivity extends AppCompatActivity {
 
-    private DataManagement dataManagement = DataManagement.getInstance(this);
+    private DataManagement dataManagement;
     private FoodImageAdapter foodToSelectAdapter;
     private FoodImageAdapter selectedFoodAdapter;
 
@@ -34,7 +34,9 @@ public class FoodSelectionActivity extends AppCompatActivity {
             }
         });
 
-        String selectedFoodGroup = getIntent().getStringExtra("SELECTED_FOOD_GROUP");
+
+        final String selectedFoodGroup = getIntent().getStringExtra("SELECTED_FOOD_GROUP");
+        dataManagement = DataManagement.getInstance(this);
         dataManagement.generateFoodList(selectedFoodGroup);
 
         foodToSelectAdapter = new FoodImageAdapter(this, R.layout.grid_item_layout, dataManagement.getFoodToSelect());
@@ -61,7 +63,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
         gridViewSelectedFood.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                dataManagement.removeSelectedFood(position);
+                dataManagement.removeSelectedFood(position,selectedFoodGroup);
                 gridViewFoodToSelect.invalidateViews();
                 gridViewFoodToSelect.setAdapter(foodToSelectAdapter);
                 gridViewSelectedFood.invalidateViews();

@@ -65,8 +65,15 @@ public class DataManagement {
         foodToSelect.remove(position);
     }
 
+    public void removeSelectedFood(int position, String selectedFoodGroup) {
+        Food selectedItem = selectedFood.get(position);
+        if (selectedItem.getFoodGroup().equals(selectedFoodGroup)) {
+            foodToSelect.add(selectedFood.get(position));
+        }
+        selectedFood.remove(position);
+    }
+
     public void removeSelectedFood(int position) {
-        foodToSelect.add(selectedFood.get(position));
         selectedFood.remove(position);
     }
 
@@ -83,7 +90,7 @@ public class DataManagement {
     }
 
     //Generate all foods used in the app
-    public void createFoods() {
+    private void createFoods() {
 
         // Parse XML
         try {
@@ -145,7 +152,7 @@ public class DataManagement {
     *
     * @return          the user, or null
     */
-    public User loadUser() {
+    private User loadUser() {
         SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
         String imageNeutral = sharedPref.getString("imageNeutral", null);
         String imageHappy = sharedPref.getString("imageHappy", null);
@@ -154,7 +161,7 @@ public class DataManagement {
         Boolean hasChildMiddle = sharedPref.getBoolean("hasChildMiddle", false);
         Boolean hasChildOld = sharedPref.getBoolean("hasChildOld", false);
 
-        if (imageNeutral == null && imageHappy == null && imageSad == null && hasChildYoung == false && hasChildMiddle == false && hasChildOld == false) {
+        if (imageNeutral == null && imageHappy == null && imageSad == null && !hasChildYoung && !hasChildMiddle && !hasChildOld) {
             return null;
         } else {
             User user = new User();
