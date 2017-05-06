@@ -1,6 +1,7 @@
 package com.aah.selectingfood;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -46,6 +47,7 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
         imageView.setImageBitmap(feedbacks.get(position).getImage());
         TextView textView = (TextView) itemView.findViewById(R.id.text_pager_item);
         textView.setText(feedbacks.get(position).getText());
+        textView.setTextColor(Color.parseColor(feedbacks.get(position).getTextColor()));
         container.addView(itemView);
         return itemView;
     }
