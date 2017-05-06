@@ -10,109 +10,130 @@
 
     <TextView
         android:id="@+id/textViewSelectLanguage"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
         android:text="Select Language"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="40dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <RadioGroup
+        android:id="@+id/radioGroupLanguage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/textViewSelectLanguage"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintLeft_creator="1">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewSelectLanguage">
 
         <RadioButton
             android:id="@+id/radioButtonEnglish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="English"
-            android:onClick="changeLanguage"/>
+            android:onClick="changeLanguage"
+            android:text="English" />
 
         <RadioButton
             android:id="@+id/radioButtonKhmer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Khmer"
-            android:onClick="changeLanguage"/>
-
+            android:onClick="changeLanguage"
+            android:text="Khmer" />
     </RadioGroup>
-
-    <CheckBox
-        android:id="@+id/checkBoxChildYoung"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="42dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="24dp"
-        android:text="6-8 months"
-        android:textSize="12sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewChildrenAges"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        android:onClick="changeChildrenAges"/>
-
-    <CheckBox
-        android:id="@+id/checkBoxChildMiddle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="24dp"
-        android:text="9-11 months"
-        android:textSize="12sp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toRightOf="@+id/checkBoxChildYoung"
-        app:layout_constraintRight_toLeftOf="@+id/checkBoxChildOld"
-        app:layout_constraintTop_toBottomOf="@+id/textViewChildrenAges"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1"
-        android:onClick="changeChildrenAges"/>
-
-    <CheckBox
-        android:id="@+id/checkBoxChildOld"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="9dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:text="12-24 months"
-        android:textSize="12sp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toRightOf="@+id/textViewChildrenAges"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewChildrenAges"
-        tools:layout_constraintBaseline_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:onClick="changeChildrenAges"/>
 
     <TextView
         android:id="@+id/textViewChildrenAges"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
         android:text="Ages of your children"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/checkBoxChildYoung"
-        android:layout_marginTop="68dp"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupLanguage" />
+
+    <CheckBox
+        android:id="@+id/checkBoxChildYoung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="changeChildrenAges"
+        android:text="6-8 months"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/checkBoxChildMiddle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChildrenAges" />
+
+    <CheckBox
+        android:id="@+id/checkBoxChildMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="changeChildrenAges"
+        android:text="9-11 months"
+        android:textSize="12sp"
         app:layout_constraintLeft_toRightOf="@+id/checkBoxChildYoung"
-        app:layout_constraintHorizontal_bias="0.586" />
+        app:layout_constraintRight_toLeftOf="@+id/checkBoxChildOld"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChildrenAges" />
+
+    <CheckBox
+        android:id="@+id/checkBoxChildOld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="changeChildrenAges"
+        android:text="12-24 months"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/checkBoxChildMiddle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChildrenAges" />
+
+    <TextView
+        android:id="@+id/textViewTakePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:text="Change photo of your baby"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxChildYoung" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPhotoHappy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="takePhotoHappy"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/imageButtonPhotoNeutral"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"
+        app:srcCompat="@drawable/ic_menu_camera" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPhotoNeutral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="takePhotoNeutral"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageButtonPhotoHappy"
+        app:layout_constraintRight_toLeftOf="@+id/imageButtonPhotoSad"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"
+        app:srcCompat="@drawable/ic_menu_camera" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPhotoSad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="takePhotoSad"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/imageButtonPhotoNeutral"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"
+        app:srcCompat="@drawable/ic_menu_camera" />
 
 </android.support.constraint.ConstraintLayout>

@@ -5,11 +5,14 @@ import com.aah.selectingfood.model.*;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.CheckBox;
 
@@ -22,6 +25,9 @@ public class SettingsActivity extends AppCompatActivity {
     CheckBox checkBoxChildYoung;
     CheckBox checkBoxChildMiddle;
     CheckBox checkBoxChildOld;
+    ImageButton childrenImageHappy;
+    ImageButton childrenImageNeutral;
+    ImageButton childrenImageSad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +40,11 @@ public class SettingsActivity extends AppCompatActivity {
         checkBoxChildYoung = (CheckBox) findViewById(R.id.checkBoxChildYoung);
         checkBoxChildMiddle = (CheckBox) findViewById(R.id.checkBoxChildMiddle);
         checkBoxChildOld = (CheckBox) findViewById(R.id.checkBoxChildOld);
+
+
+        childrenImageHappy = (ImageButton) findViewById(R.id.imageButtonPhotoHappy);
+        childrenImageNeutral = (ImageButton) findViewById(R.id.imageButtonPhotoNeutral);
+        childrenImageSad = (ImageButton) findViewById(R.id.imageButtonPhotoSad);
 
         if(DataManagement.getInstance(this).getUser().hasChildByAgeGroup("young")){
             checkBoxChildYoung.setChecked(true);
@@ -122,4 +133,41 @@ public class SettingsActivity extends AppCompatActivity {
         DataManagement.getInstance(this).storeUser(DataManagement.getInstance(this).getUser());
     }
 
+    public void takePhotoHappy (View view) {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, 1);
+        }
+    }
+
+    public void takePhotoNeutral (View view) {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, 2);
+        }
+    }
+
+    public void takePhotoSad (View view) {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePictureIntent, 3);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            childrenImageHappy.setImageBitmap(imageBitmap);
+        }else if(requestCode == 2 && resultCode == RESULT_OK){
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            childrenImageNeutral.setImageBitmap(imageBitmap);
+        }else if(requestCode == 3 && resultCode == RESULT_OK){
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            childrenImageSad.setImageBitmap(imageBitmap);
+        }
+    }
 }
