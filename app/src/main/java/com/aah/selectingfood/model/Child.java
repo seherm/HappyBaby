@@ -15,13 +15,13 @@ public class Child {
         this.ageGroup = ageGroup;
 
 
-        if(ageGroup=="young") {
+        if(ageGroup.equals("young")) {
             this.feedbackFinalGeneral = "feedback general young";
         }
-        if(ageGroup=="middle") {
+        if(ageGroup.equals("middle")) {
             this.feedbackFinalGeneral = "feedback general middle";
         }
-        if(ageGroup=="old") {
+        if(ageGroup.equals("old")) {
             this.feedbackFinalGeneral = "feedback general old";
         }
     }
@@ -58,13 +58,13 @@ public class Child {
      * @return          the resulting FeedbackInstant
      */
     public FeedbackInstant giveFeedbackInstantFood(Food food) {
-        if(ageGroup=="young") {
+        if(ageGroup.equals("young")) {
             return new FeedbackInstant("#FFFFFF", "#000000", food.getFeedbackInstantYoungMessage());
         }
-        if(ageGroup=="middle") {
+        if(ageGroup.equals("middle")) {
             return new FeedbackInstant("#FFFFFF", "#000000", food.getFeedbackInstantMiddleMessage());
         }
-        if(ageGroup=="old") {
+        if(ageGroup.equals("old")) {
             return new FeedbackInstant("#FFFFFF", "#000000", food.getFeedbackInstantOldMessage());
         }
         return null;
@@ -78,13 +78,13 @@ public class Child {
      * @return          the resulting FeedbackCard
      */
     public FeedbackCard giveFeedbackFinalFood(Food food) {
-        if(ageGroup=="young") {
+        if(ageGroup.equals("young")) {
             return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalYoungMessage(), null);
         }
-        if(ageGroup=="middle") {
+        if(ageGroup.equals("middle")) {
             return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalMiddleMessage(), null);
         }
-        if(ageGroup=="old") {
+        if(ageGroup.equals("old")) {
             return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalOldMessage(), null);
         }
         return null;

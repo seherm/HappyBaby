@@ -4,6 +4,8 @@
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
+    <string name="drawer_title">Menu</string>
+
     <!-->Button Text<-->
     <string name="start">Start</string>
 
@@ -20,11 +22,26 @@
     <!-->Other Text<-->
     <string name="start_message">Please tap on start to select the food you are going to feed your baby</string>
 
-    <string name="carbohydrates">Carbohydrates</string>
-    <string name="other_food">Other Food</string>
+    <string name="porridge_recipes">Porridge Recipes</string>
+    <string name="FAQ">FAQ</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+
+    <string name="select_language">Select Recipes</string>
+    <string name="english">English</string>
+    <string name="khmer">Khmer</string>
+    <string name="ages_of_your_children">Ages of your children</string>
+    <string name="children_young_category">6-8 months</string>
+    <string name="children_middle_category">9-11 months</string>
+    <string name="children_old_category">12-24 months</string>
+    <string name="change_photos_of_baby">Change photos of your baby</string>
+
+    <!-->Food Groups<-->
+    <string name="starches">Starches</string>
     <string name="fruits">Fruits</string>
-    <string name="herbs">Herbs</string>
+    <string name="meats">Meats</string>
     <string name="legumes">Legumes</string>
     <string name="vegetables">Vegetables</string>
+    <string name="junk_food">Junk Food</string>
 
 </resources>

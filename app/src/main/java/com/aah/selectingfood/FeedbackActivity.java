@@ -22,7 +22,6 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
     private ImageView[] dots;
     private FeedbackViewPagerAdapter pagerAdapter;
 
-    private List<FeedbackCard> feedbackCards = new ArrayList<FeedbackCard>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +32,19 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
+        viewPager = (ViewPager) findViewById(R.id.pager_introduction);
+        pagerIndicator = (LinearLayout) findViewById(R.id.viewPagerCountDots);
+        pagerAdapter = new FeedbackViewPagerAdapter(FeedbackActivity.this, getFeedbackCards());
+        viewPager.setAdapter(pagerAdapter);
+        viewPager.setCurrentItem(0);
+        viewPager.setPageMargin(100);
+        viewPager.addOnPageChangeListener(this);
+        setUiPageViewController();
+    }
+
+    private List<FeedbackCard> getFeedbackCards(){
+        List<FeedbackCard> feedbackCards = new ArrayList<FeedbackCard>();
         //Create all different feedback cards
         FeedbackCard finalFoodSummaryFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalFoodSummary(null);
         finalFoodSummaryFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("can.png","feedbackImages"));
@@ -40,15 +52,7 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         FeedbackCard generalAgeFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalGeneral();
         generalAgeFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("can.png","feedbackImages"));
         feedbackCards.add(generalAgeFeedback);
-
-        viewPager = (ViewPager) findViewById(R.id.pager_introduction);
-        pagerIndicator = (LinearLayout) findViewById(R.id.viewPagerCountDots);
-        pagerAdapter = new FeedbackViewPagerAdapter(FeedbackActivity.this, feedbackCards);
-        viewPager.setAdapter(pagerAdapter);
-        viewPager.setCurrentItem(0);
-        viewPager.setPageMargin(100);
-        viewPager.addOnPageChangeListener(this);
-        setUiPageViewController();
+        return feedbackCards;
     }
 
 

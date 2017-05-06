@@ -37,6 +37,27 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         gridViewSelectedFood.setAdapter(selectedFoodAdapter);
     }
 
+    public void showStarches(View v) {
+        Intent intent = new Intent(this, FoodSelectionActivity.class);
+        foodGroup = "Starches";
+        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
+        startActivity(intent);
+    }
+
+    public void showFruits(View v) {
+        Intent intent = new Intent(this, FoodSelectionActivity.class);
+        foodGroup = "Fruits";
+        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
+        startActivity(intent);
+    }
+
+    public void showMeats(View v) {
+        Intent intent = new Intent(this, FoodSelectionActivity.class);
+        foodGroup = "Meats";
+        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
+        startActivity(intent);
+    }
+
     public void showLegumes(View v) {
         Intent intent = new Intent(this, FoodSelectionActivity.class);
         foodGroup = "Legumes";
@@ -51,30 +72,9 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void showHerbs(View v) {
+    public void showJunkFood(View v) {
         Intent intent = new Intent(this, FoodSelectionActivity.class);
-        foodGroup = "Herbs";
-        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
-        startActivity(intent);
-    }
-
-    public void showCarbohydrates(View v) {
-        Intent intent = new Intent(this, FoodSelectionActivity.class);
-        foodGroup = "Carbohydrates";
-        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
-        startActivity(intent);
-    }
-
-    public void showFruits(View v) {
-        Intent intent = new Intent(this, FoodSelectionActivity.class);
-        foodGroup = "Fruits";
-        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
-        startActivity(intent);
-    }
-
-    public void showOtherFoods(View v) {
-        Intent intent = new Intent(this, FoodSelectionActivity.class);
-        foodGroup = "OtherFood";
+        foodGroup = "JunkFood";
         intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
         startActivity(intent);
     }

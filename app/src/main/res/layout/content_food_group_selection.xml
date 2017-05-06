@@ -26,12 +26,11 @@
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
+        app:layout_constraintRight_toRightOf="parent"/>
 
 
     <GridLayout
-        android:id="@+id/gridLayout"
+        android:id="@+id/gridLayoutFoodGroups"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:columnCount="2"
@@ -42,53 +41,18 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline">
 
         <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnSpan="2"
-            android:layout_gravity="fill"
-            android:layout_rowSpan="2"
-            android:gravity="center"
-            android:onClick="showLegumes"
-            android:text="@string/legumes"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonStarches"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:gravity="center"
-            android:onClick="showVegetables"
-            android:text="@string/vegetables"
+            android:onClick="showStarches"
+            android:text="@string/starches"
             android:textAlignment="center"
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill"
-            android:gravity="center"
-            android:onClick="showHerbs"
-            android:text="@string/herbs"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill"
-            android:gravity="center"
-            android:onClick="showCarbohydrates"
-            android:text="@string/carbohydrates"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button5"
+            android:id="@+id/buttonFruits"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
@@ -99,24 +63,46 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/buttonMeats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:gravity="center"
-            android:onClick="showOtherFoods"
-            android:text="@string/other_food"
+            android:onClick="showMeats"
+            android:text="@string/meats"
             android:textAlignment="center"
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/buttonLegumes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
             android:gravity="center"
-            android:onClick="showOtherFoods"
-            android:text="Candy"
+            android:onClick="showLegumes"
+            android:text="@string/legumes"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonVegetables"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="showVegetables"
+            android:text="@string/vegetables"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonJunkFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="showJunkFood"
+            android:text="@string/junk_food"
             android:textAlignment="center"
             android:textSize="18sp" />
     </GridLayout>

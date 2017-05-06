@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
-        android:text="Select Language"
+        android:text="@string/select_language"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,14 +35,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="changeLanguage"
-            android:text="English" />
+            android:text="@string/english" />
 
         <RadioButton
             android:id="@+id/radioButtonKhmer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="changeLanguage"
-            android:text="Khmer" />
+            android:text="@string/khmer" />
     </RadioGroup>
 
     <TextView
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
-        android:text="Ages of your children"
+        android:text="@string/ages_of_your_children"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroupLanguage" />
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:onClick="changeChildrenAges"
-        android:text="6-8 months"
+        android:text="@string/children_young_category"
         android:textSize="12sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/checkBoxChildMiddle"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:onClick="changeChildrenAges"
-        android:text="9-11 months"
+        android:text="@string/children_middle_category"
         android:textSize="12sp"
         app:layout_constraintLeft_toRightOf="@+id/checkBoxChildYoung"
         app:layout_constraintRight_toLeftOf="@+id/checkBoxChildOld"
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:onClick="changeChildrenAges"
-        android:text="12-24 months"
+        android:text="@string/children_old_category"
         android:textSize="12sp"
         app:layout_constraintLeft_toRightOf="@+id/checkBoxChildMiddle"
         app:layout_constraintRight_toRightOf="parent"
@@ -98,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
-        android:text="Change photo of your baby"
+        android:text="@string/change_photos_of_baby"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxChildYoung" />
@@ -112,7 +112,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/imageButtonPhotoNeutral"
         app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"
-        app:srcCompat="@drawable/ic_menu_camera" />
+        android:src="@drawable/ic_menu_camera" />
 
     <ImageButton
         android:id="@+id/imageButtonPhotoNeutral"
@@ -123,7 +123,7 @@
         app:layout_constraintLeft_toLeftOf="@+id/imageButtonPhotoHappy"
         app:layout_constraintRight_toLeftOf="@+id/imageButtonPhotoSad"
         app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"
-        app:srcCompat="@drawable/ic_menu_camera" />
+        android:src="@drawable/ic_menu_camera" />
 
     <ImageButton
         android:id="@+id/imageButtonPhotoSad"
@@ -134,6 +134,6 @@
         app:layout_constraintLeft_toRightOf="@+id/imageButtonPhotoNeutral"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"
-        app:srcCompat="@drawable/ic_menu_camera" />
+        android:src="@drawable/ic_menu_camera" />
 
 </android.support.constraint.ConstraintLayout>
