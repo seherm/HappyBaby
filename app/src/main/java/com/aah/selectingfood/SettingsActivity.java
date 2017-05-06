@@ -40,12 +40,6 @@ public class SettingsActivity extends AppCompatActivity {
         checkBoxChildYoung = (CheckBox) findViewById(R.id.checkBoxChildYoung);
         checkBoxChildMiddle = (CheckBox) findViewById(R.id.checkBoxChildMiddle);
         checkBoxChildOld = (CheckBox) findViewById(R.id.checkBoxChildOld);
-
-
-        childrenImageHappy = (ImageButton) findViewById(R.id.imageButtonPhotoHappy);
-        childrenImageNeutral = (ImageButton) findViewById(R.id.imageButtonPhotoNeutral);
-        childrenImageSad = (ImageButton) findViewById(R.id.imageButtonPhotoSad);
-
         if(DataManagement.getInstance(this).getUser().hasChildByAgeGroup("young")){
             checkBoxChildYoung.setChecked(true);
         }
@@ -54,6 +48,32 @@ public class SettingsActivity extends AppCompatActivity {
         }
         if(DataManagement.getInstance(this).getUser().hasChildByAgeGroup("old")){
             checkBoxChildOld.setChecked(true);
+        }
+
+        childrenImageHappy = (ImageButton) findViewById(R.id.imageButtonPhotoHappy);
+        childrenImageNeutral = (ImageButton) findViewById(R.id.imageButtonPhotoNeutral);
+        childrenImageSad = (ImageButton) findViewById(R.id.imageButtonPhotoSad);
+
+        if(DataManagement.getInstance(this).getUser().getImageHappy()!=null){
+            Bitmap imageBitmap = new ImageSaver(this).
+                    setFileName(DataManagement.getInstance(this).getUser().getImageHappy()).
+                    setDirectoryName("images").
+                    load();
+            childrenImageHappy.setImageBitmap(imageBitmap);
+        }
+        if(DataManagement.getInstance(this).getUser().getImageNeutral()!=null){
+            Bitmap imageBitmap = new ImageSaver(this).
+                    setFileName(DataManagement.getInstance(this).getUser().getImageNeutral()).
+                    setDirectoryName("images").
+                    load();
+            childrenImageNeutral.setImageBitmap(imageBitmap);
+        }
+        if(DataManagement.getInstance(this).getUser().getImageSad()!=null){
+            Bitmap imageBitmap = new ImageSaver(this).
+                    setFileName(DataManagement.getInstance(this).getUser().getImageSad()).
+                    setDirectoryName("images").
+                    load();
+            childrenImageSad.setImageBitmap(imageBitmap);
         }
     }
 
@@ -160,14 +180,37 @@ public class SettingsActivity extends AppCompatActivity {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             childrenImageHappy.setImageBitmap(imageBitmap);
+
+            // Store image
+            new ImageSaver(this).
+                    setFileName("imageHappy.png").
+                    setDirectoryName("images").
+                    save(imageBitmap);
+            DataManagement.getInstance(this).getUser().setImageHappy("imageHappy.png");
+
         }else if(requestCode == 2 && resultCode == RESULT_OK){
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             childrenImageNeutral.setImageBitmap(imageBitmap);
+
+            // Store image
+            new ImageSaver(this).
+                    setFileName("imageNeutral.png").
+                    setDirectoryName("images").
+                    save(imageBitmap);
+            DataManagement.getInstance(this).getUser().setImageNeutral("imageNeutralpng");
+
         }else if(requestCode == 3 && resultCode == RESULT_OK){
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             childrenImageSad.setImageBitmap(imageBitmap);
+
+            // Store image
+            new ImageSaver(this).
+                    setFileName("imageSad.png").
+                    setDirectoryName("images").
+                    save(imageBitmap);
+            DataManagement.getInstance(this).getUser().setImageSad("imageSad.png");
         }
     }
 }
