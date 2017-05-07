@@ -3,9 +3,11 @@ package com.aah.selectingfood;
 import com.aah.selectingfood.model.*;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity
 
     private DataManagement dataManagement;
     ImageView imageViewChild;
+
+    SharedPreferences prefs = null;
 
 
     @Override
@@ -48,6 +52,7 @@ public class MainActivity extends AppCompatActivity
         imageViewChild = (ImageView) findViewById(R.id.imageViewChild);
         setChildImage();
 
+        prefs = getSharedPreferences("com.aah.selectingfood", MODE_PRIVATE);
     }
 
     @Override
@@ -105,6 +110,21 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e("firstrun","todo delete");
+
+        if (!prefs.contains("firstrun")) {
+            // TODo first run stuff here
+            Log.e("FIRSTRUN","true");
+            prefs.edit().putBoolean("firstrun", false).commit();
+        }
+        else {
+            Log.e("FIRSTRUN","false");
+        }
     }
 
     public void goToSelectionPage(View view) {
