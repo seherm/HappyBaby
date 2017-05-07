@@ -28,6 +28,8 @@ public class SettingsActivity extends AppCompatActivity {
     ImageButton childrenImageHappy;
     ImageButton childrenImageNeutral;
     ImageButton childrenImageSad;
+    DataManagement dataManagement;
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +39,19 @@ public class SettingsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        dataManagement = DataManagement.getInstance(this);
+        user = dataManagement.getUser();
+
         checkBoxChildYoung = (CheckBox) findViewById(R.id.checkBoxChildYoung);
         checkBoxChildMiddle = (CheckBox) findViewById(R.id.checkBoxChildMiddle);
         checkBoxChildOld = (CheckBox) findViewById(R.id.checkBoxChildOld);
-        if(DataManagement.getInstance(this).getUser().hasChildByAgeGroup("young")){
+        if (user.hasChildByAgeGroup("young")) {
             checkBoxChildYoung.setChecked(true);
         }
-        if(DataManagement.getInstance(this).getUser().hasChildByAgeGroup("middle")){
+        if (user.hasChildByAgeGroup("middle")) {
             checkBoxChildMiddle.setChecked(true);
         }
-        if(DataManagement.getInstance(this).getUser().hasChildByAgeGroup("old")){
+        if (user.hasChildByAgeGroup("old")) {
             checkBoxChildOld.setChecked(true);
         }
 
@@ -62,17 +67,17 @@ public class SettingsActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.radioButtonEnglish:
                 if (checked) {
-                  setLocale("en");
+                    setLocale("en");
                 }
-                    break;
+                break;
             case R.id.radioButtonKhmer:
                 if (checked) {
                     setLocale("km");
                 }
-                    break;
+                break;
         }
     }
 
@@ -87,22 +92,22 @@ public class SettingsActivity extends AppCompatActivity {
         startActivity(refresh);
     }
 
-    public void setChildImages(){
-        if(DataManagement.getInstance(this).getUser().getImageHappy()!=null){
+    public void setChildImages() {
+        if (user.getImageHappy() != null) {
             Bitmap imageBitmap = new ImageSaver(this).
                     setFileName(DataManagement.getInstance(this).getUser().getImageHappy()).
                     setDirectoryName("childrenImages").
                     load();
             childrenImageHappy.setImageBitmap(imageBitmap);
         }
-        if(DataManagement.getInstance(this).getUser().getImageNeutral()!=null){
+        if (user.getImageNeutral() != null) {
             Bitmap imageBitmap = new ImageSaver(this).
                     setFileName(DataManagement.getInstance(this).getUser().getImageNeutral()).
                     setDirectoryName("childrenImages").
                     load();
             childrenImageNeutral.setImageBitmap(imageBitmap);
         }
-        if(DataManagement.getInstance(this).getUser().getImageSad()!=null){
+        if (user.getImageSad() != null) {
             Bitmap imageBitmap = new ImageSaver(this).
                     setFileName(DataManagement.getInstance(this).getUser().getImageSad()).
                     setDirectoryName("childrenImages").
@@ -122,56 +127,56 @@ public class SettingsActivity extends AppCompatActivity {
 
         // If no boxes are checked, return right away
         // We do this because at least one child needs to be selected
-        if((!checkBoxChildYoung.isChecked()) && (!checkBoxChildMiddle.isChecked()) && (!checkBoxChildOld.isChecked())){
+        if ((!checkBoxChildYoung.isChecked()) && (!checkBoxChildMiddle.isChecked()) && (!checkBoxChildOld.isChecked())) {
             return;
         }
 
-        if(checkBoxChildYoung.isChecked()){
-            if(!DataManagement.getInstance(this).getUser().hasChildByAgeGroup("young")){
+        if (checkBoxChildYoung.isChecked()) {
+            if (!user.hasChildByAgeGroup("young")) {
                 Child child = new Child("young");
-                DataManagement.getInstance(this).getUser().addChild(child);
+                user.addChild(child);
             }
         } else {
-            DataManagement.getInstance(this).getUser().removeChildByAgeGroup("young");
+            user.removeChildByAgeGroup("young");
         }
 
-        if(checkBoxChildMiddle.isChecked()){
-            if(!DataManagement.getInstance(this).getUser().hasChildByAgeGroup("middle")){
+        if (checkBoxChildMiddle.isChecked()) {
+            if (!user.hasChildByAgeGroup("middle")) {
                 Child child = new Child("middle");
-                DataManagement.getInstance(this).getUser().addChild(child);
+                user.addChild(child);
             }
         } else {
-            DataManagement.getInstance(this).getUser().removeChildByAgeGroup("middle");
+            user.removeChildByAgeGroup("middle");
         }
 
-        if(checkBoxChildOld.isChecked()){
-            if(!DataManagement.getInstance(this).getUser().hasChildByAgeGroup("old")){
+        if (checkBoxChildOld.isChecked()) {
+            if (!user.hasChildByAgeGroup("old")) {
                 Child child = new Child("old");
-                DataManagement.getInstance(this).getUser().addChild(child);
+                user.addChild(child);
             }
         } else {
-            DataManagement.getInstance(this).getUser().removeChildByAgeGroup("old");
+            user.removeChildByAgeGroup("old");
         }
 
         // Store user and children
-        DataManagement.getInstance(this).storeUser(DataManagement.getInstance(this).getUser());
+        dataManagement.storeUser(user);
     }
 
-    public void takePhotoHappy (View view) {
+    public void takePhotoHappy(View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, 1);
         }
     }
 
-    public void takePhotoNeutral (View view) {
+    public void takePhotoNeutral(View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, 2);
         }
     }
 
-    public void takePhotoSad (View view) {
+    public void takePhotoSad(View view) {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, 3);
@@ -190,9 +195,10 @@ public class SettingsActivity extends AppCompatActivity {
                     setFileName("imageHappy.png").
                     setDirectoryName("childrenImages").
                     save(imageBitmap);
-            DataManagement.getInstance(this).getUser().setImageHappy("imageHappy.png");
+            user.setImageHappy("imageHappy.png");
+            dataManagement.storeUser(user);
 
-        }else if(requestCode == 2 && resultCode == RESULT_OK){
+        } else if (requestCode == 2 && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             childrenImageNeutral.setImageBitmap(imageBitmap);
@@ -202,9 +208,10 @@ public class SettingsActivity extends AppCompatActivity {
                     setFileName("imageNeutral.png").
                     setDirectoryName("childrenImages").
                     save(imageBitmap);
-            DataManagement.getInstance(this).getUser().setImageNeutral("imageNeutral.png");
+            user.setImageNeutral("imageNeutral.png");
+            dataManagement.storeUser(user);
 
-        }else if(requestCode == 3 && resultCode == RESULT_OK){
+        } else if (requestCode == 3 && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             childrenImageSad.setImageBitmap(imageBitmap);
@@ -214,7 +221,8 @@ public class SettingsActivity extends AppCompatActivity {
                     setFileName("imageSad.png").
                     setDirectoryName("childrenImages").
                     save(imageBitmap);
-            DataManagement.getInstance(this).getUser().setImageSad("imageSad.png");
+            user.setImageSad("imageSad.png");
+            dataManagement.storeUser(user);
         }
     }
 }

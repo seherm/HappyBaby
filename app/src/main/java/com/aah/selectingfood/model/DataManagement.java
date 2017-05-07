@@ -205,7 +205,7 @@ public class DataManagement {
         editor.putBoolean("hasChildYoung", user.hasChildByAgeGroup("young"));
         editor.putBoolean("hasChildMiddle", user.hasChildByAgeGroup("middle"));
         editor.putBoolean("hasChildOld", user.hasChildByAgeGroup("old"));
-        editor.commit();
+        editor.apply();
     }
 
     public Bitmap loadBitmapFromAssets(String filename, String subFolderName) {
