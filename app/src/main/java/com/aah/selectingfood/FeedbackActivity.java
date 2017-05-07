@@ -46,7 +46,7 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
     private List<FeedbackCard> getFeedbackCards(){
         List<FeedbackCard> feedbackCards = new ArrayList<FeedbackCard>();
         //Create all different feedback cards
-        FeedbackCard finalFoodSummaryFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalFoodSummary(null);
+        FeedbackCard finalFoodSummaryFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalFoodSummary(DataManagement.getInstance(this).getSelectedFood());
         finalFoodSummaryFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("can.png","feedbackImages"));
         feedbackCards.add(finalFoodSummaryFeedback);
         FeedbackCard generalAgeFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalGeneral();
