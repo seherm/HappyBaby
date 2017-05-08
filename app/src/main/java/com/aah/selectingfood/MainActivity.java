@@ -115,16 +115,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        Log.e("firstrun","todo delete");
 
-        if (!prefs.contains("firstrun")) {
-            // TODo first run stuff here
-            Log.e("FIRSTRUN","true");
-            prefs.edit().putBoolean("firstrun", false).commit();
-        }
-        else {
-            Log.e("FIRSTRUN","false");
-        }
+        detectFirstRun();
     }
 
     public void goToSelectionPage(View view) {
@@ -154,6 +146,20 @@ public class MainActivity extends AppCompatActivity
         } else {
             Bitmap childDefaultImage = dataManagement.loadBitmapFromAssets("childNeutralDefault.png", "childrenImages");
             imageViewChild.setImageBitmap(childDefaultImage);
+        }
+    }
+
+    /*
+     * detects if app was started before and if not, sets boolean "firstRun" in GlobalState to TRUE
+     * accessible via GlobalState.getFirstRun
+     */
+    public void detectFirstRun() {
+        GlobalState state = ((GlobalState) getApplicationContext());
+
+        if (!prefs.contains("firstrun")) {
+            Log.e("firstrun","FIRST indeed");
+            state.setFirstRun(true);
+            prefs.edit().putBoolean("firstrun", false).commit();
         }
     }
 }
