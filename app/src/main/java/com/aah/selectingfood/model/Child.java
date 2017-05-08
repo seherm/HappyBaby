@@ -16,13 +16,13 @@ public class Child {
 
 
         if(ageGroup.equals("young")) {
-            this.feedbackFinalGeneral = "feedback general young";
+            this.feedbackFinalGeneral = "At 6 months, feeding only breast milk is not enough anymore. Your child needs to start eating other foods. Encourage him/her to try new foods and new textures little by little.";
         }
         if(ageGroup.equals("middle")) {
-            this.feedbackFinalGeneral = "feedback general middle";
+            this.feedbackFinalGeneral = "Between 9 and 11 months, your child experiences a transition to grown up food. He/she wants to touch it. Make sure his/her hands are washed before eating.";
         }
         if(ageGroup.equals("old")) {
-            this.feedbackFinalGeneral = "feedback general old";
+            this.feedbackFinalGeneral = "At 1 year, your child is starting to walk. He/she needs more energy! He/she can eat the family meals but will need additional snacks every day. He/she wants to do what grown ups do and discover the world!";
         }
     }
 
