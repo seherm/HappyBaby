@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -157,7 +156,6 @@ public class MainActivity extends AppCompatActivity
         GlobalState state = ((GlobalState) getApplicationContext());
 
         if (!prefs.contains("firstrun")) {
-            Log.e("firstrun","FIRST indeed");
             state.setFirstRun(true);
             prefs.edit().putBoolean("firstrun", false).commit();
         }
