@@ -109,9 +109,13 @@ public class Child {
         }
 
         if(selectedFoodGroups.size()>=4) {
-            return new FeedbackCard("#a2bd87", "#000000", "[summary: good choice]", null);
+            return new FeedbackCard("#a2bd87", "#000000", "The meal is well balanced! You are doing great!\n\nTry to vary the meal every day and encourage your child to taste new foods.", null);
         } else {
-            return new FeedbackCard("#ac8469", "#000000", "[summary: bad choice]", null);
+            if(selectedFoodGroups.size()>0){
+                return new FeedbackCard("#ac8469", "#000000", "Your meal is not well balanced.\n\nTry to vary the meal every day and encourage your child to taste new foods.", null);
+            } else {
+                return new FeedbackCard("#ac8469", "#000000", "You did not select any foods.", null);
+            }
         }
     }
 
