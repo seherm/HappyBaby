@@ -1,6 +1,8 @@
 package com.aah.selectingfood;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -49,48 +51,54 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
     }
 
     public void showStarches(View v) {
-        Intent intent = new Intent(this, FoodSelectionActivity.class);
         foodGroup = "Starches";
-        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
-        startActivity(intent);
+        saveToSharedPreferences(foodGroup);
+        goToFoodSelectionPage();
     }
 
     public void showFruits(View v) {
-        Intent intent = new Intent(this, FoodSelectionActivity.class);
         foodGroup = "Fruits";
-        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
-        startActivity(intent);
+        saveToSharedPreferences(foodGroup);
+        goToFoodSelectionPage();
     }
 
     public void showMeats(View v) {
-        Intent intent = new Intent(this, FoodSelectionActivity.class);
         foodGroup = "Meats";
-        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
-        startActivity(intent);
+        saveToSharedPreferences(foodGroup);
+        goToFoodSelectionPage();
     }
 
     public void showLegumes(View v) {
-        Intent intent = new Intent(this, FoodSelectionActivity.class);
         foodGroup = "Legumes";
-        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
-        startActivity(intent);
+        saveToSharedPreferences(foodGroup);
+        goToFoodSelectionPage();
     }
 
     public void showVegetables(View v) {
-        Intent intent = new Intent(this, FoodSelectionActivity.class);
         foodGroup = "Vegetables";
-        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
-        startActivity(intent);
+        saveToSharedPreferences(foodGroup);
+        goToFoodSelectionPage();
     }
 
     public void showJunkFood(View v) {
-        Intent intent = new Intent(this, FoodSelectionActivity.class);
         foodGroup = "JunkFood";
-        intent.putExtra("SELECTED_FOOD_GROUP", foodGroup);
+        saveToSharedPreferences(foodGroup);
+        goToFoodSelectionPage();
+    }
+
+    public void saveToSharedPreferences(String content) {
+        SharedPreferences sharedPref = getSharedPreferences("user_selection",MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString("SELECTED_FOOD_GROUP", content);
+        editor.apply();
+    }
+
+    public void goToFoodSelectionPage() {
+        Intent intent = new Intent(this, FoodSelectionActivity.class);
         startActivity(intent);
     }
 
-    public void goToFeedbackPage(View view){
+    public void goToFeedbackPage(View view) {
         Intent intent = new Intent(this, FeedbackActivity.class);
         startActivity(intent);
     }
