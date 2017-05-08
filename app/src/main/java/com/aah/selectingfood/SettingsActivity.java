@@ -93,6 +93,16 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void setChildImages() {
+        // Manuel:
+        // I think we should use this, so the user knows which button takes a happy, neutral or sad picture
+        // Maybe we can add a camera button below it?
+
+        childrenImageHappy.setImageBitmap(dataManagement.getUser().getImageHappyBitmap());
+        childrenImageNeutral.setImageBitmap(dataManagement.getUser().getImageNeutralBitmap());
+        childrenImageSad.setImageBitmap(dataManagement.getUser().getImageSadBitmap());
+
+        /*
+        childrenImageHappy.setImageBitmap(imageBitmap);
         if (user.getImageHappy() != null) {
             Bitmap imageBitmap = new ImageSaver(this).
                     setFileName(DataManagement.getInstance(this).getUser().getImageHappy()).
@@ -114,6 +124,7 @@ public class SettingsActivity extends AppCompatActivity {
                     load();
             childrenImageSad.setImageBitmap(imageBitmap);
         }
+        */
     }
 
     /*
