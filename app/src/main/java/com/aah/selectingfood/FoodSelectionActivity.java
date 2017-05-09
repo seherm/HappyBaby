@@ -83,7 +83,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
         });
 
         //handleIntent(getIntent());
-        Log.e("test", Arrays.toString(dataManagement.getFoodToSelect().toArray()));
+        Log.e("test", Arrays.toString(dataManagement.getFoodToSelect().toArray()));//TODO delete
     }
 
     @Override
@@ -105,7 +105,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
             public boolean onQueryTextChange(String newText) {
                 //TODO apply newtext filter on item list
                 Log.e("ActuallyDebug",newText);//TODO delete after debugging
-                //foodToSelectAdapter.getFilter().filter(newText);
+                foodToSelectAdapter.getFilter().filter(newText);
                 return false;
             }
         });
