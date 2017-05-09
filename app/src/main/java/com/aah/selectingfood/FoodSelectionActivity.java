@@ -19,6 +19,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
+import java.util.Arrays;
+
 public class FoodSelectionActivity extends AppCompatActivity {
 
     private DataManagement dataManagement;
@@ -79,6 +81,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
         });
 
         //handleIntent(getIntent());
+        Log.e("test", Arrays.toString(dataManagement.getFoodToSelect().toArray()));
     }
 
     @Override
@@ -100,6 +103,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
             public boolean onQueryTextChange(String newText) {
                 //TODO apply newtext filter on item list
                 Log.e("ActuallyDebug",newText);//TODO delete after debugging
+                //foodToSelectAdapter.getFilter().filter(newText);
                 return false;
             }
         });
