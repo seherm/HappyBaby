@@ -3,6 +3,7 @@ package com.aah.selectingfood;
 import com.aah.selectingfood.model.*;
 
 import android.content.Context;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.view.ViewGroup;
 import android.app.Activity;
@@ -53,7 +54,12 @@ public class FoodImageAdapter extends ArrayAdapter implements Filterable {
         Food item = foods.get(position);
         holder.imageTitle.setText(item.getName());
         holder.image.setImageBitmap(item.getImage());
+
         return row;
+    }
+
+    public Food getItemAtPosition(int position){
+        return foods.get(position);
     }
 
     static class ViewHolder {

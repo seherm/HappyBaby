@@ -63,7 +63,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 //TODO correct onItemClickListener -> not going over postion because of search then position changes
-                dataManagement.addSelectedFood(position);
+                dataManagement.addSelectedFood(foodToSelectAdapter.getPosition(foodToSelectAdapter.getItemAtPosition(position)));
                 gridViewFoodToSelect.invalidateViews();
                 gridViewFoodToSelect.setAdapter(foodToSelectAdapter);
                 gridViewSelectedFood.invalidateViews();
