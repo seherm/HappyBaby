@@ -82,8 +82,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
             }
         });
 
-        //handleIntent(getIntent());
-        Log.e("test", Arrays.toString(dataManagement.getFoodToSelect().toArray()));//TODO delete
+        //handleIntent(getIntent()); todo delete before completion
     }
 
     @Override
@@ -103,14 +102,12 @@ public class FoodSelectionActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                //TODO apply newtext filter on item list
-                Log.e("ActuallyDebug",newText);//TODO delete after debugging
                 foodToSelectAdapter.getFilter().filter(newText);
                 return false;
             }
         });
 
-        // Associate searchable configuration with the SearchView
+        // Associate searchable configuration with the SearchView todo delete before completion
         /*SearchManager searchManager =
                 (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView =
@@ -126,7 +123,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*private void handleIntent(Intent intent) {
+    /*private void handleIntent(Intent intent) {todo delete before completion
 
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
