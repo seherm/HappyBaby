@@ -94,7 +94,7 @@ public class FoodImageAdapter extends ArrayAdapter implements Filterable {
         @Override
         protected void publishResults(CharSequence contraint, FilterResults results) {
             foods = (ArrayList<Food>) results.values;
-            if (results.count >= 0) {//todo >=?
+            if (results.count >= 0) {//todo >=? testttest
                 notifyDataSetChanged();
             } else {
                 notifyDataSetInvalidated();
