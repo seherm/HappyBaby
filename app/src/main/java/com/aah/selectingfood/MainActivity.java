@@ -124,28 +124,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void setChildImage() {
-        if (dataManagement.getUser().getImageHappy() != null) {
-            Bitmap imageBitmap = new ImageSaver(this).
-                    setFileName(DataManagement.getInstance(this).getUser().getImageHappy()).
-                    setDirectoryName("childrenImages").
-                    load();
-            imageViewChild.setImageBitmap(imageBitmap);
-        } else if (dataManagement.getUser().getImageNeutral() != null) {
-            Bitmap imageBitmap = new ImageSaver(this).
-                    setFileName(DataManagement.getInstance(this).getUser().getImageNeutral()).
-                    setDirectoryName("childrenImages").
-                    load();
-            imageViewChild.setImageBitmap(imageBitmap);
-        } else if (dataManagement.getUser().getImageSad() != null) {
-            Bitmap imageBitmap = new ImageSaver(this).
-                    setFileName(DataManagement.getInstance(this).getUser().getImageSad()).
-                    setDirectoryName("childrenImages").
-                    load();
-            imageViewChild.setImageBitmap(imageBitmap);
-        } else {
-            Bitmap childDefaultImage = dataManagement.loadBitmapFromAssets("childNeutralDefault.png", "childrenImages");
-            imageViewChild.setImageBitmap(childDefaultImage);
-        }
+        Bitmap childDefaultImage = dataManagement.getUser().getImageHappyBitmap();
+        imageViewChild.setImageBitmap(childDefaultImage);
     }
 
     /*

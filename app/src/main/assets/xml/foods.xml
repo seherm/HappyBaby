@@ -61,26 +61,6 @@
         </feedback>
     </food>
     <food>
-        <name>Watermelon</name>
-        <foodgroup>Fruits</foodgroup>
-        <image>watermelon.jpg</image>
-        <feedback>
-            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
-            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
-            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
-            </feedbackInstantMiddleMessage>
-            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
-            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
-            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
-            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
-            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
-            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
-            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
-            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
-            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
-        </feedback>
-    </food>
-    <food>
         <name>Papaya</name>
         <foodgroup>Fruits</foodgroup>
         <image>papaya.jpg</image>

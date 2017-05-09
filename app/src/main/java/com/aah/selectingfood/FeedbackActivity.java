@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.model.DataManagement;
 import com.aah.selectingfood.model.FeedbackCard;
 
@@ -45,13 +46,24 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
 
     private List<FeedbackCard> getFeedbackCards(){
         List<FeedbackCard> feedbackCards = new ArrayList<FeedbackCard>();
-        //Create all different feedback cards
+
+        // Create all different feedback cards
+
+        // Create summary feedback for children 1-3
+        // TODO: Make sure the summary feedback is correct for 1-3 children.
         FeedbackCard finalFoodSummaryFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalFoodSummary(DataManagement.getInstance(this).getSelectedFood());
         finalFoodSummaryFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("can.png","feedbackImages"));
         feedbackCards.add(finalFoodSummaryFeedback);
-        FeedbackCard generalAgeFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalGeneral();
-        generalAgeFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("can.png","feedbackImages"));
-        feedbackCards.add(generalAgeFeedback);
+
+        // Create individual food feedback for children 1-3
+        // TODO: Analyze each food.
+
+        // Create general feedback for children 1-3
+        for(Child child : DataManagement.getInstance(this).getUser().getChildren()){
+            FeedbackCard generalAgeFeedback = child.giveFeedbackFinalGeneral();
+            generalAgeFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("can.png","feedbackImages"));
+            feedbackCards.add(generalAgeFeedback);
+        }
         return feedbackCards;
     }
 

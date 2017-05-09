@@ -1,5 +1,8 @@
 package com.aah.selectingfood.model;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+
 import java.util.ArrayList;
 
 /**
@@ -12,8 +15,10 @@ public class User {
     private String imageHappy;
     private String imageSad;
     private ArrayList<Child> children = new ArrayList<Child>();
+    private Context context;
 
-    public User(){
+    public User(Context context){
+        this.context = context;
         addChild(new Child("young"));
     }
 
@@ -77,5 +82,56 @@ public class User {
         if(childToRemove!=null) {
             children.remove(childToRemove);
         }
+    }
+
+    /**
+     * The following retrieves the image set for 'happy',
+     * or the standard image for 'happy' in bitmap form.
+     */
+    public Bitmap getImageHappyBitmap() {
+        Bitmap imageBitmap = null;
+        if(getImageNeutral()!=null){
+            imageBitmap = new ImageSaver(context).
+                    setFileName(DataManagement.getInstance(context).getUser().getImageHappy()).
+                    setDirectoryName("childrenImages").
+                    load();
+        } else {
+            imageBitmap = DataManagement.getInstance(context).loadBitmapFromAssets("childHappyDefault.png", "childrenImages");
+        }
+        return imageBitmap;
+    }
+
+    /**
+     * The following retrieves the image set for 'neutral',
+     * or the standard image for 'neutral' in bitmap form.
+     */
+    public Bitmap getImageNeutralBitmap() {
+        Bitmap imageBitmap = null;
+        if(getImageNeutral()!=null){
+            imageBitmap = new ImageSaver(context).
+                    setFileName(DataManagement.getInstance(context).getUser().getImageNeutral()).
+                    setDirectoryName("childrenImages").
+                    load();
+        } else {
+            imageBitmap = DataManagement.getInstance(context).loadBitmapFromAssets("childNeutralDefault.png", "childrenImages");
+        }
+        return imageBitmap;
+    }
+
+    /**
+     * The following retrieves the image set for 'sad',
+     * or the standard image for 'sad' in bitmap form.
+     */
+    public Bitmap getImageSadBitmap() {
+        Bitmap imageBitmap = null;
+        if(getImageSad()!=null){
+            imageBitmap = new ImageSaver(context).
+                    setFileName(DataManagement.getInstance(context).getUser().getImageSad()).
+                    setDirectoryName("childrenImages").
+                    load();
+        } else {
+            imageBitmap = DataManagement.getInstance(context).loadBitmapFromAssets("childSadDefault.png", "childrenImages");
+        }
+        return imageBitmap;
     }
 }

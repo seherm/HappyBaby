@@ -30,7 +30,7 @@
     <string name="search_title">Search</string>
     <string name="search_hint">Enter food name</string>
 
-    <string name="select_language">Select Recipes</string>
+    <string name="select_language">Select Language</string>
     <string name="english">English</string>
     <string name="khmer">Khmer</string>
     <string name="ages_of_your_children">Ages of your children</string>

@@ -16,13 +16,13 @@ public class Child {
 
 
         if(ageGroup.equals("young")) {
-            this.feedbackFinalGeneral = "feedback general young";
+            this.feedbackFinalGeneral = "At 6 months, feeding only breast milk is not enough anymore. Your child needs to start eating other foods. Encourage him/her to try new foods and new textures little by little.";
         }
         if(ageGroup.equals("middle")) {
-            this.feedbackFinalGeneral = "feedback general middle";
+            this.feedbackFinalGeneral = "Between 9 and 11 months, your child experiences a transition to grown up food. He/she wants to touch it. Make sure his/her hands are washed before eating.";
         }
         if(ageGroup.equals("old")) {
-            this.feedbackFinalGeneral = "feedback general old";
+            this.feedbackFinalGeneral = "At 1 year, your child is starting to walk. He/she needs more energy! He/she can eat the family meals but will need additional snacks every day. He/she wants to do what grown ups do and discover the world!";
         }
     }
 
@@ -109,9 +109,13 @@ public class Child {
         }
 
         if(selectedFoodGroups.size()>=4) {
-            return new FeedbackCard("#a2bd87", "#000000", "[summary: good choice]", null);
+            return new FeedbackCard("#a2bd87", "#000000", "The meal is well balanced! You are doing great!\n\nTry to vary the meal every day and encourage your child to taste new foods.", null);
         } else {
-            return new FeedbackCard("#ac8469", "#000000", "[summary: bad choice]", null);
+            if(selectedFoodGroups.size()>0){
+                return new FeedbackCard("#ac8469", "#000000", "Your meal is not well balanced.\n\nTry to vary the meal every day and encourage your child to taste new foods.", null);
+            } else {
+                return new FeedbackCard("#ac8469", "#000000", "You did not select any foods.", null);
+            }
         }
     }
 

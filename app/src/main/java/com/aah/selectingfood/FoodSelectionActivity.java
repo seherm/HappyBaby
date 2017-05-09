@@ -5,6 +5,7 @@ import com.aah.selectingfood.model.*;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -43,8 +44,9 @@ public class FoodSelectionActivity extends AppCompatActivity {
             }
         });
 
+        SharedPreferences sharedPref = getSharedPreferences("user_selection", MODE_PRIVATE);
+        final String selectedFoodGroup = sharedPref.getString("SELECTED_FOOD_GROUP",null);
 
-        final String selectedFoodGroup = getIntent().getStringExtra("SELECTED_FOOD_GROUP");
         dataManagement = DataManagement.getInstance(this);
         dataManagement.generateFoodList(selectedFoodGroup);
 

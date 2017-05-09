@@ -41,7 +41,7 @@ public class DataManagement {
         user = loadUser();
         if (user == null) {
             // No user available, create a new one
-            user = new User();
+            user = new User(this.context);
             // Store user right away
             storeUser(user);
         }
@@ -164,7 +164,7 @@ public class DataManagement {
         if (imageNeutral == null && imageHappy == null && imageSad == null && !hasChildYoung && !hasChildMiddle && !hasChildOld) {
             return null;
         } else {
-            User user = new User();
+            User user = new User(this.context);
             user.setImageNeutral(imageNeutral);
             user.setImageHappy(imageHappy);
             user.setImageSad(imageSad);
