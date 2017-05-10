@@ -47,9 +47,9 @@ public class DataManagement {
         }
 
         // Create foods
-        foodToSelect = new ArrayList<Food>();
-        selectedFood = new ArrayList<Food>();
-        allFood = new ArrayList<Food>();
+        foodToSelect = new ArrayList<>();
+        selectedFood = new ArrayList<>();
+        allFood = new ArrayList<>();
         createFoods();
     }
 
@@ -60,21 +60,20 @@ public class DataManagement {
         return instance;
     }
 
-    public void addSelectedFood(int position) {
-        selectedFood.add(foodToSelect.get(position));
-        foodToSelect.remove(position);
+    public void addSelectedFood(Food food) {
+        selectedFood.add(food);
+        foodToSelect.remove(food);
     }
 
-    public void removeSelectedFood(int position, String selectedFoodGroup) {
-        Food selectedItem = selectedFood.get(position);
-        if (selectedItem.getFoodGroup().equals(selectedFoodGroup)) {
-            foodToSelect.add(selectedFood.get(position));
+    public void removeSelectedFood(Food food, String selectedFoodGroup) {
+        if (food.getFoodGroup().equals(selectedFoodGroup)) {
+            foodToSelect.add(food);
         }
-        selectedFood.remove(position);
+        selectedFood.remove(food);
     }
 
-    public void removeSelectedFood(int position) {
-        selectedFood.remove(position);
+    public void removeSelectedFood(Food food) {
+        selectedFood.remove(food);
     }
 
     //after selecting foodgroup the foods list will be created

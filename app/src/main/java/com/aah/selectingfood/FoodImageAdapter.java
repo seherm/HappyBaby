@@ -24,15 +24,20 @@ public class FoodImageAdapter extends ArrayAdapter implements Filterable {
 
     private Context context;
     private int layoutResourceId;
-    private ArrayList<Food> foods;
     private ArrayList<Food> originalFoods;
+    private ArrayList<Food> filteredFoods;
 
     public FoodImageAdapter(Context context, int layoutResourceId, ArrayList<Food> foods) {
         super(context, layoutResourceId, foods);
         this.layoutResourceId = layoutResourceId;
         this.context = context;
-        this.foods = foods;
+        this.filteredFoods = foods;
         this.originalFoods = foods;
+    }
+
+    @Override
+    public int getCount() {
+        return filteredFoods.size();
     }
 
     @Override
@@ -51,47 +56,37 @@ public class FoodImageAdapter extends ArrayAdapter implements Filterable {
             holder = (ViewHolder) row.getTag();
         }
 
-        Food item = foods.get(position);
+        Food item = filteredFoods.get(position);
         holder.imageTitle.setText(item.getName());
         holder.image.setImageBitmap(item.getImage());
 
         return row;
     }
 
-    public Food getItemAtPosition(int position){
-        return foods.get(position);
-    }
-
-    static class ViewHolder {
-        TextView imageTitle;
-        ImageView image;
+    public Food getItemAtPosition(int position) {
+        return filteredFoods.get(position);
     }
 
     Filter myFilter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
             FilterResults filterResults = new FilterResults();
-            ArrayList<Food> tempList=new ArrayList<Food>();
             //constraint is the result from text you want to filter against.
-            //foods is your data set you will filter from
-            if(constraint != null && foods!=null) {
-                int length=originalFoods.size();
-                int i=0;
-                while(i<length){
-                    Food item=originalFoods.get(i);
-                    //do whatever you wanna do here
-                    //adding result set output array
-
-                    if(item.getName().toLowerCase().contains(constraint.toString().toLowerCase())){
-                        tempList.add(item);
+            //If there's nothing to filter on, return the original data
+            if (constraint == null || constraint.length() == 0) {
+                filterResults.values = originalFoods;
+                filterResults.count = originalFoods.size();
+            } else {
+                ArrayList<Food> filterResultsData = new ArrayList<>();
+                for (Food item : originalFoods) {
+                    //If data matches filter criterion adding it to output array
+                    if (item.getName().toLowerCase().contains(constraint.toString().toLowerCase())) {
+                        filterResultsData.add(item);
                     }
-
-                    i++;
                 }
-                //following two lines is very important
-                //as publish result can only take FilterResults foods
-                filterResults.values = tempList;
-                filterResults.count = tempList.size();
+                //following two lines are very important as publish result can only take FilterResults foods
+                filterResults.values = filterResultsData;
+                filterResults.count = filterResultsData.size();
             }
             return filterResults;
         }
@@ -99,12 +94,8 @@ public class FoodImageAdapter extends ArrayAdapter implements Filterable {
         @SuppressWarnings("unchecked")
         @Override
         protected void publishResults(CharSequence contraint, FilterResults results) {
-            foods = (ArrayList<Food>) results.values;
-            if (results.count >= 0) {//todo >=? testttest
-                notifyDataSetChanged();
-            } else {
-                notifyDataSetInvalidated();
-            }
+            filteredFoods = (ArrayList<Food>) results.values;
+            notifyDataSetChanged();
         }
     };
 
@@ -113,8 +104,8 @@ public class FoodImageAdapter extends ArrayAdapter implements Filterable {
         return myFilter;
     }
 
-    @Override
-    public int getCount() {
-        return foods.size();
+    static class ViewHolder {
+        TextView imageTitle;
+        ImageView image;
     }
 }
