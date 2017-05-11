@@ -2,7 +2,9 @@ package com.aah.selectingfood;
 
 import com.aah.selectingfood.model.*;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -11,10 +13,12 @@ import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.CheckBox;
+import android.widget.RadioGroup;
 
 import com.aah.selectingfood.model.DataManagement;
 
@@ -60,6 +64,19 @@ public class SettingsActivity extends AppCompatActivity {
         childrenImageSad = (ImageButton) findViewById(R.id.imageButtonPhotoSad);
 
         setChildImages();
+
+        //check currently selected language
+        RadioGroup languageRadioGroup = (RadioGroup) findViewById(R.id.radioGroupLanguage);
+        GlobalState state = ((GlobalState) GlobalState.getAppContext());
+        String language = state.getLanguage();
+        switch (language){
+            case "en":
+                languageRadioGroup.check(R.id.radioButtonEnglish);
+                break;
+            case "km":
+                languageRadioGroup.check(R.id.radioButtonKhmer);
+                break;
+        }
     }
 
     public void changeLanguage(View view) {
@@ -69,25 +86,30 @@ public class SettingsActivity extends AppCompatActivity {
         // Check which radio button was clicked
         switch (view.getId()) {
             case R.id.radioButtonEnglish:
-                if (checked) {
+                //if (checked) {
                     setLocale("en");
-                }
+                //}
                 break;
             case R.id.radioButtonKhmer:
-                if (checked) {
+                //if (checked) {
                     setLocale("km");
-                }
+                //}
                 break;
         }
     }
 
     public void setLocale(String lang) {
-        Locale myLocale = new Locale(lang);
+        /*Locale myLocale = new Locale(lang);
         Resources res = getResources();
         DisplayMetrics dm = res.getDisplayMetrics();
         Configuration conf = res.getConfiguration();
         conf.locale = myLocale;
-        res.updateConfiguration(conf, dm);
+        res.updateConfiguration(conf, dm); todo delete before completion*/
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        sharedPref.edit().putString("language",lang).commit();
+        GlobalState state = ((GlobalState) getApplicationContext());
+        state.setLanguage(lang);
+
         Intent refresh = new Intent(this, SettingsActivity.class);
         startActivity(refresh);
     }
@@ -235,5 +257,10 @@ public class SettingsActivity extends AppCompatActivity {
             user.setImageSad("imageSad.png");
             dataManagement.storeUser(user);
         }
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(MyContextWrapper.wrap(newBase));
     }
 }

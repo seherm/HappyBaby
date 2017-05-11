@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">អាហារជ្រើស</string>
+    <string name="app_language">en</string>
     <string name="action_settings">ការកំណត់</string>
     <string name="title_activity_settings">ការកំណត់</string>
+    <string name="ages_of_your_children">test todo</string>
+    <!-->Food Groups<-->
+    <string name="starches">test todo</string>
+    <string name="fruits">test todo</string>
+    <string name="meats">test todo</string>
+    <string name="legumes">test todo</string>
+    <string name="vegetables">test todo</string>
+    <string name="junk_food">test todo</string>
+
+    <string name="test_string">khmerkhmer</string>
 </resources>

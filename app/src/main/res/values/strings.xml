@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Selecting Food</string>
+    <string name="app_language">en</string>
 
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
@@ -46,4 +47,6 @@
     <string name="legumes">Legumes</string>
     <string name="vegetables">Vegetables</string>
     <string name="junk_food">Junk Food</string>
+
+    <string name="test_string">engeng</string>
 </resources>

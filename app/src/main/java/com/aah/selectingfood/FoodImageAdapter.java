@@ -66,15 +66,12 @@ public class FoodImageAdapter extends ArrayAdapter implements Filterable {
         protected FilterResults performFiltering(CharSequence constraint) {
             FilterResults filterResults = new FilterResults();
             ArrayList<Food> tempList=new ArrayList<Food>();
-            //constraint is the result from text you want to filter against.
-            //foods is your data set you will filter from
+            //constraint =searchinput to filter against.
             if(constraint != null && foods!=null) {
                 int length=originalFoods.size();
                 int i=0;
                 while(i<length){
                     Food item=originalFoods.get(i);
-                    //do whatever you wanna do here
-                    //adding result set output array
 
                     if(item.getName().toLowerCase().contains(constraint.toString().toLowerCase())){
                         tempList.add(item);
@@ -82,8 +79,7 @@ public class FoodImageAdapter extends ArrayAdapter implements Filterable {
 
                     i++;
                 }
-                //following two lines is very important
-                //as publish result can only take FilterResults foods
+
                 filterResults.values = tempList;
                 filterResults.count = tempList.size();
             }

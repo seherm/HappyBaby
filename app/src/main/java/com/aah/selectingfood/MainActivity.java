@@ -2,6 +2,7 @@ package com.aah.selectingfood;
 
 import com.aah.selectingfood.model.*;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -52,6 +53,9 @@ public class MainActivity extends AppCompatActivity
         setChildImage();
 
         prefs = getSharedPreferences("com.aah.selectingfood", MODE_PRIVATE);
+
+        GlobalState state = ((GlobalState) getApplicationContext());
+        state.setLanguage(prefs.getString("language","km"));
     }
 
     @Override
