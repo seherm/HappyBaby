@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.aah.selectingfood.model.DataManagement;
+import com.aah.selectingfood.model.Food;
 
 public class FoodGroupSelectionActivity extends AppCompatActivity {
 
@@ -43,7 +44,8 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         gridViewSelectedFood.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                dataManagement.removeSelectedFood(position);
+                Food selectedFood = selectedFoodAdapter.getItemAtPosition(position);
+                dataManagement.removeSelectedFood(selectedFood);
                 gridViewSelectedFood.invalidateViews();
                 gridViewSelectedFood.setAdapter(selectedFoodAdapter);
             }

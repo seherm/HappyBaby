@@ -62,7 +62,8 @@ public class FoodSelectionActivity extends AppCompatActivity {
         gridViewFoodToSelect.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                dataManagement.addSelectedFood(position);
+                Food selectedFood = foodToSelectAdapter.getItemAtPosition(position);
+                dataManagement.addSelectedFood(selectedFood);
                 gridViewFoodToSelect.invalidateViews();
                 gridViewFoodToSelect.setAdapter(foodToSelectAdapter);
                 gridViewSelectedFood.invalidateViews();
@@ -74,15 +75,14 @@ public class FoodSelectionActivity extends AppCompatActivity {
         gridViewSelectedFood.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                dataManagement.removeSelectedFood(position,selectedFoodGroup);
+                Food selectedFood = selectedFoodAdapter.getItemAtPosition(position);
+                dataManagement.removeSelectedFood(selectedFood,selectedFoodGroup);
                 gridViewFoodToSelect.invalidateViews();
                 gridViewFoodToSelect.setAdapter(foodToSelectAdapter);
                 gridViewSelectedFood.invalidateViews();
                 gridViewSelectedFood.setAdapter(selectedFoodAdapter);
             }
         });
-
-        //handleIntent(getIntent()); todo delete before completion
     }
 
     @Override
@@ -107,14 +107,6 @@ public class FoodSelectionActivity extends AppCompatActivity {
             }
         });
 
-        // Associate searchable configuration with the SearchView todo delete before completion
-        /*SearchManager searchManager =
-                (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView =
-                (SearchView) menu.findItem(R.id.search).getActionView();
-        searchView.setSearchableInfo(
-                searchManager.getSearchableInfo(getComponentName()));*/
-
         return true;
     }
 
@@ -122,13 +114,5 @@ public class FoodSelectionActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FeedbackActivity.class);
         startActivity(intent);
     }
-
-    /*private void handleIntent(Intent intent) {todo delete before completion
-
-        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            String query = intent.getStringExtra(SearchManager.QUERY);
-            //use the query to search your data somehow
-        }
-    }*/
 }
 
