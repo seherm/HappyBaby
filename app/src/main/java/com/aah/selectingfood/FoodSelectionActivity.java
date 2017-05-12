@@ -27,6 +27,8 @@ public class FoodSelectionActivity extends AppCompatActivity {
     private DataManagement dataManagement;
     private FoodImageAdapter foodToSelectAdapter;
     private FoodImageAdapter selectedFoodAdapter;
+    private SearchView searchView;
+    private MenuItem item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +64,12 @@ public class FoodSelectionActivity extends AppCompatActivity {
         gridViewFoodToSelect.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
+                //collapse searchView
+                if (searchView.isShown()){
+                    item.collapseActionView();
+                    searchView.setQuery("",false);
+                }
+
                 Food selectedFood = foodToSelectAdapter.getItemAtPosition(position);
                 dataManagement.addSelectedFood(selectedFood);
                 gridViewFoodToSelect.invalidateViews();
@@ -91,8 +99,8 @@ public class FoodSelectionActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.options_menu, menu);
 
-        MenuItem item = menu.findItem(R.id.search);
-        SearchView searchView = (SearchView) item.getActionView();
+        item = menu.findItem(R.id.search);
+        searchView = (SearchView) item.getActionView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
             @Override
