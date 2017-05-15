@@ -1,4 +1,5 @@
 <resources>
+    <string name="facebook_app_id">1892057001064840</string>
     <string name="app_name">Selecting Food</string>
     <string name="app_language">en</string>
 
