@@ -40,13 +40,7 @@
     <string name="children_old_category">12-24 months</string>
     <string name="change_photos_of_baby">Change photos of your baby</string>
 
-    <!-->Food Groups<-->
-    <string name="starches">Starches</string>
-    <string name="fruits">Fruits</string>
-    <string name="meats">Meats</string>
-    <string name="legumes">Legumes</string>
-    <string name="vegetables">Vegetables</string>
-    <string name="junk_food">Junk Food</string>
+    <string name="food_message">What other kinds of food will I eat today?</string>
 
     <string name="test_string">engeng</string>
 </resources>

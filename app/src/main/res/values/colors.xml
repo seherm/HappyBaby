@@ -16,4 +16,11 @@
     <color name="indigoDark">#434A54</color>
     <color name="yellow">#EAC663</color>
 
+    <color name="fruitsBlue">#3F51B5</color>
+    <color name="legumesBrown">#795548</color>
+    <color name="meatsRed">#DB4437</color>
+    <color name="vegetablesGreen">#0F9D58</color>
+    <color name="junkFoodPink">#E91E63</color>
+    <color name="starchesYellow">#F4B400</color>
+
 </resources>

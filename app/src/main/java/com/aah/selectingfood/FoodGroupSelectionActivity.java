@@ -13,12 +13,17 @@ import android.widget.GridView;
 
 import com.aah.selectingfood.model.DataManagement;
 import com.aah.selectingfood.model.Food;
+import com.aah.selectingfood.model.FoodGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FoodGroupSelectionActivity extends AppCompatActivity {
 
     private String foodGroup;
     private DataManagement dataManagement;
     private FoodImageAdapter selectedFoodAdapter;
+    private FoodGroupAdapter foodGroupAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,42 +55,19 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
                 gridViewSelectedFood.setAdapter(selectedFoodAdapter);
             }
         });
-    }
 
-    public void showStarches(View v) {
-        foodGroup = "Starches";
-        saveToSharedPreferences(foodGroup);
-        goToFoodSelectionPage();
-    }
+        foodGroupAdapter = new FoodGroupAdapter(this, R.layout.grid_item_layout, createFoodGroups());
+        final GridView gridViewFoodGroup = (GridView) findViewById(R.id.foodGroups);
+        gridViewFoodGroup.setAdapter(foodGroupAdapter);
 
-    public void showFruits(View v) {
-        foodGroup = "Fruits";
-        saveToSharedPreferences(foodGroup);
-        goToFoodSelectionPage();
-    }
-
-    public void showMeats(View v) {
-        foodGroup = "Meats";
-        saveToSharedPreferences(foodGroup);
-        goToFoodSelectionPage();
-    }
-
-    public void showLegumes(View v) {
-        foodGroup = "Legumes";
-        saveToSharedPreferences(foodGroup);
-        goToFoodSelectionPage();
-    }
-
-    public void showVegetables(View v) {
-        foodGroup = "Vegetables";
-        saveToSharedPreferences(foodGroup);
-        goToFoodSelectionPage();
-    }
-
-    public void showJunkFood(View v) {
-        foodGroup = "JunkFood";
-        saveToSharedPreferences(foodGroup);
-        goToFoodSelectionPage();
+        gridViewFoodGroup.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+                FoodGroup selectedFoodGroup = foodGroupAdapter.getItemAtPosition(position);
+                saveToSharedPreferences(selectedFoodGroup.getName());
+                goToFoodSelectionPage();
+            }
+        });
     }
 
     public void saveToSharedPreferences(String content) {
@@ -103,5 +85,24 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
     public void goToFeedbackPage(View view) {
         Intent intent = new Intent(this, FeedbackActivity.class);
         startActivity(intent);
+    }
+
+    public List<FoodGroup> createFoodGroups(){
+        List<FoodGroup> foodGroups = new ArrayList<>();
+
+        FoodGroup fruits = new FoodGroup("Fruits",dataManagement.loadBitmapFromAssets("fruits.png","foodGroupImages"),R.color.fruitsBlue);
+        foodGroups.add(fruits);
+        FoodGroup legumes = new FoodGroup("Legumes",dataManagement.loadBitmapFromAssets("legumes.png","foodGroupImages"),R.color.legumesBrown);
+        foodGroups.add(legumes);
+        FoodGroup meat = new FoodGroup("Meats",dataManagement.loadBitmapFromAssets("meat.png","foodGroupImages"),R.color.meatsRed);
+        foodGroups.add(meat);
+        FoodGroup vegetables = new FoodGroup("Vegetables",dataManagement.loadBitmapFromAssets("vegetables.png","foodGroupImages"),R.color.vegetablesGreen);
+        foodGroups.add(vegetables);
+        FoodGroup junkFood = new FoodGroup("Junk Food",dataManagement.loadBitmapFromAssets("junk_food.png","foodGroupImages"),R.color.junkFoodPink);
+        foodGroups.add(junkFood);
+        FoodGroup starches = new FoodGroup("Starches",dataManagement.loadBitmapFromAssets("starches.png","foodGroupImages"),R.color.starchesYellow);
+        foodGroups.add(starches);
+
+        return foodGroups;
     }
 }
