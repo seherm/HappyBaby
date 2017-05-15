@@ -3,6 +3,7 @@ package com.aah.selectingfood;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +23,7 @@ import java.util.List;
  * Created by sebas on 28.04.2017.
  */
 
-public class FoodGroupAdapter extends ArrayAdapter implements Filterable {
+public class FoodGroupAdapter extends  ArrayAdapter {
 
     private Context context;
     private int layoutResourceId;
@@ -61,6 +62,7 @@ public class FoodGroupAdapter extends ArrayAdapter implements Filterable {
         row.setBackgroundResource(item.getBackgroundColor());
         holder.imageTitle.setText(item.getName());
         holder.imageTitle.setTextColor(Color.WHITE);
+        holder.image.setAdjustViewBounds(true);
         holder.imageTitle.setTextSize(20);
         holder.image.setImageBitmap(item.getImage());
 
