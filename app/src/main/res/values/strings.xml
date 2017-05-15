@@ -40,7 +40,7 @@
     <string name="children_old_category">12-24 months</string>
     <string name="change_photos_of_baby">Change photos of your baby</string>
 
-    <string name="food_message">What other kinds of food will I eat today?</string>
+    <string name="food_message">What other kinds of \n food will I eat today?</string>
 
     <string name="test_string">engeng</string>
 </resources>

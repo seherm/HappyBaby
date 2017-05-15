@@ -48,15 +48,19 @@ public class FoodSelectionActivity extends AppCompatActivity {
 
         SharedPreferences sharedPref = getSharedPreferences("user_selection", MODE_PRIVATE);
         final String selectedFoodGroup = sharedPref.getString("SELECTED_FOOD_GROUP",null);
+        final int selectedFoodGroupColor = sharedPref.getInt("SELECTED_FOOD_GROUP_COLOR",0);
 
         dataManagement = DataManagement.getInstance(this);
         dataManagement.generateFoodList(selectedFoodGroup);
+
+        setTitle(selectedFoodGroup);
 
         foodToSelectAdapter = new FoodImageAdapter(this, R.layout.grid_item_layout, dataManagement.getFoodToSelect());
         selectedFoodAdapter = new FoodImageAdapter(this, R.layout.grid_item_layout, dataManagement.getSelectedFood());
 
         final GridView gridViewFoodToSelect = (GridView) findViewById(R.id.foodToSelect);
         gridViewFoodToSelect.setAdapter(foodToSelectAdapter);
+        gridViewFoodToSelect.setBackgroundResource(selectedFoodGroupColor);
 
         final GridView gridViewSelectedFood = (GridView) findViewById(R.id.selectedFood);
         gridViewSelectedFood.setAdapter(selectedFoodAdapter);
@@ -78,7 +82,6 @@ public class FoodSelectionActivity extends AppCompatActivity {
                 gridViewSelectedFood.setAdapter(selectedFoodAdapter);
             }
         });
-
 
         gridViewSelectedFood.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,

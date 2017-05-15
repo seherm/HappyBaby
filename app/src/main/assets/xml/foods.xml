@@ -242,7 +242,7 @@
     </food>
     <food>
         <name>Soft Drink</name>
-        <foodgroup>JunkFood</foodgroup>
+        <foodgroup>Junk Food</foodgroup>
         <image>coke_can.jpg</image>
         <feedback>
             <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>

@@ -19,20 +19,17 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:clickable="true"
-        android:src="@drawable/ic_menu_send"
-        app:layout_constraintBottom_toBottomOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        />
+        android:src="@drawable/ic_check"
+        app:backgroundTint="@color/pestoGreenDark"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="parent" />
 
     <GridView
         android:id="@+id/foodToSelect"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/greyBrown"
         android:columnWidth="100dp"
         android:gravity="center"
         android:horizontalSpacing="10dp"
@@ -49,7 +46,6 @@
         android:id="@+id/selectedFood"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/yellow"
         android:columnWidth="100dp"
         android:gravity="center"
         android:horizontalSpacing="5dp"

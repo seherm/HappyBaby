@@ -3,6 +3,7 @@ package com.aah.selectingfood;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.aah.selectingfood.model.DataManagement;
 import com.aah.selectingfood.model.Food;
@@ -17,6 +20,9 @@ import com.aah.selectingfood.model.FoodGroup;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.R.id.list;
+import static com.aah.selectingfood.R.id.imageViewChild;
 
 public class FoodGroupSelectionActivity extends AppCompatActivity {
 
@@ -41,6 +47,7 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
             }
         });
 
+        //Configure Selected Food View
         dataManagement = DataManagement.getInstance(this);
         selectedFoodAdapter = new FoodImageAdapter(this, R.layout.grid_item_layout, dataManagement.getSelectedFood());
         final GridView gridViewSelectedFood = (GridView) findViewById(R.id.selectedFood);
@@ -56,6 +63,7 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
             }
         });
 
+        //Configure Food Groups View
         foodGroupAdapter = new FoodGroupAdapter(this, R.layout.grid_item_layout, createFoodGroups());
         final GridView gridViewFoodGroup = (GridView) findViewById(R.id.foodGroups);
         gridViewFoodGroup.setAdapter(foodGroupAdapter);
@@ -64,16 +72,32 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 FoodGroup selectedFoodGroup = foodGroupAdapter.getItemAtPosition(position);
-                saveToSharedPreferences(selectedFoodGroup.getName());
+                saveStringToSharedPreferences("SELECTED_FOOD_GROUP",selectedFoodGroup.getName());
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR",selectedFoodGroup.getBackgroundColor());
                 goToFoodSelectionPage();
             }
         });
+
+        //Configure Image of the Baby
+        ImageView imageViewChild = (ImageView) findViewById(R.id.childImageView);
+        Bitmap childDefaultImage = dataManagement.getUser().getImageHappyBitmap();
+        imageViewChild.setImageBitmap(childDefaultImage);
+
+        //TODO: Set Instant Feedback Text
+        TextView instantFeedback = (TextView) findViewById(R.id.instantFeedback);
     }
 
-    public void saveToSharedPreferences(String content) {
+    public void saveStringToSharedPreferences(String key, String content) {
         SharedPreferences sharedPref = getSharedPreferences("user_selection",MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("SELECTED_FOOD_GROUP", content);
+        editor.putString(key, content);
+        editor.apply();
+    }
+
+    public void saveIntToSharedPreferences(String key, int content){
+        SharedPreferences sharedPref = getSharedPreferences("user_selection",MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(key, content);
         editor.apply();
     }
 
@@ -89,7 +113,6 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
 
     public List<FoodGroup> createFoodGroups(){
         List<FoodGroup> foodGroups = new ArrayList<>();
-
         FoodGroup fruits = new FoodGroup("Fruits",dataManagement.loadBitmapFromAssets("fruits.png","foodGroupImages"),R.color.fruitsBlue);
         foodGroups.add(fruits);
         FoodGroup legumes = new FoodGroup("Legumes",dataManagement.loadBitmapFromAssets("legumes.png","foodGroupImages"),R.color.legumesBrown);
@@ -102,7 +125,6 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         foodGroups.add(junkFood);
         FoodGroup starches = new FoodGroup("Starches",dataManagement.loadBitmapFromAssets("starches.png","foodGroupImages"),R.color.starchesYellow);
         foodGroups.add(starches);
-
         return foodGroups;
     }
 }
