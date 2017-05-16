@@ -22,6 +22,7 @@
 
     <!-->Other Text<-->
     <string name="start_message">Please tap on start to select the food you are going to feed your baby</string>
+    <string name="food_message">What other kinds of \n foods will I eat today?</string>
 
     <string name="porridge_recipes">Porridge Recipes</string>
     <string name="FAQ">FAQ</string>
@@ -40,7 +41,13 @@
     <string name="children_old_category">12-24 months</string>
     <string name="change_photos_of_baby">Change photos of your baby</string>
 
-    <string name="food_message">What other kinds of \n food will I eat today?</string>
+    <!-->Food Groups<-->
+    <string name="fruits">Fruits</string>
+    <string name="legumes">Legumes</string>
+    <string name="meat">Meat</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="junk_food">Junk Food</string>
+    <string name="starches">Starches</string>
 
     <string name="test_string">engeng</string>
 </resources>
