@@ -2,14 +2,18 @@ package com.aah.selectingfood.activity;
 
 import com.aah.selectingfood.adapter.FoodToSelectArrayAdapter;
 import com.aah.selectingfood.R;
+import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
 import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.*;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -19,12 +23,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.ImageView;
 
 public class FoodSelectionActivity extends AppCompatActivity {
 
     private DataManagement dataManagement;
     private FoodToSelectArrayAdapter foodToSelectArrayAdapter;
-    private FoodToSelectArrayAdapter selectedFoodAdapter;
+    private RecyclerView recyclerViewSelectedFood;
+    private SelectedFoodRecyclerViewAdapter selectedFoodRecyclerViewAdapter;
     private SearchView searchView;
     private MenuItem item;
 
@@ -67,24 +73,28 @@ public class FoodSelectionActivity extends AppCompatActivity {
                 Food selectedFood = foodToSelectArrayAdapter.getItemAtPosition(position);
                 dataManagement.addSelectedFood(selectedFood);
                 foodToSelectArrayAdapter.notifyDataSetChanged();
-                selectedFoodAdapter.notifyDataSetChanged();
+                selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
             }
         });
 
         //Configure Selected Food View
-        selectedFoodAdapter = new FoodToSelectArrayAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getSelectedFood());
-        final GridView gridViewSelectedFood = (GridView) findViewById(R.id.selectedFood);
-        gridViewSelectedFood.setAdapter(selectedFoodAdapter);
-        gridViewSelectedFood.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView<?> parent, View v,
-                                    int position, long id) {
-                Food selectedFood = selectedFoodAdapter.getItemAtPosition(position);
-                dataManagement.removeSelectedFood(selectedFood,selectedFoodGroup);
-                foodToSelectArrayAdapter.notifyDataSetChanged();
-                selectedFoodAdapter.notifyDataSetChanged();
-
+        dataManagement = DataManagement.getInstance(this);
+        recyclerViewSelectedFood = (RecyclerView) findViewById(R.id.selectedFoodRecyclerView);
+        selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(dataManagement.getSelectedFood(), getApplication(), new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Food item) {
+                dataManagement.removeSelectedFood(item);
+                selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
             }
         });
+        LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(FoodSelectionActivity.this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewSelectedFood.setLayoutManager(horizontalLayoutManager);
+        recyclerViewSelectedFood.setAdapter(selectedFoodRecyclerViewAdapter);
+
+        //Configure Image of the Baby
+        ImageView imageViewChild = (ImageView) findViewById(R.id.childImageView);
+        Bitmap childDefaultImage = dataManagement.getUser().getImageHappyBitmap();
+        imageViewChild.setImageBitmap(childDefaultImage);
     }
 
     @Override
