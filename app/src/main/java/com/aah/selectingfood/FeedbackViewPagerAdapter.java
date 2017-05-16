@@ -1,7 +1,6 @@
 package com.aah.selectingfood;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -41,7 +40,7 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        View itemView = LayoutInflater.from(context).inflate(R.layout.pager_item_layout, container, false);
+        View itemView = LayoutInflater.from(context).inflate(R.layout.feedback_item_layout, container, false);
         itemView.setBackgroundColor(Color.parseColor(feedbacks.get(position).getBackgroundColor()));
         ImageView imageView = (ImageView) itemView.findViewById(R.id.img_pager_item);
         imageView.setImageBitmap(feedbacks.get(position).getImage());

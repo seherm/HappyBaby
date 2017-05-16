@@ -2,8 +2,6 @@ package com.aah.selectingfood;
 
 import com.aah.selectingfood.model.*;
 
-import android.app.SearchManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,7 +9,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -20,13 +17,11 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
-import java.util.Arrays;
-
 public class FoodSelectionActivity extends AppCompatActivity {
 
     private DataManagement dataManagement;
-    private FoodImageAdapter foodToSelectAdapter;
-    private FoodImageAdapter selectedFoodAdapter;
+    private FoodToSelectAdapter foodToSelectAdapter;
+    private FoodToSelectAdapter selectedFoodAdapter;
     private SearchView searchView;
     private MenuItem item;
 
@@ -55,8 +50,8 @@ public class FoodSelectionActivity extends AppCompatActivity {
 
         setTitle(selectedFoodGroup);
 
-        foodToSelectAdapter = new FoodImageAdapter(this, R.layout.grid_item_layout, dataManagement.getFoodToSelect());
-        selectedFoodAdapter = new FoodImageAdapter(this, R.layout.grid_item_layout, dataManagement.getSelectedFood());
+        foodToSelectAdapter = new FoodToSelectAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getFoodToSelect());
+        selectedFoodAdapter = new FoodToSelectAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getSelectedFood());
 
         final GridView gridViewFoodToSelect = (GridView) findViewById(R.id.foodToSelect);
         gridViewFoodToSelect.setAdapter(foodToSelectAdapter);
@@ -76,10 +71,8 @@ public class FoodSelectionActivity extends AppCompatActivity {
 
                 Food selectedFood = foodToSelectAdapter.getItemAtPosition(position);
                 dataManagement.addSelectedFood(selectedFood);
-                gridViewFoodToSelect.invalidateViews();
-                gridViewFoodToSelect.setAdapter(foodToSelectAdapter);
-                gridViewSelectedFood.invalidateViews();
-                gridViewSelectedFood.setAdapter(selectedFoodAdapter);
+                foodToSelectAdapter.notifyDataSetChanged();
+                selectedFoodAdapter.notifyDataSetChanged();
             }
         });
 
@@ -88,10 +81,9 @@ public class FoodSelectionActivity extends AppCompatActivity {
                                     int position, long id) {
                 Food selectedFood = selectedFoodAdapter.getItemAtPosition(position);
                 dataManagement.removeSelectedFood(selectedFood,selectedFoodGroup);
-                gridViewFoodToSelect.invalidateViews();
-                gridViewFoodToSelect.setAdapter(foodToSelectAdapter);
-                gridViewSelectedFood.invalidateViews();
-                gridViewSelectedFood.setAdapter(selectedFoodAdapter);
+                foodToSelectAdapter.notifyDataSetChanged();
+                selectedFoodAdapter.notifyDataSetChanged();
+
             }
         });
     }

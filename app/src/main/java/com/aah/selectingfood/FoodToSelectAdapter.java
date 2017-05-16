@@ -20,14 +20,14 @@ import java.util.ArrayList;
  * Created by sebas on 28.04.2017.
  */
 
-public class FoodImageAdapter extends ArrayAdapter implements Filterable {
+public class FoodToSelectAdapter extends ArrayAdapter implements Filterable {
 
     private Context context;
     private int layoutResourceId;
     private ArrayList<Food> originalFoods;
     private ArrayList<Food> filteredFoods;
 
-    public FoodImageAdapter(Context context, int layoutResourceId, ArrayList<Food> foods) {
+    public FoodToSelectAdapter(Context context, int layoutResourceId, ArrayList<Food> foods) {
         super(context, layoutResourceId, foods);
         this.layoutResourceId = layoutResourceId;
         this.context = context;
