@@ -1,4 +1,4 @@
-package com.aah.selectingfood;
+package com.aah.selectingfood.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.aah.selectingfood.R;
 import com.aah.selectingfood.model.FeedbackCard;
 
 import java.util.List;

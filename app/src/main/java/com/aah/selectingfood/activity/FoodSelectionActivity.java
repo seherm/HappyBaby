@@ -1,5 +1,8 @@
-package com.aah.selectingfood;
+package com.aah.selectingfood.activity;
 
+import com.aah.selectingfood.adapter.FoodToSelectArrayAdapter;
+import com.aah.selectingfood.R;
+import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.*;
 
 import android.content.Intent;
@@ -20,8 +23,8 @@ import android.widget.GridView;
 public class FoodSelectionActivity extends AppCompatActivity {
 
     private DataManagement dataManagement;
-    private FoodToSelectAdapter foodToSelectAdapter;
-    private FoodToSelectAdapter selectedFoodAdapter;
+    private FoodToSelectArrayAdapter foodToSelectArrayAdapter;
+    private FoodToSelectArrayAdapter selectedFoodAdapter;
     private SearchView searchView;
     private MenuItem item;
 
@@ -50,11 +53,11 @@ public class FoodSelectionActivity extends AppCompatActivity {
 
         setTitle(selectedFoodGroup);
 
-        foodToSelectAdapter = new FoodToSelectAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getFoodToSelect());
-        selectedFoodAdapter = new FoodToSelectAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getSelectedFood());
+        foodToSelectArrayAdapter = new FoodToSelectArrayAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getFoodToSelect());
+        selectedFoodAdapter = new FoodToSelectArrayAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getSelectedFood());
 
         final GridView gridViewFoodToSelect = (GridView) findViewById(R.id.foodToSelect);
-        gridViewFoodToSelect.setAdapter(foodToSelectAdapter);
+        gridViewFoodToSelect.setAdapter(foodToSelectArrayAdapter);
         gridViewFoodToSelect.setBackgroundResource(selectedFoodGroupColor);
 
         final GridView gridViewSelectedFood = (GridView) findViewById(R.id.selectedFood);
@@ -69,9 +72,9 @@ public class FoodSelectionActivity extends AppCompatActivity {
                     searchView.setQuery("",false);
                 }
 
-                Food selectedFood = foodToSelectAdapter.getItemAtPosition(position);
+                Food selectedFood = foodToSelectArrayAdapter.getItemAtPosition(position);
                 dataManagement.addSelectedFood(selectedFood);
-                foodToSelectAdapter.notifyDataSetChanged();
+                foodToSelectArrayAdapter.notifyDataSetChanged();
                 selectedFoodAdapter.notifyDataSetChanged();
             }
         });
@@ -81,7 +84,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
                                     int position, long id) {
                 Food selectedFood = selectedFoodAdapter.getItemAtPosition(position);
                 dataManagement.removeSelectedFood(selectedFood,selectedFoodGroup);
-                foodToSelectAdapter.notifyDataSetChanged();
+                foodToSelectArrayAdapter.notifyDataSetChanged();
                 selectedFoodAdapter.notifyDataSetChanged();
 
             }
@@ -105,7 +108,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                foodToSelectAdapter.getFilter().filter(newText);
+                foodToSelectArrayAdapter.getFilter().filter(newText);
                 return false;
             }
         });

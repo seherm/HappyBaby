@@ -182,7 +182,7 @@
     </food>
     <food>
         <name>Pork</name>
-        <foodgroup>Meats</foodgroup>
+        <foodgroup>Meat</foodgroup>
         <image>pork.jpg</image>
         <feedback>
             <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>

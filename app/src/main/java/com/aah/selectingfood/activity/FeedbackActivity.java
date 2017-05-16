@@ -1,6 +1,5 @@
-package com.aah.selectingfood;
+package com.aah.selectingfood.activity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -9,8 +8,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.aah.selectingfood.adapter.FeedbackViewPagerAdapter;
+import com.aah.selectingfood.R;
 import com.aah.selectingfood.model.Child;
-import com.aah.selectingfood.model.DataManagement;
+import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.FeedbackCard;
 
 import java.util.ArrayList;
@@ -75,7 +76,7 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
 
         for (int i = 0; i < dotsCount; i++) {
             dots[i] = new ImageView(this);
-            dots[i].setImageDrawable(getResources().getDrawable(R.drawable.nonselecteditem_dot));
+            dots[i].setImageDrawable(getResources().getDrawable(R.drawable.dot_nonselecteditem));
 
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -87,7 +88,7 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
             pagerIndicator.addView(dots[i], params);
         }
 
-        dots[0].setImageDrawable(getResources().getDrawable(R.drawable.selecteditem_dot));
+        dots[0].setImageDrawable(getResources().getDrawable(R.drawable.dot_selecteditem));
     }
 
     @Override
@@ -101,10 +102,10 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
     @Override
     public void onPageSelected(int position) {
         for (int i = 0; i < dotsCount; i++) {
-            dots[i].setImageDrawable(getResources().getDrawable(R.drawable.nonselecteditem_dot));
+            dots[i].setImageDrawable(getResources().getDrawable(R.drawable.dot_nonselecteditem));
         }
 
-        dots[position].setImageDrawable(getResources().getDrawable(R.drawable.selecteditem_dot));
+        dots[position].setImageDrawable(getResources().getDrawable(R.drawable.dot_selecteditem));
     }
 
 

@@ -1,4 +1,4 @@
-package com.aah.selectingfood.model;
+package com.aah.selectingfood.helper;
 
 import android.content.Context;
 import android.graphics.Bitmap;

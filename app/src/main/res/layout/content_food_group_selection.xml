@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.aah.selectingfood.FoodGroupSelectionActivity"
-    tools:showIn="@layout/activity_food_group_selection">
+    tools:context="com.aah.selectingfood.activity.FoodGroupSelectionActivity"
+    tools:showIn="@layout/activity_food_group_selection"
+    android:background="@color/background">
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline1"
@@ -79,7 +80,7 @@
                 android:id="@+id/fruitsImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/fruits" />
+                android:src="@drawable/foodgroup_fruits" />
         </LinearLayout>
 
         <LinearLayout
@@ -104,7 +105,7 @@
                 android:id="@+id/legumesImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/legumes" />
+                android:src="@drawable/foodgroup_legumes" />
         </LinearLayout>
 
 
@@ -132,7 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:src="@drawable/meat" />
+                android:src="@drawable/foodgroup_meat" />
         </LinearLayout>
     </LinearLayout>
 
@@ -169,7 +170,7 @@
                 android:id="@+id/vegetablesImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/vegetables" />
+                android:src="@drawable/foodgroup_vegetables" />
         </LinearLayout>
 
         <LinearLayout
@@ -194,7 +195,7 @@
                 android:id="@+id/junkFoodImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/junk_food" />
+                android:src="@drawable/foodgroup_junk_food" />
         </LinearLayout>
 
 
@@ -222,7 +223,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
-                android:src="@drawable/starches" />
+                android:src="@drawable/foodgroup_starches" />
         </LinearLayout>
     </LinearLayout>
 

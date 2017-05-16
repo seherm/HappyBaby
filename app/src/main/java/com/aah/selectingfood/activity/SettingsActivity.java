@@ -1,28 +1,26 @@
-package com.aah.selectingfood;
+package com.aah.selectingfood.activity;
 
+import com.aah.selectingfood.GlobalState;
+import com.aah.selectingfood.MyContextWrapper;
+import com.aah.selectingfood.R;
+import com.aah.selectingfood.helper.ImageSaver;
 import com.aah.selectingfood.model.*;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.CheckBox;
 import android.widget.RadioGroup;
 
-import com.aah.selectingfood.model.DataManagement;
-
-import java.util.Locale;
+import com.aah.selectingfood.helper.DataManagement;
 
 public class SettingsActivity extends AppCompatActivity {
 

@@ -1,5 +1,6 @@
-package com.aah.selectingfood;
+package com.aah.selectingfood.adapter;
 
+import com.aah.selectingfood.R;
 import com.aah.selectingfood.model.*;
 
 import android.content.Context;
@@ -20,14 +21,14 @@ import java.util.ArrayList;
  * Created by sebas on 28.04.2017.
  */
 
-public class FoodToSelectAdapter extends ArrayAdapter implements Filterable {
+public class FoodToSelectArrayAdapter extends ArrayAdapter implements Filterable {
 
     private Context context;
     private int layoutResourceId;
     private ArrayList<Food> originalFoods;
     private ArrayList<Food> filteredFoods;
 
-    public FoodToSelectAdapter(Context context, int layoutResourceId, ArrayList<Food> foods) {
+    public FoodToSelectArrayAdapter(Context context, int layoutResourceId, ArrayList<Food> foods) {
         super(context, layoutResourceId, foods);
         this.layoutResourceId = layoutResourceId;
         this.context = context;

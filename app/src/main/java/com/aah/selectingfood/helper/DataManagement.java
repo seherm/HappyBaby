@@ -1,9 +1,13 @@
-package com.aah.selectingfood.model;
+package com.aah.selectingfood.helper;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+
+import com.aah.selectingfood.model.Child;
+import com.aah.selectingfood.model.Food;
+import com.aah.selectingfood.model.User;
 
 import java.util.ArrayList;
 import java.io.InputStream;
@@ -93,7 +97,7 @@ public class DataManagement {
 
         // Parse XML
         try {
-            InputStream foodsFIS = context.getAssets().open("xml/foods.xml");
+            InputStream foodsFIS = context.getAssets().open("foodList/foods.xml");
 
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
@@ -230,10 +234,6 @@ public class DataManagement {
 
     public ArrayList<Food> getSelectedFood() {
         return selectedFood;
-    }
-
-    public ArrayList<Food> getAllFood() {
-        return allFood;
     }
 
     public User getUser() {

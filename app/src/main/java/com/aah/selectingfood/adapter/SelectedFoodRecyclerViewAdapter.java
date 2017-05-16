@@ -1,4 +1,4 @@
-package com.aah.selectingfood;
+package com.aah.selectingfood.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.aah.selectingfood.model.DataManagement;
+import com.aah.selectingfood.R;
 import com.aah.selectingfood.model.Food;
 
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
  * Created by sebas on 16.05.2017.
  */
 
-public class SelectedFoodAdapter extends RecyclerView.Adapter<SelectedFoodAdapter.ViewHolder> {
+public class SelectedFoodRecyclerViewAdapter extends RecyclerView.Adapter<SelectedFoodRecyclerViewAdapter.ViewHolder> {
 
     public interface OnItemClickListener {
         void onItemClick(Food item);
@@ -28,7 +28,7 @@ public class SelectedFoodAdapter extends RecyclerView.Adapter<SelectedFoodAdapte
     private final OnItemClickListener listener;
 
 
-    public SelectedFoodAdapter(List<Food> selectedFood, Context context, OnItemClickListener listener) {
+    public SelectedFoodRecyclerViewAdapter(List<Food> selectedFood, Context context, OnItemClickListener listener) {
         this.selectedFood = selectedFood;
         this.context = context;
         this.listener = listener;

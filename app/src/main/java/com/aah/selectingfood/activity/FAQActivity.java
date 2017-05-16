@@ -1,4 +1,4 @@
-package com.aah.selectingfood;
+package com.aah.selectingfood.activity;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,6 +9,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast; //todo delete line
+
+import com.aah.selectingfood.GlobalState;
+import com.aah.selectingfood.R;
 
 public class FAQActivity extends AppCompatActivity {
 

@@ -1,12 +1,8 @@
-package com.aah.selectingfood;
+package com.aah.selectingfood.activity;
 
-import com.aah.selectingfood.model.*;
-
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -19,9 +15,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
-import com.aah.selectingfood.model.DataManagement;
-
-import java.io.InputStream;
+import com.aah.selectingfood.GlobalState;
+import com.aah.selectingfood.R;
+import com.aah.selectingfood.helper.DataManagement;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

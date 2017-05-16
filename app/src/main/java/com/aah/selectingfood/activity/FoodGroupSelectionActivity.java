@@ -1,4 +1,4 @@
-package com.aah.selectingfood;
+package com.aah.selectingfood.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,17 +13,16 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.aah.selectingfood.model.DataManagement;
+import com.aah.selectingfood.R;
+import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
+import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.Food;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class FoodGroupSelectionActivity extends AppCompatActivity {
 
     private DataManagement dataManagement;
     private RecyclerView recyclerViewSelectedFood;
-    private SelectedFoodAdapter selectedFoodAdapter;
+    private SelectedFoodRecyclerViewAdapter selectedFoodRecyclerViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,17 +44,17 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         //Configure Selected Food View
         dataManagement = DataManagement.getInstance(this);
         recyclerViewSelectedFood = (RecyclerView) findViewById(R.id.selectedFoodRecyclerView);
-        selectedFoodAdapter = new SelectedFoodAdapter(dataManagement.getSelectedFood(), getApplication(), new SelectedFoodAdapter.OnItemClickListener() {
+        selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(dataManagement.getSelectedFood(), getApplication(), new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Food item) {
                 dataManagement.removeSelectedFood(item);
-                selectedFoodAdapter.notifyDataSetChanged();
+                selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
             }
         });
 
         LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(FoodGroupSelectionActivity.this, LinearLayoutManager.HORIZONTAL, false);
         recyclerViewSelectedFood.setLayoutManager(horizontalLayoutManager);
-        recyclerViewSelectedFood.setAdapter(selectedFoodAdapter);
+        recyclerViewSelectedFood.setAdapter(selectedFoodRecyclerViewAdapter);
 
         //Configure Image of the Baby
         ImageView imageViewChild = (ImageView) findViewById(R.id.childImageView);
