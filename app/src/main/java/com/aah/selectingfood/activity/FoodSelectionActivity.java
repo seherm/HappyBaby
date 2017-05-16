@@ -47,22 +47,15 @@ public class FoodSelectionActivity extends AppCompatActivity {
         SharedPreferences sharedPref = getSharedPreferences("user_selection", MODE_PRIVATE);
         final String selectedFoodGroup = sharedPref.getString("SELECTED_FOOD_GROUP",null);
         final int selectedFoodGroupColor = sharedPref.getInt("SELECTED_FOOD_GROUP_COLOR",0);
-
         dataManagement = DataManagement.getInstance(this);
         dataManagement.generateFoodList(selectedFoodGroup);
-
         setTitle(selectedFoodGroup);
 
+        //Configure Food to Select View
         foodToSelectArrayAdapter = new FoodToSelectArrayAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getFoodToSelect());
-        selectedFoodAdapter = new FoodToSelectArrayAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getSelectedFood());
-
         final GridView gridViewFoodToSelect = (GridView) findViewById(R.id.foodToSelect);
         gridViewFoodToSelect.setAdapter(foodToSelectArrayAdapter);
         gridViewFoodToSelect.setBackgroundResource(selectedFoodGroupColor);
-
-        final GridView gridViewSelectedFood = (GridView) findViewById(R.id.selectedFood);
-        gridViewSelectedFood.setAdapter(selectedFoodAdapter);
-
         gridViewFoodToSelect.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
@@ -71,7 +64,6 @@ public class FoodSelectionActivity extends AppCompatActivity {
                     item.collapseActionView();
                     searchView.setQuery("",false);
                 }
-
                 Food selectedFood = foodToSelectArrayAdapter.getItemAtPosition(position);
                 dataManagement.addSelectedFood(selectedFood);
                 foodToSelectArrayAdapter.notifyDataSetChanged();
@@ -79,6 +71,10 @@ public class FoodSelectionActivity extends AppCompatActivity {
             }
         });
 
+        //Configure Selected Food View
+        selectedFoodAdapter = new FoodToSelectArrayAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getSelectedFood());
+        final GridView gridViewSelectedFood = (GridView) findViewById(R.id.selectedFood);
+        gridViewSelectedFood.setAdapter(selectedFoodAdapter);
         gridViewSelectedFood.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {

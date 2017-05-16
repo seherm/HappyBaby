@@ -8,12 +8,20 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.aah.selectingfood.R;
+import com.aah.selectingfood.adapter.FoodToSelectArrayAdapter;
 import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
 import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.Food;
@@ -23,6 +31,12 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
     private DataManagement dataManagement;
     private RecyclerView recyclerViewSelectedFood;
     private SelectedFoodRecyclerViewAdapter selectedFoodRecyclerViewAdapter;
+    private GridView foodToSelectGridView;
+    private FoodToSelectArrayAdapter foodToSelectArrayAdapter;
+    private SearchView searchView;
+    private MenuItem item;
+    private LinearLayout foodGroup1;
+    private LinearLayout foodGroup2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +54,6 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
             }
         });
 
-
         //Configure Selected Food View
         dataManagement = DataManagement.getInstance(this);
         recyclerViewSelectedFood = (RecyclerView) findViewById(R.id.selectedFoodRecyclerView);
@@ -51,7 +64,6 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
                 selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
             }
         });
-
         LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(FoodGroupSelectionActivity.this, LinearLayoutManager.HORIZONTAL, false);
         recyclerViewSelectedFood.setLayoutManager(horizontalLayoutManager);
         recyclerViewSelectedFood.setAdapter(selectedFoodRecyclerViewAdapter);
@@ -63,6 +75,28 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
 
         //TODO: Set Instant Feedback Text
         TextView instantFeedback = (TextView) findViewById(R.id.instantFeedback);
+
+
+        //Configure Search View
+        foodToSelectArrayAdapter = new FoodToSelectArrayAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getAllFood());
+        foodGroup1 = (LinearLayout) findViewById(R.id.foodGroups1);
+        foodGroup2 = (LinearLayout) findViewById(R.id.foodGroups2);
+        foodToSelectGridView = (GridView) findViewById(R.id.foodToSelect);
+        foodToSelectGridView.setAdapter(foodToSelectArrayAdapter);
+        foodToSelectGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+                //collapse searchView
+                if (searchView.isShown()) {
+                    item.collapseActionView();
+                    searchView.setQuery("", false);
+                }
+                Food selectedFood = foodToSelectArrayAdapter.getItemAtPosition(position);
+                dataManagement.addSelectedFood(selectedFood);
+                foodToSelectArrayAdapter.notifyDataSetChanged();
+                selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
+            }
+        });
     }
 
     public void goToFoodSelectionPage(View view) {
@@ -76,7 +110,7 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.legumesBrown);
                 break;
             case R.id.meat:
-                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Meats");
+                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Meat");
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.meatsRed);
                 break;
             case R.id.vegetables:
@@ -113,5 +147,40 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt(key, content);
         editor.apply();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //used to display search bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.options_menu, menu);
+
+        item = menu.findItem(R.id.search);
+        searchView = (SearchView) item.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if (newText.equals("")) {
+                    foodToSelectGridView.setVisibility(View.GONE);
+                    foodGroup1.setVisibility(View.VISIBLE);
+                    foodGroup2.setVisibility(View.VISIBLE);
+                    return false;
+                } else {
+                    foodToSelectGridView.setVisibility(View.VISIBLE);
+                    foodGroup1.setVisibility(View.GONE);
+                    foodGroup2.setVisibility(View.GONE);
+                    foodToSelectArrayAdapter.getFilter().filter(newText);
+                    return false;
+                }
+            }
+        });
+
+        return true;
     }
 }

@@ -236,6 +236,10 @@ public class DataManagement {
         return selectedFood;
     }
 
+    public ArrayList<Food> getAllFood() {
+        return allFood;
+    }
+
     public User getUser() {
         return user;
     }
