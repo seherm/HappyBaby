@@ -105,9 +105,9 @@
 
     <ImageButton
         android:id="@+id/imageButtonPhotoHappy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="takePhotoHappy"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="selectImage"
         android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/imageButtonPhotoNeutral"
@@ -116,9 +116,9 @@
 
     <ImageButton
         android:id="@+id/imageButtonPhotoNeutral"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="takePhotoNeutral"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="selectImage"
         android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="@+id/imageButtonPhotoHappy"
         app:layout_constraintRight_toLeftOf="@+id/imageButtonPhotoSad"
@@ -127,9 +127,9 @@
 
     <ImageButton
         android:id="@+id/imageButtonPhotoSad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="takePhotoSad"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="selectImage"
         android:layout_marginTop="10dp"
         app:layout_constraintLeft_toRightOf="@+id/imageButtonPhotoNeutral"
         app:layout_constraintRight_toRightOf="parent"
