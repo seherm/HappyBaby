@@ -6,16 +6,20 @@
         android:name="android.hardware.camera"
         android:required="true" />
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".GlobalState"
+        android:name=".helper.GlobalState"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -26,7 +30,7 @@
             android:exported="true" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -36,72 +40,66 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FoodGroupSelectionActivity"
+            android:name=".activity.FoodGroupSelectionActivity"
             android:label="@string/title_activity_food_group_selection"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.aah.selectingfood.MainActivity" />
+                android:value="com.aah.selectingfood.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".AboutActivity"
+            android:name=".activity.AboutActivity"
             android:label="@string/title_activity_about"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.aah.selectingfood.MainActivity" />
+                android:value="com.aah.selectingfood.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".FAQActivity"
+            android:name=".activity.FAQActivity"
             android:label="@string/title_activity_faq"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.aah.selectingfood.MainActivity" />
+                android:value="com.aah.selectingfood.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".SettingsActivity"
+
+            android:name=".activity.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.aah.selectingfood.MainActivity" />
+                android:value="com.aah.selectingfood.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".RecipesActivity"
+            android:name=".activity.RecipesActivity"
             android:label="@string/title_activity_recipes"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.aah.selectingfood.MainActivity" />
+                android:value="com.aah.selectingfood.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".FoodSelectionActivity"
+            android:name=".activity.FoodSelectionActivity"
             android:label="@string/title_activity_food_selection"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.aah.selectingfood.FoodGroupSelectionActivity" />
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
-
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
+                android:value="com.aah.selectingfood.activity.FoodGroupSelectionActivity" />
         </activity>
         <activity
-            android:name=".FeedbackActivity"
+            android:name=".activity.FeedbackActivity"
             android:label="@string/title_activity_feedback"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.aah.selectingfood.FoodSelectionActivity" />
+                android:value="com.aah.selectingfood.activity.FoodSelectionActivity" />
         </activity>
     </application>
 

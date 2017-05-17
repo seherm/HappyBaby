@@ -3,6 +3,9 @@ package com.aah.selectingfood.model;
 import android.content.Context;
 import android.graphics.Bitmap;
 
+import com.aah.selectingfood.helper.DataManagement;
+import com.aah.selectingfood.helper.ImageSaver;
+
 import java.util.ArrayList;
 
 /**

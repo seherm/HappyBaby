@@ -4,16 +4,20 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="background">#f0f0f0</color>
+    <color name="button_yellow">#f4b400</color>
+    <color name="grey">#cccccc</color>
+
+    <!-->Basic Colors<-->
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 
-    <color name="pestoGreenPrimary">#00aa8d</color>
-    <color name="pestoGreenLight">#57dcbd</color>
-    <color name="pestoGreenDark">#007a60</color>
-    
-    <color name="greyBrown">#D4CDC7</color>
-    <color name="blueGreen">#324A5E</color>
-    <color name="indigoDark">#434A54</color>
-    <color name="yellow">#EAC663</color>
+    <!-->Food Groups Colors<-->
+    <color name="fruitsBlue">#3F51B5</color>
+    <color name="legumesBrown">#795548</color>
+    <color name="meatsRed">#DB4437</color>
+    <color name="vegetablesGreen">#0F9D58</color>
+    <color name="junkFoodPink">#E91E63</color>
+    <color name="starchesYellow">#F4B400</color>
 
 </resources>

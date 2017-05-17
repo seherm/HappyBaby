@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<foods>
+    <food>
+        <name>Yellow Noodle</name>
+        <foodgroup>Starches</foodgroup>
+        <image>yellow_noodle.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+    <food>
+        <name>Rice</name>
+        <foodgroup>Starches</foodgroup>
+        <image>rice.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+    <food>
+        <name>Watermelon</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>watermelon.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+    <food>
+        <name>Papaya</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>papaya.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+    <food>
+        <name>Mango</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>mango.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+    <food>
+        <name>Jackfruit</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>jackfruit.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+    <food>
+        <name>Guava</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>guava.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+    <food>
+        <name>Green Orange</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>green_orange.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+    <food>
+        <name>Green Bananas</name>
+        <foodgroup>Fruits</foodgroup>
+        <image>green_bananas.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+    <food>
+        <name>Pork</name>
+        <foodgroup>Meat</foodgroup>
+        <image>pork.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+    <food>
+        <name>Red Mung Beans</name>
+        <foodgroup>Legumes</foodgroup>
+        <image>red_mung_beans.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+    <food>
+        <name>Zucchini</name>
+        <foodgroup>Vegetables</foodgroup>
+        <image>zucchini.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+    <food>
+        <name>Soft Drink</name>
+        <foodgroup>Junk Food</foodgroup>
+        <image>coke_can.jpg</image>
+        <feedback>
+            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
+            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
+            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
+            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
+            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
+            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
+            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
+        </feedback>
+    </food>
+</foods>

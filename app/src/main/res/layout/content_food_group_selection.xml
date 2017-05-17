@@ -5,124 +5,284 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.aah.selectingfood.FoodGroupSelectionActivity"
+    tools:context="com.aah.selectingfood.activity.FoodGroupSelectionActivity"
     tools:showIn="@layout/activity_food_group_selection">
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guideline1"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".7" />
+        app:layout_constraintGuide_percent="0.3"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="154dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
 
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:clickable="true"
-        android:src="@drawable/ic_menu_send"
-        app:layout_constraintBottom_toBottomOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
-
-
-    <GridLayout
-        android:id="@+id/gridLayoutFoodGroups"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:columnCount="2"
-        android:background="@color/greyBrown"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/guideline">
-
-        <Button
-            android:id="@+id/buttonStarches"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill"
-            android:gravity="center"
-            android:onClick="showStarches"
-            android:text="@string/starches"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/buttonFruits"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill"
-            android:gravity="center"
-            android:onClick="showFruits"
-            android:text="@string/fruits"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/buttonMeats"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill"
-            android:gravity="center"
-            android:onClick="showMeats"
-            android:text="@string/meats"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/buttonLegumes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill"
-            android:gravity="center"
-            android:onClick="showLegumes"
-            android:text="@string/legumes"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/buttonVegetables"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill"
-            android:gravity="center"
-            android:onClick="showVegetables"
-            android:text="@string/vegetables"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/buttonJunkFood"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill"
-            android:gravity="center"
-            android:onClick="showJunkFood"
-            android:text="@string/junk_food"
-            android:textAlignment="center"
-            android:textSize="18sp" />
-    </GridLayout>
+        android:src="@drawable/ic_check"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="parent" />
 
     <GridView
-        android:id="@+id/selectedFood"
+        android:id="@+id/foodToSelect"
+        android:visibility="gone"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:columnWidth="100dp"
         android:gravity="center"
-        android:background="@color/yellow"
         android:horizontalSpacing="10dp"
         android:verticalSpacing="10dp"
         android:padding="10dp"
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"/>
+
+
+    <LinearLayout
+        android:id="@+id/foodGroups1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:baselineAligned="false"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/fruits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/fruitsBlue"
+            android:onClick="goToFoodSelectionPage"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/fruitsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/fruits"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/fruitsImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/foodgroup_fruits" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/legumes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/legumesBrown"
+            android:onClick="goToFoodSelectionPage"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/legumesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/legumes"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/legumesImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/foodgroup_legumes" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/meat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/meatsRed"
+            android:onClick="goToFoodSelectionPage"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/meatText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/meat"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/meatImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/foodgroup_meat" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/foodGroups2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:baselineAligned="false"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline1">
+
+        <LinearLayout
+            android:id="@+id/vegetables"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/vegetablesGreen"
+            android:onClick="goToFoodSelectionPage"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/vegetablesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/vegetables"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/vegetablesImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/foodgroup_vegetables" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/junkFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/junkFoodPink"
+            android:onClick="goToFoodSelectionPage"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/junkFoodText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/junk_food"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/junkFoodImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/foodgroup_junk_food" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/starches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/starchesYellow"
+            android:onClick="goToFoodSelectionPage"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/starchesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/starches"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/starchesImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/foodgroup_starches" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/childImageView"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/instantFeedback"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+
+    <TextView
+        android:id="@+id/instantFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/food_message"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintLeft_toRightOf="@+id/childImageView"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/selectedFoodRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"/>
 
 
 </android.support.constraint.ConstraintLayout>

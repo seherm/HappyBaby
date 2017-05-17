@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.aah.selectingfood.SettingsActivity"
+    tools:context="com.aah.selectingfood.activity.SettingsActivity"
     tools:showIn="@layout/activity_settings">
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
         android:text="@string/select_language"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textSize="@dimen/text_size_large"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,7 +52,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
         android:text="@string/ages_of_your_children"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textSize="@dimen/text_size_large"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroupLanguage" />
 
@@ -63,7 +63,6 @@
         android:layout_marginTop="10dp"
         android:onClick="changeChildrenAges"
         android:text="@string/children_young_category"
-        android:textSize="12sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/checkBoxChildMiddle"
         app:layout_constraintTop_toBottomOf="@+id/textViewChildrenAges" />
@@ -75,7 +74,6 @@
         android:layout_marginTop="10dp"
         android:onClick="changeChildrenAges"
         android:text="@string/children_middle_category"
-        android:textSize="12sp"
         app:layout_constraintLeft_toRightOf="@+id/checkBoxChildYoung"
         app:layout_constraintRight_toLeftOf="@+id/checkBoxChildOld"
         app:layout_constraintTop_toBottomOf="@+id/textViewChildrenAges" />
@@ -87,7 +85,6 @@
         android:layout_marginTop="10dp"
         android:onClick="changeChildrenAges"
         android:text="@string/children_old_category"
-        android:textSize="12sp"
         app:layout_constraintLeft_toRightOf="@+id/checkBoxChildMiddle"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewChildrenAges" />
@@ -99,41 +96,38 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
         android:text="@string/change_photos_of_baby"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textSize="@dimen/text_size_large"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxChildYoung" />
 
     <ImageButton
         android:id="@+id/imageButtonPhotoHappy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="takePhotoHappy"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="selectImage"
         android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/imageButtonPhotoNeutral"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"
-        android:src="@drawable/ic_menu_camera" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"/>
 
     <ImageButton
         android:id="@+id/imageButtonPhotoNeutral"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="takePhotoNeutral"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="selectImage"
         android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="@+id/imageButtonPhotoHappy"
         app:layout_constraintRight_toLeftOf="@+id/imageButtonPhotoSad"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"
-        android:src="@drawable/ic_menu_camera" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"/>
 
     <ImageButton
         android:id="@+id/imageButtonPhotoSad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="takePhotoSad"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:onClick="selectImage"
         android:layout_marginTop="10dp"
         app:layout_constraintLeft_toRightOf="@+id/imageButtonPhotoNeutral"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"
-        android:src="@drawable/ic_menu_camera" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"/>
 
 </android.support.constraint.ConstraintLayout>
