@@ -15,7 +15,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
         android:text="@string/select_language"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textSize="@dimen/text_size_large"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,7 +52,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
         android:text="@string/ages_of_your_children"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textSize="@dimen/text_size_large"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroupLanguage" />
 
@@ -63,7 +63,6 @@
         android:layout_marginTop="10dp"
         android:onClick="changeChildrenAges"
         android:text="@string/children_young_category"
-        android:textSize="12sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/checkBoxChildMiddle"
         app:layout_constraintTop_toBottomOf="@+id/textViewChildrenAges" />
@@ -75,7 +74,6 @@
         android:layout_marginTop="10dp"
         android:onClick="changeChildrenAges"
         android:text="@string/children_middle_category"
-        android:textSize="12sp"
         app:layout_constraintLeft_toRightOf="@+id/checkBoxChildYoung"
         app:layout_constraintRight_toLeftOf="@+id/checkBoxChildOld"
         app:layout_constraintTop_toBottomOf="@+id/textViewChildrenAges" />
@@ -87,7 +85,6 @@
         android:layout_marginTop="10dp"
         android:onClick="changeChildrenAges"
         android:text="@string/children_old_category"
-        android:textSize="12sp"
         app:layout_constraintLeft_toRightOf="@+id/checkBoxChildMiddle"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewChildrenAges" />
@@ -99,7 +96,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
         android:text="@string/change_photos_of_baby"
-        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textSize="@dimen/text_size_large"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxChildYoung" />
 

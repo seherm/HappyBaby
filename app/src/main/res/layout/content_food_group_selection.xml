@@ -265,7 +265,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginStart="20dp"
         android:text="@string/food_message"
-        android:textSize="20sp"
+        android:textSize="@dimen/text_size_medium"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintLeft_toRightOf="@+id/childImageView"
         app:layout_constraintRight_toLeftOf="parent"

@@ -1,11 +1,7 @@
-package com.aah.selectingfood;
+package com.aah.selectingfood.helper;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.util.Log;
-
-import java.util.Locale;
 
 /**
  * Created by flori on 08.05.2017.

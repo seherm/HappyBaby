@@ -2,15 +2,11 @@ package com.aah.selectingfood.activity;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.View;
 import android.widget.Toast; //todo delete line
 
-import com.aah.selectingfood.GlobalState;
+import com.aah.selectingfood.helper.GlobalState;
 import com.aah.selectingfood.R;
 
 public class FAQActivity extends AppCompatActivity {

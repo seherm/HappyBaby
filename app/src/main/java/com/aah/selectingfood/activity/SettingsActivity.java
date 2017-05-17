@@ -1,7 +1,7 @@
 package com.aah.selectingfood.activity;
 
-import com.aah.selectingfood.GlobalState;
-import com.aah.selectingfood.MyContextWrapper;
+import com.aah.selectingfood.helper.GlobalState;
+import com.aah.selectingfood.helper.MyContextWrapper;
 import com.aah.selectingfood.R;
 import com.aah.selectingfood.helper.ImageSaver;
 import com.aah.selectingfood.model.*;
@@ -13,7 +13,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,8 +29,6 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.aah.selectingfood.helper.DataManagement;
-
-import java.io.ByteArrayOutputStream;
 
 public class SettingsActivity extends AppCompatActivity {
 

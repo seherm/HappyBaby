@@ -1,12 +1,12 @@
-package com.aah.selectingfood;
+package com.aah.selectingfood.helper;
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.util.Log;
+
+import com.aah.selectingfood.R;
 
 import java.util.Locale;
 /**
