@@ -1,17 +1,25 @@
 package com.aah.selectingfood;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.model.DataManagement;
 import com.aah.selectingfood.model.FeedbackCard;
+import com.facebook.CallbackManager;
+import com.facebook.share.model.SharePhoto;
+import com.facebook.share.model.SharePhotoContent;
+import com.facebook.share.widget.ShareDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +32,8 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
     private ImageView[] dots;
     private FeedbackViewPagerAdapter pagerAdapter;
 
+    CallbackManager callbackManager;
+    ShareDialog shareDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +53,17 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         viewPager.setPageMargin(100);
         viewPager.addOnPageChangeListener(this);
         setUiPageViewController();
+
+        //Facebook
+        callbackManager = CallbackManager.Factory.create();
+        shareDialog = new ShareDialog(this);
+
+        final Button button = (Button) findViewById(R.id.shareButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                shareOnFacebook(R.mipmap.ic_launcher);
+            }
+        });
     }
 
     private List<FeedbackCard> getFeedbackCards(){
@@ -90,6 +111,21 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         dots[0].setImageDrawable(getResources().getDrawable(R.drawable.selecteditem_dot));
     }
 
+    private void shareOnFacebook(int photoResource){
+        Bitmap image = BitmapFactory.decodeResource(getResources(), photoResource);
+        SharePhoto photo = new SharePhoto.Builder()
+                .setBitmap(image)
+                .setCaption("testesteestetetstestsetse")
+                .build();
+
+        SharePhotoContent content = new SharePhotoContent.Builder()
+                .addPhoto(photo)
+                .build();
+
+        //ShareApi.share(content, null);
+        shareDialog.show(content);
+    }
+
     @Override
     public void onClick(View v) {
     }
@@ -110,5 +146,11 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
 
     @Override
     public void onPageScrollStateChanged(int state) {
+    }
+
+    @Override
+    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 }

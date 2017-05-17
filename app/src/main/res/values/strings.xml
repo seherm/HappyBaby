@@ -50,4 +50,5 @@
     <string name="junk_food">Junk Food</string>
 
     <string name="test_string">engeng</string>
+    <string name="title_activity_sharing">SharingActivity</string>
 </resources>
