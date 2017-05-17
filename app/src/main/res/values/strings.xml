@@ -9,6 +9,7 @@
 
     <!--Button Text-->
     <string name="start">Start</string>
+    <string name="share">Share</string>
 
     <!--Page Titles-->
     <string name="title_activity_food_group_selection">Select Food Group</string>

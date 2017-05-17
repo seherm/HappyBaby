@@ -4,7 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -12,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.aah.selectingfood.adapter.FeedbackViewPagerAdapter;
 import com.aah.selectingfood.R;
@@ -32,6 +36,7 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
     private int dotsCount;
     private ImageView[] dots;
     private FeedbackViewPagerAdapter pagerAdapter;
+    ViewPager viewPager;
 
     CallbackManager callbackManager;
     ShareDialog shareDialog;
@@ -43,12 +48,12 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setSupportActionBar(toolbar);
-        if(getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.pager_introduction);
+        viewPager = (ViewPager) findViewById(R.id.pager_introduction);
         pagerIndicator = (LinearLayout) findViewById(R.id.viewPagerCountDots);
         pagerAdapter = new FeedbackViewPagerAdapter(FeedbackActivity.this, getFeedbackCards());
         viewPager.setAdapter(pagerAdapter);
@@ -64,12 +69,26 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         final Button button = (Button) findViewById(R.id.shareButton);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                shareOnFacebook(R.mipmap.ic_launcher);
+                final int position = viewPager.getCurrentItem();
+                View view = viewPager.getChildAt(position);
+                Bitmap image = getBitmapFromView(view);
+                shareOnFacebook(image);
             }
         });
     }
 
-    private List<FeedbackCard> getFeedbackCards(){
+    public static Bitmap getBitmapFromView(View view) {
+        view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+        Bitmap bitmap = Bitmap.createBitmap(view.getMeasuredWidth(), view.getMeasuredHeight(),
+                Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
+        view.draw(canvas);
+        return bitmap;
+    }
+
+
+    private List<FeedbackCard> getFeedbackCards() {
         List<FeedbackCard> feedbackCards = new ArrayList<>();
 
         // Create all different feedback cards
@@ -77,16 +96,16 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         // Create summary feedback for children 1-3
         // TODO: Make sure the summary feedback is correct for 1-3 children.
         FeedbackCard finalFoodSummaryFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalFoodSummary(DataManagement.getInstance(this).getSelectedFood());
-        finalFoodSummaryFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("balance.png","feedbackImages"));
+        finalFoodSummaryFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("balance.png", "feedbackImages"));
         feedbackCards.add(finalFoodSummaryFeedback);
 
         // Create individual food feedback for children 1-3
         // TODO: Analyze each food.
 
         // Create general feedback for children 1-3
-        for(Child child : DataManagement.getInstance(this).getUser().getChildren()){
+        for (Child child : DataManagement.getInstance(this).getUser().getChildren()) {
             FeedbackCard generalAgeFeedback = child.giveFeedbackFinalGeneral();
-            generalAgeFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("childHappyDefault.png","childrenImages"));
+            generalAgeFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("childHappyDefault.png", "childrenImages"));
             feedbackCards.add(generalAgeFeedback);
         }
         return feedbackCards;
@@ -114,8 +133,8 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         dots[0].setImageDrawable(getResources().getDrawable(R.drawable.dot_selecteditem));
     }
 
-    private void shareOnFacebook(int photoResource){
-        Bitmap image = BitmapFactory.decodeResource(getResources(), photoResource);
+    private void shareOnFacebook(Bitmap image) {
+        //Bitmap image = BitmapFactory.decodeResource(getResources(), photoResource);
         SharePhoto photo = new SharePhoto.Builder()
                 .setBitmap(image)
                 .setCaption("testesteestetetstestsetse")
