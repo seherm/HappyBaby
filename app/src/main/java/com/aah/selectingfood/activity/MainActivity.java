@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity
 
         if (!prefs.contains("firstrun")) {
             state.setFirstRun(true);
-            prefs.edit().putBoolean("firstrun", false).commit();
+            prefs.edit().putBoolean("firstrun", false).apply();
         }
     }
 }

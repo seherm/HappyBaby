@@ -29,7 +29,6 @@ import com.aah.selectingfood.model.Food;
 public class FoodGroupSelectionActivity extends AppCompatActivity {
 
     private DataManagement dataManagement;
-    private RecyclerView recyclerViewSelectedFood;
     private SelectedFoodRecyclerViewAdapter selectedFoodRecyclerViewAdapter;
     private GridView foodToSelectGridView;
     private FoodToSelectArrayAdapter foodToSelectArrayAdapter;
@@ -44,7 +43,9 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_food_group_selection);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +57,7 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
 
         //Configure Selected Food View
         dataManagement = DataManagement.getInstance(this);
-        recyclerViewSelectedFood = (RecyclerView) findViewById(R.id.selectedFoodRecyclerView);
+        RecyclerView recyclerViewSelectedFood = (RecyclerView) findViewById(R.id.selectedFoodRecyclerView);
         selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(dataManagement.getSelectedFood(), getApplication(), new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Food item) {

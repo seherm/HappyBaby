@@ -56,7 +56,9 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         checkPermissions();
 
@@ -123,7 +125,7 @@ public class SettingsActivity extends AppCompatActivity {
         conf.locale = myLocale;
         res.updateConfiguration(conf, dm); todo delete before completion*/
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-        sharedPref.edit().putString("language", lang).commit();
+        sharedPref.edit().putString("language", lang).apply();
         GlobalState state = ((GlobalState) getApplicationContext());
         state.setLanguage(lang);
 
@@ -198,7 +200,6 @@ public class SettingsActivity extends AppCompatActivity {
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
                 }
-                return;
             }
         }
     }

@@ -19,7 +19,6 @@ import java.util.List;
 
 public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
 
-    private ViewPager viewPager;
     private LinearLayout pagerIndicator;
     private int dotsCount;
     private ImageView[] dots;
@@ -33,10 +32,12 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
 
-        viewPager = (ViewPager) findViewById(R.id.pager_introduction);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.pager_introduction);
         pagerIndicator = (LinearLayout) findViewById(R.id.viewPagerCountDots);
         pagerAdapter = new FeedbackViewPagerAdapter(FeedbackActivity.this, getFeedbackCards());
         viewPager.setAdapter(pagerAdapter);

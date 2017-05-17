@@ -24,13 +24,12 @@ public class SelectedFoodRecyclerViewAdapter extends RecyclerView.Adapter<Select
     }
 
     private List<Food> selectedFood;
-    private Context context;
     private final OnItemClickListener listener;
 
 
     public SelectedFoodRecyclerViewAdapter(List<Food> selectedFood, Context context, OnItemClickListener listener) {
         this.selectedFood = selectedFood;
-        this.context = context;
+        Context context1 = context;
         this.listener = listener;
     }
 

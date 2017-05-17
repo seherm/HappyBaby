@@ -17,11 +17,13 @@ public class FAQActivity extends AppCompatActivity {
         setContentView(R.layout.activity_faq);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         //TODO delete following part
         GlobalState state = ((GlobalState) getApplicationContext());
-        Context context = getApplicationContext();;
+        Context context = getApplicationContext();
         int duration = Toast.LENGTH_LONG;
 
         Toast toast = Toast.makeText(context, String.valueOf(state.getFirstRun()), duration);

@@ -29,7 +29,6 @@ public class FoodSelectionActivity extends AppCompatActivity {
 
     private DataManagement dataManagement;
     private FoodToSelectArrayAdapter foodToSelectArrayAdapter;
-    private RecyclerView recyclerViewSelectedFood;
     private SelectedFoodRecyclerViewAdapter selectedFoodRecyclerViewAdapter;
     private SearchView searchView;
     private MenuItem item;
@@ -40,7 +39,9 @@ public class FoodSelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_food_selection);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +80,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
 
         //Configure Selected Food View
         dataManagement = DataManagement.getInstance(this);
-        recyclerViewSelectedFood = (RecyclerView) findViewById(R.id.selectedFoodRecyclerView);
+        RecyclerView recyclerViewSelectedFood = (RecyclerView) findViewById(R.id.selectedFoodRecyclerView);
         selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(dataManagement.getSelectedFood(), getApplication(), new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Food item) {
