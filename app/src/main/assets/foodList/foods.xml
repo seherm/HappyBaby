@@ -245,18 +245,17 @@
         <foodgroup>Junk Food</foodgroup>
         <image>coke_can.jpg</image>
         <feedback>
-            <feedbackInstantYoungMessage>Test Instant Feedback Young.</feedbackInstantYoungMessage>
+            <feedbackInstantYoungMessage>This kind of drink is not the best for your child. It contains too much sugar and chemical. Fresh water is much more healthy. You can mix it with small amount of natural fruit juice.</feedbackInstantYoungMessage>
             <feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
-            <feedbackInstantMiddleMessage>Test Instant Feedback Middle.
-            </feedbackInstantMiddleMessage>
+            <feedbackInstantMiddleMessage>This kind of drink is not the best for your child. It contains too much sugar and chemical. Fresh water is much more healthy. You can mix it with small amount of natural fruit juice.</feedbackInstantMiddleMessage>
             <feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
-            <feedbackInstantOldMessage>Test Instant Feedback Old.</feedbackInstantOldMessage>
+            <feedbackInstantOldMessage>This kind of drink is not the best for your child. It contains too much sugar and chemical. Fresh water is much more healthy. You can mix it with small amount of natural fruit juice.</feedbackInstantOldMessage>
             <feedbackInstantOldColor>#000000</feedbackInstantOldColor>
-            <feedbackFinalYoungMessage>Test Final Feedback Young.</feedbackFinalYoungMessage>
+            <feedbackFinalYoungMessage>This kind of drink is not the best for your child. It contains too much sugar and chemical. Fresh water is much more healthy. You can mix it with small amount of natural fruit juice.</feedbackFinalYoungMessage>
             <feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
-            <feedbackFinalMiddleMessage>Test Final Feedback Middle.</feedbackFinalMiddleMessage>
+            <feedbackFinalMiddleMessage>This kind of drink is not the best for your child. It contains too much sugar and chemical. Fresh water is much more healthy. You can mix it with small amount of natural fruit juice.</feedbackFinalMiddleMessage>
             <feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
-            <feedbackFinalOldMessage>Test Final Feedback Old.</feedbackFinalOldMessage>
+            <feedbackFinalOldMessage>This kind of drink is not the best for your child. It contains too much sugar and chemical. Fresh water is much more healthy. You can mix it with small amount of natural fruit juice.</feedbackFinalOldMessage>
             <feedbackFinalOldColor>#000000</feedbackFinalOldColor>
         </feedback>
     </food>

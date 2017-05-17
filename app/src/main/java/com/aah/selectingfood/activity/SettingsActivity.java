@@ -196,7 +196,6 @@ public class SettingsActivity extends AppCompatActivity {
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
                 } else {
-
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
                 }
@@ -250,7 +249,6 @@ public class SettingsActivity extends AppCompatActivity {
                 Toast.makeText(this, "Camera Permission error", Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
-
             Toast.makeText(this, "Camera Permission error", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }

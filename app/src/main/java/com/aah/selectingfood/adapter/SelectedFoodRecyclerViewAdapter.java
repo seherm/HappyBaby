@@ -25,11 +25,12 @@ public class SelectedFoodRecyclerViewAdapter extends RecyclerView.Adapter<Select
 
     private List<Food> selectedFood;
     private final OnItemClickListener listener;
+    private Context context;
 
 
     public SelectedFoodRecyclerViewAdapter(List<Food> selectedFood, Context context, OnItemClickListener listener) {
         this.selectedFood = selectedFood;
-        Context context1 = context;
+        this.context = context;
         this.listener = listener;
     }
 
@@ -41,15 +42,16 @@ public class SelectedFoodRecyclerViewAdapter extends RecyclerView.Adapter<Select
 
         public ViewHolder(View view) {
             super(view);
-            imageView=(ImageView) view.findViewById(R.id.image);
-            textView =(TextView) view.findViewById(R.id.text);
+            imageView = (ImageView) view.findViewById(R.id.image);
+            textView = (TextView) view.findViewById(R.id.text);
         }
 
         public void bind(final Food item, final OnItemClickListener listener) {
             textView.setText(item.getName());
             imageView.setImageBitmap(item.getImage());
             itemView.setOnClickListener(new View.OnClickListener() {
-                @Override public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
                     listener.onItemClick(item);
                 }
             });
@@ -71,8 +73,7 @@ public class SelectedFoodRecyclerViewAdapter extends RecyclerView.Adapter<Select
     }
 
     @Override
-    public int getItemCount()
-    {
+    public int getItemCount() {
         return selectedFood.size();
     }
 }
