@@ -24,7 +24,11 @@ import com.aah.selectingfood.R;
 import com.aah.selectingfood.adapter.FoodToSelectArrayAdapter;
 import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
 import com.aah.selectingfood.helper.DataManagement;
+import com.aah.selectingfood.model.Child;
+import com.aah.selectingfood.model.FeedbackInstant;
 import com.aah.selectingfood.model.Food;
+
+import java.util.List;
 
 public class FoodGroupSelectionActivity extends AppCompatActivity {
 
@@ -63,6 +67,7 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
             public void onItemClick(Food item) {
                 dataManagement.removeSelectedFood(item);
                 selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
+                foodToSelectArrayAdapter.notifyDataSetChanged();
             }
         });
         LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(FoodGroupSelectionActivity.this, LinearLayoutManager.HORIZONTAL, false);
@@ -73,10 +78,6 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         ImageView imageViewChild = (ImageView) findViewById(R.id.childImageView);
         Bitmap childDefaultImage = dataManagement.getUser().getImageHappyBitmap();
         imageViewChild.setImageBitmap(childDefaultImage);
-
-        //TODO: Set Instant Feedback Text
-        TextView instantFeedback = (TextView) findViewById(R.id.instantFeedback);
-
 
         //Configure Search View
         foodToSelectArrayAdapter = new FoodToSelectArrayAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getAllFood());
@@ -99,6 +100,8 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     public void goToFoodSelectionPage(View view) {
         switch (view.getId()) {

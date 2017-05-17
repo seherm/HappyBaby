@@ -17,7 +17,7 @@ public class User {
     private String imageNeutral;
     private String imageHappy;
     private String imageSad;
-    private ArrayList<Child> children = new ArrayList<Child>();
+    private ArrayList<Child> children = new ArrayList<>();
     private Context context;
 
     public User(Context context){

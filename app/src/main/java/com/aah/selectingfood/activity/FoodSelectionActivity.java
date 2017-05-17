@@ -24,6 +24,9 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.List;
 
 public class FoodSelectionActivity extends AppCompatActivity {
 
@@ -75,6 +78,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
                 dataManagement.addSelectedFood(selectedFood);
                 foodToSelectArrayAdapter.notifyDataSetChanged();
                 selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
+                checkForImmediateFeedback(selectedFood);
             }
         });
 
@@ -84,8 +88,9 @@ public class FoodSelectionActivity extends AppCompatActivity {
         selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(dataManagement.getSelectedFood(), getApplication(), new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Food item) {
-                dataManagement.removeSelectedFood(item);
+                dataManagement.removeSelectedFood(item,item.getFoodGroup());
                 selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
+                foodToSelectArrayAdapter.notifyDataSetChanged();
             }
         });
         LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(FoodSelectionActivity.this, LinearLayoutManager.HORIZONTAL, false);
@@ -96,6 +101,15 @@ public class FoodSelectionActivity extends AppCompatActivity {
         ImageView imageViewChild = (ImageView) findViewById(R.id.childImageView);
         Bitmap childDefaultImage = dataManagement.getUser().getImageHappyBitmap();
         imageViewChild.setImageBitmap(childDefaultImage);
+    }
+
+    public void checkForImmediateFeedback(Food food){
+        TextView instantFeedback = (TextView) findViewById(R.id.instantFeedback);
+        List<Child> children = dataManagement.getUser().getChildren();
+        for(Child child : children){
+            FeedbackInstant feedbackInstant = child.giveFeedbackInstantFood(food);
+            instantFeedback.setText(feedbackInstant.getText());
+        }
     }
 
     @Override

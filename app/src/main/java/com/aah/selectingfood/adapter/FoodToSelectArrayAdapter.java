@@ -4,7 +4,7 @@ import com.aah.selectingfood.R;
 import com.aah.selectingfood.model.*;
 
 import android.content.Context;
-import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 import android.app.Activity;
@@ -94,7 +94,7 @@ public class FoodToSelectArrayAdapter extends ArrayAdapter implements Filterable
 
         @SuppressWarnings("unchecked")
         @Override
-        protected void publishResults(CharSequence contraint, FilterResults results) {
+        protected void publishResults(CharSequence constraint, FilterResults results) {
             filteredFoods = (ArrayList<Food>) results.values;
             notifyDataSetChanged();
         }

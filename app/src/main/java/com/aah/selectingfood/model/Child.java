@@ -52,7 +52,7 @@ public class Child {
 
     /*
      * Gives instant FeedbackActivity based on a specific food. Depending on the age group
-     * of the child, different Feedbacks may be returned.
+     * of the child, different Feedback may be returned.
      *
      * @param   food    a specific food the child should give FeedbackActivity about
      * @return          the resulting FeedbackInstant
@@ -72,7 +72,7 @@ public class Child {
 
     /*
      * Gives final FeedbackActivity based on a specific food. Depending on the age group
-     * of the child, different Feedbacks may be returned.
+     * of the child, different Feedback may be returned.
      *
      * @param   food    a specific food the child should give FeedbackActivity about
      * @return          the resulting FeedbackCard
@@ -92,7 +92,7 @@ public class Child {
 
     /*
      * Gives a summary FeedbackActivity based on a set of food. Depending on the age group
-     * of the child, different Feedbacks may be returned.
+     * of the child, different Feedback may be returned.
      *
      * @param   foods    a set of foods the child should give FeedbackActivity about
      * @return          the resulting FeedbackCard
@@ -101,7 +101,7 @@ public class Child {
         if(foods==null){
             return new FeedbackCard("#ac8469", "#000000", "You did not select any foods.", null);
         }
-        ArrayList<String> selectedFoodGroups = new ArrayList<String>(0);
+        ArrayList<String> selectedFoodGroups = new ArrayList<>(0);
         for(Food food : foods){
             if(!selectedFoodGroups.contains(food.getName())){
                 selectedFoodGroups.add(food.getName());
@@ -122,7 +122,7 @@ public class Child {
 
     /*
      * Gives a general FeedbackActivity about the child and its needs. Depending on the age group
-     * of the child, different Feedbacks may be returned.
+     * of the child, different Feedback may be returned.
      *
      * @return          the resulting FeedbackCard
      */

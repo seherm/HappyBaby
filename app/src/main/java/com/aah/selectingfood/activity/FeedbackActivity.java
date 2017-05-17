@@ -48,14 +48,14 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
     }
 
     private List<FeedbackCard> getFeedbackCards(){
-        List<FeedbackCard> feedbackCards = new ArrayList<FeedbackCard>();
+        List<FeedbackCard> feedbackCards = new ArrayList<>();
 
         // Create all different feedback cards
 
         // Create summary feedback for children 1-3
         // TODO: Make sure the summary feedback is correct for 1-3 children.
         FeedbackCard finalFoodSummaryFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalFoodSummary(DataManagement.getInstance(this).getSelectedFood());
-        finalFoodSummaryFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("can.png","feedbackImages"));
+        finalFoodSummaryFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("balance.png","feedbackImages"));
         feedbackCards.add(finalFoodSummaryFeedback);
 
         // Create individual food feedback for children 1-3
@@ -64,7 +64,7 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         // Create general feedback for children 1-3
         for(Child child : DataManagement.getInstance(this).getUser().getChildren()){
             FeedbackCard generalAgeFeedback = child.giveFeedbackFinalGeneral();
-            generalAgeFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("can.png","feedbackImages"));
+            generalAgeFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("childHappyDefault.png","childrenImages"));
             feedbackCards.add(generalAgeFeedback);
         }
         return feedbackCards;
