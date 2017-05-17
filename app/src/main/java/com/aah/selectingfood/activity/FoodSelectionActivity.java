@@ -88,7 +88,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
         selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(dataManagement.getSelectedFood(), getApplication(), new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Food item) {
-                dataManagement.removeSelectedFood(item,item.getFoodGroup());
+                dataManagement.removeSelectedFood(item,selectedFoodGroup);
                 selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
                 foodToSelectArrayAdapter.notifyDataSetChanged();
             }
