@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.aah.selectingfood.activity.FoodGroupSelectionActivity"
-    tools:showIn="@layout/activity_food_group_selection"
-    android:background="@color/background">
+    tools:showIn="@layout/activity_food_group_selection">
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline1"
@@ -40,7 +39,6 @@
         android:layout_margin="20dp"
         android:clickable="true"
         android:src="@drawable/ic_check"
-        app:backgroundTint="@color/pestoGreenDark"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintRight_toLeftOf="parent" />
 
@@ -69,11 +67,9 @@
         android:orientation="horizontal"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/guideline1"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/fruits"
@@ -246,7 +242,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/childImageView"
         android:layout_width="96dp"
         android:layout_height="96dp"
@@ -270,7 +266,6 @@
         android:layout_marginStart="20dp"
         android:text="@string/food_message"
         android:textSize="20sp"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintLeft_toRightOf="@+id/childImageView"
         app:layout_constraintRight_toLeftOf="parent"

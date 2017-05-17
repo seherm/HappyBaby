@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.aah.selectingfood.activity.FoodSelectionActivity"
-    tools:showIn="@layout/activity_food_selection"
-    android:background="@color/background">
+    tools:showIn="@layout/activity_food_selection">
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline1"
@@ -39,7 +38,6 @@
         android:layout_margin="20dp"
         android:clickable="true"
         android:src="@drawable/ic_check"
-        app:backgroundTint="@color/pestoGreenDark"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintRight_toLeftOf="parent" />
 
@@ -83,7 +81,6 @@
         android:layout_marginStart="20dp"
         android:text="@string/food_message"
         android:textSize="20sp"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintLeft_toRightOf="@+id/childImageView"
         app:layout_constraintRight_toLeftOf="parent"

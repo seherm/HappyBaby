@@ -2,10 +2,9 @@
     <string name="app_name">Selecting Food</string>
     <string name="app_language">en</string>
 
+    <string name="drawer_title">Nutrition App for Parents</string>
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
-
-    <string name="drawer_title">Menu</string>
 
     <!-->Button Text<-->
     <string name="start">Start</string>
