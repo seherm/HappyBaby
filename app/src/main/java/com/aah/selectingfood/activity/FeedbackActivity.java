@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ import com.aah.selectingfood.model.FeedbackCard;
 import com.facebook.CallbackManager;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
+import com.facebook.share.widget.ShareButton;
 import com.facebook.share.widget.ShareDialog;
 
 import java.util.ArrayList;
@@ -65,16 +67,13 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         //Facebook
         callbackManager = CallbackManager.Factory.create();
         shareDialog = new ShareDialog(this);
+    }
 
-        final Button button = (Button) findViewById(R.id.shareButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                final int position = viewPager.getCurrentItem();
-                View view = viewPager.getChildAt(position);
-                Bitmap image = getBitmapFromView(view);
-                shareOnFacebook(image);
-            }
-        });
+    public void ShareFeedbackCard(View v){
+        final int position = viewPager.getCurrentItem();
+        View view = viewPager.getChildAt(position);
+        Bitmap image = getBitmapFromView(view);
+        shareOnFacebook(image);
     }
 
     public static Bitmap getBitmapFromView(View view) {
@@ -134,7 +133,6 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
     }
 
     private void shareOnFacebook(Bitmap image) {
-        //Bitmap image = BitmapFactory.decodeResource(getResources(), photoResource);
         SharePhoto photo = new SharePhoto.Builder()
                 .setBitmap(image)
                 .setCaption("testesteestetetstestsetse")
@@ -143,8 +141,6 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         SharePhotoContent content = new SharePhotoContent.Builder()
                 .addPhoto(photo)
                 .build();
-
-        //ShareApi.share(content, null);
         shareDialog.show(content);
     }
 
