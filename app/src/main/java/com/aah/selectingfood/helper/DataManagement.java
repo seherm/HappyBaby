@@ -118,26 +118,28 @@ public class DataManagement {
                     Element eElement = (Element) nNode;
 
                     // Create food
-                    Food tempFood = new Food(eElement.getElementsByTagName("name").item(0).getTextContent(),
-                            eElement.getElementsByTagName("foodgroup").item(0).getTextContent(),
-                            loadBitmapFromAssets(eElement.getElementsByTagName("image").item(0).getTextContent(), "foodImages"));
+                    String name = eElement.getElementsByTagName("name").item(0).getTextContent();
+                    String foodgroup = eElement.getElementsByTagName("foodgroup").item(0).getTextContent();
+                    Bitmap image = loadBitmapFromAssets(eElement.getElementsByTagName("image").item(0).getTextContent(), "foodImages");
+                    Food tempFood = new Food(name, foodgroup, image);
 
                     // Add instant feedback to food
-                    Element feedbackNode = (Element) eElement.getElementsByTagName("feedback").item(0);
-                    tempFood.setFeedbackInstantYoungMessage(feedbackNode.getElementsByTagName("feedbackInstantYoungMessage").item(0).getTextContent());
-                    tempFood.setFeedbackInstantYoungColor(feedbackNode.getElementsByTagName("feedbackInstantYoungColor").item(0).getTextContent());
-                    tempFood.setFeedbackInstantMiddleMessage(feedbackNode.getElementsByTagName("feedbackInstantMiddleMessage").item(0).getTextContent());
-                    tempFood.setFeedbackInstantMiddleColor(feedbackNode.getElementsByTagName("feedbackInstantMiddleColor").item(0).getTextContent());
-                    tempFood.setFeedbackInstantOldMessage(feedbackNode.getElementsByTagName("feedbackInstantOldMessage").item(0).getTextContent());
-                    tempFood.setFeedbackInstantOldColor(feedbackNode.getElementsByTagName("feedbackInstantOldColor").item(0).getTextContent());
 
-                    // Add final feedback to food
-                    tempFood.setFeedbackFinalYoungMessage(feedbackNode.getElementsByTagName("feedbackFinalYoungMessage").item(0).getTextContent());
-                    tempFood.setFeedbackFinalYoungColor(feedbackNode.getElementsByTagName("feedbackFinalYoungColor").item(0).getTextContent());
-                    tempFood.setFeedbackFinalMiddleMessage(feedbackNode.getElementsByTagName("feedbackFinalMiddleMessage").item(0).getTextContent());
-                    tempFood.setFeedbackFinalMiddleColor(feedbackNode.getElementsByTagName("feedbackFinalMiddleColor").item(0).getTextContent());
-                    tempFood.setFeedbackFinalOldMessage(feedbackNode.getElementsByTagName("feedbackFinalOldMessage").item(0).getTextContent());
-                    tempFood.setFeedbackFinalOldColor(feedbackNode.getElementsByTagName("feedbackFinalOldColor").item(0).getTextContent());
+                     Element feedbackNode = (Element) eElement.getElementsByTagName("feedback").item(0);
+                     tempFood.setFeedbackInstantYoungMessage(feedbackNode.getElementsByTagName("feedbackInstantYoungMessage").item(0).getTextContent());
+                     tempFood.setFeedbackInstantYoungColor(feedbackNode.getElementsByTagName("feedbackInstantYoungColor").item(0).getTextContent());
+                     tempFood.setFeedbackInstantMiddleMessage(feedbackNode.getElementsByTagName("feedbackInstantMiddleMessage").item(0).getTextContent());
+                     tempFood.setFeedbackInstantMiddleColor(feedbackNode.getElementsByTagName("feedbackInstantMiddleColor").item(0).getTextContent());
+                     tempFood.setFeedbackInstantOldMessage(feedbackNode.getElementsByTagName("feedbackInstantOldMessage").item(0).getTextContent());
+                     tempFood.setFeedbackInstantOldColor(feedbackNode.getElementsByTagName("feedbackInstantOldColor").item(0).getTextContent());
+
+                     // Add final feedback to food
+                     tempFood.setFeedbackFinalYoungMessage(feedbackNode.getElementsByTagName("feedbackFinalYoungMessage").item(0).getTextContent());
+                     tempFood.setFeedbackFinalYoungColor(feedbackNode.getElementsByTagName("feedbackFinalYoungColor").item(0).getTextContent());
+                     tempFood.setFeedbackFinalMiddleMessage(feedbackNode.getElementsByTagName("feedbackFinalMiddleMessage").item(0).getTextContent());
+                     tempFood.setFeedbackFinalMiddleColor(feedbackNode.getElementsByTagName("feedbackFinalMiddleColor").item(0).getTextContent());
+                     tempFood.setFeedbackFinalOldMessage(feedbackNode.getElementsByTagName("feedbackFinalOldMessage").item(0).getTextContent());
+                     tempFood.setFeedbackFinalOldColor(feedbackNode.getElementsByTagName("feedbackFinalOldColor").item(0).getTextContent());
 
                     allFood.add(tempFood);
                 }

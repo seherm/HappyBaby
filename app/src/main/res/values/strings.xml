@@ -22,7 +22,7 @@
 
     <!--Other Text-->
     <string name="start_message">Please tap on start to select the food you are going to feed your baby</string>
-    <string name="food_message">What other kinds of \n foods will I eat today?</string>
+    <string name="food_message">What other kinds of foods will I eat today?</string>
 
     <string name="porridge_recipes">Porridge Recipes</string>
     <string name="FAQ">FAQ</string>
