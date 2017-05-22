@@ -101,6 +101,12 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume(){
+        super.onResume();
+        selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
+    }
+
 
 
     public void goToFoodSelectionPage(View view) {
