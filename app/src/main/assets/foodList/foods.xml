@@ -839,7 +839,7 @@
 	<food>
 		<name>Fish Herb</name>
 		<foodgroup>Herbs</foodgroup>
-		<image>-</image>
+		<image>fish_herb.jpg</image>
 		<feedback>
 			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
 			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
@@ -858,7 +858,7 @@
 	<food>
 		<name>Rice Paddy Herb</name>
 		<foodgroup>Herbs</foodgroup>
-		<image>-</image>
+		<image>rice_paddy_herb.jpg</image>
 		<feedback>
 			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
 			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
@@ -896,7 +896,7 @@
 	<food>
 		<name>Khmer cakes</name>
 		<foodgroup>Junk Food</foodgroup>
-		<image>-</image>
+		<image>coconut_rice_cake.jpg</image>
 		<feedback>
 			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
 			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
@@ -915,7 +915,7 @@
 	<food>
 		<name>Crisps</name>
 		<foodgroup>Junk Food</foodgroup>
-		<image>-</image>
+		<image>crisps.jpg</image>
 		<feedback>
 			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
 			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
@@ -934,7 +934,7 @@
 	<food>
 		<name>Peanut</name>
 		<foodgroup>Legumes</foodgroup>
-		<image>-</image>
+		<image>peanut.jpg</image>
 		<feedback>
 			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
 			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>

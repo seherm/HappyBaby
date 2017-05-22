@@ -6,12 +6,15 @@ import com.aah.selectingfood.model.*;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -42,7 +45,7 @@ public class FoodToSelectArrayAdapter extends ArrayAdapter implements Filterable
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, final ViewGroup parent) {
         View row = convertView;
         ViewHolder holder = null;
 
@@ -52,6 +55,7 @@ public class FoodToSelectArrayAdapter extends ArrayAdapter implements Filterable
             holder = new ViewHolder();
             holder.imageTitle = (TextView) row.findViewById(R.id.text);
             holder.image = (ImageView) row.findViewById(R.id.image);
+            holder.button = (ImageView) row.findViewById(R.id.soundButton);
             row.setTag(holder);
         } else {
             holder = (ViewHolder) row.getTag();
@@ -60,6 +64,13 @@ public class FoodToSelectArrayAdapter extends ArrayAdapter implements Filterable
         Food item = filteredFoods.get(position);
         holder.imageTitle.setText(item.getName());
         holder.image.setImageBitmap(item.getImage());
+        holder.button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((GridView) parent).performItemClick(v,position,0);
+            }
+        });
+
 
         return row;
     }
@@ -108,5 +119,6 @@ public class FoodToSelectArrayAdapter extends ArrayAdapter implements Filterable
     static class ViewHolder {
         TextView imageTitle;
         ImageView image;
+        ImageView button;
     }
 }
