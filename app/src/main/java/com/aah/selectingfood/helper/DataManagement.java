@@ -174,22 +174,24 @@ public class DataManagement {
             user.setImageHappy(imageHappy);
             user.setImageSad(imageSad);
 
-            if (hasChildYoung) {
+            // Add children
+            // Also remove them if they do not belong to user (needed for "young" child, as it is automatically added to the user)
+            if ((!user.hasChildByAgeGroup("young")) && hasChildYoung) {
                 Child child = new Child("young");
                 user.addChild(child);
-            } else {
+            } else if (user.hasChildByAgeGroup("young") && (!hasChildYoung)) {
                 user.removeChildByAgeGroup("young");
             }
-            if (hasChildMiddle) {
+            if ((!user.hasChildByAgeGroup("middle")) && hasChildMiddle) {
                 Child child = new Child("middle");
                 user.addChild(child);
-            } else {
+            } else if (user.hasChildByAgeGroup("middle") && (!hasChildMiddle)) {
                 user.removeChildByAgeGroup("middle");
             }
-            if (hasChildOld) {
+            if ((!user.hasChildByAgeGroup("old")) && hasChildOld) {
                 Child child = new Child("old");
                 user.addChild(child);
-            } else {
+            } else if (user.hasChildByAgeGroup("old") && (!hasChildOld)) {
                 user.removeChildByAgeGroup("old");
             }
 

@@ -68,6 +68,7 @@ public class SettingsActivity extends AppCompatActivity {
         checkBoxChildYoung = (CheckBox) findViewById(R.id.checkBoxChildYoung);
         checkBoxChildMiddle = (CheckBox) findViewById(R.id.checkBoxChildMiddle);
         checkBoxChildOld = (CheckBox) findViewById(R.id.checkBoxChildOld);
+
         if (user.hasChildByAgeGroup("young")) {
             checkBoxChildYoung.setChecked(true);
         }
