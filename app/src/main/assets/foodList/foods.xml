@@ -2264,7 +2264,7 @@
 	<food>
 		<name>Zucchini</name>
 		<foodgroup>Vegetables</foodgroup>
-		<image>zuchini.jpg</image>
+		<image>zucchini.jpg</image>
 		<feedback>
 			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
 			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
