@@ -105,6 +105,7 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
     protected void onResume(){
         super.onResume();
         selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
+        overridePendingTransition(0,0);
     }
 
 
@@ -138,6 +139,7 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
         }
         Intent intent = new Intent(this, FoodSelectionActivity.class);
         startActivity(intent);
+        overridePendingTransition(0,0);
     }
 
     public void goToFeedbackPage(View view) {
