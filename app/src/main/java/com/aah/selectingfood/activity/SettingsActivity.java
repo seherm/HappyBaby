@@ -13,6 +13,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -31,6 +32,11 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.aah.selectingfood.helper.DataManagement;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 import static com.aah.selectingfood.R.id.imageViewChild;
 
@@ -303,36 +309,33 @@ public class SettingsActivity extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             childPhoto.setImageBitmap(imageBitmap);
 
-            user.setChildPhoto("childPhoto.png");
-
             // Store image
-            /**
-             new ImageSaver(this).
-             setFileName("childPhoto.png").
-             setDirectoryName("childrenImages").
-             save(imageBitmap);
-             user.setChildPhoto("childPhoto.png");
-             dataManagement.storeUser(user);
-             **/
+            new ImageSaver(this).
+                    setFileName("childPhoto.png").
+                    setDirectoryName("childrenImages").
+                    save(imageBitmap);
+            user.setChildPhoto("childPhoto.png");
+            dataManagement.storeUser(user);
+
 
         } else if (requestCode == GALLERY_PHOTO_REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
 
             Uri uri = data.getData();
 
             try {
-                Bitmap imageBitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
-                childPhoto.setImageBitmap(imageBitmap);
+                BitmapFactory.Options options = new BitmapFactory.Options();
+                options.inSampleSize = 8;
+                Bitmap preview_bitmap = BitmapFactory.decodeStream(this.getContentResolver().openInputStream(uri), null, options);
+                childPhoto.setImageBitmap(preview_bitmap);
 
+                //Store image
+                new ImageSaver(this).
+                        setFileName("childPhoto.png").
+                        setDirectoryName("childrenImages").
+                        save(preview_bitmap);
                 user.setChildPhoto("childPhoto.png");
-                /**
-                 //Store image
-                 new ImageSaver(this).
-                 setFileName("childPhoto.png").
-                 setDirectoryName("childrenImages").
-                 save(imageBitmap);
-                 user.setChildPhoto("childPhoto.png");
-                 dataManagement.storeUser(user);
-                 **/
+                dataManagement.storeUser(user);
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
