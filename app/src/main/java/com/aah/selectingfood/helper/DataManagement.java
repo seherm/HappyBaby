@@ -20,6 +20,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 
+import static com.aah.selectingfood.R.id.childPhoto;
+
 /**
  * Created by sebas on 03.05.2017.
  * <p>
@@ -159,21 +161,15 @@ public class DataManagement {
     */
     private User loadUser() {
         SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
-        String imageNeutral = sharedPref.getString("imageNeutral", null);
-        String imageHappy = sharedPref.getString("imageHappy", null);
-        String imageSad = sharedPref.getString("imageSad", null);
+        String childPhoto = sharedPref.getString("childPhoto", null);
         Boolean hasChildYoung = sharedPref.getBoolean("hasChildYoung", false);
         Boolean hasChildMiddle = sharedPref.getBoolean("hasChildMiddle", false);
         Boolean hasChildOld = sharedPref.getBoolean("hasChildOld", false);
 
-        if (imageNeutral == null && imageHappy == null && imageSad == null && !hasChildYoung && !hasChildMiddle && !hasChildOld) {
+        if (childPhoto == null && !hasChildYoung && !hasChildMiddle && !hasChildOld) {
             return null;
         } else {
             User user = new User(this.context);
-            user.setImageNeutral(imageNeutral);
-            user.setImageHappy(imageHappy);
-            user.setImageSad(imageSad);
-
             // Add children
             // Also remove them if they do not belong to user (needed for "young" child, as it is automatically added to the user)
             if ((!user.hasChildByAgeGroup("young")) && hasChildYoung) {
@@ -194,7 +190,6 @@ public class DataManagement {
             } else if (user.hasChildByAgeGroup("old") && (!hasChildOld)) {
                 user.removeChildByAgeGroup("old");
             }
-
             return user;
         }
     }
@@ -206,9 +201,7 @@ public class DataManagement {
     public void storeUser(User user) {
         SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("imageNeutral", user.getImageNeutral());
-        editor.putString("imageHappy", user.getImageHappy());
-        editor.putString("imageSad", user.getImageSad());
+        editor.putString("childPhoto", user.getChildPhoto());
         editor.putBoolean("hasChildYoung", user.hasChildByAgeGroup("young"));
         editor.putBoolean("hasChildMiddle", user.hasChildByAgeGroup("middle"));
         editor.putBoolean("hasChildOld", user.hasChildByAgeGroup("old"));

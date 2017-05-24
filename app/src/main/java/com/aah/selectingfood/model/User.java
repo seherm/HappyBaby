@@ -14,13 +14,11 @@ import java.util.ArrayList;
 
 public class User {
     private int id;
-    private String imageNeutral;
-    private String imageHappy;
-    private String imageSad;
+    private String childPhoto;
     private ArrayList<Child> children = new ArrayList<>();
     private Context context;
 
-    public User(Context context){
+    public User(Context context) {
         this.context = context;
         addChild(new Child("young"));
     }
@@ -33,28 +31,12 @@ public class User {
         this.id = id;
     }
 
-    public String getImageNeutral() {
-        return imageNeutral;
+    public String getChildPhoto() {
+        return childPhoto;
     }
 
-    public void setImageNeutral(String imageNeutral) {
-        this.imageNeutral = imageNeutral;
-    }
-
-    public String getImageHappy() {
-        return imageHappy;
-    }
-
-    public void setImageHappy(String imageHappy) {
-        this.imageHappy = imageHappy;
-    }
-
-    public String getImageSad() {
-        return imageSad;
-    }
-
-    public void setImageSad(String imageSad) {
-        this.imageSad = imageSad;
+    public void setChildPhoto(String childPhoto) {
+        this.childPhoto = childPhoto;
     }
 
     public void addChild(Child child) {
@@ -65,76 +47,39 @@ public class User {
         return children;
     }
 
-    public Boolean hasChildByAgeGroup(String ageGroup){
-        for(Child child : children){
-            if(child.getAgeGroup().equals(ageGroup)){
+    public Boolean hasChildByAgeGroup(String ageGroup) {
+        for (Child child : children) {
+            if (child.getAgeGroup().equals(ageGroup)) {
                 return true;
             }
         }
         return false;
     }
 
-    public void removeChildByAgeGroup(String ageGroup){
+    public void removeChildByAgeGroup(String ageGroup) {
         Child childToRemove = null;
-        for(Child child : children){
-            if(child.getAgeGroup().equals(ageGroup)){
+        for (Child child : children) {
+            if (child.getAgeGroup().equals(ageGroup)) {
                 childToRemove = child;
             }
         }
 
-        if(childToRemove!=null) {
+        if (childToRemove != null) {
             children.remove(childToRemove);
         }
     }
 
-    /**
-     * The following retrieves the image set for 'happy',
-     * or the standard image for 'happy' in bitmap form.
-     */
-    public Bitmap getImageHappyBitmap() {
-        Bitmap imageBitmap = null;
-        if(getImageNeutral()!=null){
+    public Bitmap getChildPhotoBitmap() {
+        Bitmap imageBitmap;
+        if (getChildPhoto() != null) {
             imageBitmap = new ImageSaver(context).
-                    setFileName(DataManagement.getInstance(context).getUser().getImageHappy()).
+                    setFileName(DataManagement.getInstance(context).getUser().getChildPhoto()).
                     setDirectoryName("childrenImages").
                     load();
+            return imageBitmap;
         } else {
             imageBitmap = DataManagement.getInstance(context).loadBitmapFromAssets("childHappyDefault.png", "childrenImages");
+            return imageBitmap;
         }
-        return imageBitmap;
-    }
-
-    /**
-     * The following retrieves the image set for 'neutral',
-     * or the standard image for 'neutral' in bitmap form.
-     */
-    public Bitmap getImageNeutralBitmap() {
-        Bitmap imageBitmap = null;
-        if(getImageNeutral()!=null){
-            imageBitmap = new ImageSaver(context).
-                    setFileName(DataManagement.getInstance(context).getUser().getImageNeutral()).
-                    setDirectoryName("childrenImages").
-                    load();
-        } else {
-            imageBitmap = DataManagement.getInstance(context).loadBitmapFromAssets("childNeutralDefault.png", "childrenImages");
-        }
-        return imageBitmap;
-    }
-
-    /**
-     * The following retrieves the image set for 'sad',
-     * or the standard image for 'sad' in bitmap form.
-     */
-    public Bitmap getImageSadBitmap() {
-        Bitmap imageBitmap = null;
-        if(getImageSad()!=null){
-            imageBitmap = new ImageSaver(context).
-                    setFileName(DataManagement.getInstance(context).getUser().getImageSad()).
-                    setDirectoryName("childrenImages").
-                    load();
-        } else {
-            imageBitmap = DataManagement.getInstance(context).loadBitmapFromAssets("childSadDefault.png", "childrenImages");
-        }
-        return imageBitmap;
     }
 }

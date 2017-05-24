@@ -111,8 +111,8 @@ public class FoodSelectionActivity extends AppCompatActivity {
 
         //Configure Image of the Baby
         ImageView imageViewChild = (ImageView) findViewById(R.id.childImageView);
-        Bitmap childDefaultImage = dataManagement.getUser().getImageHappyBitmap();
-        imageViewChild.setImageBitmap(childDefaultImage);
+        Bitmap childImage = dataManagement.getUser().getChildPhotoBitmap();
+        imageViewChild.setImageBitmap(childImage);
     }
 
     public void checkForImmediateFeedback(Food food) {

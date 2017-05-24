@@ -38,7 +38,7 @@
     <string name="children_young_category">6\u20138 months</string>
     <string name="children_middle_category">9\u201311 months</string>
     <string name="children_old_category">12\u201324 months</string>
-    <string name="change_photos_of_baby">Photos of your baby</string>
+    <string name="change_photos_of_baby">Photo of your children</string>
 
     <!--Food Groups-->
     <string name="fruits">Fruits</string>
@@ -50,4 +50,19 @@
 
     <string name="test_string">engeng</string>
     <string name="title_activity_sharing">SharingActivity</string>
+
+
+    <string name="change_photo">Change photo</string>
+    <string name="cancel">Cancel</string>
+    <string name="camera_permission_error">Camera Permission Error</string>
+    <string-array name="select_photo_items_array">
+        <item>Take new photo</item>
+        <item>Select new photo</item>
+    </string-array>
+    <string-array name="select_photo_items_array_with_delete">
+        <item>Take new photo</item>
+        <item>Select new photo</item>
+        <item>Delete photo</item>
+    </string-array>
+
 </resources>

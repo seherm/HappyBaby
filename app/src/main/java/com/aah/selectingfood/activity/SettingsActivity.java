@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -23,6 +24,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.CheckBox;
 import android.widget.RadioGroup;
@@ -30,25 +32,20 @@ import android.widget.Toast;
 
 import com.aah.selectingfood.helper.DataManagement;
 
+import static com.aah.selectingfood.R.id.imageViewChild;
+
 public class SettingsActivity extends AppCompatActivity {
 
     private CheckBox checkBoxChildYoung;
     private CheckBox checkBoxChildMiddle;
     private CheckBox checkBoxChildOld;
-    private ImageButton childrenImageHappy;
-    private ImageButton childrenImageNeutral;
-    private ImageButton childrenImageSad;
+    private ImageView childPhoto;
     private DataManagement dataManagement;
     private User user;
 
     private static final int CAMERA_PERMISSION_REQUEST_CODE = 1;
-    private static final int HAPPY_FACE_PHOTO_REQUEST_CODE = 1;
-    private static final int NEUTRAL_FACE_PHOTO_REQUEST_CODE = 2;
-    private static final int SAD_FACE_PHOTO_REQUEST_CODE = 3;
-    private static final int HAPPY_FACE_PHOTO_GALLERY_REQUEST_CODE = 4;
-    private static final int NEUTRAL_FACE_PHOTO_GALLERY_REQUEST_CODE = 5;
-    private static final int SAD_FACE_PHOTO_GALLERY_REQUEST_CODE = 6;
-
+    private static final int CAMERA_PHOTO_REQUEST_CODE = 1;
+    private static final int GALLERY_PHOTO_REQUEST_CODE = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +53,7 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        if(getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
@@ -64,6 +61,8 @@ public class SettingsActivity extends AppCompatActivity {
 
         dataManagement = DataManagement.getInstance(this);
         user = dataManagement.getUser();
+
+        childPhoto = (ImageView) findViewById(R.id.childPhoto);
 
         checkBoxChildYoung = (CheckBox) findViewById(R.id.checkBoxChildYoung);
         checkBoxChildMiddle = (CheckBox) findViewById(R.id.checkBoxChildMiddle);
@@ -79,11 +78,7 @@ public class SettingsActivity extends AppCompatActivity {
             checkBoxChildOld.setChecked(true);
         }
 
-        childrenImageHappy = (ImageButton) findViewById(R.id.imageButtonPhotoHappy);
-        childrenImageNeutral = (ImageButton) findViewById(R.id.imageButtonPhotoNeutral);
-        childrenImageSad = (ImageButton) findViewById(R.id.imageButtonPhotoSad);
-
-        setChildImages();
+        setChildImage();
 
         //check currently selected language
         RadioGroup languageRadioGroup = (RadioGroup) findViewById(R.id.radioGroupLanguage);
@@ -98,6 +93,7 @@ public class SettingsActivity extends AppCompatActivity {
                 break;
         }
     }
+
 
     public void changeLanguage(View view) {
         // Is the button now checked?
@@ -132,12 +128,6 @@ public class SettingsActivity extends AppCompatActivity {
 
         Intent refresh = new Intent(this, SettingsActivity.class);
         startActivity(refresh);
-    }
-
-    public void setChildImages() {
-        childrenImageHappy.setImageBitmap(dataManagement.getUser().getImageHappyBitmap());
-        childrenImageNeutral.setImageBitmap(dataManagement.getUser().getImageNeutralBitmap());
-        childrenImageSad.setImageBitmap(dataManagement.getUser().getImageSadBitmap());
     }
 
     /*
@@ -187,6 +177,22 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
 
+    public void checkPermissions() {
+        if (ContextCompat.checkSelfPermission(SettingsActivity.this,
+                Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            if (ActivityCompat.shouldShowRequestPermissionRationale(SettingsActivity.this,
+                    Manifest.permission.CAMERA)) {
+
+            } else {
+                ActivityCompat.requestPermissions(SettingsActivity.this,
+                        new String[]{Manifest.permission.CAMERA},
+                        CAMERA_PERMISSION_REQUEST_CODE);
+            }
+        }
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
@@ -204,150 +210,129 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
-    public void checkPermissions() {
-        if (ContextCompat.checkSelfPermission(SettingsActivity.this,
-                Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED) {
-
-            if (ActivityCompat.shouldShowRequestPermissionRationale(SettingsActivity.this,
-                    Manifest.permission.CAMERA)) {
-
-            } else {
-                ActivityCompat.requestPermissions(SettingsActivity.this,
-                        new String[]{Manifest.permission.CAMERA},
-                        CAMERA_PERMISSION_REQUEST_CODE);
-            }
-        }
+    public void setChildImage() {
+        Bitmap childImage = dataManagement.getUser().getChildPhotoBitmap();
+        childPhoto.setImageBitmap(childImage);
     }
 
-
-    public void selectImage(final View view) {
+    public void selectPhoto(View view) {
         try {
             PackageManager packageManager = getPackageManager();
             int hasPerm = packageManager.checkPermission(Manifest.permission.CAMERA, getPackageName());
             if (hasPerm == PackageManager.PERMISSION_GRANTED) {
-                //TODO: Delete Photo
-                final CharSequence[] options = {"Take Photo", "Choose From Gallery", "Cancel"};
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle("Select Option");
-                builder.setItems(options, new DialogInterface.OnClickListener() {
+                builder.setTitle(R.string.change_photo);
+                builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int item) {
-                        if (options[item].equals("Take Photo")) {
-                            dialog.dismiss();
-                            takePhoto(view);
-                        } else if (options[item].equals("Choose From Gallery")) {
-                            dialog.dismiss();
-                            pickPhoto(view);
-                        } else if (options[item].equals("Cancel")) {
-                            dialog.dismiss();
-                        }
+                        dialog.dismiss();
                     }
                 });
-                builder.show();
+                if (user.getChildPhoto() == null) {
+                    builder.setItems(R.array.select_photo_items_array, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int item) {
+                            switch (item) {
+                                case 0:
+                                    dialog.dismiss();
+                                    takePhoto();
+                                    break;
+                                case 1:
+                                    pickPhoto();
+                                    dialog.dismiss();
+                            }
+                        }
+                    });
 
+                    builder.show();
+                } else {
+                    builder.setItems(R.array.select_photo_items_array_with_delete, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int item) {
+                            switch (item) {
+                                case 0:
+                                    dialog.dismiss();
+                                    takePhoto();
+                                    break;
+                                case 1:
+                                    pickPhoto();
+                                    dialog.dismiss();
+                                    break;
+                                case 2:
+                                    deletePhoto();
+                                    dialog.dismiss();
+                            }
+                        }
+                    });
+                    builder.show();
+                }
             } else {
-                Toast.makeText(this, "Camera Permission error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.camera_permission_error, Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
-            Toast.makeText(this, "Camera Permission error", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.camera_permission_error, Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
     }
 
 
-    public void takePhoto(View view) {
-        int requestCode = 0;
-
-        switch (view.getId()) {
-            case R.id.imageButtonPhotoHappy:
-                requestCode = HAPPY_FACE_PHOTO_REQUEST_CODE;
-                break;
-            case R.id.imageButtonPhotoNeutral:
-                requestCode = NEUTRAL_FACE_PHOTO_REQUEST_CODE;
-                break;
-            case R.id.imageButtonPhotoSad:
-                requestCode = SAD_FACE_PHOTO_REQUEST_CODE;
-                break;
-        }
-        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (takePictureIntent.resolveActivity(getPackageManager()) != null && requestCode != 0) {
-            startActivityForResult(takePictureIntent, requestCode);
+    public void takePhoto() {
+        Intent takePhotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (takePhotoIntent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(takePhotoIntent, CAMERA_PHOTO_REQUEST_CODE);
         }
     }
 
-    public void pickPhoto(View view){
-        int requestCode = 0;
-
-        switch (view.getId()) {
-            case R.id.imageButtonPhotoHappy:
-                requestCode = HAPPY_FACE_PHOTO_GALLERY_REQUEST_CODE;
-                break;
-            case R.id.imageButtonPhotoNeutral:
-                requestCode = NEUTRAL_FACE_PHOTO_GALLERY_REQUEST_CODE;
-                break;
-            case R.id.imageButtonPhotoSad:
-                requestCode = SAD_FACE_PHOTO_GALLERY_REQUEST_CODE;
-                break;
-        }
+    public void pickPhoto() {
         Intent pickPhotoIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(pickPhotoIntent, requestCode);
+        startActivityForResult(pickPhotoIntent, GALLERY_PHOTO_REQUEST_CODE);
+    }
+
+    public void deletePhoto() {
+        user.setChildPhoto(null);
+        childPhoto.setImageBitmap(user.getChildPhotoBitmap());
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == HAPPY_FACE_PHOTO_REQUEST_CODE && resultCode == RESULT_OK) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == CAMERA_PHOTO_REQUEST_CODE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            childrenImageHappy.setImageBitmap(imageBitmap);
+            childPhoto.setImageBitmap(imageBitmap);
+
+            user.setChildPhoto("childPhoto.png");
 
             // Store image
-            new ImageSaver(this).
-                    setFileName("imageHappy.png").
-                    setDirectoryName("childrenImages").
-                    save(imageBitmap);
-            user.setImageHappy("imageHappy.png");
-            dataManagement.storeUser(user);
+            /**
+             new ImageSaver(this).
+             setFileName("childPhoto.png").
+             setDirectoryName("childrenImages").
+             save(imageBitmap);
+             user.setChildPhoto("childPhoto.png");
+             dataManagement.storeUser(user);
+             **/
 
-        } else if (requestCode == NEUTRAL_FACE_PHOTO_REQUEST_CODE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            childrenImageNeutral.setImageBitmap(imageBitmap);
+        } else if (requestCode == GALLERY_PHOTO_REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
 
-            // Store image
-            new ImageSaver(this).
-                    setFileName("imageNeutral.png").
-                    setDirectoryName("childrenImages").
-                    save(imageBitmap);
-            user.setImageNeutral("imageNeutral.png");
-            dataManagement.storeUser(user);
+            Uri uri = data.getData();
 
-        } else if (requestCode == SAD_FACE_PHOTO_REQUEST_CODE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            childrenImageSad.setImageBitmap(imageBitmap);
-
-            // Store image
-            new ImageSaver(this).
-                    setFileName("imageSad.png").
-                    setDirectoryName("childrenImages").
-                    save(imageBitmap);
-            user.setImageSad("imageSad.png");
-            dataManagement.storeUser(user);
-
-        } else if (requestCode == SAD_FACE_PHOTO_GALLERY_REQUEST_CODE) {
-            Uri selectedImage = data.getData();
             try {
-                Bitmap imageBitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
-                childrenImageSad.setImageBitmap(imageBitmap);
-                // Store image
-                //TODO: Saving is very slow
-                new ImageSaver(this).
-                        setFileName("imageSad.png").
-                        setDirectoryName("childrenImages").
-                        save(imageBitmap);
-                user.setImageSad("imageSad.png");
-                dataManagement.storeUser(user);
+                Bitmap imageBitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
+                childPhoto.setImageBitmap(imageBitmap);
+
+                user.setChildPhoto("childPhoto.png");
+                /**
+                 //Store image
+                 new ImageSaver(this).
+                 setFileName("childPhoto.png").
+                 setDirectoryName("childrenImages").
+                 save(imageBitmap);
+                 user.setChildPhoto("childPhoto.png");
+                 dataManagement.storeUser(user);
+                 **/
             } catch (Exception e) {
                 e.printStackTrace();
             }

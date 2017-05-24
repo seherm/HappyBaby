@@ -22,9 +22,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private DataManagement dataManagement;
-    ImageView imageViewChild;
-
-    SharedPreferences prefs = null;
+    private ImageView imageViewChild;
+    private SharedPreferences prefs = null;
 
 
     @Override
@@ -91,7 +90,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-
         detectFirstRun();
     }
 
@@ -101,7 +99,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void setChildImage() {
-        Bitmap childDefaultImage = dataManagement.getUser().getImageHappyBitmap();
+        Bitmap childDefaultImage = dataManagement.getUser().getChildPhotoBitmap();
         imageViewChild.setImageBitmap(childDefaultImage);
     }
 

@@ -76,8 +76,8 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
 
         //Configure Image of the Baby
         ImageView imageViewChild = (ImageView) findViewById(R.id.childImageView);
-        Bitmap childDefaultImage = dataManagement.getUser().getImageHappyBitmap();
-        imageViewChild.setImageBitmap(childDefaultImage);
+        Bitmap childImage = dataManagement.getUser().getChildPhotoBitmap();
+        imageViewChild.setImageBitmap(childImage);
 
         //Configure Search View
         foodToSelectArrayAdapter = new FoodToSelectArrayAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getAllFood());
