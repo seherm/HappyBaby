@@ -170,6 +170,7 @@ public class DataManagement {
             return null;
         } else {
             User user = new User(this.context);
+            user.setChildPhoto(childPhoto);
             // Add children
             // Also remove them if they do not belong to user (needed for "young" child, as it is automatically added to the user)
             if ((!user.hasChildByAgeGroup("young")) && hasChildYoung) {
