@@ -67,7 +67,7 @@ public class DataManagement {
     }
 
     public void addSelectedFood(Food food) {
-        selectedFood.add(food);
+        selectedFood.add(0,food);
         foodToSelect.remove(food);
     }
 
