@@ -190,14 +190,14 @@ public class SettingsActivity extends AppCompatActivity {
 
             if (ActivityCompat.shouldShowRequestPermissionRationale(SettingsActivity.this,
                     Manifest.permission.CAMERA)) {
-
-            } else {
-                ActivityCompat.requestPermissions(SettingsActivity.this,
-                        new String[]{Manifest.permission.CAMERA},
-                        CAMERA_PERMISSION_REQUEST_CODE);
             }
+            ActivityCompat.requestPermissions(SettingsActivity.this,
+                    new String[]{Manifest.permission.CAMERA},
+                    CAMERA_PERMISSION_REQUEST_CODE);
+            return;
         }
     }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
@@ -222,6 +222,8 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void selectPhoto(View view) {
+        checkPermissions();
+
         try {
             PackageManager packageManager = getPackageManager();
             int hasPerm = packageManager.checkPermission(Manifest.permission.CAMERA, getPackageName());
