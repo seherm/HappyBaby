@@ -100,34 +100,31 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxChildYoung" />
 
-    <ImageButton
-        android:id="@+id/imageButtonPhotoHappy"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:onClick="selectImage"
-        android:layout_marginTop="10dp"
+    <FrameLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/imageButtonPhotoNeutral"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"/>
+        app:layout_constraintRight_toRightOf="parent">
 
-    <ImageButton
-        android:id="@+id/imageButtonPhotoNeutral"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:onClick="selectImage"
-        android:layout_marginTop="10dp"
-        app:layout_constraintLeft_toLeftOf="@+id/imageButtonPhotoHappy"
-        app:layout_constraintRight_toLeftOf="@+id/imageButtonPhotoSad"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/childPhoto"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:layout_gravity="center_horizontal"
+            app:civ_fill_color="@color/white"/>
 
-    <ImageButton
-        android:id="@+id/imageButtonPhotoSad"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:onClick="selectImage"
-        android:layout_marginTop="10dp"
-        app:layout_constraintLeft_toRightOf="@+id/imageButtonPhotoNeutral"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"/>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_photo_camera_black_24dp"
+            android:tint="@color/white"
+            android:onClick="selectPhoto"
+            android:layout_margin="10dp"
+            android:layout_gravity="bottom|end"/>
+    </FrameLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>
