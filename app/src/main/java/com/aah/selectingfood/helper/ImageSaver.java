@@ -69,14 +69,11 @@ public class ImageSaver {
         File directory;
         if(external){
             directory = getAlbumStorageDir(directoryName);
-            Log.e("testest","1");//Todo delete
         }
         else {
             directory = context.getDir(directoryName, Context.MODE_PRIVATE);
-            Log.e("testest","2");//Todo delete
         }
 
-        Log.e("testest",directory.getParent());//TODO DELETE LINE
         return new File(directory, fileName);
     }
 
