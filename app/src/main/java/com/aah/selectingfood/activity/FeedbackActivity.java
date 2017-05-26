@@ -1,12 +1,16 @@
 package com.aah.selectingfood.activity;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +21,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.aah.selectingfood.adapter.FeedbackViewPagerAdapter;
 import com.aah.selectingfood.R;
@@ -67,13 +72,14 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         //Facebook
         callbackManager = CallbackManager.Factory.create();
         shareDialog = new ShareDialog(this);
+        setPermissions();
     }
 
     public void ShareFeedbackCard(View v){
         final int position = viewPager.getCurrentItem();
         View view = viewPager.getChildAt(position);
         Bitmap image = getBitmapFromView(view);
-        shareOnFacebook(image);
+        shareGeneral(image);
     }
 
     public static Bitmap getBitmapFromView(View view) {
@@ -142,6 +148,50 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
                 .addPhoto(photo)
                 .build();
         shareDialog.show(content);
+    }
+
+    private void setPermissions(){
+        int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 311390813;
+        if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+            if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                    != PackageManager.PERMISSION_GRANTED) {
+
+                // Should we show an explanation?
+                if (shouldShowRequestPermissionRationale(
+                        Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                    // Explain to the user why we need to read the contacts
+                }
+
+                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                        MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+
+                // MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE is an
+                // app-defined int constant that should be quite unique
+
+                return;
+            }
+        }
+    }
+
+    private void shareGeneral(Bitmap imageBitmap) {
+        setPermissions();
+
+        try {
+            PackageManager packageManager = getPackageManager();
+            int hasPerm = packageManager.checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE, getPackageName());
+            if (hasPerm == PackageManager.PERMISSION_GRANTED) {
+                String pathofBmp = MediaStore.Images.Media.insertImage(getContentResolver(), imageBitmap, "sharepicture", null);
+                Uri bmpUri = Uri.parse(pathofBmp);
+                final Intent shareIntent = new Intent(android.content.Intent.ACTION_SEND);
+                shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                shareIntent.putExtra(Intent.EXTRA_STREAM, bmpUri);
+                shareIntent.setType("image/png");
+                startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.send_to)));
+            } else Toast.makeText(this, R.string.writeext_permission_error, Toast.LENGTH_SHORT).show();
+        }
+        catch (Exception e){
+            Toast.makeText(this, R.string.writeext_permission_error, Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

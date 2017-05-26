@@ -44,10 +44,11 @@ public class ImageSaver {
         return this;
     }
 
-    public void save(Bitmap bitmapImage) {
+    public File save(Bitmap bitmapImage) {
         FileOutputStream fileOutputStream = null;
+        File file = createFile();
         try {
-            fileOutputStream = new FileOutputStream(createFile());
+            fileOutputStream = new FileOutputStream(file);
             bitmapImage.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream);
         } catch (Exception e) {
             e.printStackTrace();
@@ -60,6 +61,7 @@ public class ImageSaver {
                 e.printStackTrace();
             }
         }
+        return file;
     }
 
     @NonNull
@@ -67,11 +69,14 @@ public class ImageSaver {
         File directory;
         if(external){
             directory = getAlbumStorageDir(directoryName);
+            Log.e("testest","1");//Todo delete
         }
         else {
             directory = context.getDir(directoryName, Context.MODE_PRIVATE);
+            Log.e("testest","2");//Todo delete
         }
 
+        Log.e("testest",directory.getParent());//TODO DELETE LINE
         return new File(directory, fileName);
     }
 
