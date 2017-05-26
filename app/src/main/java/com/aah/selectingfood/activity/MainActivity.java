@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
         detectFirstRun();
+        setChildImage();
     }
 
     public void goToSelectionPage(View view) {
