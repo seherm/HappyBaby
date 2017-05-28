@@ -66,5 +66,6 @@
         <item>Select new photo</item>
         <item>Delete photo</item>
     </string-array>
+    <string name="title_activity_intro">IntroActivity</string>
 
 </resources>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -50,6 +51,39 @@ public class MainActivity extends AppCompatActivity
 
         GlobalState state = ((GlobalState) getApplicationContext());
         state.setLanguage(prefs.getString("language", "km"));
+
+        //  Declare a new thread to do a preference check
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                //  Initialize SharedPreferences
+                SharedPreferences getPrefs = PreferenceManager
+                        .getDefaultSharedPreferences(getBaseContext());
+
+                //  Create a new boolean and preference and set it to true
+                boolean isFirstStart = getPrefs.getBoolean("firstStart", true);
+
+                //  If the activity has never started before...
+                if (isFirstStart) {
+
+                    //  Launch app intro
+                    Intent i = new Intent(MainActivity.this, IntroActivity.class);
+                    startActivity(i);
+
+                    //  Make a new preferences editor
+                    SharedPreferences.Editor e = getPrefs.edit();
+
+                    //  Edit preference to make it false because we don't want this to run again
+                    e.putBoolean("firstStart", false);
+
+                    //  Apply changes
+                    e.apply();
+                }
+            }
+        });
+
+        // Start the thread
+        t.start();
     }
 
     @Override
@@ -90,7 +124,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        detectFirstRun();
+        //detectFirstRun();
         setChildImage();
     }
 
@@ -104,16 +138,16 @@ public class MainActivity extends AppCompatActivity
         imageViewChild.setImageBitmap(childDefaultImage);
     }
 
-    /*
+    /* todo: deprecated, delete when not needed
      * detects if app was started before and if not, sets boolean "firstRun" in GlobalState to TRUE
      * accessible via GlobalState.getFirstRun
      */
-    public void detectFirstRun() {
+    /*public void detectFirstRun() {
         GlobalState state = ((GlobalState) getApplicationContext());
 
         if (!prefs.contains("firstrun")) {
             state.setFirstRun(true);
             prefs.edit().putBoolean("firstrun", false).apply();
         }
-    }
+    }*/
 }
