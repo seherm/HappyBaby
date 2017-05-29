@@ -17,6 +17,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -77,7 +78,7 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         setPermissions();
     }
 
-    public void ShareFeedbackCard(View v){
+    public void ShareFeedbackCard(View v) {
         final int position = viewPager.getCurrentItem();
         View view = viewPager.getChildAt(position);
         Bitmap image = getBitmapFromView(view);
@@ -152,9 +153,9 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         shareDialog.show(content);
     }
 
-    private void setPermissions(){
+    private void setPermissions() {
         int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 311390813;
-        if(android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
                     != PackageManager.PERMISSION_GRANTED) {
 
@@ -189,9 +190,9 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
                 shareIntent.putExtra(Intent.EXTRA_STREAM, bmpUri);
                 shareIntent.setType("image/png");
                 startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.send_to)));
-            } else Toast.makeText(this, R.string.writeext_permission_error, Toast.LENGTH_SHORT).show();
-        }
-        catch (Exception e){
+            } else
+                Toast.makeText(this, R.string.writeext_permission_error, Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
             Toast.makeText(this, R.string.writeext_permission_error, Toast.LENGTH_SHORT).show();
         }
     }
@@ -226,9 +227,23 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.restart_menu, menu);
+        getMenuInflater().inflate(R.menu.restart_menu, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id == R.id.restart) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 }

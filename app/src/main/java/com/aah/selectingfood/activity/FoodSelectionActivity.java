@@ -151,7 +151,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         //used to display search bar
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.options_menu, menu);
+        inflater.inflate(R.menu.search_menu, menu);
 
         item = menu.findItem(R.id.search);
         searchView = (SearchView) item.getActionView();

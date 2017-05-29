@@ -42,12 +42,15 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         View itemView = LayoutInflater.from(context).inflate(R.layout.feedback_item_layout, container, false);
-        itemView.setBackgroundColor(Color.parseColor(feedbacks.get(position).getBackgroundColor()));
+        //itemView.setBackgroundResource(R.color.white);
+        //itemView.setBackgroundColor(Color.parseColor(feedbacks.get(position).getBackgroundColor()));
+        TextView titleTextView = (TextView) itemView.findViewById(R.id.title_pager_item);
+        titleTextView.setText("Test Title");
         ImageView imageView = (ImageView) itemView.findViewById(R.id.img_pager_item);
         imageView.setImageBitmap(feedbacks.get(position).getImage());
         TextView textView = (TextView) itemView.findViewById(R.id.text_pager_item);
         textView.setText(feedbacks.get(position).getText());
-        textView.setTextColor(Color.parseColor(feedbacks.get(position).getTextColor()));
+        //textView.setTextColor(Color.parseColor(feedbacks.get(position).getTextColor()));
         container.addView(itemView);
         return itemView;
     }

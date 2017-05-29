@@ -10,7 +10,7 @@
 
     <!--Button Text-->
     <string name="start">Start</string>
-    <string name="share">Share</string>
+    <string name="share">Share this Tip</string>
 
     <!--Page Titles-->
     <string name="title_activity_food_group_selection">Select Food Group</string>

@@ -7,6 +7,8 @@
     <color name="background">#f0f0f0</color>
     <color name="button_yellow">#f4b400</color>
     <color name="grey">#cccccc</color>
+    <color name="lightGrey">#E5E5E5</color>
+    <color name="blue">#03A9F4</color>
 
     <!-->Basic Colors<-->
     <color name="white">#FFFFFF</color>

@@ -18,17 +18,12 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.aah.selectingfood.R;
 import com.aah.selectingfood.adapter.FoodToSelectArrayAdapter;
 import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
 import com.aah.selectingfood.helper.DataManagement;
-import com.aah.selectingfood.model.Child;
-import com.aah.selectingfood.model.FeedbackInstant;
 import com.aah.selectingfood.model.Food;
-
-import java.util.List;
 
 public class FoodGroupSelectionActivity extends AppCompatActivity {
 
@@ -165,7 +160,7 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         //used to display search bar
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.options_menu, menu);
+        inflater.inflate(R.menu.search_menu, menu);
 
         item = menu.findItem(R.id.search);
         searchView = (SearchView) item.getActionView();
