@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:id="@+id/onboarding_photo_layout">
+
+    <TextView
+        android:id="@+id/takePhotoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/change_photos_of_baby"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_large"/>
+
+    <TextView
+        android:id="@+id/takePhotoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/change_photos_of_baby"
+        android:textSize="@dimen/text_size_medium"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/onbobardingChildPhoto"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_photo_camera_black_24dp"
+        android:onClick="selectPhoto"/>
+
+
+</LinearLayout>

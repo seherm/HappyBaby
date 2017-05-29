@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:id="@+id/onboarding_photo_layout">
+
+    <TextView
+        android:id="@+id/takePhotoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ages_of_your_children"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_large"/>
+
+    <TextView
+        android:id="@+id/takePhotoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ages_of_your_children"
+        android:textSize="@dimen/text_size_medium"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxChildYoung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:onClick="addYoungChild"
+        android:text="@string/children_young_category"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxChildMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:onClick="addMiddleChild"
+        android:text="@string/children_middle_category"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxChildOld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:onClick="addOldChild"
+        android:text="@string/children_old_category"/>
+
+
+</LinearLayout>
