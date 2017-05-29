@@ -54,10 +54,10 @@ public class IntroActivity extends AppIntro {
 
         // Instead of fragments, you can also use our default slide
         // Just set a title, description, background and image. AppIntro will do the rest.
-        String title = "asdf";
-        String description = "bcsd";
-        int image = R.drawable.foodgroup_fruits;
-        int backgroundColor = Color.parseColor("#3F51B5");
+        String title = getString(R.string.onboarding_intro_title);
+        String description = getString(R.string.onboarding_intro_description);
+        int image = R.mipmap.ic_launcher;
+        int backgroundColor = Color.parseColor(getString(R.color.blue));
         addSlide(AppIntroFragment.newInstance(title, description, image, backgroundColor));
 
         addSlide(SampleSlide.newInstance(R.layout.onboarding_take_photo_layout));

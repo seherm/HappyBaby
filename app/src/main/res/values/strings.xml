@@ -8,6 +8,10 @@
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
+    <!--Onboarding Text-->
+    <string name="onboarding_intro_title">"New in Nutrition App for Parents"</string>
+    <string name="onboarding_intro_description">"This App will help you how to feed your child well"</string>
+
     <!--Button Text-->
     <string name="start">Start</string>
     <string name="share">Share this Tip</string>
