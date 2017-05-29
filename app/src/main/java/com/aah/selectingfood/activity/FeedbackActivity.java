@@ -72,7 +72,7 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         viewPager.addOnPageChangeListener(this);
         setUiPageViewController();
 
-        //Facebook
+        //TODO: Facebook -> still used?
         callbackManager = CallbackManager.Factory.create();
         shareDialog = new ShareDialog(this);
         setPermissions();
@@ -141,6 +141,7 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         dots[0].setImageDrawable(getResources().getDrawable(R.drawable.dot_selecteditem));
     }
 
+    //TODO: delete when not used anymore?
     private void shareOnFacebook(Bitmap image) {
         SharePhoto photo = new SharePhoto.Builder()
                 .setBitmap(image)
@@ -183,8 +184,8 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
             PackageManager packageManager = getPackageManager();
             int hasPerm = packageManager.checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE, getPackageName());
             if (hasPerm == PackageManager.PERMISSION_GRANTED) {
-                String pathofBmp = MediaStore.Images.Media.insertImage(getContentResolver(), imageBitmap, "sharepicture", null);
-                Uri bmpUri = Uri.parse(pathofBmp);
+                String pathOfBitmap = MediaStore.Images.Media.insertImage(getContentResolver(), imageBitmap, "sharepicture", null);
+                Uri bmpUri = Uri.parse(pathOfBitmap);
                 final Intent shareIntent = new Intent(android.content.Intent.ACTION_SEND);
                 shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 shareIntent.putExtra(Intent.EXTRA_STREAM, bmpUri);
@@ -242,8 +243,6 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
-
         return super.onOptionsItemSelected(item);
     }
-
 }
