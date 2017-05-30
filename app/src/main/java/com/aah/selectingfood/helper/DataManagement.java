@@ -124,8 +124,10 @@ public class DataManagement {
                     Bitmap image = loadBitmapFromAssets(eElement.getElementsByTagName("image").item(0).getTextContent(), "foodImages");
                     Food tempFood = new Food(name, foodgroup, image);
 
-                    // Add instant feedback to food
+                    tempFood.setKhmerName(eElement.getElementsByTagName("khmerName").item(0).getTextContent());
+                    tempFood.setSound(eElement.getElementsByTagName("sound").item(0).getTextContent());
 
+                    // Add instant feedback to food
                     Element feedbackNode = (Element) eElement.getElementsByTagName("feedback").item(0);
                     tempFood.setFeedbackInstantYoungMessage(feedbackNode.getElementsByTagName("feedbackInstantYoungMessage").item(0).getTextContent());
                     tempFood.setFeedbackInstantYoungColor(feedbackNode.getElementsByTagName("feedbackInstantYoungColor").item(0).getTextContent());

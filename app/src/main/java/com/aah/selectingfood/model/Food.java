@@ -9,8 +9,10 @@ import android.graphics.Bitmap;
 public class Food {
     private int id;
     private String name;
+    private String khmerName;
     private String foodGroup;
     private Bitmap image;
+    private String sound;
     private String borderColor;
     private String backgroundColor;
     private String feedbackInstantYoungColor;
@@ -174,6 +176,22 @@ public class Food {
 
     public void setFeedbackFinalOldMessage(String feedbackFinalOldMessage) {
         this.feedbackFinalOldMessage = feedbackFinalOldMessage;
+    }
+
+    public String getKhmerName() {
+        return khmerName;
+    }
+
+    public void setKhmerName(String khmerName) {
+        this.khmerName = khmerName;
+    }
+
+    public String getSound() {
+        return sound;
+    }
+
+    public void setSound(String sound) {
+        this.sound = sound;
     }
 }
 
