@@ -16,7 +16,6 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.aah.selectingfood.R;
@@ -28,6 +27,7 @@ import com.aah.selectingfood.model.User;
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 
+/** This Activity is for showing the onboarding process in the first usage of the app**/
 public class IntroActivity extends AppIntro {
 
     private static final int CAMERA_PHOTO_REQUEST_CODE = 1;
@@ -148,7 +148,7 @@ public class IntroActivity extends AppIntro {
                     setDirectoryName("childrenImages").
                     save(imageBitmap);
             user.setChildPhoto("childPhoto.png");
-            dataManagement.storeUser(user);
+            dataManagement.storeUserPrefs(user);
 
 
         } else if (requestCode == GALLERY_PHOTO_REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
@@ -167,7 +167,7 @@ public class IntroActivity extends AppIntro {
                         setDirectoryName("childrenImages").
                         save(preview_bitmap);
                 user.setChildPhoto("childPhoto.png");
-                dataManagement.storeUser(user);
+                dataManagement.storeUserPrefs(user);
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -186,7 +186,7 @@ public class IntroActivity extends AppIntro {
                 user.removeChildByAgeGroup("young");
             }
         }
-        dataManagement.storeUser(user);
+        dataManagement.storeUserPrefs(user);
     }
 
     public void addMiddleChild(View view) {
@@ -200,7 +200,7 @@ public class IntroActivity extends AppIntro {
                 user.removeChildByAgeGroup("middle");
             }
         }
-        dataManagement.storeUser(user);
+        dataManagement.storeUserPrefs(user);
     }
 
     public void addOldChild(View view) {
@@ -214,7 +214,7 @@ public class IntroActivity extends AppIntro {
                 user.removeChildByAgeGroup("old");
             }
         }
-        dataManagement.storeUser(user);
+        dataManagement.storeUserPrefs(user);
     }
 
     @Override

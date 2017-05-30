@@ -25,6 +25,7 @@ import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
 import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.Food;
 
+/** In this Activity the user selects the food group of the food he wants to select**/
 public class FoodGroupSelectionActivity extends AppCompatActivity {
 
     private DataManagement dataManagement;

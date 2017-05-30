@@ -40,6 +40,7 @@ import com.facebook.share.widget.ShareDialog;
 import java.util.ArrayList;
 import java.util.List;
 
+/** This Activity is for showing the feedback about the meal/food the user has chosen to feed his child**/
 public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
 
     private LinearLayout pagerIndicator;

@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.aah.selectingfood.R;
 
+/** This Activity is for showing some suggestions of recipes for good meals**/
 public class RecipesActivity extends AppCompatActivity {
 
     @Override

@@ -6,6 +6,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.aah.selectingfood.R;
 
+/** This Activity is for showing static content in an about page**/
 public class AboutActivity extends AppCompatActivity {
 
     @Override

@@ -19,6 +19,7 @@ import com.aah.selectingfood.helper.GlobalState;
 import com.aah.selectingfood.R;
 import com.aah.selectingfood.helper.DataManagement;
 
+/** This Activity is the start screen of the app**/
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 

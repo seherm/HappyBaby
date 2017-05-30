@@ -13,7 +13,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -24,7 +23,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.CheckBox;
@@ -33,13 +31,7 @@ import android.widget.Toast;
 
 import com.aah.selectingfood.helper.DataManagement;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-
-import static com.aah.selectingfood.R.id.imageViewChild;
-
+/** This Activity is for showing the settings page, where the user can change ages, photo and language**/
 public class SettingsActivity extends AppCompatActivity {
 
     private CheckBox checkBoxChildYoung;
@@ -179,7 +171,7 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         // Store user and children
-        dataManagement.storeUser(user);
+        dataManagement.storeUserPrefs(user);
     }
 
 
@@ -317,7 +309,7 @@ public class SettingsActivity extends AppCompatActivity {
                     setDirectoryName("childrenImages").
                     save(imageBitmap);
             user.setChildPhoto("childPhoto.png");
-            dataManagement.storeUser(user);
+            dataManagement.storeUserPrefs(user);
 
 
         } else if (requestCode == GALLERY_PHOTO_REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
@@ -336,7 +328,7 @@ public class SettingsActivity extends AppCompatActivity {
                         setDirectoryName("childrenImages").
                         save(preview_bitmap);
                 user.setChildPhoto("childPhoto.png");
-                dataManagement.storeUser(user);
+                dataManagement.storeUserPrefs(user);
 
             } catch (Exception e) {
                 e.printStackTrace();

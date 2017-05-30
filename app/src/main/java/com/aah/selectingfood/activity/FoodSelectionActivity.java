@@ -30,6 +30,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+/** In this Activity the user selects the food after selecting the food group in the FoodGroupSelectionActivity before**/
 public class FoodSelectionActivity extends AppCompatActivity {
 
     private DataManagement dataManagement;

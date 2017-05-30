@@ -34,6 +34,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+/** This Activity is for showing static content in an frequently asked questions page**/
 public class FAQActivity extends AppCompatActivity {
 
     @Override

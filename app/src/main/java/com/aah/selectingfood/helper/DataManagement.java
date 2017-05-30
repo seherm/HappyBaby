@@ -9,6 +9,7 @@ import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.model.Food;
 import com.aah.selectingfood.model.User;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.io.InputStream;
 
@@ -19,8 +20,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
-
-import static com.aah.selectingfood.R.id.childPhoto;
 
 /**
  * Created by sebas on 03.05.2017.
@@ -44,12 +43,12 @@ public class DataManagement {
         this.context = context;
 
         // Try to load user from last time
-        user = loadUser();
+        user = loadUserPrefs();
         if (user == null) {
             // No user available, create a new one
             user = new User(this.context);
             // Store user right away
-            storeUser(user);
+            storeUserPrefs(user);
         }
 
         // Create foods
@@ -67,7 +66,7 @@ public class DataManagement {
     }
 
     public void addSelectedFood(Food food) {
-        selectedFood.add(0,food);
+        selectedFood.add(0, food);
         foodToSelect.remove(food);
     }
 
@@ -127,21 +126,21 @@ public class DataManagement {
 
                     // Add instant feedback to food
 
-                     Element feedbackNode = (Element) eElement.getElementsByTagName("feedback").item(0);
-                     tempFood.setFeedbackInstantYoungMessage(feedbackNode.getElementsByTagName("feedbackInstantYoungMessage").item(0).getTextContent());
-                     tempFood.setFeedbackInstantYoungColor(feedbackNode.getElementsByTagName("feedbackInstantYoungColor").item(0).getTextContent());
-                     tempFood.setFeedbackInstantMiddleMessage(feedbackNode.getElementsByTagName("feedbackInstantMiddleMessage").item(0).getTextContent());
-                     tempFood.setFeedbackInstantMiddleColor(feedbackNode.getElementsByTagName("feedbackInstantMiddleColor").item(0).getTextContent());
-                     tempFood.setFeedbackInstantOldMessage(feedbackNode.getElementsByTagName("feedbackInstantOldMessage").item(0).getTextContent());
-                     tempFood.setFeedbackInstantOldColor(feedbackNode.getElementsByTagName("feedbackInstantOldColor").item(0).getTextContent());
+                    Element feedbackNode = (Element) eElement.getElementsByTagName("feedback").item(0);
+                    tempFood.setFeedbackInstantYoungMessage(feedbackNode.getElementsByTagName("feedbackInstantYoungMessage").item(0).getTextContent());
+                    tempFood.setFeedbackInstantYoungColor(feedbackNode.getElementsByTagName("feedbackInstantYoungColor").item(0).getTextContent());
+                    tempFood.setFeedbackInstantMiddleMessage(feedbackNode.getElementsByTagName("feedbackInstantMiddleMessage").item(0).getTextContent());
+                    tempFood.setFeedbackInstantMiddleColor(feedbackNode.getElementsByTagName("feedbackInstantMiddleColor").item(0).getTextContent());
+                    tempFood.setFeedbackInstantOldMessage(feedbackNode.getElementsByTagName("feedbackInstantOldMessage").item(0).getTextContent());
+                    tempFood.setFeedbackInstantOldColor(feedbackNode.getElementsByTagName("feedbackInstantOldColor").item(0).getTextContent());
 
-                     // Add final feedback to food
-                     tempFood.setFeedbackFinalYoungMessage(feedbackNode.getElementsByTagName("feedbackFinalYoungMessage").item(0).getTextContent());
-                     tempFood.setFeedbackFinalYoungColor(feedbackNode.getElementsByTagName("feedbackFinalYoungColor").item(0).getTextContent());
-                     tempFood.setFeedbackFinalMiddleMessage(feedbackNode.getElementsByTagName("feedbackFinalMiddleMessage").item(0).getTextContent());
-                     tempFood.setFeedbackFinalMiddleColor(feedbackNode.getElementsByTagName("feedbackFinalMiddleColor").item(0).getTextContent());
-                     tempFood.setFeedbackFinalOldMessage(feedbackNode.getElementsByTagName("feedbackFinalOldMessage").item(0).getTextContent());
-                     tempFood.setFeedbackFinalOldColor(feedbackNode.getElementsByTagName("feedbackFinalOldColor").item(0).getTextContent());
+                    // Add final feedback to food
+                    tempFood.setFeedbackFinalYoungMessage(feedbackNode.getElementsByTagName("feedbackFinalYoungMessage").item(0).getTextContent());
+                    tempFood.setFeedbackFinalYoungColor(feedbackNode.getElementsByTagName("feedbackFinalYoungColor").item(0).getTextContent());
+                    tempFood.setFeedbackFinalMiddleMessage(feedbackNode.getElementsByTagName("feedbackFinalMiddleMessage").item(0).getTextContent());
+                    tempFood.setFeedbackFinalMiddleColor(feedbackNode.getElementsByTagName("feedbackFinalMiddleColor").item(0).getTextContent());
+                    tempFood.setFeedbackFinalOldMessage(feedbackNode.getElementsByTagName("feedbackFinalOldMessage").item(0).getTextContent());
+                    tempFood.setFeedbackFinalOldColor(feedbackNode.getElementsByTagName("feedbackFinalOldColor").item(0).getTextContent());
 
                     allFood.add(tempFood);
                 }
@@ -159,7 +158,7 @@ public class DataManagement {
     *
     * @return          the user, or null
     */
-    private User loadUser() {
+    private User loadUserPrefs() {
         SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
         String childPhoto = sharedPref.getString("childPhoto", null);
         Boolean hasChildYoung = sharedPref.getBoolean("hasChildYoung", false);
@@ -199,7 +198,7 @@ public class DataManagement {
     * Stores a user and its children in the local shared preferences.
     *
     */
-    public void storeUser(User user) {
+    public void storeUserPrefs(User user) {
         SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString("childPhoto", user.getChildPhoto());
@@ -220,7 +219,8 @@ public class DataManagement {
                 if (stream != null) {
                     stream.close();
                 }
-            } catch (Exception ignored) {
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
         return null;
