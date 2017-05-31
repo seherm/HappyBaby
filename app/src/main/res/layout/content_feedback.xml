@@ -17,7 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/feedback_item_layout"
-        android:padding="40dp"
         android:paddingBottom="40dp"/>
 
     <LinearLayout
