@@ -84,7 +84,7 @@
             android:background="@color/fruitsBlue"
             android:onClick="goToFoodSelectionPage"
             android:orientation="vertical"
-            android:padding="25dp">
+            android:padding="20dp">
 
             <TextView
                 android:id="@+id/fruitsText"
@@ -111,7 +111,7 @@
             android:background="@color/legumesBrown"
             android:onClick="goToFoodSelectionPage"
             android:orientation="vertical"
-            android:padding="25dp">
+            android:padding="18dp">
 
             <TextView
                 android:id="@+id/legumesText"
@@ -130,6 +130,32 @@
                 android:src="@drawable/foodgroup_legumes" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/herbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/herbsGreen"
+            android:onClick="goToFoodSelectionPage"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/herbsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/herbs"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/herbsImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/foodgroup_herbs" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/meat"
@@ -139,7 +165,7 @@
             android:background="@color/meatsRed"
             android:onClick="goToFoodSelectionPage"
             android:orientation="vertical"
-            android:padding="25dp">
+            android:padding="20dp">
 
             <TextView
                 android:id="@+id/meatText"
@@ -179,7 +205,7 @@
             android:background="@color/vegetablesGreen"
             android:onClick="goToFoodSelectionPage"
             android:orientation="vertical"
-            android:padding="25dp">
+            android:padding="20dp">
 
             <TextView
                 android:id="@+id/vegetablesText"
@@ -206,7 +232,7 @@
             android:background="@color/junkFoodPink"
             android:onClick="goToFoodSelectionPage"
             android:orientation="vertical"
-            android:padding="25dp">
+            android:padding="20dp">
 
             <TextView
                 android:id="@+id/junkFoodText"
@@ -227,30 +253,57 @@
 
 
         <LinearLayout
-            android:id="@+id/starches"
+            android:id="@+id/carbohydrates"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/starchesYellow"
+            android:background="@color/carbohydratesYellow"
             android:onClick="goToFoodSelectionPage"
             android:orientation="vertical"
-            android:padding="25dp">
+            android:padding="20dp">
 
             <TextView
-                android:id="@+id/starchesText"
+                android:id="@+id/carbohydratesText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="@string/starches"
+                android:text="@string/carbohydrates"
                 android:textColor="@color/white" />
 
             <ImageView
-                android:id="@+id/starchesImage"
+                android:id="@+id/carbohydratesImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/foodgroup_starches" />
+                android:src="@drawable/foodgroup_carbohydrates" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lastUsed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lastUsedPurple"
+            android:onClick="goToFoodSelectionPage"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/lastUsedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/last_used"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/lastUsedImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/foodgroup_last_used" />
         </LinearLayout>
     </LinearLayout>
 

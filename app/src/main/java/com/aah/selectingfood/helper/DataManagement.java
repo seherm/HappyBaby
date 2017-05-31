@@ -37,6 +37,7 @@ public class DataManagement {
 
     private ArrayList<Food> foodToSelect;
     private ArrayList<Food> selectedFood;
+    private ArrayList<Food> lastUsedFood;
     private ArrayList<Food> allFood;
 
     private DataManagement(Context context) {
@@ -55,6 +56,7 @@ public class DataManagement {
         foodToSelect = new ArrayList<>();
         selectedFood = new ArrayList<>();
         allFood = new ArrayList<>();
+        lastUsedFood = new ArrayList<>();
         createFoods();
     }
 
@@ -66,15 +68,22 @@ public class DataManagement {
     }
 
     public void addSelectedFood(Food food) {
+        if (!lastUsedFood.contains(food)) {
+            lastUsedFood.add(0, food);
+        }
         selectedFood.add(0, food);
         foodToSelect.remove(food);
     }
 
     public void removeSelectedFood(Food food, String selectedFoodGroup) {
-        if (food.getFoodGroup().equals(selectedFoodGroup)) {
-            foodToSelect.add(food);
+        if (selectedFoodGroup.equals("Last Used")) {
+            selectedFood.remove(food);
+        } else {
+            if (food.getFoodGroup().equals(selectedFoodGroup)) {
+                foodToSelect.add(food);
+            }
+            selectedFood.remove(food);
         }
-        selectedFood.remove(food);
     }
 
     public void removeSelectedFood(Food food) {
@@ -84,10 +93,14 @@ public class DataManagement {
     //after selecting foodgroup the foods list will be created
     public void generateFoodList(String foodGroup) {
         foodToSelect.clear();
-        for (Food food : allFood) {
-            if (food.getFoodGroup().equals(foodGroup)) {
-                if (!selectedFood.contains(food)) {
-                    foodToSelect.add(food);
+        if (foodGroup.equals("Last Used")) {
+            foodToSelect.addAll(lastUsedFood);
+        } else {
+            for (Food food : allFood) {
+                if (food.getFoodGroup().equals(foodGroup)) {
+                    if (!selectedFood.contains(food)) {
+                        foodToSelect.add(food);
+                    }
                 }
             }
         }

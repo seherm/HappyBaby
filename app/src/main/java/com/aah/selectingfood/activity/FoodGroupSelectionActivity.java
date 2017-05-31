@@ -116,6 +116,10 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Legumes");
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.legumesBrown);
                 break;
+            case R.id.herbs:
+                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Herbs");
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.herbsGreen);
+                break;
             case R.id.meat:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Meat");
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.meatsRed);
@@ -128,9 +132,13 @@ public class FoodGroupSelectionActivity extends AppCompatActivity {
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Junk Food");
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.junkFoodPink);
                 break;
-            case R.id.starches:
-                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Starches");
-                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.starchesYellow);
+            case R.id.carbohydrates:
+                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Carbohydrates");
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.carbohydratesYellow);
+                break;
+            case R.id.lastUsed:
+                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Last Used");
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.lastUsedPurple);
                 break;
         }
         Intent intent = new Intent(this, FoodSelectionActivity.class);

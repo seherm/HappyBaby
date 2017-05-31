@@ -50,9 +50,13 @@
     <string name="fruits">Fruits</string>
     <string name="legumes">Legumes</string>
     <string name="meat">Meat</string>
+    <string name="herbs">Herbs</string>
     <string name="vegetables">Vegetables</string>
     <string name="junk_food">Junk Food</string>
-    <string name="starches">Starches</string>
+    <string name="carbohydrates">Carbohydrates</string>
+    <string name="last_used">Last Used</string>
+
+
 
     <string name="test_string">engeng</string>
     <string name="title_activity_sharing">SharingActivity</string>

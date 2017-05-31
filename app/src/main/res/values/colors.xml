@@ -21,6 +21,8 @@
     <color name="meatsRed">#DB4437</color>
     <color name="vegetablesGreen">#0F9D58</color>
     <color name="junkFoodPink">#E91E63</color>
-    <color name="starchesYellow">#F4B400</color>
+    <color name="carbohydratesYellow">#F4B400</color>
+    <color name="herbsGreen">#00A3A0</color>
+    <color name="lastUsedPurple">#352683</color>
 
 </resources>
