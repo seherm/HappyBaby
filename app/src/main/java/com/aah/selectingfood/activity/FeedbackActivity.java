@@ -7,7 +7,9 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -77,6 +79,14 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         callbackManager = CallbackManager.Factory.create();
         shareDialog = new ShareDialog(this);
         setPermissions();
+
+        /*setContentView(R.layout.feedback_item_layout);
+        final Button button =  findViewById(R.id.share_button_pager_item);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //ShareFeedbackCard(v);
+            }
+        });*/
     }
 
     public void ShareFeedbackCard(View v) {
@@ -87,14 +97,24 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
     }
 
     public static Bitmap getBitmapFromView(View view) {
-        view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
-        Bitmap bitmap = Bitmap.createBitmap(view.getMeasuredWidth(), view.getMeasuredHeight(),
-                Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-        view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
+        //Define a bitmap with the same size as the view
+        Bitmap returnedBitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(),Bitmap.Config.ARGB_8888);
+        //Bind a canvas to it
+        Canvas canvas = new Canvas(returnedBitmap);
+        //Get the view's background
+        Drawable bgDrawable =view.getBackground();
+        if (bgDrawable!=null)
+            //has background drawable, then draw it on the canvas
+            bgDrawable.draw(canvas);
+        else
+            //does not have background drawable, then draw white background on the canvas
+            canvas.drawColor(Color.WHITE);
+        // draw the view on the canvas
         view.draw(canvas);
-        return bitmap;
+        //return the bitmap
+        return returnedBitmap;
     }
+
 
 
     private List<FeedbackCard> getFeedbackCards() {
