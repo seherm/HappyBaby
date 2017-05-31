@@ -57,8 +57,6 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
     private ImageView[] dots;
     private FeedbackViewPagerAdapter pagerAdapter;
     private ViewPager viewPager;
-    private SelectedFoodRecyclerViewAdapter selectedFoodRecyclerViewAdapter;
-    private DataManagement dataManagement;
 
     CallbackManager callbackManager;
     ShareDialog shareDialog;

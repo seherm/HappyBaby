@@ -12,12 +12,14 @@ public class FeedbackCard {
     private String textColor;
     private String text;
     private Bitmap image;
+    private boolean showFoodOnCard;
 
-    public FeedbackCard(String backgroundColor, String textColor, String text, Bitmap image) {
+    public FeedbackCard(String backgroundColor, String textColor, String text, Bitmap image, boolean showFoodOnCard) {
         this.backgroundColor = backgroundColor;
         this.textColor = textColor;
         this.text = text;
         this.image = image;
+        this.showFoodOnCard = showFoodOnCard;
     }
 
     public int getId() {
@@ -58,5 +60,13 @@ public class FeedbackCard {
 
     public void setImage(Bitmap image) {
         this.image = image;
+    }
+
+    public boolean isShowFoodOnCard() {
+        return showFoodOnCard;
+    }
+
+    public void setShowFoodOnCard(boolean showFoodOnCard) {
+        this.showFoodOnCard = showFoodOnCard;
     }
 }
