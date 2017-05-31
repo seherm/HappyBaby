@@ -14,12 +14,17 @@ import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -28,9 +33,11 @@ import android.widget.Toast;
 
 import com.aah.selectingfood.adapter.FeedbackViewPagerAdapter;
 import com.aah.selectingfood.R;
+import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
 import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.FeedbackCard;
+import com.aah.selectingfood.model.Food;
 import com.facebook.CallbackManager;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
@@ -40,14 +47,18 @@ import com.facebook.share.widget.ShareDialog;
 import java.util.ArrayList;
 import java.util.List;
 
-/** This Activity is for showing the feedback about the meal/food the user has chosen to feed his child**/
+/**
+ * This Activity is for showing the feedback about the meal/food the user has chosen to feed his child
+ **/
 public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
 
     private LinearLayout pagerIndicator;
     private int dotsCount;
     private ImageView[] dots;
     private FeedbackViewPagerAdapter pagerAdapter;
-    ViewPager viewPager;
+    private ViewPager viewPager;
+    private SelectedFoodRecyclerViewAdapter selectedFoodRecyclerViewAdapter;
+    private DataManagement dataManagement;
 
     CallbackManager callbackManager;
     ShareDialog shareDialog;
@@ -62,7 +73,6 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-
 
         viewPager = (ViewPager) findViewById(R.id.pager_introduction);
         pagerIndicator = (LinearLayout) findViewById(R.id.viewPagerCountDots);

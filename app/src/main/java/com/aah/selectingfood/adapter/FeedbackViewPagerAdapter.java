@@ -3,6 +3,8 @@ package com.aah.selectingfood.adapter;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v4.view.PagerAdapter;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.aah.selectingfood.R;
+import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.FeedbackCard;
 
 import java.util.List;
@@ -23,6 +26,8 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
 
     private Context context;
     private List<FeedbackCard> feedbacks;
+    private DataManagement dataManagement;
+    private SelectedFoodRecyclerViewAdapter selectedFoodRecyclerViewAdapter;
 
     public FeedbackViewPagerAdapter(Context context, List<FeedbackCard> feedbacks) {
         this.context = context;
@@ -44,6 +49,15 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
         View itemView = LayoutInflater.from(context).inflate(R.layout.feedback_item_layout, container, false);
         //itemView.setBackgroundResource(R.color.white);
         //itemView.setBackgroundColor(Color.parseColor(feedbacks.get(position).getBackgroundColor()));
+
+        //Configure Selected Food View
+        RecyclerView selectedFoodRecyclerView = (RecyclerView) itemView.findViewById(R.id.selectedFoodFeedbackRecyclerView);
+        dataManagement = DataManagement.getInstance(context);
+        selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(dataManagement.getSelectedFood(), context, null);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(context,5);
+        selectedFoodRecyclerView.setLayoutManager(gridLayoutManager);
+        selectedFoodRecyclerView.setAdapter(selectedFoodRecyclerViewAdapter);
+
         TextView titleTextView = (TextView) itemView.findViewById(R.id.title_pager_item);
         titleTextView.setText("Test Title");
         ImageView imageView = (ImageView) itemView.findViewById(R.id.img_pager_item);
