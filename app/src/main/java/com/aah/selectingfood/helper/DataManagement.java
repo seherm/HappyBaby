@@ -12,6 +12,9 @@ import com.aah.selectingfood.model.User;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.io.InputStream;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -58,6 +61,7 @@ public class DataManagement {
         allFood = new ArrayList<>();
         lastUsedFood = new ArrayList<>();
         createFoods();
+        loadLastUsedFoodFromPrefs();
     }
 
     public static final DataManagement getInstance(Context context) {
@@ -221,6 +225,29 @@ public class DataManagement {
         editor.putBoolean("hasChildMiddle", user.hasChildByAgeGroup("middle"));
         editor.putBoolean("hasChildOld", user.hasChildByAgeGroup("old"));
         editor.apply();
+    }
+
+    public void storeLastUsedFoodToPrefs() {
+        SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        Set<String> set = new HashSet<String>();
+        for (Food food : lastUsedFood) {
+            set.add(food.getName());
+        }
+        editor.putStringSet("LastUsedFoods", set);
+        editor.apply();
+    }
+
+    public void loadLastUsedFoodFromPrefs() {
+        SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
+        Set<String> set = sharedPref.getStringSet("LastUsedFoods", new HashSet<String>());
+        for (String foodName : set){
+            for(Food food : allFood){
+                if(foodName.equals(food.getName())){
+                    lastUsedFood.add(food);
+                }
+            }
+        }
     }
 
     public Bitmap loadBitmapFromAssets(String filename, String subFolderName) {

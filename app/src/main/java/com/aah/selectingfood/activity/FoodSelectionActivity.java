@@ -85,6 +85,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
                 } else {
                     Food selectedFood = foodToSelectArrayAdapter.getItemAtPosition(position);
                     dataManagement.addSelectedFood(selectedFood);
+                    dataManagement.storeLastUsedFoodToPrefs();
                     foodToSelectArrayAdapter.notifyDataSetChanged();
                     selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
                     checkForImmediateFeedback(selectedFood);
