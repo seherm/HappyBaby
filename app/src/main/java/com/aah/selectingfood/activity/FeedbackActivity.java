@@ -113,7 +113,7 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
         // Create summary feedback for children 1-3
         // TODO: Make sure the summary feedback is correct for 1-3 children.
         FeedbackCard finalFoodSummaryFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalFoodSummary(DataManagement.getInstance(this).getSelectedFood());
-        finalFoodSummaryFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("balance.png", "feedbackImages"));
+        finalFoodSummaryFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets(finalFoodSummaryFeedback.getImageName(), "feedbackImages"));
         feedbackCards.add(finalFoodSummaryFeedback);
 
         // Create individual food feedback for children 1-3

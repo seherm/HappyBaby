@@ -11,14 +11,15 @@ public class FeedbackCard {
     private String backgroundColor;
     private String textColor;
     private String text;
+    private String imageName;
     private Bitmap image;
     private boolean showFoodOnCard;
 
-    public FeedbackCard(String backgroundColor, String textColor, String text, Bitmap image, boolean showFoodOnCard) {
+    public FeedbackCard(String backgroundColor, String textColor, String text, String imageName, boolean showFoodOnCard) {
         this.backgroundColor = backgroundColor;
         this.textColor = textColor;
         this.text = text;
-        this.image = image;
+        this.imageName = imageName;
         this.showFoodOnCard = showFoodOnCard;
     }
 
@@ -68,5 +69,13 @@ public class FeedbackCard {
 
     public void setShowFoodOnCard(boolean showFoodOnCard) {
         this.showFoodOnCard = showFoodOnCard;
+    }
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
     }
 }

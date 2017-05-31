@@ -99,22 +99,22 @@ public class Child {
      */
     public FeedbackCard giveFeedbackFinalFoodSummary(ArrayList<Food> foods) {
         if (foods == null) {
-            return new FeedbackCard("#ac8469", "#000000", "You did not select any foods.", null, false);
+            return new FeedbackCard("#ac8469", "#000000", "You did not select any foods.", "no-food.png", false);
         }
-        ArrayList<String> selectedFoodGroups = new ArrayList<>(0);
+        ArrayList<String> selectedFoodGroups = new ArrayList<>();
         for (Food food : foods) {
-            if (!selectedFoodGroups.contains(food.getName())) {
-                selectedFoodGroups.add(food.getName());
+            if (!selectedFoodGroups.contains(food.getFoodGroup())) {
+                selectedFoodGroups.add(food.getFoodGroup());
             }
         }
 
         if (selectedFoodGroups.size() >= 4) {
-            return new FeedbackCard("#a2bd87", "#000000", "The meal is well balanced! You are doing great!\n\nTry to vary the meal every day and encourage your child to taste new foods.", null, true);
+            return new FeedbackCard("#a2bd87", "#000000", "The meal is well balanced! You are doing great!\n\nTry to vary the meal every day and encourage your child to taste new foods.", "balance.png", true);
         } else {
             if (selectedFoodGroups.size() > 0) {
-                return new FeedbackCard("#ac8469", "#000000", "Your meal is not well balanced.\n\nTry to vary the meal every day and encourage your child to taste new foods.", null, true);
+                return new FeedbackCard("#ac8469", "#000000", "Your meal is not well balanced.\n\nTry to vary the meal every day and encourage your child to taste new foods.", "balance.png", true);
             } else {
-                return new FeedbackCard("#ac8469", "#000000", "You did not select any foods.", null, false);
+                return new FeedbackCard("#ac8469", "#000000", "You did not select any foods.", "no-food.png", false);
             }
         }
     }
