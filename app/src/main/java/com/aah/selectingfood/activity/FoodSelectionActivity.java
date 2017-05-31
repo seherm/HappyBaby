@@ -66,7 +66,6 @@ public class FoodSelectionActivity extends AppCompatActivity {
         setTitle(selectedFoodGroup);
 
         //Configure Food to Select View
-
         foodToSelectArrayAdapter = new FoodToSelectArrayAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getFoodToSelect());
         final GridView gridViewFoodToSelect = (GridView) findViewById(R.id.foodToSelect);
         gridViewFoodToSelect.setAdapter(foodToSelectArrayAdapter);
