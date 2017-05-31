@@ -75,8 +75,8 @@ public class DataManagement {
 
     public void addSelectedFood(Food food) {
         if (!lastUsedFood.contains(food)) {
-            if(lastUsedFood.size()>=MAX_LAST_USED_FOODS){
-                lastUsedFood.remove(lastUsedFood.size()-1);
+            if (lastUsedFood.size() >= MAX_LAST_USED_FOODS) {
+                lastUsedFood.remove(lastUsedFood.size() - 1);
             }
             lastUsedFood.add(0, food);
         }
@@ -246,9 +246,9 @@ public class DataManagement {
     public void loadLastUsedFoodFromPrefs() {
         SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
         Set<String> set = sharedPref.getStringSet("LastUsedFoods", new HashSet<String>());
-        for (String foodName : set){
-            for(Food food : allFood){
-                if(foodName.equals(food.getName())){
+        for (String foodName : set) {
+            for (Food food : allFood) {
+                if (foodName.equals(food.getName())) {
                     lastUsedFood.add(food);
                 }
             }
@@ -283,6 +283,10 @@ public class DataManagement {
 
     public ArrayList<Food> getAllFood() {
         return allFood;
+    }
+
+    public ArrayList<Food> getLastUsedFood() {
+        return lastUsedFood;
     }
 
     public User getUser() {

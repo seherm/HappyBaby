@@ -38,6 +38,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
     private SelectedFoodRecyclerViewAdapter selectedFoodRecyclerViewAdapter;
     private SearchView searchView;
     private MenuItem item;
+    private String selectedFoodGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +59,7 @@ public class FoodSelectionActivity extends AppCompatActivity {
         });
 
         SharedPreferences sharedPref = getSharedPreferences("user_selection", MODE_PRIVATE);
-        final String selectedFoodGroup = sharedPref.getString("SELECTED_FOOD_GROUP", null);
+        selectedFoodGroup = sharedPref.getString("SELECTED_FOOD_GROUP", null);
         final int selectedFoodGroupColor = sharedPref.getInt("SELECTED_FOOD_GROUP_COLOR", 0);
         dataManagement = DataManagement.getInstance(this);
         dataManagement.generateFoodList(selectedFoodGroup);
@@ -156,6 +157,10 @@ public class FoodSelectionActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.search_menu, menu);
 
+        if (selectedFoodGroup.equals("Last Used")){
+            inflater.inflate(R.menu.options_menu, menu);
+        }
+
         item = menu.findItem(R.id.search);
         searchView = (SearchView) item.getActionView();
 
@@ -173,6 +178,21 @@ public class FoodSelectionActivity extends AppCompatActivity {
         });
 
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id == R.id.clear) {
+            dataManagement.getFoodToSelect().clear();
+            dataManagement.getLastUsedFood().clear();
+            foodToSelectArrayAdapter.notifyDataSetChanged();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void goToFeedbackPage(View view) {
