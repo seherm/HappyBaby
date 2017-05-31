@@ -21,10 +21,12 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
@@ -100,7 +102,9 @@ public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnP
     public void ShareFeedbackCard(View v) {
         final int position = viewPager.getCurrentItem();
         View view = viewPager.getChildAt(position);
+        view = ((ViewGroup)((ViewGroup)((ViewGroup) view).getChildAt(0)).getChildAt(0)).getChildAt(0);
         Bitmap image = getBitmapFromView(view);
+        Log.e("wuutwuut",Integer.toString(position));
         shareGeneral(image);
     }
 
