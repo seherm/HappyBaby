@@ -36,6 +36,7 @@
 
     <string name="search_title">Search</string>
     <string name="restart_title">Restart</string>
+    <string name="clear_list">Clear List</string>
 
     <string name="select_language">Select Language</string>
     <string name="english">English</string>

@@ -12,6 +12,9 @@ import com.aah.selectingfood.model.User;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.io.InputStream;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -40,6 +43,8 @@ public class DataManagement {
     private ArrayList<Food> lastUsedFood;
     private ArrayList<Food> allFood;
 
+    private static final int MAX_LAST_USED_FOODS = 6;
+
     private DataManagement(Context context) {
         this.context = context;
 
@@ -58,6 +63,7 @@ public class DataManagement {
         allFood = new ArrayList<>();
         lastUsedFood = new ArrayList<>();
         createFoods();
+        loadLastUsedFoodFromPrefs();
     }
 
     public static final DataManagement getInstance(Context context) {
@@ -69,6 +75,9 @@ public class DataManagement {
 
     public void addSelectedFood(Food food) {
         if (!lastUsedFood.contains(food)) {
+            if (lastUsedFood.size() >= MAX_LAST_USED_FOODS) {
+                lastUsedFood.remove(lastUsedFood.size() - 1);
+            }
             lastUsedFood.add(0, food);
         }
         selectedFood.add(0, food);
@@ -223,6 +232,29 @@ public class DataManagement {
         editor.apply();
     }
 
+    public void storeLastUsedFoodToPrefs() {
+        SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        Set<String> set = new HashSet<String>();
+        for (Food food : lastUsedFood) {
+            set.add(food.getName());
+        }
+        editor.putStringSet("LastUsedFoods", set);
+        editor.apply();
+    }
+
+    public void loadLastUsedFoodFromPrefs() {
+        SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
+        Set<String> set = sharedPref.getStringSet("LastUsedFoods", new HashSet<String>());
+        for (String foodName : set) {
+            for (Food food : allFood) {
+                if (foodName.equals(food.getName())) {
+                    lastUsedFood.add(food);
+                }
+            }
+        }
+    }
+
     public Bitmap loadBitmapFromAssets(String filename, String subFolderName) {
         InputStream stream = null;
         try {
@@ -251,6 +283,10 @@ public class DataManagement {
 
     public ArrayList<Food> getAllFood() {
         return allFood;
+    }
+
+    public ArrayList<Food> getLastUsedFood() {
+        return lastUsedFood;
     }
 
     public User getUser() {
