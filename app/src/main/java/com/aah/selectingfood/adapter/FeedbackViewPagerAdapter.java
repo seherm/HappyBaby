@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.aah.selectingfood.R;
 import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.FeedbackCard;
+import com.aah.selectingfood.model.Food;
 
 import java.util.List;
 
@@ -54,8 +55,13 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
             //Configure Selected Food View
             RecyclerView selectedFoodRecyclerView = (RecyclerView) itemView.findViewById(R.id.selectedFoodFeedbackRecyclerView);
             dataManagement = DataManagement.getInstance(context);
-            selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(dataManagement.getSelectedFood(), context, null);
-            GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 5);
+            selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(dataManagement.getSelectedFood(), context, new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(Food item) {
+                    //TODO: create other adapter where no click event listener necessary
+                }
+            });
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 4);
             selectedFoodRecyclerView.setLayoutManager(gridLayoutManager);
             selectedFoodRecyclerView.setAdapter(selectedFoodRecyclerViewAdapter);
         }
