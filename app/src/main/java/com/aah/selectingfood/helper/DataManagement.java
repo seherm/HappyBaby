@@ -43,6 +43,8 @@ public class DataManagement {
     private ArrayList<Food> lastUsedFood;
     private ArrayList<Food> allFood;
 
+    private static final int MAX_LAST_USED_FOODS = 6;
+
     private DataManagement(Context context) {
         this.context = context;
 
@@ -73,6 +75,9 @@ public class DataManagement {
 
     public void addSelectedFood(Food food) {
         if (!lastUsedFood.contains(food)) {
+            if(lastUsedFood.size()>=MAX_LAST_USED_FOODS){
+                lastUsedFood.remove(lastUsedFood.size()-1);
+            }
             lastUsedFood.add(0, food);
         }
         selectedFood.add(0, food);
