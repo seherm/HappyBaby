@@ -1,35 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue">
+    android:background="@color/blue"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/takePhotoTitle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="top|center"
+        android:paddingTop="@dimen/appIntroDefaultPaddingTop"
+        android:paddingLeft="@dimen/appIntroDefaultPaddingLeft"
+        android:paddingRight="@dimen/appIntroDefaultPaddingRight"
         android:text="@string/change_photos_of_baby"
-        android:gravity="center"
-        android:textSize="@dimen/text_size_large"
         android:textColor="@color/white"
-        android:paddingTop="20dp"/>
+        android:textSize="@dimen/appIntroHeadingTextSize" />
 
-    <TextView
-        android:id="@+id/takePhotoText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/change_photos_of_baby"
-        android:textSize="@dimen/text_size_medium"
-        android:textColor="@color/white"/>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/onbobardingChildPhoto"
-        android:layout_height="match_parent"
-        android:layout_width="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
-        android:src="@drawable/ic_onboarding_camera"
-        android:onClick="selectPhoto" />
+        android:layout_weight="1"
+        android:onClick="selectPhoto"
+        android:src="@drawable/ic_onboarding_camera" />
+
+
+    <TextView
+        android:id="@+id/takePhotoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:gravity="top|center"
+        android:paddingBottom="@dimen/appIntroDefaultPaddingBottom"
+        android:paddingLeft="@dimen/appIntroDefaultPaddingLeft"
+        android:paddingRight="@dimen/appIntroDefaultPaddingRight"
+        android:text="@string/add_photo_of_baby_message"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium" />
 
 
 </LinearLayout>
