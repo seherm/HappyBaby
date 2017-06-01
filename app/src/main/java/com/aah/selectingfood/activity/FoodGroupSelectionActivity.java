@@ -1,12 +1,10 @@
 package com.aah.selectingfood.activity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
@@ -24,7 +22,6 @@ import com.aah.selectingfood.R;
 import com.aah.selectingfood.adapter.FoodToSelectArrayAdapter;
 import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
 import com.aah.selectingfood.helper.DataManagement;
-import com.aah.selectingfood.helper.LocaleHelper;
 import com.aah.selectingfood.model.Food;
 
 /** In this Activity the user selects the food group of the food he wants to select**/
@@ -112,34 +109,42 @@ public class FoodGroupSelectionActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.fruits:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Fruits");
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.fruits);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.fruitsBlue);
                 break;
             case R.id.legumes:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Legumes");
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.legumes);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.legumesBrown);
                 break;
             case R.id.herbs:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Herbs");
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.herbs);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.herbsGreen);
                 break;
             case R.id.meat:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Meat");
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.meat);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.meatsRed);
                 break;
             case R.id.vegetables:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Vegetables");
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.vegetables);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.vegetablesGreen);
                 break;
             case R.id.junkFood:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Junk Food");
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.junk_food);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.junkFoodPink);
                 break;
             case R.id.carbohydrates:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Carbohydrates");
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.carbohydrates);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.carbohydratesYellow);
                 break;
             case R.id.lastUsed:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Last Used");
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.last_used);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.lastUsedPurple);
                 break;
         }

@@ -11,9 +11,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,8 +26,6 @@ import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.model.FeedbackCard;
 import com.facebook.CallbackManager;
-import com.facebook.share.model.SharePhoto;
-import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
 
 import java.util.ArrayList;
@@ -70,10 +66,11 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         setUiPageViewController();
 
         //TODO: Facebook -> still used?
-        callbackManager = CallbackManager.Factory.create();
-        shareDialog = new ShareDialog(this);
-        setPermissions();
+        //callbackManager = CallbackManager.Factory.create();
+        //shareDialog = new ShareDialog(this);
+        //setPermissions();
 
+        //TODO: Still used?
         /*setContentView(R.layout.feedback_item_layout);
         final Button button =  findViewById(R.id.share_button_pager_item);
         button.setOnClickListener(new View.OnClickListener() {
@@ -88,7 +85,8 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         View view = viewPager.getChildAt(position);
         view = ((ViewGroup)((ViewGroup)((ViewGroup) view).getChildAt(0)).getChildAt(0)).getChildAt(0);
         Bitmap image = getBitmapFromView(view);
-        Log.e("wuutwuut",Integer.toString(position));
+        //TODO: To delete?
+        //Log.e("wuutwuut",Integer.toString(position));
         shareGeneral(image);
     }
 
@@ -159,7 +157,7 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
     }
 
     //TODO: delete when not used anymore?
-    private void shareOnFacebook(Bitmap image) {
+    /**private void shareOnFacebook(Bitmap image) {
         SharePhoto photo = new SharePhoto.Builder()
                 .setBitmap(image)
                 .setCaption("testesteestetetstestsetse")
@@ -169,7 +167,7 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
                 .addPhoto(photo)
                 .build();
         shareDialog.show(content);
-    }
+    }**/
 
     private void setPermissions() {
         int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 311390813;

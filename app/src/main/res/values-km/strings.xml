@@ -14,4 +14,5 @@
     <string name="fruits">ផ្លែឈើ</string>
     <string name="herbs">ឱសថ</string>
     <string name="start_message">"សូមចុចលើការចាប់ផ្តើមក្នុងការជ្រើសរើសអាហារដែលអ្នកកំពុងនឹងចិញ្ចឹមទារករបស់អ្នក "</string>
+    <string name="last_used">បានប្រើចុងក្រោយ</string>
 </resources>

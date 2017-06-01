@@ -7,7 +7,6 @@ import android.graphics.Bitmap;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
@@ -62,10 +61,11 @@ public class FoodSelectionActivity extends BaseActivity {
 
         SharedPreferences sharedPref = getSharedPreferences("user_selection", MODE_PRIVATE);
         selectedFoodGroup = sharedPref.getString("SELECTED_FOOD_GROUP", null);
+        final int selectedFoodGroupResourceId = sharedPref.getInt("SELECTED_FOOD_GROUP_ID", 0);
         final int selectedFoodGroupColor = sharedPref.getInt("SELECTED_FOOD_GROUP_COLOR", 0);
         dataManagement = DataManagement.getInstance(this);
         dataManagement.generateFoodList(selectedFoodGroup);
-        setTitle(selectedFoodGroup);
+        setTitle(getString(selectedFoodGroupResourceId));
 
         //Configure Food to Select View
         foodToSelectArrayAdapter = new FoodToSelectArrayAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getFoodToSelect());
