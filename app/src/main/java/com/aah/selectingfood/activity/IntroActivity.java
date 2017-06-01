@@ -2,6 +2,7 @@ package com.aah.selectingfood.activity;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.aah.selectingfood.R;
 import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.helper.ImageSaver;
+import com.aah.selectingfood.helper.LocaleHelper;
 import com.aah.selectingfood.helper.SampleSlide;
 import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.model.User;
@@ -234,5 +236,10 @@ public class IntroActivity extends AppIntro {
     public void onSlideChanged(@Nullable Fragment oldFragment, @Nullable Fragment newFragment) {
         super.onSlideChanged(oldFragment, newFragment);
         // Do something when the slide changes.
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleHelper.onAttach(base));
     }
 }
