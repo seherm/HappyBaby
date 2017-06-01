@@ -139,8 +139,14 @@ public class DataManagement {
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                     Element eElement = (Element) nNode;
 
+                    String languageCode = LocaleHelper.getLanguage(context);
                     // Create food
-                    String name = eElement.getElementsByTagName("khmerName").item(0).getTextContent();
+                    String name;
+                    if (languageCode.equals("km")) {
+                        name = eElement.getElementsByTagName("khmerName").item(0).getTextContent();
+                    }else{
+                        name = eElement.getElementsByTagName("name").item(0).getTextContent();
+                    }
                     String foodgroup = eElement.getElementsByTagName("foodgroup").item(0).getTextContent();
                     Bitmap image = loadBitmapFromAssets(eElement.getElementsByTagName("image").item(0).getTextContent(), "foodImages");
                     Food tempFood = new Food(name, foodgroup, image);
