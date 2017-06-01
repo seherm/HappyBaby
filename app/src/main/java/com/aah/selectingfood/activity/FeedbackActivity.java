@@ -85,8 +85,6 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         View view = viewPager.getChildAt(position);
         view = ((ViewGroup)((ViewGroup)((ViewGroup) view).getChildAt(0)).getChildAt(0)).getChildAt(0);
         Bitmap image = getBitmapFromView(view);
-        //TODO: To delete?
-        //Log.e("wuutwuut",Integer.toString(position));
         shareGeneral(image);
     }
 
