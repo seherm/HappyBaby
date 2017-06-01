@@ -2,6 +2,7 @@ package com.aah.selectingfood.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.opengl.Visibility;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aah.selectingfood.R;
+import com.aah.selectingfood.helper.LocaleHelper;
 import com.aah.selectingfood.model.Food;
 
 import java.util.ArrayList;
@@ -47,6 +49,8 @@ public class FoodToSelectArrayAdapter extends ArrayAdapter implements Filterable
         View row = convertView;
         ViewHolder holder = null;
 
+        String languageCode = LocaleHelper.getLanguage(context);
+
         if (row == null) {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
             row = inflater.inflate(layoutResourceId, parent, false);
@@ -54,6 +58,9 @@ public class FoodToSelectArrayAdapter extends ArrayAdapter implements Filterable
             holder.imageTitle = (TextView) row.findViewById(R.id.text);
             holder.image = (ImageView) row.findViewById(R.id.image);
             holder.button = (ImageView) row.findViewById(R.id.soundButton);
+            if(!languageCode.equals("km")){
+                holder.button.setVisibility(View.GONE);
+            }
             row.setTag(holder);
         } else {
             holder = (ViewHolder) row.getTag();
