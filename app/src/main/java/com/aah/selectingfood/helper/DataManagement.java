@@ -140,11 +140,12 @@ public class DataManagement {
                     Element eElement = (Element) nNode;
 
                     // Create food
-                    String name = eElement.getElementsByTagName("name").item(0).getTextContent();
+                    String name = eElement.getElementsByTagName("khmerName").item(0).getTextContent();
                     String foodgroup = eElement.getElementsByTagName("foodgroup").item(0).getTextContent();
                     Bitmap image = loadBitmapFromAssets(eElement.getElementsByTagName("image").item(0).getTextContent(), "foodImages");
                     Food tempFood = new Food(name, foodgroup, image);
 
+                    tempFood.setEnglishName(eElement.getElementsByTagName("name").item(0).getTextContent());
                     tempFood.setKhmerName(eElement.getElementsByTagName("khmerName").item(0).getTextContent());
                     tempFood.setSound(eElement.getElementsByTagName("sound").item(0).getTextContent());
 

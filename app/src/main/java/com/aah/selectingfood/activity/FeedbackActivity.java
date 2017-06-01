@@ -55,6 +55,7 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+        setTitle(getString(R.string.title_activity_feedback));
 
         viewPager = (ViewPager) findViewById(R.id.pager_introduction);
         pagerIndicator = (LinearLayout) findViewById(R.id.viewPagerCountDots);

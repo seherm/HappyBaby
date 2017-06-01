@@ -24,6 +24,7 @@ import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.helper.ImageSaver;
 import com.aah.selectingfood.helper.LocaleHelper;
 import com.aah.selectingfood.model.Child;
+import com.aah.selectingfood.model.Food;
 import com.aah.selectingfood.model.User;
 
 /**
@@ -53,6 +54,7 @@ public class SettingsActivity extends BaseActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+        setTitle(getString(R.string.title_activity_settings));
 
         checkPermissions();
 
@@ -70,9 +72,9 @@ public class SettingsActivity extends BaseActivity {
 
 
         String language = LocaleHelper.getLanguage(this);
-        if(language.equals("en")){
+        if (language.equals("en")) {
             radioButtonEnglish.setChecked(true);
-        }else{
+        } else {
             radioButtonKhmer.setChecked(true);
         }
 
@@ -105,7 +107,19 @@ public class SettingsActivity extends BaseActivity {
 
     private void updateViews(String languageCode) {
         LocaleHelper.setLocale(this, languageCode);
+        setFoodName(languageCode);
         this.recreate();
+
+    }
+
+    public void setFoodName(String languageCode){
+        for (Food food : dataManagement.getAllFood()) {
+            if (languageCode.equals("km")) {
+                food.setName(food.getKhmerName());
+            }else{
+                food.setName(food.getEnglishName());
+            }
+        }
     }
 
 

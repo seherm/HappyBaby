@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">អាហារជ្រើស</string>
-    <string name="app_language">en</string>
     <string name="title_activity_settings">ការកំណត់</string>
     <string name="ages_of_your_children">អាយុរបស់កូនរបស់អ្នក</string>
     <!-->Food Groups<-->
@@ -13,6 +12,40 @@
     <string name="carbohydrates">កាបូអ៊ីដ្រាត</string>
     <string name="fruits">ផ្លែឈើ</string>
     <string name="herbs">ឱសថ</string>
-    <string name="start_message">"សូមចុចលើការចាប់ផ្តើមក្នុងការជ្រើសរើសអាហារដែលអ្នកកំពុងនឹងចិញ្ចឹមទារករបស់អ្នក "</string>
+    <string name="start_message">សូមចុចលើការចាប់ផ្តើមក្នុងការជ្រើសរើសអាហារដែលអ្នកកំពុងនឹងចិញ្ចឹមទារករបស់អ្នក</string>
     <string name="last_used">បានប្រើចុងក្រោយ</string>
+    <string name="FAQ">សំណួរគេសួរញឹកញាប់</string>
+    <string name="about">អំពី</string>
+    <string name="camera_permission_error">កំហុសក្នុងការអនុញ្ញាតកាមេរ៉ា</string>
+    <string name="cancel">បោះបង់</string>
+    <string name="change_photo">រូបថតការផ្លាស់ប្តូរ</string>
+    <string name="change_photos_of_baby">រូបថតកូនរបស់អ្នក</string>
+    <string name="children_middle_category">9–11 ខែ</string>
+    <string name="children_old_category">12–24 ខែ</string>
+    <string name="children_young_category">6–8 ខែ</string>
+    <string name="clear_list">សម្អាត​បញ្ជី</string>
+    <string name="drawer_title">កម្មវិធីអាហារូបត្ថម្ភសម្រាប់មាតាបិតា</string>
+    <string name="english">ភាសាអង់គ្លេស</string>
+    <string name="food_message">តើអ្វីទៅជាប្រភេទដទៃទៀតនៃអាហារដែលខ្ញុំនឹងមិនបរិភោគសព្វថ្ងៃនេះ?</string>
+    <string name="khmer">ខ្មែរ</string>
+    <string name="onboarding_intro_description">កម្មវិធីនេះនឹងជួយអ្នកពីរបៀបដើម្បីចិញ្ចឹមកូនរបស់អ្នកបានយ៉ាងល្អ</string>
+    <string name="onboarding_intro_title">កម្មវិធីអាហារូបត្ថម្ភថ្មីនៅចំពោះឪពុកម្តាយ</string>
+    <string name="porridge_recipes">បបររូបមន្ត</string>
+    <string name="restart_title">ចាប់ផ្ដើមឡើងវិញ</string>
+    <string name="search_title">ការស្វែងរក</string>
+    <string name="select_language">ជ្រើសរើស​ភាសា</string>
+    <string name="send_to">ការចែករំលែកលទ្ធផលរបស់អ្នក</string>
+    <string name="settings">ការកំណត់</string>
+    <string name="share">ចែករំលែកនេះ</string>
+    <string name="start">ការចាប់ផ្តើម</string>
+    <string name="title_activity_about">អំពី</string>
+    <string name="title_activity_faq">សំណួរគេសួរញឹកញាប់</string>
+    <string name="title_activity_feedback">អំពីអាហាររបស់អ្នក</string>
+    <string name="title_activity_food_group_selection">ជ្រើសក្រុមអាហារ</string>
+    <string name="title_activity_food_selection">ជ្រើសអាហារ</string>
+    <string name="title_activity_recipes">រូបមន្តបបរ</string>
+    <string name="writeext_permission_error">កំហុសក្នុងការចូលដំណើរការអង្គចងចាំខាងក្រៅសិទ្ធិ</string>
+    <string name="delete_photo">លុបរូបថត</string>
+    <string name="select_new_photo">ជ្រើសរូបថតថ្មី</string>
+    <string name="take_new_photo">ថតរូបថ្មី</string>
 </resources>

@@ -17,6 +17,7 @@ public class AboutActivity extends BaseActivity {
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+        setTitle(getString(R.string.title_activity_about));
 
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="facebook_app_id">1892057001064840</string>
+    <string name="facebook_app_id" translatable="false">1892057001064840</string>
     <string name="app_name">Selecting Food</string>
     <string name="send_to">Share your result picture</string>
 
@@ -8,8 +8,8 @@
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
     <!--Onboarding Text-->
-    <string name="onboarding_intro_title">"New in Nutrition App for Parents"</string>
-    <string name="onboarding_intro_description">"This App will help you how to feed your child well"</string>
+    <string name="onboarding_intro_title">New in Nutrition App for Parents</string>
+    <string name="onboarding_intro_description">This App will help you how to feed your child well</string>
 
     <!--Button Text-->
     <string name="start">Start</string>
@@ -56,21 +56,26 @@
     <string name="carbohydrates">Carbohydrates</string>
     <string name="last_used">Last Used</string>
 
-    <string name="title_activity_sharing">SharingActivity</string>
+    <string name="title_activity_sharing" translatable="false">SharingActivity</string>
 
     <string name="change_photo">Change photo</string>
     <string name="cancel">Cancel</string>
     <string name="camera_permission_error">Camera Permission Error</string>
     <string name="writeext_permission_error">External memory access Permission Error</string>
+
+    <string name="select_new_photo">Select new photo</string>
+    <string name="delete_photo">Delete photo</string>
+    <string name="take_new_photo">Take new photo</string>
+
     <string-array name="select_photo_items_array">
-        <item>Take new photo</item>
-        <item>Select new photo</item>
+        <item>@string/take_new_photo</item>
+        <item>@string/select_new_photo</item>
     </string-array>
     <string-array name="select_photo_items_array_with_delete">
-        <item>Take new photo</item>
-        <item>Select new photo</item>
-        <item>Delete photo</item>
+        <item>@string/take_new_photo</item>
+        <item>@string/select_new_photo</item>
+        <item>@string/delete_photo</item>
     </string-array>
-    <string name="title_activity_intro">IntroActivity</string>
+    <string name="title_activity_intro" translatable="false">IntroActivity</string>
 
 </resources>

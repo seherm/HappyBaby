@@ -10,6 +10,7 @@ public class Food {
     private int id;
     private String name;
     private String khmerName;
+    private String englishName;
     private String foodGroup;
     private Bitmap image;
     private String sound;
@@ -184,6 +185,14 @@ public class Food {
 
     public void setKhmerName(String khmerName) {
         this.khmerName = khmerName;
+    }
+
+    public String getEnglishName() {
+        return englishName;
+    }
+
+    public void setEnglishName(String englishName) {
+        this.englishName = englishName;
     }
 
     public String getSound() {

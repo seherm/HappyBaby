@@ -19,5 +19,6 @@ public class FAQActivity extends BaseActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
+        setTitle(getString(R.string.title_activity_faq));
     }
 }
