@@ -15,5 +15,4 @@ public class BaseActivity extends AppCompatActivity {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(LocaleHelper.onAttach(base));
     }
-
 }
