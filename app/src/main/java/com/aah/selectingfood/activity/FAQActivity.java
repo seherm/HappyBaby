@@ -6,36 +6,18 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.widget.Toast; //todo delete line
+import android.widget.Toast;
 
-import com.aah.selectingfood.helper.ImageSaver;
-import com.facebook.CallbackManager;
-import com.facebook.share.ShareApi;
-import com.facebook.share.model.ShareLinkContent;
-import com.facebook.share.model.SharePhoto;
-import com.facebook.share.model.SharePhotoContent;
-import com.facebook.share.widget.ShareButton;
-import com.facebook.share.widget.ShareDialog;
-import com.aah.selectingfood.helper.GlobalState;
 import com.aah.selectingfood.R;
-
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import com.aah.selectingfood.helper.GlobalState;
 
 /** This Activity is for showing static content in an frequently asked questions page**/
-public class FAQActivity extends AppCompatActivity {
+public class FAQActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

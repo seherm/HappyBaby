@@ -3,14 +3,15 @@
     <string name="app_name">អាហារជ្រើស</string>
     <string name="app_language">en</string>
     <string name="title_activity_settings">ការកំណត់</string>
-    <string name="ages_of_your_children">test todo</string>
+    <string name="ages_of_your_children">អាយុរបស់កូនរបស់អ្នក</string>
     <!-->Food Groups<-->
-    <string name="carbohydrates">test todo</string>
-    <string name="fruits">test todo</string>
-    <string name="meat">test todo</string>
-    <string name="legumes">test todo</string>
-    <string name="vegetables">test todo</string>
-    <string name="junk_food">test todo</string>
+    <string name="meat">សាច់</string>
+    <string name="legumes">ពពួកសណ្តែក</string>
+    <string name="vegetables">បន្លែ</string>
+    <string name="junk_food">អាហារ​មិនល្អ</string>
 
-    <string name="test_string">khmerkhmer</string>
+    <string name="carbohydrates">កាបូអ៊ីដ្រាត</string>
+    <string name="fruits">ផ្លែឈើ</string>
+    <string name="herbs">ឱសថ</string>
+    <string name="start_message">"សូមចុចលើការចាប់ផ្តើមក្នុងការជ្រើសរើសអាហារដែលអ្នកកំពុងនឹងចិញ្ចឹមទារករបស់អ្នក "</string>
 </resources>

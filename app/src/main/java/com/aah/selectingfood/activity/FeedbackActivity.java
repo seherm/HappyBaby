@@ -1,51 +1,35 @@
 package com.aah.selectingfood.activity;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.GridView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.aah.selectingfood.adapter.FeedbackViewPagerAdapter;
 import com.aah.selectingfood.R;
-import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
-import com.aah.selectingfood.model.Child;
+import com.aah.selectingfood.adapter.FeedbackViewPagerAdapter;
 import com.aah.selectingfood.helper.DataManagement;
+import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.model.FeedbackCard;
-import com.aah.selectingfood.model.Food;
 import com.facebook.CallbackManager;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
-import com.facebook.share.widget.ShareButton;
 import com.facebook.share.widget.ShareDialog;
 
 import java.util.ArrayList;
@@ -54,7 +38,7 @@ import java.util.List;
 /**
  * This Activity is for showing the feedback about the meal/food the user has chosen to feed his child
  **/
-public class FeedbackActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
+public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageChangeListener, View.OnClickListener {
 
     private LinearLayout pagerIndicator;
     private int dotsCount;

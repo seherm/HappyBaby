@@ -1,11 +1,5 @@
 package com.aah.selectingfood.activity;
 
-import com.aah.selectingfood.adapter.FoodToSelectArrayAdapter;
-import com.aah.selectingfood.R;
-import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
-import com.aah.selectingfood.helper.DataManagement;
-import com.aah.selectingfood.model.*;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.AssetFileDescriptor;
@@ -28,10 +22,18 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.aah.selectingfood.R;
+import com.aah.selectingfood.adapter.FoodToSelectArrayAdapter;
+import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
+import com.aah.selectingfood.helper.DataManagement;
+import com.aah.selectingfood.model.Child;
+import com.aah.selectingfood.model.FeedbackInstant;
+import com.aah.selectingfood.model.Food;
+
 import java.util.List;
 
 /** In this Activity the user selects the food after selecting the food group in the FoodGroupSelectionActivity before**/
-public class FoodSelectionActivity extends AppCompatActivity {
+public class FoodSelectionActivity extends BaseActivity {
 
     private DataManagement dataManagement;
     private FoodToSelectArrayAdapter foodToSelectArrayAdapter;

@@ -1,11 +1,11 @@
 package com.aah.selectingfood.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,14 +13,15 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 
-import com.aah.selectingfood.helper.GlobalState;
 import com.aah.selectingfood.R;
 import com.aah.selectingfood.helper.DataManagement;
+import com.aah.selectingfood.helper.LocaleHelper;
 
 /** This Activity is the start screen of the app**/
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private DataManagement dataManagement;
@@ -50,8 +51,8 @@ public class MainActivity extends AppCompatActivity
 
         prefs = getSharedPreferences("com.aah.selectingfood", MODE_PRIVATE);
 
-        GlobalState state = ((GlobalState) getApplicationContext());
-        state.setLanguage(prefs.getString("language", "km"));
+        //GlobalState state = ((GlobalState) getApplicationContext());
+        //state.setLanguage(prefs.getString("language", "km"));
 
         //  Declare a new thread to do a preference check
         Thread t = new Thread(new Runnable() {
@@ -151,4 +152,5 @@ public class MainActivity extends AppCompatActivity
             prefs.edit().putBoolean("firstrun", false).apply();
         }
     }*/
+
 }

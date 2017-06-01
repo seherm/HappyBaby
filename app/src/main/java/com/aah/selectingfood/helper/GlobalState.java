@@ -11,17 +11,9 @@ public class GlobalState extends Application {
 
     private boolean firstRun = false;
 
-    private static String language = "km";
-
-    private static Context context;
-
     public void onCreate() {
         super.onCreate();
-        GlobalState.context = getApplicationContext();
-    }
 
-    public static Context getAppContext() {
-        return GlobalState.context;
     }
 
     public boolean getFirstRun() {
@@ -32,12 +24,8 @@ public class GlobalState extends Application {
         this.firstRun = firstRun;
     }
 
-    public static String getLanguage() {
-        return language;
+    //Here you can define the default app language
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleHelper.onAttach(base, "km"));
     }
-
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
 }

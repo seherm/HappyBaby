@@ -1,17 +1,9 @@
 package com.aah.selectingfood.activity;
 
-import com.aah.selectingfood.helper.GlobalState;
-import com.aah.selectingfood.helper.MyContextWrapper;
-import com.aah.selectingfood.R;
-import com.aah.selectingfood.helper.ImageSaver;
-import com.aah.selectingfood.model.*;
-
 import android.Manifest;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -20,19 +12,23 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.RadioButton;
 import android.widget.CheckBox;
-import android.widget.RadioGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.aah.selectingfood.R;
 import com.aah.selectingfood.helper.DataManagement;
+import com.aah.selectingfood.helper.ImageSaver;
+import com.aah.selectingfood.helper.LocaleHelper;
+import com.aah.selectingfood.model.Child;
+import com.aah.selectingfood.model.User;
 
-/** This Activity is for showing the settings page, where the user can change ages, photo and language**/
-public class SettingsActivity extends AppCompatActivity {
+/**
+ * This Activity is for showing the settings page, where the user can change ages, photo and language
+ **/
+public class SettingsActivity extends BaseActivity {
 
     private CheckBox checkBoxChildYoung;
     private CheckBox checkBoxChildMiddle;
@@ -77,56 +73,26 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         setChildImage();
-
-        //check currently selected language
-        RadioGroup languageRadioGroup = (RadioGroup) findViewById(R.id.radioGroupLanguage);
-        GlobalState state = ((GlobalState) GlobalState.getAppContext());
-        String language = state.getLanguage();
-        switch (language) {
-            case "en":
-                languageRadioGroup.check(R.id.radioButtonEnglish);
-                break;
-            case "km":
-                languageRadioGroup.check(R.id.radioButtonKhmer);
-                break;
-        }
     }
 
 
     public void changeLanguage(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
 
-        // Check which radio button was clicked
         switch (view.getId()) {
             case R.id.radioButtonEnglish:
-                //if (checked) {
-                setLocale("en");
-                //}
+                updateViews("en");
                 break;
             case R.id.radioButtonKhmer:
-                //if (checked) {
-                setLocale("km");
-                //}
+                updateViews("km");
                 break;
         }
     }
 
-    public void setLocale(String lang) {
-        /*Locale myLocale = new Locale(lang);
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = myLocale;
-        res.updateConfiguration(conf, dm); todo delete before completion*/
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-        sharedPref.edit().putString("language", lang).apply();
-        GlobalState state = ((GlobalState) getApplicationContext());
-        state.setLanguage(lang);
-
-        Intent refresh = new Intent(this, SettingsActivity.class);
-        startActivity(refresh);
+    private void updateViews(String languageCode) {
+        LocaleHelper.setLocale(this, languageCode);
+        this.recreate();
     }
+
 
     /*
      * Changes the ages of the children. Possible ages are:
@@ -334,10 +300,5 @@ public class SettingsActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-    }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(MyContextWrapper.wrap(newBase));
     }
 }

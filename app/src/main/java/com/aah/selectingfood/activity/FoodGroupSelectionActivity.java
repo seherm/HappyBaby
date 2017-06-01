@@ -1,5 +1,6 @@
 package com.aah.selectingfood.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -23,10 +24,11 @@ import com.aah.selectingfood.R;
 import com.aah.selectingfood.adapter.FoodToSelectArrayAdapter;
 import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
 import com.aah.selectingfood.helper.DataManagement;
+import com.aah.selectingfood.helper.LocaleHelper;
 import com.aah.selectingfood.model.Food;
 
 /** In this Activity the user selects the food group of the food he wants to select**/
-public class FoodGroupSelectionActivity extends AppCompatActivity {
+public class FoodGroupSelectionActivity extends BaseActivity {
 
     private DataManagement dataManagement;
     private SelectedFoodRecyclerViewAdapter selectedFoodRecyclerViewAdapter;
