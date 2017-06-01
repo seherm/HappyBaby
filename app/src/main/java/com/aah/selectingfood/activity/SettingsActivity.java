@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.aah.selectingfood.R;
@@ -30,6 +31,8 @@ import com.aah.selectingfood.model.User;
  **/
 public class SettingsActivity extends BaseActivity {
 
+    private RadioButton radioButtonKhmer;
+    private RadioButton radioButtonEnglish;
     private CheckBox checkBoxChildYoung;
     private CheckBox checkBoxChildMiddle;
     private CheckBox checkBoxChildOld;
@@ -56,11 +59,23 @@ public class SettingsActivity extends BaseActivity {
         dataManagement = DataManagement.getInstance(this);
         user = dataManagement.getUser();
 
-        childPhoto = (ImageView) findViewById(R.id.childPhoto);
+        radioButtonKhmer = (RadioButton) findViewById(R.id.radioButtonKhmer);
+        radioButtonEnglish = (RadioButton) findViewById(R.id.radioButtonEnglish);
 
         checkBoxChildYoung = (CheckBox) findViewById(R.id.checkBoxChildYoung);
         checkBoxChildMiddle = (CheckBox) findViewById(R.id.checkBoxChildMiddle);
         checkBoxChildOld = (CheckBox) findViewById(R.id.checkBoxChildOld);
+
+        childPhoto = (ImageView) findViewById(R.id.childPhoto);
+
+
+        String language = LocaleHelper.getLanguage(this);
+        if(language.equals("en")){
+            radioButtonEnglish.setChecked(true);
+        }else{
+            radioButtonKhmer.setChecked(true);
+        }
+
 
         if (user.hasChildByAgeGroup("young")) {
             checkBoxChildYoung.setChecked(true);
