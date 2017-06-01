@@ -50,4 +50,5 @@
     <string name="take_new_photo">ថតរូបថ្មី</string>
     <string name="add_photo_of_baby_message">ប៉ះលើរូបតំណាងកាមេរ៉ាដើម្បីបន្ថែមរូបភាពនៃទារករបស់អ្នក</string>
     <string name="select_ages_of_your_children">ធីកប្រអប់នេះបើយោងតាមអាយុរបស់កូនអ្នក</string>
+    <string name="no_food_selected_title">គ្មានការជ្រើសរើសអាហារ</string>
 </resources>

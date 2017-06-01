@@ -10,9 +10,7 @@ public class FeedbackInstant {
     private String textColor;
     private String text;
 
-    public FeedbackInstant(String backgroundColor, String textColor, String text){
-        this.backgroundColor = backgroundColor;
-        this.textColor = textColor;
+    public FeedbackInstant(String text){
         this.text = text;
     }
 
