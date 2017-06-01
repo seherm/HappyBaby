@@ -39,7 +39,7 @@
 
     <string name="select_language">Select Language</string>
     <string name="english">English</string>
-    <string name="khmer">Khmer</string>
+    <string name="khmer">ខ្មែរ</string>
     <string name="ages_of_your_children">Ages of your children</string>
     <string name="children_young_category">6\u20138 months</string>
     <string name="children_middle_category">9\u201311 months</string>
@@ -47,6 +47,8 @@
     <string name="change_photos_of_baby">Photo of your children</string>
     <string name="add_photo_of_baby_message">Tap on the camera icon to add a picture of your baby</string>
     <string name="select_ages_of_your_children">Check the boxes according to the ages of your baby</string>
+    <string name="restart_intro">Restart intro</string>
+
 
     <!--Food Groups-->
     <string name="fruits">Fruits</string>

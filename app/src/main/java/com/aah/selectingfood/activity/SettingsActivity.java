@@ -4,11 +4,13 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -328,6 +330,11 @@ public class SettingsActivity extends BaseActivity {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void launchIntro(View v){
+        Intent i = new Intent(SettingsActivity.this, IntroActivity.class);
+        startActivity(i);
     }
 
     @Override
