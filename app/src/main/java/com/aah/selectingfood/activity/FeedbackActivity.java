@@ -233,11 +233,12 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
     public void onPageScrollStateChanged(int state) {
     }
 
-    @Override
-    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+    //TODO:delete?
+    //@Override
+    /**protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
