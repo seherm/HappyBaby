@@ -105,7 +105,6 @@ public class FoodGroupSelectionActivity extends BaseActivity {
     }
 
 
-
     public void goToFoodSelectionPage(View view) {
         switch (view.getId()) {
             case R.id.fruits:

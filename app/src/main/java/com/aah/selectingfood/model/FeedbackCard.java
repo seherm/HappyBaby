@@ -10,15 +10,15 @@ public class FeedbackCard {
     private int id;
     private String backgroundColor;
     private String textColor;
-    private String text;
+    private int titleStringResourceId;
+    private int textStringResourceId;
     private String imageName;
     private Bitmap image;
     private boolean showFoodOnCard;
 
-    public FeedbackCard(String backgroundColor, String textColor, String text, String imageName, boolean showFoodOnCard) {
-        this.backgroundColor = backgroundColor;
-        this.textColor = textColor;
-        this.text = text;
+    public FeedbackCard (int titleStringResourceId, int textStringResourceId, String imageName, boolean showFoodOnCard) {
+        this.titleStringResourceId = titleStringResourceId;
+        this.textStringResourceId = textStringResourceId;
         this.imageName = imageName;
         this.showFoodOnCard = showFoodOnCard;
     }
@@ -47,14 +47,6 @@ public class FeedbackCard {
         this.textColor = textColor;
     }
 
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
     public Bitmap getImage() {
         return image;
     }
@@ -77,5 +69,21 @@ public class FeedbackCard {
 
     public void setImageName(String imageName) {
         this.imageName = imageName;
+    }
+
+    public int getTextStringResourceId() {
+        return textStringResourceId;
+    }
+
+    public void setTextStringResourceId(int textStringResourceId) {
+        this.textStringResourceId = textStringResourceId;
+    }
+
+    public int getTitleStringResourceId() {
+        return titleStringResourceId;
+    }
+
+    public void setTitleStringResourceId(int titleStringResourceId) {
+        this.titleStringResourceId = titleStringResourceId;
     }
 }

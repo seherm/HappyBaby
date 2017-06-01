@@ -1,5 +1,7 @@
 package com.aah.selectingfood.model;
 
+import com.aah.selectingfood.R;
+
 import java.util.ArrayList;
 
 /**
@@ -9,20 +11,20 @@ import java.util.ArrayList;
 public class Child {
     private int id;
     private String ageGroup;
-    private String feedbackFinalGeneral;
+    private int feedbackFinalGeneralStringResourceId;
+
 
     public Child(String ageGroup) {
         this.ageGroup = ageGroup;
 
-
         if (ageGroup.equals("young")) {
-            this.feedbackFinalGeneral = "At 6 months, feeding only breast milk is not enough anymore. Your child needs to start eating other foods. Encourage him/her to try new foods and new textures little by little.";
+            feedbackFinalGeneralStringResourceId = R.string.final_feedback_general_young;
         }
         if (ageGroup.equals("middle")) {
-            this.feedbackFinalGeneral = "Between 9 and 11 months, your child experiences a transition to grown up food. He/she wants to touch it. Make sure his/her hands are washed before eating.";
+            feedbackFinalGeneralStringResourceId = R.string.final_feedback_general_middle;
         }
         if (ageGroup.equals("old")) {
-            this.feedbackFinalGeneral = "At 1 year, your child is starting to walk. He/she needs more energy! He/she can eat the family meals but will need additional snacks every day. He/she wants to do what grown ups do and discover the world!";
+            feedbackFinalGeneralStringResourceId = R.string.final_feedback_general_old;
         }
     }
 
@@ -38,17 +40,6 @@ public class Child {
         return ageGroup;
     }
 
-    public void setAgeGroup(String ageGroup) {
-        this.ageGroup = ageGroup;
-    }
-
-    public String getFeedbackFinalGeneral() {
-        return feedbackFinalGeneral;
-    }
-
-    public void setFeedbackFinalGeneral(String feedbackFinalGeneral) {
-        this.feedbackFinalGeneral = feedbackFinalGeneral;
-    }
 
     /*
      * Gives instant FeedbackActivity based on a specific food. Depending on the age group
@@ -59,13 +50,13 @@ public class Child {
      */
     public FeedbackInstant giveFeedbackInstantFood(Food food) {
         if (ageGroup.equals("young")) {
-            return new FeedbackInstant("#FFFFFF", "#000000", food.getFeedbackInstantYoungMessage());
+            return new FeedbackInstant(food.getFeedbackInstantYoungMessage());
         }
         if (ageGroup.equals("middle")) {
-            return new FeedbackInstant("#FFFFFF", "#000000", food.getFeedbackInstantMiddleMessage());
+            return new FeedbackInstant(food.getFeedbackInstantMiddleMessage());
         }
         if (ageGroup.equals("old")) {
-            return new FeedbackInstant("#FFFFFF", "#000000", food.getFeedbackInstantOldMessage());
+            return new FeedbackInstant(food.getFeedbackInstantOldMessage());
         }
         return null;
     }
@@ -77,8 +68,11 @@ public class Child {
      * @param   food    a specific food the child should give FeedbackActivity about
      * @return          the resulting FeedbackCard
      */
+
     public FeedbackCard giveFeedbackFinalFood(Food food) {
-        if (ageGroup.equals("young")) {
+
+        //TODO: calculate feedback on individual food (protein rich,...)
+        /**if (ageGroup.equals("young")) {
             return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalYoungMessage(), null, false);
         }
         if (ageGroup.equals("middle")) {
@@ -86,9 +80,10 @@ public class Child {
         }
         if (ageGroup.equals("old")) {
             return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalOldMessage(), null, false);
-        }
+        }*/
         return null;
     }
+
 
     /*
      * Gives a summary FeedbackActivity based on a set of food. Depending on the age group
@@ -99,7 +94,7 @@ public class Child {
      */
     public FeedbackCard giveFeedbackFinalFoodSummary(ArrayList<Food> foods) {
         if (foods == null) {
-            return new FeedbackCard("#ac8469", "#000000", "You did not select any foods.", "no-food.png", false);
+            return new FeedbackCard(R.string.no_food_selected_title, R.string.no_food_selected_message, "noFood.png", false);
         }
         ArrayList<String> selectedFoodGroups = new ArrayList<>();
         for (Food food : foods) {
@@ -109,12 +104,12 @@ public class Child {
         }
 
         if (selectedFoodGroups.size() >= 4) {
-            return new FeedbackCard("#a2bd87", "#000000", "The meal is well balanced! You are doing great!\n\nTry to vary the meal every day and encourage your child to taste new foods.", "balance.png", true);
+            return new FeedbackCard(R.string.well_balanced_title, R.string.well_balanced_message, "balanced.png", true);
         } else {
             if (selectedFoodGroups.size() > 0) {
-                return new FeedbackCard("#ac8469", "#000000", "Your meal is not well balanced.\n\nTry to vary the meal every day and encourage your child to taste new foods.", "balance.png", true);
+                return new FeedbackCard(R.string.not_well_balanced_title, R.string.not_well_balanced_message, "unbalanced.png", true);
             } else {
-                return new FeedbackCard("#ac8469", "#000000", "You did not select any foods.", "no-food.png", false);
+                return new FeedbackCard(R.string.no_food_selected_title, R.string.no_food_selected_message, "noFood.png", false);
             }
         }
     }
@@ -127,7 +122,7 @@ public class Child {
      * @return          the resulting FeedbackCard
      */
     public FeedbackCard giveFeedbackFinalGeneral() {
-        return new FeedbackCard("#a2bd87", "#000000", feedbackFinalGeneral, null, false);
+        return new FeedbackCard(R.string.feedback_general_title, feedbackFinalGeneralStringResourceId, null, false);
     }
 
 }

@@ -66,12 +66,11 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
         }
 
         TextView titleTextView = (TextView) itemView.findViewById(R.id.title_pager_item);
-        titleTextView.setText("Test Title");
+        titleTextView.setText(feedbacks.get(position).getTitleStringResourceId());
         ImageView imageView = (ImageView) itemView.findViewById(R.id.img_pager_item);
         imageView.setImageBitmap(feedbacks.get(position).getImage());
         TextView textView = (TextView) itemView.findViewById(R.id.text_pager_item);
-        textView.setText(feedbacks.get(position).getText());
-        //textView.setTextColor(Color.parseColor(feedbacks.get(position).getTextColor()));
+        textView.setText(feedbacks.get(position).getTextStringResourceId());
         container.addView(itemView);
         return itemView;
     }
