@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 
 import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.model.Food;
@@ -17,6 +18,7 @@ import org.w3c.dom.NodeList;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -254,7 +256,7 @@ public class DataManagement {
         Set<String> set = sharedPref.getStringSet("LastUsedFoods", new HashSet<String>());
         for (String foodName : set) {
             for (Food food : allFood) {
-                if (foodName.equals(food.getName())) {
+                if (foodName.equals(food.getName())  /*todo fixflo && !getSelectedFoodNames().contains(food.getName())*/) {
                     lastUsedFood.add(food);
                 }
             }
@@ -285,6 +287,16 @@ public class DataManagement {
 
     public ArrayList<Food> getSelectedFood() {
         return selectedFood;
+    }
+
+    //Todo fixflo
+    public ArrayList<String> getSelectedFoodNames() {
+        ArrayList<String> selectedFoodNames = new ArrayList<>();
+        for(Food food: selectedFood){
+            selectedFoodNames.add(food.getName());
+            Log.e("wuutwuut",food.getName());
+        }
+        return selectedFoodNames;
     }
 
     public ArrayList<Food> getAllFood() {

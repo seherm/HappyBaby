@@ -89,6 +89,7 @@ public class FoodSelectionActivity extends BaseActivity {
                     Food selectedFood = foodToSelectArrayAdapter.getItemAtPosition(position);
                     dataManagement.addSelectedFood(selectedFood);
                     dataManagement.storeLastUsedFoodToPrefs();
+                    //todo fixflo dataManagement.loadLastUsedFoodFromPrefs();
                     foodToSelectArrayAdapter.notifyDataSetChanged();
                     selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
                     checkForImmediateFeedback(selectedFood);
