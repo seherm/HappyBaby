@@ -125,6 +125,7 @@ public class MainActivity extends BaseActivity
     }
 
     public void goToSelectionPage(View view) {
+        dataManagement.getSelectedFood().clear();
         Intent intent = new Intent(this, FoodGroupSelectionActivity.class);
         startActivity(intent);
     }
