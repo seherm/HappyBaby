@@ -25,6 +25,8 @@ import com.aah.selectingfood.adapter.FeedbackViewPagerAdapter;
 import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.model.FeedbackCard;
+import com.aah.selectingfood.model.Food;
+import com.aah.selectingfood.model.User;
 import com.facebook.CallbackManager;
 import com.facebook.share.widget.ShareDialog;
 
@@ -111,17 +113,25 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
 
     private List<FeedbackCard> getFeedbackCards() {
         List<FeedbackCard> feedbackCards = new ArrayList<>();
+        DataManagement dataManagement = DataManagement.getInstance(this);
+        User user = dataManagement.getUser();
+        List<Child> children = user.getChildren();
+        Child firstChild = children.get(0);
 
         // Create all different feedback cards
 
         // Create summary feedback for children 1-3
         // TODO: Make sure the summary feedback is correct for 1-3 children.
-        FeedbackCard finalFoodSummaryFeedback = DataManagement.getInstance(this).getUser().getChildren().get(0).giveFeedbackFinalFoodSummary(DataManagement.getInstance(this).getSelectedFood());
-        finalFoodSummaryFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets(finalFoodSummaryFeedback.getImageName(), "feedbackImages"));
+        FeedbackCard finalFoodSummaryFeedback = firstChild.giveFeedbackFinalFoodSummary(dataManagement.getSelectedFood());
+        finalFoodSummaryFeedback.setImage(dataManagement.loadBitmapFromAssets(finalFoodSummaryFeedback.getImageName(), "feedbackImages"));
         feedbackCards.add(finalFoodSummaryFeedback);
 
         // Create individual food feedback for children 1-3
-        // TODO: Analyze each food.
+        List<FeedbackCard> finalFoodFeedbackCards = firstChild.giveFeedbackFinalFood(dataManagement.getSelectedFood());
+        for (FeedbackCard card : finalFoodFeedbackCards){
+            card.setImage(dataManagement.loadBitmapFromAssets(card.getImageName(),"feedbackImages"));
+            feedbackCards.add(card);
+        }
 
         // Create general feedback for children 1-3
         for (Child child : DataManagement.getInstance(this).getUser().getChildren()) {

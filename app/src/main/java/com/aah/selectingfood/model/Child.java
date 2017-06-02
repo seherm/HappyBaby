@@ -3,6 +3,7 @@ package com.aah.selectingfood.model;
 import com.aah.selectingfood.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Manuel on 04.05.2017.
@@ -68,20 +69,39 @@ public class Child {
      * @param   food    a specific food the child should give FeedbackActivity about
      * @return          the resulting FeedbackCard
      */
+    public List<FeedbackCard> giveFeedbackFinalFood(List<Food> foods) {
 
-    public FeedbackCard giveFeedbackFinalFood(Food food) {
+        List<FeedbackCard> finalFeedbackCardsFood = new ArrayList<>();
+        boolean junkFoodCardAdded = false;
+        boolean softDrinkCardAdded = false;
+        boolean containsFruit = false;
+        boolean containsVegetable = false;
 
-        //TODO: calculate feedback on individual food (protein rich,...)
-        /**if (ageGroup.equals("young")) {
-            return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalYoungMessage(), null, false);
+        for (Food food : foods) {
+            if (food.getFoodGroup().equals("Junk Food") && !junkFoodCardAdded) {
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_junk_food_title, R.string.final_feedback_junk_food_message, "junkFood.png", false));
+                junkFoodCardAdded = true;
+            }
+
+            if (food.getEnglishName().equals("Soft drink") && !softDrinkCardAdded) {
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_soft_drink_title, R.string.final_feedback_soft_drink_message, "softDrink.png", false));
+                softDrinkCardAdded = true;
+            }
+
+            if(food.getFoodGroup().equals("Fruits")){
+                containsFruit = true;
+            }
+
+            if(food.getFoodGroup().equals("Vegetables")){
+                containsVegetable = true;
+            }
         }
-        if (ageGroup.equals("middle")) {
-            return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalMiddleMessage(), null, false);
+
+        if(!containsFruit || !containsVegetable){
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_lack_of_fruit_or_vegetable_title, R.string.final_feedback_lack_of_fruit_or_vegetable_message, "noFruit.png", false));
         }
-        if (ageGroup.equals("old")) {
-            return new FeedbackCard("#FFFFFF", "#000000", food.getFeedbackFinalOldMessage(), null, false);
-        }*/
-        return null;
+
+        return finalFeedbackCardsFood;
     }
 
 
@@ -92,11 +112,11 @@ public class Child {
      * @param   foods    a set of foods the child should give FeedbackActivity about
      * @return          the resulting FeedbackCard
      */
-    public FeedbackCard giveFeedbackFinalFoodSummary(ArrayList<Food> foods) {
+    public FeedbackCard giveFeedbackFinalFoodSummary(List<Food> foods) {
         if (foods == null) {
             return new FeedbackCard(R.string.no_food_selected_title, R.string.no_food_selected_message, "noFood.png", false);
         }
-        ArrayList<String> selectedFoodGroups = new ArrayList<>();
+        List<String> selectedFoodGroups = new ArrayList<>();
         for (Food food : foods) {
             if (!selectedFoodGroups.contains(food.getFoodGroup())) {
                 selectedFoodGroups.add(food.getFoodGroup());
