@@ -59,7 +59,7 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         viewPager.setCurrentItem(0);
         viewPager.setPageMargin(100);
         viewPager.addOnPageChangeListener(this);
-        viewPager.setOffscreenPageLimit(25);
+        viewPager.setOffscreenPageLimit(getFeedbackCards().size());
         setUiPageViewController();
     }
 
