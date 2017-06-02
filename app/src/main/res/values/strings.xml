@@ -1,5 +1,4 @@
 <resources>
-    <string name="facebook_app_id" translatable="false">1892057001064840</string>
     <string name="app_name">Selecting Food</string>
     <string name="send_to">Share your result picture</string>
 
@@ -10,6 +9,8 @@
     <!--Onboarding Text-->
     <string name="onboarding_intro_title">New in Nutrition App for Parents</string>
     <string name="onboarding_intro_description">This App will help you how to feed your child well</string>
+    <string name="add_photo_of_baby_message">Tap on the camera icon to add a picture of your baby</string>
+    <string name="select_ages_of_your_children">Check the boxes according to the ages of your baby</string>
 
     <!--Button Text-->
     <string name="start">Start</string>
@@ -45,8 +46,6 @@
     <string name="children_middle_category">9\u201311 months</string>
     <string name="children_old_category">12\u201324 months</string>
     <string name="change_photos_of_baby">Photo of your children</string>
-    <string name="add_photo_of_baby_message">Tap on the camera icon to add a picture of your baby</string>
-    <string name="select_ages_of_your_children">Check the boxes according to the ages of your baby</string>
     <string name="restart_intro">Restart intro</string>
 
 
@@ -89,9 +88,18 @@
     <string name="well_balanced_message">Your meal is well balanced! You are doing great! Try to vary the meal every day and encourage your child to taste new foods.</string>
     <string name="not_well_balanced_title">The meal is not well balanced</string>
     <string name="not_well_balanced_message">Your meal is not well balanced. Try to vary the meal every day and encourage your child to taste new foods.</string>
-    <string name="feedback_general_title">General Feedback</string>
+
+    <string name="feedback_general_title">Take away</string>
     <string name="final_feedback_general_young">At 6 months, feeding only breast milk is not enough anymore. Your child needs to start eating other foods. Encourage him/her to try new foods and new textures little by little.</string>
     <string name="final_feedback_general_middle">Between 9 and 11 months, your child experiences a transition to grown up food. He/she wants to touch it. Make sure his/her hands are washed before eating.</string>
     <string name="final_feedback_general_old">At 1 year, your child is starting to walk. He/she needs more energy! He/she can eat the family meals but will need additional snacks every day. He/she wants to do what grown ups do and discover the world!</string>
+
+    <string name="final_feedback_soft_drink_title">The meal contains Soft Drink</string>
+    <string name="final_feedback_soft_drink_message">This kind of drink is not the best for your child. It contain too much sugar and chemical. Fresh water is much more healthy. You can mix it with small amount of natural fruit juice.</string>
+    <string name="final_feedback_junk_food_title">The meal contains Junk Food</string>
+    <string name="final_feedback_junk_food_message">This kind of food is not the best for your child. Try to replace it by an health snack: a banana, a rice cake, fruit salad, a piece of bread.</string>
+
+    <string name="final_feedback_lack_of_fruit_or_vegetable_title">No fruit or vegetables</string>
+    <string name="final_feedback_lack_of_fruit_or_vegetable_message">Your child need  a balance diet to develop well and to be healthy. Try to add one of those foods in his/her meal (fish, meat, beans, crab,..). It will  protect him/her from getting sick and facilitate his digestion!</string>
 
 </resources>

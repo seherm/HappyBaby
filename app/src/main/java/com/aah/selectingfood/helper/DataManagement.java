@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -88,12 +89,14 @@ public class DataManagement {
     public void removeSelectedFood(Food food, String selectedFoodGroup) {
         if (selectedFoodGroup.equals("Last Used")) {
             selectedFood.remove(food);
+            foodToSelect.add(food);
         } else {
             if (food.getFoodGroup().equals(selectedFoodGroup)) {
                 foodToSelect.add(food);
             }
             selectedFood.remove(food);
         }
+        Collections.sort(foodToSelect);
     }
 
     public void removeSelectedFood(Food food) {
@@ -105,6 +108,9 @@ public class DataManagement {
         foodToSelect.clear();
         if (foodGroup.equals("Last Used")) {
             foodToSelect.addAll(lastUsedFood);
+            for(Food food: selectedFood){
+                foodToSelect.remove(food);
+            }
         } else {
             for (Food food : allFood) {
                 if (food.getFoodGroup().equals(foodGroup)) {
