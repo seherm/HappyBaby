@@ -86,6 +86,7 @@ public class DataManagement {
     public void removeSelectedFood(Food food, String selectedFoodGroup) {
         if (selectedFoodGroup.equals("Last Used")) {
             selectedFood.remove(food);
+            foodToSelect.add(food);
         } else {
             if (food.getFoodGroup().equals(selectedFoodGroup)) {
                 foodToSelect.add(food);
@@ -103,6 +104,9 @@ public class DataManagement {
         foodToSelect.clear();
         if (foodGroup.equals("Last Used")) {
             foodToSelect.addAll(lastUsedFood);
+            for(Food food: selectedFood){
+                foodToSelect.remove(food);
+            }
         } else {
             for (Food food : allFood) {
                 if (food.getFoodGroup().equals(foodGroup)) {
