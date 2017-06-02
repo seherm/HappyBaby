@@ -36,10 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_weight="1"
-        android:gravity="top|center"
+        android:gravity="center|top"
         android:paddingBottom="@dimen/appIntroDefaultPaddingBottom"
         android:paddingLeft="@dimen/appIntroDefaultPaddingLeft"
-        android:paddingRight="@dimen/appIntroDefaultPaddingRight"
+        android:paddingRight="@dimen/appIntroDefaultPaddingLeft"
         android:text="@string/add_photo_of_baby_message"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_medium" />
