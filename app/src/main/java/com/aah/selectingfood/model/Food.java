@@ -6,7 +6,7 @@ import android.graphics.Bitmap;
  * Created by Manuel on 04.05.2017.
  */
 
-public class Food {
+public class Food implements Comparable<Food>{
     private int id;
     private String name;
     private String khmerName;
@@ -201,6 +201,11 @@ public class Food {
 
     public void setSound(String sound) {
         this.sound = sound;
+    }
+
+    @Override
+    public int compareTo(Food food) {
+        return this.name.compareTo(food.getName());
     }
 }
 

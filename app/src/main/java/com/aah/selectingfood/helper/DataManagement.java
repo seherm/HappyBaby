@@ -17,6 +17,7 @@ import org.w3c.dom.NodeList;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -93,6 +94,7 @@ public class DataManagement {
             }
             selectedFood.remove(food);
         }
+        Collections.sort(foodToSelect);
     }
 
     public void removeSelectedFood(Food food) {
