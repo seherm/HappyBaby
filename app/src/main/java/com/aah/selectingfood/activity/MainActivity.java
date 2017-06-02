@@ -121,8 +121,6 @@ public class MainActivity extends BaseActivity
     @Override
     protected void onResume() {
         super.onResume();
-        //TODO: to delete?
-        //detectFirstRun();
         setChildImage();
     }
 
@@ -135,18 +133,4 @@ public class MainActivity extends BaseActivity
         Bitmap childDefaultImage = dataManagement.getUser().getChildPhotoBitmap();
         imageViewChild.setImageBitmap(childDefaultImage);
     }
-
-    /* todo: deprecated, delete when not needed
-     * detects if app was started before and if not, sets boolean "firstRun" in GlobalState to TRUE
-     * accessible via GlobalState.getFirstRun
-     */
-    /*public void detectFirstRun() {
-        GlobalState state = ((GlobalState) getApplicationContext());
-
-        if (!prefs.contains("firstrun")) {
-            state.setFirstRun(true);
-            prefs.edit().putBoolean("firstrun", false).apply();
-        }
-    }*/
-
 }

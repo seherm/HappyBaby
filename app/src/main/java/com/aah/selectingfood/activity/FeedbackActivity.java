@@ -25,10 +25,7 @@ import com.aah.selectingfood.adapter.FeedbackViewPagerAdapter;
 import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.model.FeedbackCard;
-import com.aah.selectingfood.model.Food;
 import com.aah.selectingfood.model.User;
-import com.facebook.CallbackManager;
-import com.facebook.share.widget.ShareDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,9 +40,6 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
     private ImageView[] dots;
     private FeedbackViewPagerAdapter pagerAdapter;
     private ViewPager viewPager;
-
-    CallbackManager callbackManager;
-    ShareDialog shareDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,21 +59,8 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         viewPager.setCurrentItem(0);
         viewPager.setPageMargin(100);
         viewPager.addOnPageChangeListener(this);
+        viewPager.setOffscreenPageLimit(25);
         setUiPageViewController();
-
-        //TODO: Facebook -> still used?
-        //callbackManager = CallbackManager.Factory.create();
-        //shareDialog = new ShareDialog(this);
-        //setPermissions();
-
-        //TODO: Still used?
-        /*setContentView(R.layout.feedback_item_layout);
-        final Button button =  findViewById(R.id.share_button_pager_item);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                //ShareFeedbackCard(v);
-            }
-        });*/
     }
 
     public void ShareFeedbackCard(View v) {
@@ -164,19 +145,6 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         dots[0].setImageDrawable(getResources().getDrawable(R.drawable.dot_selecteditem));
     }
 
-    //TODO: delete when not used anymore?
-    /**private void shareOnFacebook(Bitmap image) {
-        SharePhoto photo = new SharePhoto.Builder()
-                .setBitmap(image)
-                .setCaption("testesteestetetstestsetse")
-                .build();
-
-        SharePhotoContent content = new SharePhotoContent.Builder()
-                .addPhoto(photo)
-                .build();
-        shareDialog.show(content);
-    }**/
-
     private void setPermissions() {
         int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 311390813;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
@@ -242,13 +210,6 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
     @Override
     public void onPageScrollStateChanged(int state) {
     }
-
-    //TODO:delete?
-    //@Override
-    /**protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
-    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
