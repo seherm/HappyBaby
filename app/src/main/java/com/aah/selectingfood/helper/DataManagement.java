@@ -162,6 +162,9 @@ public class DataManagement {
                     tempFood.setEnglishName(eElement.getElementsByTagName("name").item(0).getTextContent());
                     tempFood.setKhmerName(eElement.getElementsByTagName("khmerName").item(0).getTextContent());
                     tempFood.setSound(eElement.getElementsByTagName("sound").item(0).getTextContent());
+                    tempFood.setConsideredIronRich(Boolean.getBoolean(eElement.getElementsByTagName("consideredIronRich").item(0).getTextContent()));
+                    tempFood.setConsideredProteinRich(Boolean.getBoolean(eElement.getElementsByTagName("consideredProteinRich").item(0).getTextContent()));
+                    tempFood.setConsideredSalty(Boolean.getBoolean(eElement.getElementsByTagName("consideredSalty").item(0).getTextContent()));
                     tempFood.setInstantFeedback(eElement.getElementsByTagName("instantFeedback").item(0).getTextContent());
 
                     allFood.add(tempFood);

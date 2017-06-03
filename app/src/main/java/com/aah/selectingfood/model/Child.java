@@ -43,8 +43,7 @@ public class Child {
 
 
     /*
-     * Gives instant FeedbackActivity based on a specific food. Depending on the age group
-     * of the child, different Feedback may be returned.
+     * Gives instant Feedback based on a specific food.
      *
      * @param   food    a specific food the child should give FeedbackActivity about
      * @return          the resulting FeedbackInstant
@@ -54,19 +53,22 @@ public class Child {
     }
 
     /*
-     * Gives final FeedbackActivity based on a specific food. Depending on the age group
-     * of the child, different Feedback may be returned.
+     * Gives final Feedback based on all selected food.
      *
-     * @param   food    a specific food the child should give FeedbackActivity about
-     * @return          the resulting FeedbackCard
+     * @param   List<food>    all food selected in FoodSelectionActivity
+     * @return   List<FeedbackCard> allFinalFoodFeedback Cards to be show in FeedbackActivity
      */
     public List<FeedbackCard> giveFeedbackFinalFood(List<Food> foods) {
 
         List<FeedbackCard> finalFeedbackCardsFood = new ArrayList<>();
         boolean junkFoodCardAdded = false;
         boolean softDrinkCardAdded = false;
+        boolean ironRichCardAdded = false;
+        boolean saltyCardAdded = false;
+
         boolean containsFruit = false;
         boolean containsVegetable = false;
+        boolean containsProtein = false;
 
         for (Food food : foods) {
             if (food.getFoodGroup().equals("Junk Food") && !junkFoodCardAdded) {
@@ -79,17 +81,39 @@ public class Child {
                 softDrinkCardAdded = true;
             }
 
-            if(food.getFoodGroup().equals("Fruits")){
+            if (food.getFoodGroup().equals("Fruits")) {
                 containsFruit = true;
             }
 
-            if(food.getFoodGroup().equals("Vegetables")){
+            if (food.getFoodGroup().equals("Vegetables")) {
                 containsVegetable = true;
+            }
+
+            if (food.isConsideredProteinRich()) {
+                containsProtein = true;
+            }
+
+            if (food.isConsideredIronRich() && !ironRichCardAdded) {
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_iron_rich_present_title, R.string.final_feedback_iron_rich_present_message, "noFruit.png", false));
+                ironRichCardAdded = true;
+            }
+
+            if (food.isConsideredSalty() && !saltyCardAdded) {
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_salty_present_title, R.string.final_feedback_salty_present_message, "noFruit.png", false));
+                saltyCardAdded = true;
             }
         }
 
-        if(!containsFruit || !containsVegetable){
-            finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_lack_of_fruit_or_vegetable_title, R.string.final_feedback_lack_of_fruit_or_vegetable_message, "noFruit.png", false));
+        if (!containsFruit) {
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_lack_of_fruit_title, R.string.final_feedback_lack_of_fruit_message, "noFruit.png", false));
+        }
+
+        if (!containsVegetable) {
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_lack_of_vegetable_title, R.string.final_feedback_lack_of_vegetable_message, "noFruit.png", false));
+        }
+
+        if(!containsProtein){
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_lack_of_protein_present_title, R.string.final_feedback_lack_of_protein_message, "noFruit.png", false));
         }
 
         return finalFeedbackCardsFood;
@@ -97,10 +121,9 @@ public class Child {
 
 
     /*
-     * Gives a summary FeedbackActivity based on a set of food. Depending on the age group
-     * of the child, different Feedback may be returned.
+     * Gives a summary Feedback based on number of different foodgroups of selected food.
      *
-     * @param   foods    a set of foods the child should give FeedbackActivity about
+     * @param   foods    a set of foods the child should give Feedback about
      * @return          the resulting FeedbackCard
      */
     public FeedbackCard giveFeedbackFinalFoodSummary(List<Food> foods) {
@@ -127,8 +150,7 @@ public class Child {
 
 
     /*
-     * Gives a general FeedbackActivity about the child and its needs. Depending on the age group
-     * of the child, different Feedback may be returned.
+     * Gives a general Feedback about the child and its needs.
      *
      * @return          the resulting FeedbackCard
      */

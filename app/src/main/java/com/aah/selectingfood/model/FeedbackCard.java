@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
  */
 
 public class FeedbackCard {
+
     private int id;
     private String backgroundColor;
     private String textColor;

@@ -108,7 +108,7 @@ public class FoodGroupSelectionActivity extends BaseActivity {
     public void goToFoodSelectionPage(View view) {
         switch (view.getId()) {
             case R.id.fruits:
-                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Fruits");
+                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Fruit");
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.fruits);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.fruitsBlue);
                 break;
@@ -128,7 +128,7 @@ public class FoodGroupSelectionActivity extends BaseActivity {
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.meatsRed);
                 break;
             case R.id.vegetables:
-                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Vegetables");
+                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Vegetable");
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.vegetables);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.vegetablesGreen);
                 break;
@@ -138,7 +138,7 @@ public class FoodGroupSelectionActivity extends BaseActivity {
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.junkFoodPink);
                 break;
             case R.id.carbohydrates:
-                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Carbohydrates");
+                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Carbohydrate");
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.carbohydrates);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.carbohydratesYellow);
                 break;

@@ -83,10 +83,12 @@ public class FoodSelectionActivity extends BaseActivity {
                     searchView.setQuery("", false);
                 }
 
+                Food selectedFood = foodToSelectArrayAdapter.getItemAtPosition(position);
+
                 if (v.getId() == R.id.soundButton) {
-                    playTest();
+                    playTest(selectedFood.getSound());
                 } else {
-                    Food selectedFood = foodToSelectArrayAdapter.getItemAtPosition(position);
+
                     dataManagement.addSelectedFood(selectedFood);
                     dataManagement.storeLastUsedFoodToPrefs();
                     //todo fixflo dataManagement.loadLastUsedFoodFromPrefs();
@@ -132,7 +134,7 @@ public class FoodSelectionActivity extends BaseActivity {
     }
 
 
-    public void playTest() {
+    public void playTest(String fileName) {
         MediaPlayer m = new MediaPlayer();
         try {
             if (m.isPlaying()) {
@@ -141,7 +143,7 @@ public class FoodSelectionActivity extends BaseActivity {
                 m = new MediaPlayer();
             }
 
-            AssetFileDescriptor descriptor = getAssets().openFd("foodSound/fruit_0.m4a");
+            AssetFileDescriptor descriptor = getAssets().openFd("foodSound/" + fileName);
             m.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
             descriptor.close();
 
