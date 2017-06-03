@@ -1,2523 +1,1191 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<foods>
+<foods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<food>
+		<name>Bread</name>
+		<khmerName>នំប័ង</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>bread.jpg</image>
+		<sound>bread.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
+	</food>
+	<food>
+		<name>Rice Noodles</name>
+		<khmerName>នំំបញ្ចុក</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>rice_noodles.jpg</image>
+		<sound>rice.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
+	</food>
+	<food>
+		<name>Rice</name>
+		<khmerName>បាយ</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>rice.jpg</image>
+		<sound>rice_noodle.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
+	</food>
+	<food>
+		<name>Sweet Corn</name>
+		<khmerName>ពោត</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>sweet_corn.jpg</image>
+		<sound>sweet_corn.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
+	</food>
+	<food>
+		<name>Sweet Potato</name>
+		<khmerName>ដំឡូងជ្វា</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>sweet_potato.jpg</image>
+		<sound>sweet_potato.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
+	</food>
+	<food>
+		<name>Taro</name>
+		<khmerName>ត្រាវ</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>taro.jpg</image>
+		<sound>taro.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
+	</food>
+	<food>
+		<name>Yellow Noodle</name>
+		<khmerName>មីដុំ</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>yellow_noodle.jpg</image>
+		<sound>yellow_noodle.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
+	</food>
 	<food>
 		<name>Apple</name>
 		<khmerName>ផ្លែប៉ោម</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>apple.jpg</image>
-		<sound>name_1</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>apple.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Banana</name>
 		<khmerName>ចេក</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>banana.jpg</image>
-		<sound>name_2</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>banana.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Custard Apple</name>
 		<khmerName>ផ្លែទៀប</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>custard_apple.jpg</image>
-		<sound>name_3</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>custard_apple.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Dragonfruit</name>
 		<khmerName>ផ្លែស្រការនាគ</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>dragonfruit.jpg</image>
-		<sound>name_4</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>dragonfruit.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Durian</name>
 		<khmerName>ផ្លែធុរ៉េន</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>durian.jpg</image>
-		<sound>name_5</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>durian.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Grapes</name>
 		<khmerName>ផ្លែទំពាំងបាយជូរ</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>grapes.jpg</image>
-		<sound>name_6</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>grapes.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Green bananas</name>
 		<khmerName>ចេកអំបូង</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>green_bananas.jpg</image>
-		<sound>name_7</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>green_banana.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Green Orange</name>
 		<khmerName>ផ្លែក្រូច</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>green_orange.jpg</image>
-		<sound>name_8</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>green_orange.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Guava</name>
 		<khmerName>ផ្លែត្របែក</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>guava.jpg</image>
-		<sound>name_9</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>guava.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Jackfruit</name>
 		<khmerName>ផ្លែខ្នុរ</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>jackfruit.jpg</image>
-		<sound>name_10</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Kaffir Lime</name>
-		<khmerName>ផ្លែក្រូូចសើច</khmerName>
-		<foodgroup>Fruits</foodgroup>
-		<image>kaffir_lime.jpg</image>
-		<sound>name_11</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>jackfruit.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Ladyfinger Banana</name>
 		<khmerName>ចេកណាំវ៉ា</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>ladyfinger_banana.jpg</image>
-		<sound>name_12</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>ladyfinger_banana.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Lemon</name>
 		<khmerName>ផ្លែក្រូចស្ករ</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>lemon.jpg</image>
-		<sound>name_13</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>lemon.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Lime</name>
 		<khmerName>ផ្លែក្រូចឆ្មា</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>lime.jpg</image>
-		<sound>name_14</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>lime.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Longan</name>
 		<khmerName>ផ្លែមៀន</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>longan.jpg</image>
-		<sound>name_15</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>longan.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Lotus Seed</name>
 		<khmerName>គ្រាប់ឈូក</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>lotus_seed.jpg</image>
-		<sound>name_16</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>lotus_seed.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Lychee</name>
 		<khmerName>ផ្លែគូលែន</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>lycee.jpg</image>
-		<sound>name_17</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>lychee.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Mango</name>
 		<khmerName>ផ្លែស្វាយ</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>mango.jpg</image>
-		<sound>name_18</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>mango.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Mangosteen</name>
 		<khmerName>ផ្លែមង្ឃុត</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>mangosteen.jpg</image>
-		<sound>name_19</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Mature Coconut</name>
-		<khmerName>ផ្លែដូងទុំ</khmerName>
-		<foodgroup>Fruits</foodgroup>
-		<image>mature_coconut.jpg</image>
-		<sound>name_20</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>mangosteen.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Melon</name>
 		<khmerName>ត្រសក់ផ្អែម</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>melon.jpg</image>
-		<sound>name_21</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>melon.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Orange</name>
 		<khmerName>ផ្លែក្រូច</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>orange.jpg</image>
-		<sound>name_22</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>orange.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Palm Fruit</name>
 		<khmerName>ផ្លែត្នោត</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>palm_fruit.jpg</image>
-		<sound>name_23</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>palm_fruit.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Papaya</name>
 		<khmerName>ផ្លែល្ហុង</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>papaya.jpg</image>
-		<sound>name_24</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>papaya.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Passionfruit</name>
 		<khmerName>ផ្លែក្រូចទ្រើង</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>passionfruit.jpg</image>
-		<sound>name_25</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>passionfruit.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Pineapple</name>
 		<khmerName>ផ្លែម្នាស់</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>pineapple.jpg</image>
-		<sound>name_26</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>pineapple.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Pomegranate</name>
 		<khmerName>ផ្លែទទឺម</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>pomegranate.jpg</image>
-		<sound>name_27</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>pomegranate.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Pomelo</name>
 		<khmerName>ផ្លែក្រូចថ្លុង</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>pomelo.jpg</image>
-		<sound>name_28</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>pomelo.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Rose Apple</name>
 		<khmerName>ផ្លែជម្ពូរ</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>rose_apple.jpg</image>
-		<sound>name_29</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>rose_apple.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Rambutan</name>
 		<khmerName>ផ្លែសាវម៉ាវ</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>rumbutan.jpg</image>
-		<sound>name_30</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>rambutan.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Santol</name>
 		<khmerName>ផ្លែកំពីងរាជ្យ់</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>santol.jpg</image>
-		<sound>name_31</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>santol.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Sapodilla</name>
 		<khmerName>ផ្លែល្មុត</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>sapodilla.jpg</image>
-		<sound>name_32</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>sapodilla.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Snake Fruit</name>
 		<khmerName>ផ្លែអង្កាំ</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>snake_fruit.jpg</image>
-		<sound>name_33</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>snake_fruit.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Soursop</name>
 		<khmerName>ផ្លែទៀបបារាំង</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>soursop.jpg</image>
-		<sound>name_34</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Star Gooseberry</name>
-		<khmerName>ផ្លែកន្ទួត</khmerName>
-		<foodgroup>Fruits</foodgroup>
-		<image>star_gooseberry.jpg</image>
-		<sound>name_35</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Tamarind</name>
-		<khmerName>ផ្លែអំពិល</khmerName>
-		<foodgroup>Fruits</foodgroup>
-		<image>tamarind.jpg</image>
-		<sound>name_36</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>soursop.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Tangerine</name>
 		<khmerName>ផ្លែក្រូចខ្វិច</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>tangerine.jpg</image>
-		<sound>name_37</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>tangerine.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Watermelon</name>
 		<khmerName>ផ្លែឪឡឹក</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>watermelon.jpg</image>
-		<sound>name_38</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>watermelon.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Young Coconut</name>
 		<khmerName>ផ្លែដូូងខ្ចី</khmerName>
-		<foodgroup>Fruits</foodgroup>
+		<foodgroup>Fruit</foodgroup>
 		<image>young_coconut.jpg</image>
-		<sound>name_39</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>young_coconut.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Basil</name>
 		<khmerName>ជីក្រហម</khmerName>
 		<foodgroup>Herbs</foodgroup>
 		<image>basil.jpg</image>
-		<sound>name_40</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>basil.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Cinnamon</name>
 		<khmerName>ឈើអ៊ែម</khmerName>
 		<foodgroup>Herbs</foodgroup>
 		<image>cinnamon.jpg</image>
-		<sound>name_41</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>cinnamon.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Garlic</name>
 		<khmerName>ខ្ទឹមស</khmerName>
 		<foodgroup>Herbs</foodgroup>
 		<image>garlic.jpg</image>
-		<sound>name_42</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>garlic.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Holy Basil</name>
 		<khmerName>ម្រះព្រៅ</khmerName>
 		<foodgroup>Herbs</foodgroup>
 		<image>holy_basil.jpg</image>
-		<sound>name_43</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>holy_basil.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Turmeric</name>
 		<khmerName>រមៀត</khmerName>
 		<foodgroup>Herbs</foodgroup>
 		<image>tumeric.jpg</image>
-		<sound>name_44</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>turmeric.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Fish Herb</name>
 		<khmerName>ជីថ្ពាល់ត្រី</khmerName>
 		<foodgroup>Herbs</foodgroup>
 		<image>fish_herb.jpg</image>
-		<sound>name_45</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>fish_herb.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Rice Paddy Herb</name>
 		<khmerName>ម្អម</khmerName>
 		<foodgroup>Herbs</foodgroup>
 		<image>rice_paddy_herb.jpg</image>
-		<sound>name_46</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>rice_paddy_herb.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
-		<name>Soft drink</name>
-		<khmerName>ភេសជ្ជះ</khmerName>
-		<foodgroup>Junk Food</foodgroup>
-		<image>soft_drink.jpg</image>
-		<sound>name_47</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>This kind of drink is not the best for your child.</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>#000000</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>This kind of drink is not the best for your child.</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>#000000</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>This kind of drink is not the best for your child.</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>#000000</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>This kind of drink is not the best for your child. It contains too much sugar and chemical. Fresh water is much more healthy. You can mix it with small amount of natural fruit juice.</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>#000000</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>This kind of drink is not the best for your child. It contains too much sugar and chemical. Fresh water is much more healthy. You can mix it with small amount of natural fruit juice.</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>#000000</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>This kind of drink is not the best for your child. It contains too much sugar and chemical. Fresh water is much more healthy. You can mix it with small amount of natural fruit juice.</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>#000000</feedbackFinalOldColor>
-		</feedback>
+		<name>Pork</name>
+		<khmerName>សាច់ជ្រូក</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>"empty"</image>
+		<sound>pork.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
-		<name>Khmer cakes</name>
-		<khmerName>នំក្រូច</khmerName>
-		<foodgroup>Junk Food</foodgroup>
-		<image>coconut_rice_cake.jpg</image>
-		<sound>name_48</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<name>Chicken</name>
+		<khmerName>សាច់់មាន់</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>"empty"</image>
+		<sound>chicken.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
-		<name>Crisps</name>
-		<khmerName>នំំកញ្ចប់</khmerName>
-		<foodgroup>Junk Food</foodgroup>
-		<image>crisps.jpg</image>
-		<sound>name_49</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<name>Beef</name>
+		<khmerName>សាច់គោ</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>"empty"</image>
+		<sound>beef.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
+	</food>
+	<food>
+		<name>Fish</name>
+		<khmerName>សាច់ត្រី</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>"empty"</image>
+		<sound>fish.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
+	</food>
+	<food>
+		<name>Duck</name>
+		<khmerName>សាច់ទា</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>"empty"</image>
+		<sound>duck.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Peanut</name>
 		<khmerName>សណ្តែកដី</khmerName>
 		<foodgroup>Legumes</foodgroup>
 		<image>peanut.jpg</image>
-		<sound>name_50</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>peanut.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Black Eyed Peas</name>
 		<khmerName>សណ្តែកសៀង</khmerName>
 		<foodgroup>Legumes</foodgroup>
 		<image>black_eyed_peas.jpg</image>
-		<sound>name_51</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>black_eyed_peas.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Green Mung Beans</name>
 		<khmerName>សណ្តែកបាយខៀវ</khmerName>
 		<foodgroup>Legumes</foodgroup>
 		<image>green_mung_beans.jpg</image>
-		<sound>name_52</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>green_mung_beans.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Kidney Beans</name>
 		<khmerName>សណ្តែកគុយ</khmerName>
 		<foodgroup>Legumes</foodgroup>
 		<image>kidney_beans.jpg</image>
-		<sound>name_53</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>kidney_bean.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Red Mung Beans</name>
 		<khmerName>សណ្តែកបាយក្រហម</khmerName>
 		<foodgroup>Legumes</foodgroup>
 		<image>red_mung_beans.jpg</image>
-		<sound>name_54</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>red_mung_beans.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Soy Beans</name>
 		<khmerName>សណ្តែកសៀង</khmerName>
 		<foodgroup>Legumes</foodgroup>
 		<image>soy_beans.jpg</image>
-		<sound>name_55</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Pork</name>
-		<khmerName>សាច់ជ្រូក</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>-</image>
-		<sound>name_56</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Chicken</name>
-		<khmerName>សាច់់មាន់</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>-</image>
-		<sound>name_57</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Beef</name>
-		<khmerName>សាច់គោ</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>-</image>
-		<sound>name_58</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Fish</name>
-		<khmerName>សាច់ត្រី</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>-</image>
-		<sound>name_59</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Duck</name>
-		<khmerName>សាច់ទា</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>-</image>
-		<sound>name_60</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Bread</name>
-		<khmerName>នំប័ង</khmerName>
-		<foodgroup>Carbohydrates</foodgroup>
-		<image>bread.jpg</image>
-		<sound>name_61</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Rice Noodles</name>
-		<khmerName>នំំបញ្ចុក</khmerName>
-		<foodgroup>Carbohydrates</foodgroup>
-		<image>rice_noodles.jpg</image>
-		<sound>name_62</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Rice</name>
-		<khmerName>បាយ</khmerName>
-		<foodgroup>Carbohydrates</foodgroup>
-		<image>rice.jpg</image>
-		<sound>name_63</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Sweet Corn</name>
-		<khmerName>ពោត</khmerName>
-		<foodgroup>Carbohydrates</foodgroup>
-		<image>sweet_corn.jpg</image>
-		<sound>name_64</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Sweet Potato</name>
-		<khmerName>ដំឡូងជ្វា</khmerName>
-		<foodgroup>Carbohydrates</foodgroup>
-		<image>sweet_potato.jpg</image>
-		<sound>name_65</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Taro</name>
-		<khmerName>ត្រាវ</khmerName>
-		<foodgroup>Carbohydrates</foodgroup>
-		<image>taro.jpg</image>
-		<sound>name_66</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Yellow Noodle</name>
-		<khmerName>មីដុំ</khmerName>
-		<foodgroup>Carbohydrates</foodgroup>
-		<image>yellow_noodle.jpg</image>
-		<sound>name_67</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>soy_bean.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Avocado</name>
 		<khmerName>ផ្លែអាវ៉ូកាឌូ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>avocado.jpg</image>
-		<sound>name_68</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>avocado.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Baby Corn</name>
 		<khmerName>ស្នៀតពោត</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>baby_corn.jpg</image>
-		<sound>name_69</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>baby_corn.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Baby Eggplant</name>
 		<khmerName>ត្រប់ស្រួយ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>baby_eggplant.jpg</image>
-		<sound>name_70</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>baby_eggplant.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Bamboo Shoot</name>
 		<khmerName>ទំពាំង</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>bamboo_shoot.jpg</image>
-		<sound>name_71</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>bamboo_shot.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Banana Blossom</name>
 		<khmerName>ត្រួយ៉ូងចេក</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>banana_blossom.jpg</image>
-		<sound>name_72</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>banana_blossom.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Banana Stem</name>
 		<khmerName>ដើមចេក</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>banana_stem.jpg</image>
-		<sound>name_73</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>banana_stem.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Bean Sprout</name>
 		<khmerName>សណ្តែកបណ្តុះ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>bean_sprout.jpg</image>
-		<sound>name_74</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>bean_sprout.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Broccoli</name>
 		<khmerName>ផ្កាខាត់ណាខៀវ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>broccoli.jpg</image>
-		<sound>name_75</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>broccoli.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Cabbage</name>
 		<khmerName>ស្ពែក្តោប</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>cabbage.jpg</image>
-		<sound>name_76</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>cabbage.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Celery</name>
 		<khmerName>ភ្លៅកង្កែប</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>celery.jpg</image>
-		<sound>name_77</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Chayote</name>
-		<khmerName>ផ្លែស៊ូ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
-		<image>chayote.jpg</image>
-		<sound>name_78</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>celery.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Chicory</name>
 		<khmerName>ស្លឺកតាំងអោរ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>chicory.jpg</image>
-		<sound>name_79</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>chicory.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Chinese Cabbage</name>
 		<khmerName>ស្ពែបូកគោ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>chinese_cabbage.jpg</image>
-		<sound>name_80</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>chinese_cabbage.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Chive Flower</name>
 		<khmerName>ផ្កាគូឆាយ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>chive_flower.jpg</image>
-		<sound>name_81</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>chive_flower.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Choy Sum</name>
 		<khmerName>ស្ពៃចង្កឹះ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>choy_sum.jpg</image>
-		<sound>name_82</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>choy_sum.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Enoki Mushroom</name>
 		<khmerName>ផ្សិតម្ជុល</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>enoki_mushroom.jpg</image>
-		<sound>name_83</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>enoki_mushroom.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Escarole</name>
 		<khmerName>ស្ពៃក្រញាញ់</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>escarole.jpg</image>
-		<sound>name_84</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>escarole.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>French Bean</name>
 		<khmerName>សណ្តែកបារាំង</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>french_bean.jpg</image>
-		<sound>name_85</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Galangal</name>
-		<khmerName>រំដេង</khmerName>
-		<foodgroup>Vegetables</foodgroup>
-		<image>galangal.jpg</image>
-		<sound>name_86</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>french_beans.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Green Papaya</name>
 		<khmerName>ល្ហុងខ្ចី</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>green_papaya.jpg</image>
-		<sound>name_87</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>green_papaya.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Green Peas</name>
 		<khmerName>គ្រាប់សណ្តែកខៀវ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>green_peas.jpg</image>
-		<sound>name_88</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Green Peppercorns</name>
-		<khmerName>ម្រេចខ្ចី</khmerName>
-		<foodgroup>Vegetables</foodgroup>
-		<image>green_peppercorns.jpg</image>
-		<sound>name_89</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>green_pease.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Green Tomato</name>
 		<khmerName>ប៉េងប៉ោះ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>green_tomato.jpg</image>
-		<sound>name_90</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>green_tomato.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Ivy Gourd Leaves</name>
 		<khmerName>ស្លឺឹកបាស់</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>ivy_gourd_leaves.jpg</image>
-		<sound>name_91</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Java Feroniella</name>
-		<khmerName>ផ្លែក្រសាំង</khmerName>
-		<foodgroup>Vegetables</foodgroup>
-		<image>java_feroniella.jpg</image>
-		<sound>name_92</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Leek</name>
-		<khmerName>ស្លឺកខ្ទឹម</khmerName>
-		<foodgroup>Vegetables</foodgroup>
-		<image>leek.jpg</image>
-		<sound>name_93</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Lemongrass</name>
-		<khmerName>ស្លឺកគ្រៃ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
-		<image>lemongrass.jpg</image>
-		<sound>name_94</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>ivy_gourd_leave.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Lettuce</name>
 		<khmerName>សាឡាត់</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>lettuce.jpg</image>
-		<sound>name_95</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>lettuce.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Lotus Root</name>
 		<khmerName>មើមឈូក</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>lotus_root.jpg</image>
-		<sound>name_96</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>lotus_root.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Lotus Stem</name>
 		<khmerName>ក្រអៅឈូក</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>lotus_stem.jpg</image>
-		<sound>name_97</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>lotus_stem.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Luffa</name>
 		<khmerName>ននោង</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>luffa.jpg</image>
-		<sound>name_98</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>luffa.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Margosa Leaves</name>
 		<khmerName>ត្រួយស្តៅ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>margosa_leaves.jpg</image>
-		<sound>name_99</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>margosa_leaves.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Moringa</name>
 		<khmerName>ស្លឹកម្រុំ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>moringa.jpg</image>
-		<sound>name_100</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>moringa.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Moustard Greens</name>
 		<khmerName>ស្ពៃទឿ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>mustard_greens.jpg</image>
-		<sound>name_101</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>moustard_green.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Ngob Leaves</name>
 		<khmerName>ស្លឹកងប់</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>ngob_leaves.jpg</image>
-		<sound>name_102</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>ngob_leave.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Okra</name>
 		<khmerName>ពោតបារាំង</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>okra.jpg</image>
-		<sound>name_103</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>okra.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Oyster Mushroom</name>
 		<khmerName>ផ្សិតអំបោះ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>oyster_mushroom.jpg</image>
-		<sound>name_104</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>oyster_mushroom.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Pea Eggplant</name>
 		<khmerName>ត្រប់់ពុតញង</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>pea_eggplant.jpg</image>
-		<sound>name_105</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Pepper</name>
-		<khmerName>ម្រេច</khmerName>
-		<foodgroup>Vegetables</foodgroup>
-		<image>pepper.jpg</image>
-		<sound>name_106</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>pea_eggplant.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Red Cabbage</name>
 		<khmerName>ស្ពៃក្តោបពណ៏ស្វាយ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>red_cabbage.jpg</image>
-		<sound>name_107</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>red_cabbage.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Shemeji Mushroom</name>
 		<khmerName>ផ្សិតក្តាម</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>shemeji_mushroom.jpg</image>
-		<sound>name_108</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>shemeji_mushroom.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Shiitake Mushroom</name>
 		<khmerName>ផ្សិតខ្មៅ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>shiitake_mushroom.jpg</image>
-		<sound>name_109</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>shiitake_mushroom.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Snow Pea</name>
 		<khmerName>ពពាយ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>snow_pea.jpg</image>
-		<sound>name_110</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>snow_pea.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Soy Beans</name>
 		<khmerName>សណ្តែកសៀង</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>soy_beans.jpg</image>
-		<sound>name_111</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>soy_beans.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Spinach</name>
 		<khmerName>ស្ពៃខ្មៅ</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>spinach.jpg</image>
-		<sound>name_112</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
-	</food>
-	<food>
-		<name>Spring Onion</name>
-		<khmerName>ដើមខ្ទឹម</khmerName>
-		<foodgroup>Vegetables</foodgroup>
-		<image>spring_onion.jpg</image>
-		<sound>name_113</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>spinach.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Straw Mushroom</name>
 		<khmerName>ផ្សិតចំបើង</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>straw_mushroom.jpg</image>
-		<sound>name_114</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>straw_mushroom.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Water Lily</name>
 		<khmerName>ព្រលឹត</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>water_lily.jpg</image>
-		<sound>name_115</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>water_lily.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Water Pennywort</name>
 		<khmerName>ស្លឹកត្រចៀកក្រាញ់</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>water_pennywort.jpg</image>
-		<sound>name_116</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>water_pennywort.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Winged Bean</name>
 		<khmerName>ពពាយជ្រុង</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>winged_bean.jpg</image>
-		<sound>name_117</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>winged_bean.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Winter Melon</name>
 		<khmerName>ត្រឡាច</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>winter_melo.jpg</image>
-		<sound>name_118</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>winter_melon.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Young Jackfruit</name>
 		<khmerName>ខ្នុរខ្ចី</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>young_jackfruit.jpg</image>
-		<sound>name_119</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>young_jackfruit.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 	<food>
 		<name>Zucchini</name>
 		<khmerName>ននោងបារាំង</khmerName>
-		<foodgroup>Vegetables</foodgroup>
+		<foodgroup>Vegetable</foodgroup>
 		<image>zucchini.jpg</image>
-		<sound>name_120</sound>
-		<feedback>
-			<feedbackInstantYoungMessage>-</feedbackInstantYoungMessage>
-			<feedbackInstantYoungColor>-</feedbackInstantYoungColor>
-			<feedbackInstantMiddleMessage>-</feedbackInstantMiddleMessage>
-			<feedbackInstantMiddleColor>-</feedbackInstantMiddleColor>
-			<feedbackInstantOldMessage>-</feedbackInstantOldMessage>
-			<feedbackInstantOldColor>-</feedbackInstantOldColor>
-			<feedbackFinalYoungMessage>-</feedbackFinalYoungMessage>
-			<feedbackFinalYoungColor>-</feedbackFinalYoungColor>
-			<feedbackFinalMiddleMessage>-</feedbackFinalMiddleMessage>
-			<feedbackFinalMiddleColor>-</feedbackFinalMiddleColor>
-			<feedbackFinalOldMessage>-</feedbackFinalOldMessage>
-			<feedbackFinalOldColor>-</feedbackFinalOldColor>
-		</feedback>
+		<sound>zucchini.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
+	</food>
+	<food>
+		<name>Soft drink</name>
+		<khmerName>ភេសជ្ជះ</khmerName>
+		<foodgroup>Junk Food</foodgroup>
+		<image>soft_drink.jpg</image>
+		<sound>soft_drink.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
+	</food>
+	<food>
+		<name>Khmer cakes</name>
+		<khmerName>នំក្រូច</khmerName>
+		<foodgroup>Junk Food</foodgroup>
+		<image>coconut_rice_cake.jpg</image>
+		<sound>khmer_cakes.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
+	</food>
+	<food>
+		<name>Crisps</name>
+		<khmerName>នំំកញ្ចប់</khmerName>
+		<foodgroup>Junk Food</foodgroup>
+		<image>crisps.jpg</image>
+		<sound>crips.m4a</sound>
+		<consideredSalty>false</consideredSalty>
+		<consideredProteinRich>false</consideredProteinRich>
+		<consideredIronRich>false</consideredIronRich>
+		<instantFeedback>Food selected</instantFeedback>
 	</food>
 </foods>

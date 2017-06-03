@@ -50,16 +50,7 @@ public class Child {
      * @return          the resulting FeedbackInstant
      */
     public FeedbackInstant giveFeedbackInstantFood(Food food) {
-        if (ageGroup.equals("young")) {
-            return new FeedbackInstant(food.getFeedbackInstantYoungMessage());
-        }
-        if (ageGroup.equals("middle")) {
-            return new FeedbackInstant(food.getFeedbackInstantMiddleMessage());
-        }
-        if (ageGroup.equals("old")) {
-            return new FeedbackInstant(food.getFeedbackInstantOldMessage());
-        }
-        return null;
+        return new FeedbackInstant((food.getInstantFeedback()));
     }
 
     /*

@@ -6,7 +6,7 @@ import android.graphics.Bitmap;
  * Created by Manuel on 04.05.2017.
  */
 
-public class Food implements Comparable<Food>{
+public class Food implements Comparable<Food> {
 
     private String name;
     private String khmerName;
@@ -17,6 +17,7 @@ public class Food implements Comparable<Food>{
     private boolean consideredSalty;
     private boolean consideredProteinRich;
     private boolean consideredIronRich;
+    private String instantFeedback;
 
     public Food(String name, String foodGroup, Bitmap image) {
         this.name = name;
@@ -94,6 +95,14 @@ public class Food implements Comparable<Food>{
 
     public void setConsideredIronRich(boolean consideredIronRich) {
         this.consideredIronRich = consideredIronRich;
+    }
+
+    public String getInstantFeedback() {
+        return instantFeedback;
+    }
+
+    public void setInstantFeedback(String instantFeedback) {
+        this.instantFeedback = instantFeedback;
     }
 
     @Override

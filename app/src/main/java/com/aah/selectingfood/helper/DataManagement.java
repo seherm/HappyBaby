@@ -162,23 +162,7 @@ public class DataManagement {
                     tempFood.setEnglishName(eElement.getElementsByTagName("name").item(0).getTextContent());
                     tempFood.setKhmerName(eElement.getElementsByTagName("khmerName").item(0).getTextContent());
                     tempFood.setSound(eElement.getElementsByTagName("sound").item(0).getTextContent());
-
-                    // Add instant feedback to food
-                    Element feedbackNode = (Element) eElement.getElementsByTagName("feedback").item(0);
-                    tempFood.setFeedbackInstantYoungMessage(feedbackNode.getElementsByTagName("feedbackInstantYoungMessage").item(0).getTextContent());
-                    tempFood.setFeedbackInstantYoungColor(feedbackNode.getElementsByTagName("feedbackInstantYoungColor").item(0).getTextContent());
-                    tempFood.setFeedbackInstantMiddleMessage(feedbackNode.getElementsByTagName("feedbackInstantMiddleMessage").item(0).getTextContent());
-                    tempFood.setFeedbackInstantMiddleColor(feedbackNode.getElementsByTagName("feedbackInstantMiddleColor").item(0).getTextContent());
-                    tempFood.setFeedbackInstantOldMessage(feedbackNode.getElementsByTagName("feedbackInstantOldMessage").item(0).getTextContent());
-                    tempFood.setFeedbackInstantOldColor(feedbackNode.getElementsByTagName("feedbackInstantOldColor").item(0).getTextContent());
-
-                    // Add final feedback to food
-                    tempFood.setFeedbackFinalYoungMessage(feedbackNode.getElementsByTagName("feedbackFinalYoungMessage").item(0).getTextContent());
-                    tempFood.setFeedbackFinalYoungColor(feedbackNode.getElementsByTagName("feedbackFinalYoungColor").item(0).getTextContent());
-                    tempFood.setFeedbackFinalMiddleMessage(feedbackNode.getElementsByTagName("feedbackFinalMiddleMessage").item(0).getTextContent());
-                    tempFood.setFeedbackFinalMiddleColor(feedbackNode.getElementsByTagName("feedbackFinalMiddleColor").item(0).getTextContent());
-                    tempFood.setFeedbackFinalOldMessage(feedbackNode.getElementsByTagName("feedbackFinalOldMessage").item(0).getTextContent());
-                    tempFood.setFeedbackFinalOldColor(feedbackNode.getElementsByTagName("feedbackFinalOldColor").item(0).getTextContent());
+                    tempFood.setInstantFeedback(eElement.getElementsByTagName("instantFeedback").item(0).getTextContent());
 
                     allFood.add(tempFood);
                 }
