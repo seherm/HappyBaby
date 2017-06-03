@@ -81,11 +81,11 @@ public class Child {
                 softDrinkCardAdded = true;
             }
 
-            if (food.getFoodGroup().equals("Fruits")) {
+            if (food.getFoodGroup().equals("Fruit")) {
                 containsFruit = true;
             }
 
-            if (food.getFoodGroup().equals("Vegetables")) {
+            if (food.getFoodGroup().equals("Vegetable")) {
                 containsVegetable = true;
             }
 
