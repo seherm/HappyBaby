@@ -1,6 +1,7 @@
 package com.aah.selectingfood.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,6 +17,7 @@ import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.model.FeedbackCard;
 import com.aah.selectingfood.model.Food;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -55,15 +57,31 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
         RecyclerView selectedFoodRecyclerView = (RecyclerView) itemView.findViewById(R.id.selectedFoodFeedbackRecyclerView);
         if (feedbacks.get(position).isShowFoodOnCard() && !selectedFood.isEmpty()) {
             //Configure Selected Food View
-            selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(dataManagement.getSelectedFood(), context, new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
-                @Override
-                public void onItemClick(Food item) {
-                    //TODO: create other adapter where no click event listener necessary
-                }
-            });
+            final int MAX_FOOD_CARDS = 12;
+            if(selectedFood.size() >= MAX_FOOD_CARDS){
+                List<Food> foodToShowOnCard = new ArrayList<>(selectedFood.subList(0,MAX_FOOD_CARDS-1));
+                Food placeHolder = new Food("...","empty",null);
+                foodToShowOnCard.add(placeHolder);
+                selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(foodToShowOnCard, context, new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(Food item) {
+                        //TODO: create other adapter where no click event listener necessary
+                    }
+                });
+
+            }else{
+                selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(selectedFood, context, new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(Food item) {
+                        //TODO: create other adapter where no click event listener necessary
+                    }
+                });
+            }
+
             GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 4);
             selectedFoodRecyclerView.setLayoutManager(gridLayoutManager);
             selectedFoodRecyclerView.setAdapter(selectedFoodRecyclerViewAdapter);
+
         } else {
             selectedFoodRecyclerView.setVisibility(View.GONE);
         }
