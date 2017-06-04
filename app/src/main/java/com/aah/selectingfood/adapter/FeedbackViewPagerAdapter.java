@@ -50,10 +50,11 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
         //itemView.setBackgroundResource(R.color.white);
         //itemView.setBackgroundColor(Color.parseColor(feedbacks.get(position).getBackgroundColor()));
 
-        if(feedbacks.get(position).isShowFoodOnCard()){
+        dataManagement = DataManagement.getInstance(context);
+        List<Food> selectedFood = dataManagement.getSelectedFood();
+        RecyclerView selectedFoodRecyclerView = (RecyclerView) itemView.findViewById(R.id.selectedFoodFeedbackRecyclerView);
+        if (feedbacks.get(position).isShowFoodOnCard() && !selectedFood.isEmpty()) {
             //Configure Selected Food View
-            RecyclerView selectedFoodRecyclerView = (RecyclerView) itemView.findViewById(R.id.selectedFoodFeedbackRecyclerView);
-            dataManagement = DataManagement.getInstance(context);
             selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(dataManagement.getSelectedFood(), context, new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(Food item) {
@@ -63,6 +64,8 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
             GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 4);
             selectedFoodRecyclerView.setLayoutManager(gridLayoutManager);
             selectedFoodRecyclerView.setAdapter(selectedFoodRecyclerViewAdapter);
+        } else {
+            selectedFoodRecyclerView.setVisibility(View.GONE);
         }
 
         TextView titleTextView = (TextView) itemView.findViewById(R.id.title_pager_item);
