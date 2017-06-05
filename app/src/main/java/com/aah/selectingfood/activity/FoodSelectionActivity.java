@@ -52,13 +52,13 @@ public class FoodSelectionActivity extends BaseActivity {
         }
         setTitle(getString(R.string.title_activity_food_selection));
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
-        fab.setOnClickListener(new View.OnClickListener() {
+        // todo delete FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        /*fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 goToFeedbackPage(view);
             }
-        });
+        });*/
 
         SharedPreferences sharedPref = getSharedPreferences("user_selection", MODE_PRIVATE);
         selectedFoodGroup = sharedPref.getString("SELECTED_FOOD_GROUP", null);
@@ -200,9 +200,9 @@ public class FoodSelectionActivity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void goToFeedbackPage(View view) {
+    /* todo delete public void goToFeedbackPage(View view) {
         Intent intent = new Intent(this, FeedbackActivity.class);
         startActivity(intent);
-    }
+    }*/
 }
 
