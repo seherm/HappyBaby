@@ -1,12 +1,10 @@
 package com.aah.selectingfood.activity;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
@@ -31,7 +29,9 @@ import com.aah.selectingfood.model.Food;
 
 import java.util.List;
 
-/** In this Activity the user selects the food after selecting the food group in the FoodGroupSelectionActivity before**/
+/**
+ * In this Activity the user selects the food after selecting the food group in the FoodGroupSelectionActivity before
+ **/
 public class FoodSelectionActivity extends BaseActivity {
 
     private DataManagement dataManagement;
@@ -40,6 +40,7 @@ public class FoodSelectionActivity extends BaseActivity {
     private SearchView searchView;
     private MenuItem item;
     private String selectedFoodGroup;
+    private MediaPlayer m = new MediaPlayer();;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +87,7 @@ public class FoodSelectionActivity extends BaseActivity {
                 Food selectedFood = foodToSelectArrayAdapter.getItemAtPosition(position);
 
                 if (v.getId() == R.id.soundButton) {
-                    playTest(selectedFood.getSound());
+                    playSound(selectedFood.getSound());
                 } else {
 
                     dataManagement.addSelectedFood(selectedFood);
@@ -134,15 +135,16 @@ public class FoodSelectionActivity extends BaseActivity {
     }
 
 
-    public void playTest(String fileName) {
-        MediaPlayer m = new MediaPlayer();
+    public void playSound(String fileName) {
         try {
+            m.release();
+            m = new MediaPlayer();
+
             if (m.isPlaying()) {
                 m.stop();
                 m.release();
                 m = new MediaPlayer();
             }
-
             AssetFileDescriptor descriptor = getAssets().openFd("foodSound/" + fileName);
             m.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
             descriptor.close();
@@ -156,13 +158,14 @@ public class FoodSelectionActivity extends BaseActivity {
         }
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //used to display search bar
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.search_menu, menu);
 
-        if (selectedFoodGroup.equals("Last Used")){
+        if (selectedFoodGroup.equals("Last Used")) {
             inflater.inflate(R.menu.options_menu, menu);
         }
 
