@@ -64,7 +64,7 @@ public class IntroActivity extends AppIntro {
 
         String title2 = getString(R.string.onboarding_intro_title_2);
         String description2 = getString(R.string.onboarding_intro_description_2);
-        int image2 = R.drawable.foodgroup_meat;//TODO replace with selection screenshot
+        int image2 = R.drawable.onboarding_foodselection;//TODO replace with selection screenshot
         addSlide(AppIntroFragment.newInstance(title2, description2, image2, backgroundColor));
 
         addSlide(SampleSlide.newInstance(R.layout.onboarding_take_photo_layout));
@@ -80,6 +80,7 @@ public class IntroActivity extends AppIntro {
         // Hide Skip/Done button.
         showSkipButton(true);
         setProgressButtonEnabled(true);
+        pager.setPagingEnabled(true);
 
         // Turn vibration on and set intensity.
         // NOTE: you will probably need to ask VIBRATE permission in Manifest.
