@@ -62,6 +62,11 @@ public class IntroActivity extends AppIntro {
         int backgroundColor = Color.parseColor(getString(R.color.blue));
         addSlide(AppIntroFragment.newInstance(title, description, image, backgroundColor));
 
+        String title2 = getString(R.string.onboarding_intro_title_2);
+        String description2 = getString(R.string.onboarding_intro_description_2);
+        int image2 = R.drawable.foodgroup_meat;//TODO replace with selection screenshot
+        addSlide(AppIntroFragment.newInstance(title2, description2, image2, backgroundColor));
+
         addSlide(SampleSlide.newInstance(R.layout.onboarding_take_photo_layout));
         askForPermissions(new String[]{Manifest.permission.CAMERA}, 1);
 

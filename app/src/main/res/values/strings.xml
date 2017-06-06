@@ -7,8 +7,11 @@
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
     <!--Onboarding Text-->
-    <string name="onboarding_intro_title">New in Nutrition App for Parents</string>
-    <string name="onboarding_intro_description">This App will help you how to feed your child well</string>
+    <!-- todo insert app name instead of our app-->
+    <string name="onboarding_intro_title">Welcome to our app!</string>
+    <string name="onboarding_intro_title_2">Next steps</string>
+    <string name="onboarding_intro_description">This App will help you feeding your child, such that it can grow big and strong.</string>
+    <string name="onboarding_intro_description_2">Select all ingredients that you want to feed your child today and we will tell you what you can improve to help your child. Before you start, you can add a picture of your child and tell us about your children, to make the app more fun to use and our tips more accurate.</string>
     <string name="add_photo_of_baby_message">Tap on the camera icon to add a picture of your baby</string>
     <string name="select_ages_of_your_children">Check the boxes according to the ages of your baby</string>
 
