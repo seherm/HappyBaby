@@ -13,64 +13,48 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="154dp" />
+        app:layout_constraintGuide_percent="0.325"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6"
-        tools:layout_editor_absoluteY="307dp"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintGuide_percent="0.65" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8"
-        tools:layout_editor_absoluteY="409dp"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintGuide_percent="0.8" />
 
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:onClick="goToFeedbackPage"
-        android:src="@drawable/ic_arrow_forward"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintRight_toLeftOf="parent" />
 
     <GridView
         android:id="@+id/foodToSelect"
-        android:visibility="gone"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:columnWidth="100dp"
         android:gravity="center"
         android:horizontalSpacing="10dp"
-        android:verticalSpacing="10dp"
-        android:padding="10dp"
         android:numColumns="auto_fit"
+        android:padding="10dp"
         android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <LinearLayout
         android:id="@+id/foodGroups1"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:baselineAligned="false"
         android:orientation="horizontal"
         android:visibility="visible"
-        android:baselineAligned="false"
         app:layout_constraintBottom_toTopOf="@+id/guideline1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -189,9 +173,9 @@
         android:id="@+id/foodGroups2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:baselineAligned="false"
         android:orientation="horizontal"
         android:visibility="visible"
-        android:baselineAligned="false"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -308,32 +292,44 @@
     </LinearLayout>
 
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/childImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        app:civ_fill_color="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:onClick="goToFeedbackPage"
+        android:src="@drawable/ic_arrow_forward"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/guideline2"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:orientation="horizontal">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/childImageView"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:layout_weight="2"
-            app:civ_fill_color="@android:color/white"/>
+        app:layout_constraintLeft_toRightOf="@id/childImageView"
+        app:layout_constraintRight_toLeftOf="@id/floatingActionButton"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2">
 
         <TextView
             android:id="@+id/instantFeedback"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:gravity="center"
-            android:paddingRight="@dimen/text_margin"
             android:text="@string/food_message"
-            android:textSize="@dimen/text_size_medium"/>
+            android:textSize="@dimen/text_size_medium" />
     </LinearLayout>
 
 
@@ -345,7 +341,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"/>
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
 
 </android.support.constraint.ConstraintLayout>

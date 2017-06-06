@@ -2,6 +2,8 @@ package com.aah.selectingfood.activity;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
+import android.widget.TextView;
 
 import com.aah.selectingfood.R;
 
@@ -20,5 +22,8 @@ public class FAQActivity extends BaseActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         setTitle(getString(R.string.title_activity_faq));
+
+        TextView textView = (TextView) findViewById(R.id.textViewFAQ);
+        textView.setMovementMethod(new ScrollingMovementMethod());
     }
 }
