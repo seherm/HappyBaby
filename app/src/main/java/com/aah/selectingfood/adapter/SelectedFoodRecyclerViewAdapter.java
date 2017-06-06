@@ -68,8 +68,6 @@ public class SelectedFoodRecyclerViewAdapter extends RecyclerView.Adapter<Select
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         holder.bind(selectedFood.get(position), listener);
-        //holder.imageView.setImageBitmap(selectedFood.get(position).getImage());
-        //holder.textView.setText(selectedFood.get(position).getName());
     }
 
     @Override

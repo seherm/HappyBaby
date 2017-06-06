@@ -48,8 +48,6 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         View itemView = LayoutInflater.from(context).inflate(R.layout.feedback_item_layout, container, false);
-        //itemView.setBackgroundResource(R.color.white);
-        //itemView.setBackgroundColor(Color.parseColor(feedbacks.get(position).getBackgroundColor()));
 
         dataManagement = DataManagement.getInstance(context);
         List<Food> selectedFood = dataManagement.getSelectedFood();

@@ -79,7 +79,7 @@ public class User {
                     load();
             return imageBitmap;
         } else {
-            imageBitmap = DataManagement.getInstance(context).loadBitmapFromAssets("child_happy_default.pngng", "childrenImages");
+            imageBitmap = DataManagement.getInstance(context).loadBitmapFromAssets("child_happy_default.png", "childrenImages");
             return imageBitmap;
         }
     }

@@ -79,7 +79,7 @@
                 android:drawableStart="@drawable/ic_share_black_24dp"
                 android:drawableTint="@color/lightBlue"
                 android:onClick="ShareFeedbackCard"
-                android:text="@string/share"
+                android:text="@string/share_this_tip"
                 android:textColor="@color/lightBlue" />
 
         </LinearLayout>

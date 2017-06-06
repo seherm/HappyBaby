@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Selecting Food</string>
-    <string name="send_to">Share your result picture</string>
+    <string name="drawer_title">@string/app_name</string>
 
-    <string name="drawer_title">Nutrition App for Parents</string>
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
@@ -12,12 +11,14 @@
     <string name="onboarding_intro_title_2">Next steps</string>
     <string name="onboarding_intro_description">This App will help you feeding your child, such that it can grow big and strong.</string>
     <string name="onboarding_intro_description_2">Select all ingredients that you want to feed your child today and we will tell you what you can improve to help your child. Before you start, you can add a picture of your child and tell us about your children, to make the app more fun to use and our tips more accurate.</string>
-    <string name="add_photo_of_baby_message">Tap on the camera icon to add a picture of your baby</string>
-    <string name="select_ages_of_your_children">Check the boxes according to the ages of your baby</string>
+    <string name="add_photo_of_your_child_title">Select photo</string>
+    <string name="add_photo_of_your_child_message">Tap on the camera to add a picture of your child</string>
+    <string name="select_age_of_your_child_title">How old is your child?</string>
+    <string name="select_age_of_your_child_message">Check the boxes according to the ages of your baby</string>
 
     <!--Button Text-->
     <string name="start">Start</string>
-    <string name="share">Share this Tip</string>
+    <string name="share_this_tip">Share this Tip</string>
 
     <!--Page Titles-->
     <string name="title_activity_food_group_selection">Select Food Group</string>
@@ -29,9 +30,10 @@
     <string name="title_activity_feedback">About your meal</string>
 
     <!--Other Text-->
-    <string name="start_message">Please tap on start to select the food you are going to feed your baby</string>
-    <string name="food_message">What other kinds of foods will I eat today?</string>
+    <string name="start_message">Tap on start to select the foods you will feed your baby today</string>
+    <string name="food_message">What foods will I eat today?</string>
 
+    <!--Navigation Drawer Items-->
     <string name="porridge_recipes">Porridge Recipes</string>
     <string name="FAQ">FAQ</string>
     <string name="settings">Settings</string>
@@ -44,11 +46,11 @@
     <string name="select_language">Select Language</string>
     <string name="english">English</string>
     <string name="khmer">ខ្មែរ</string>
-    <string name="ages_of_your_children">Ages of your children</string>
+    <string name="ages_of_your_children">Age of your child</string>
     <string name="children_young_category">6\u20138 months</string>
     <string name="children_middle_category">9\u201311 months</string>
     <string name="children_old_category">12\u201324 months</string>
-    <string name="change_photos_of_baby">Photo of your children</string>
+    <string name="change_photos_of_baby">Photo of your child</string>
     <string name="restart_intro">Restart Intro</string>
 
 

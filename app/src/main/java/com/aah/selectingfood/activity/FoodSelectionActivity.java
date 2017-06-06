@@ -41,7 +41,7 @@ public class FoodSelectionActivity extends BaseActivity {
     private SearchView searchView;
     private MenuItem item;
     private String selectedFoodGroup;
-    private MediaPlayer m = new MediaPlayer();;
+    private MediaPlayer m = new MediaPlayer();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
