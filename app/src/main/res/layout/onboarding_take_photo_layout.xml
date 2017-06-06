@@ -38,17 +38,18 @@
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:layout_margin="20dp"
-                    android:src="@color/background"
+                    android:src="@drawable/child_happy_default"
                     app:civ_fill_color="@android:color/white"/>
 
                 <android.support.design.widget.FloatingActionButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|end"
+                    android:layout_margin="20dp"
                     android:onClick="selectPhoto"
                     android:src="@drawable/ic_photo_camera_black_24dp"
                     android:tint="@color/white"
-                    android:layout_margin="20dp"/>
+                    />
             </FrameLayout>
 
     </LinearLayout>

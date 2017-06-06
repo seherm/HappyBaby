@@ -102,16 +102,16 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/textViewTakePhoto"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/childPhoto"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_width="200dp"
             android:layout_margin="20dp"
             android:layout_gravity="center_horizontal"
             app:civ_fill_color="@color/white"/>
@@ -119,11 +119,11 @@
         <android.support.design.widget.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_gravity="bottom|end"
             android:src="@drawable/ic_photo_camera_black_24dp"
             android:tint="@color/white"
-            android:onClick="selectPhoto"
-            android:layout_margin="10dp"
-            android:layout_gravity="bottom|end"/>
+            android:onClick="selectPhoto"/>
     </FrameLayout>
 
 
