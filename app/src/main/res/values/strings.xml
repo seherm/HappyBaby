@@ -14,7 +14,7 @@
     <string name="add_photo_of_your_child_title">Select photo</string>
     <string name="add_photo_of_your_child_message">Tap on the camera to add a picture of your child</string>
     <string name="select_age_of_your_child_title">How old is your child?</string>
-    <string name="select_age_of_your_child_message">Check the boxes according to the ages of your baby</string>
+    <string name="select_age_of_your_child_message">This will help us give customized advice for your childs age</string>
 
     <!--Button Text-->
     <string name="start">Start</string>
