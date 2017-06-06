@@ -1,5 +1,6 @@
 package com.aah.selectingfood.activity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
@@ -53,14 +54,6 @@ public class FoodSelectionActivity extends BaseActivity {
         }
         setTitle(getString(R.string.title_activity_food_selection));
 
-        // todo delete FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton);
-        /*fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goToFeedbackPage(view);
-            }
-        });*/
-
         SharedPreferences sharedPref = getSharedPreferences("user_selection", MODE_PRIVATE);
         selectedFoodGroup = sharedPref.getString("SELECTED_FOOD_GROUP", null);
         final int selectedFoodGroupResourceId = sharedPref.getInt("SELECTED_FOOD_GROUP_ID", 0);
@@ -92,7 +85,6 @@ public class FoodSelectionActivity extends BaseActivity {
 
                     dataManagement.addSelectedFood(selectedFood);
                     dataManagement.storeLastUsedFoodToPrefs();
-                    //todo fixflo dataManagement.loadLastUsedFoodFromPrefs();
                     foodToSelectArrayAdapter.notifyDataSetChanged();
                     selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
                     checkForImmediateFeedback(selectedFood);
@@ -203,9 +195,9 @@ public class FoodSelectionActivity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /* todo delete public void goToFeedbackPage(View view) {
+    public void goToFeedbackPage(View view) {
         Intent intent = new Intent(this, FeedbackActivity.class);
         startActivity(intent);
-    }*/
+    }
 }
 

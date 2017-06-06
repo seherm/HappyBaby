@@ -18,7 +18,6 @@ import org.w3c.dom.NodeList;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
@@ -249,7 +248,7 @@ public class DataManagement {
         Set<String> set = sharedPref.getStringSet("LastUsedFoods", new HashSet<String>());
         for (String foodName : set) {
             for (Food food : allFood) {
-                if (foodName.equals(food.getName())  /*todo fixflo && !getSelectedFoodNames().contains(food.getName())*/) {
+                if (foodName.equals(food.getName())) {
                     lastUsedFood.add(food);
                 }
             }

@@ -41,8 +41,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:clickable="true"
-        android:src="@drawable/ic_check"
+        android:onClick="goToFeedbackPage"
+        android:src="@drawable/ic_arrow_forward"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintRight_toLeftOf="parent" />
 
