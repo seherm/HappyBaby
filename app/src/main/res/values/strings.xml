@@ -49,7 +49,7 @@
     <string name="children_middle_category">9\u201311 months</string>
     <string name="children_old_category">12\u201324 months</string>
     <string name="change_photos_of_baby">Photo of your children</string>
-    <string name="restart_intro">Restart intro</string>
+    <string name="restart_intro">Restart Intro</string>
 
 
     <!--Food Groups-->
@@ -113,6 +113,5 @@
     <string name="final_feedback_iron_rich_present_message">Great choice! This iron-rich food makes your baby strong!</string>
     <string name="final_feedback_salty_present_title">Too salty!</string>
     <string name="final_feedback_salty_present_message">Too salty! Be careful not to put too much salt in baby food. Tea prevents your child from taking iron from the food and growing well. It is also an excitant, that can disturb the sleep.</string>
-
 
 </resources>

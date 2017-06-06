@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -29,7 +30,9 @@ import com.aah.selectingfood.model.User;
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 
-/** This Activity is for showing the onboarding process in the first usage of the app**/
+/**
+ * This Activity is for showing the onboarding process in the first usage of the app
+ **/
 public class IntroActivity extends AppIntro {
 
     private static final int CAMERA_PHOTO_REQUEST_CODE = 1;
@@ -47,16 +50,9 @@ public class IntroActivity extends AppIntro {
         dataManagement = DataManagement.getInstance(this);
         user = dataManagement.getUser();
 
-        // Add your slide fragments here.
-        // AppIntro will automatically generate the dots indicator and buttons.
-        /*addSlide(firstFragment);
-        addSlide(secondFragment);
-        addSlide(thirdFragment);
-        addSlide(fourthFragment);*/
-
         // Instead of fragments, you can also use our default slide
         // Just set a title, description, background and image. AppIntro will do the rest.
-        String title = getString(R.string.onboarding_intro_title);
+        String title = getString(R.string.onboarding_intro_title); //TODO: Include app name
         String description = getString(R.string.onboarding_intro_description);
         int image = R.drawable.onboarding_groceries;
         int backgroundColor = Color.parseColor(getString(R.color.blue));
@@ -68,7 +64,7 @@ public class IntroActivity extends AppIntro {
         addSlide(AppIntroFragment.newInstance(title2, description2, image2, backgroundColor));
 
         addSlide(SampleSlide.newInstance(R.layout.onboarding_take_photo_layout));
-        askForPermissions(new String[]{Manifest.permission.CAMERA}, 1);
+        askForPermissions(new String[]{Manifest.permission.CAMERA}, 2);
 
         addSlide(SampleSlide.newInstance(R.layout.onboarding_select_ages_layout));
 
@@ -77,20 +73,16 @@ public class IntroActivity extends AppIntro {
         setBarColor(Color.parseColor("#3F51B5"));
         setSeparatorColor(Color.parseColor("#2196F3"));
 
-        // Hide Skip/Done button.
+        // Show Skip/Done button.
         showSkipButton(true);
         setProgressButtonEnabled(true);
+        // Enable swiping
         pager.setPagingEnabled(true);
-
-        // Turn vibration on and set intensity.
-        // NOTE: you will probably need to ask VIBRATE permission in Manifest.
-        //setVibrate(true);
-        //setVibrateIntensity(30);
     }
 
     public void selectPhoto(View view) {
         //askForPermissions(new String[]{Manifest.permission.CAMERA}, 1);
-        childPhoto = (ImageView) view;
+        childPhoto = (ImageView) pager.findViewById(R.id.childPhoto);
         try {
             PackageManager packageManager = getPackageManager();
             int hasPerm = packageManager.checkPermission(Manifest.permission.CAMERA, getPackageName());

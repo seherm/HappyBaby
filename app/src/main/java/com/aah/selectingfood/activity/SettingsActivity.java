@@ -13,6 +13,9 @@ import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -112,11 +115,11 @@ public class SettingsActivity extends BaseActivity {
 
     }
 
-    public void setFoodName(String languageCode){
+    public void setFoodName(String languageCode) {
         for (Food food : dataManagement.getAllFood()) {
             if (languageCode.equals("km")) {
                 food.setName(food.getKhmerName());
-            }else{
+            } else {
                 food.setName(food.getEnglishName());
             }
         }
@@ -330,7 +333,7 @@ public class SettingsActivity extends BaseActivity {
         }
     }
 
-    public void launchIntro(View v){
+    public void launchIntro() {
         Intent i = new Intent(SettingsActivity.this, IntroActivity.class);
         startActivity(i);
     }
@@ -338,5 +341,26 @@ public class SettingsActivity extends BaseActivity {
     @Override
     public void onBackPressed() {
         startActivity(new Intent(this, MainActivity.class));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.options_menu_settings, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id == R.id.restart_intro) {
+            launchIntro();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

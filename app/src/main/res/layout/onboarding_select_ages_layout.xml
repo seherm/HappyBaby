@@ -3,79 +3,94 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/appIntroBottomBarHeight">
 
     <TextView
-        android:id="@+id/chooseAges"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:gravity="top|center"
-        android:paddingLeft="@dimen/appIntroDefaultPaddingLeft"
-        android:paddingRight="@dimen/appIntroDefaultPaddingRight"
-        android:paddingTop="@dimen/appIntroDefaultPaddingTop"
-        android:text="@string/ages_of_your_children"
-        android:textColor="@color/white"
-        android:textSize="@dimen/appIntroHeadingTextSize" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|center"
-        android:layout_weight="1"
-        android:gravity="top"
-        android:orientation="vertical">
-
-        <CheckBox
-            android:id="@+id/checkBoxChildYoung"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:buttonTint="@color/white"
-            android:onClick="addYoungChild"
-            android:text="@string/children_young_category"
-            android:textColor="@color/white"
-            android:textSize="@dimen/appIntroHeadingTextSize" />
-
-        <CheckBox
-            android:id="@+id/checkBoxChildMiddle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginTop="10dp"
-            android:buttonTint="@color/white"
-            android:onClick="addMiddleChild"
-            android:text="@string/children_middle_category"
-            android:textColor="@color/white"
-            android:textSize="@dimen/appIntroHeadingTextSize" />
-
-        <CheckBox
-            android:id="@+id/checkBoxChildOld"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginTop="10dp"
-            android:buttonTint="@color/white"
-            android:onClick="addOldChild"
-            android:text="@string/children_old_category"
-            android:textColor="@color/white"
-            android:textSize="@dimen/appIntroHeadingTextSize" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/selectAgesText"
+        android:id="@+id/takePhotoTitle"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_gravity="bottom"
-        android:gravity="center|top"
-        android:paddingBottom="@dimen/appIntroDefaultPaddingBottom"
-        android:paddingLeft="@dimen/appIntroDefaultPaddingLeft"
-        android:paddingRight="@dimen/appIntroDefaultPaddingLeft"
-        android:text="@string/select_ages_of_your_children"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_size_medium" />
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="@string/ages_of_your_children"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/appIntroHeadingTextSize"
+        android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkBoxChildYoung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:buttonTint="@color/white"
+                android:onClick="addYoungChild"
+                android:text="@string/children_young_category"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxChildMiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/white"
+                android:onClick="addMiddleChild"
+                android:text="@string/children_middle_category"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxChildOld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:buttonTint="@color/white"
+                android:onClick="addOldChild"
+                android:text="@string/children_old_category"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:text="@string/select_ages_of_your_children"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -166,7 +166,7 @@ public class FoodSelectionActivity extends BaseActivity {
         inflater.inflate(R.menu.search_menu, menu);
 
         if (selectedFoodGroup.equals("Last Used")) {
-            inflater.inflate(R.menu.options_menu, menu);
+            inflater.inflate(R.menu.options_menu_clear_list, menu);
         }
 
         item = menu.findItem(R.id.search);
