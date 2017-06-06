@@ -52,6 +52,8 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         }
         setTitle(getString(R.string.title_activity_feedback));
 
+        setPermissions();
+
         viewPager = (ViewPager) findViewById(R.id.pager_introduction);
         pagerIndicator = (LinearLayout) findViewById(R.id.viewPagerCountDots);
         pagerAdapter = new FeedbackViewPagerAdapter(FeedbackActivity.this, getFeedbackCards());

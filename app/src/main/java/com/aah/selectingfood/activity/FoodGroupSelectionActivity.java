@@ -174,7 +174,7 @@ public class FoodGroupSelectionActivity extends BaseActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        //used to display search bar
+        //display search bar
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.search_menu, menu);
 
