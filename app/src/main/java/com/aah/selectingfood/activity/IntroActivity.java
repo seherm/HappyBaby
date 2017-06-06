@@ -58,13 +58,13 @@ public class IntroActivity extends AppIntro {
         // Just set a title, description, background and image. AppIntro will do the rest.
         String title = getString(R.string.onboarding_intro_title);
         String description = getString(R.string.onboarding_intro_description);
-        int image = R.mipmap.ic_launcher;
+        int image = R.drawable.onboarding_groceries;
         int backgroundColor = Color.parseColor(getString(R.color.blue));
         addSlide(AppIntroFragment.newInstance(title, description, image, backgroundColor));
 
         String title2 = getString(R.string.onboarding_intro_title_2);
         String description2 = getString(R.string.onboarding_intro_description_2);
-        int image2 = R.drawable.onboarding_foodselection;//TODO replace with selection screenshot
+        int image2 = R.drawable.onboarding_foodselection;
         addSlide(AppIntroFragment.newInstance(title2, description2, image2, backgroundColor));
 
         addSlide(SampleSlide.newInstance(R.layout.onboarding_take_photo_layout));
