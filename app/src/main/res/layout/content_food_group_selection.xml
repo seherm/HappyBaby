@@ -93,7 +93,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="@string/fruits"
-                android:textColor="@color/white" />
+                android:textColor="@android:color/white" />
 
             <ImageView
                 android:id="@+id/fruitsImage"
@@ -120,7 +120,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="@string/legumes"
-                android:textColor="@color/white" />
+                android:textColor="@android:color/white" />
 
             <ImageView
                 android:id="@+id/legumesImage"
@@ -147,7 +147,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="@string/herbs"
-                android:textColor="@color/white" />
+                android:textColor="@android:color/white" />
 
             <ImageView
                 android:id="@+id/herbsImage"
@@ -174,7 +174,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="@string/meat"
-                android:textColor="@color/white" />
+                android:textColor="@android:color/white" />
 
             <ImageView
                 android:id="@+id/meatImage"
@@ -214,7 +214,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="@string/vegetables"
-                android:textColor="@color/white" />
+                android:textColor="@android:color/white" />
 
             <ImageView
                 android:id="@+id/vegetablesImage"
@@ -241,7 +241,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="@string/junk_food"
-                android:textColor="@color/white" />
+                android:textColor="@android:color/white" />
 
             <ImageView
                 android:id="@+id/junkFoodImage"
@@ -269,7 +269,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="@string/carbohydrates"
-                android:textColor="@color/white" />
+                android:textColor="@android:color/white" />
 
             <ImageView
                 android:id="@+id/carbohydratesImage"
@@ -296,7 +296,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="@string/last_used"
-                android:textColor="@color/white" />
+                android:textColor="@android:color/white" />
 
             <ImageView
                 android:id="@+id/lastUsedImage"
@@ -323,7 +323,7 @@
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:layout_weight="2"
-            app:civ_fill_color="@color/white"/>
+            app:civ_fill_color="@android:color/white"/>
 
         <TextView
             android:id="@+id/instantFeedback"

@@ -75,7 +75,7 @@
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:layout_weight="2"
-            app:civ_fill_color="@color/white"/>
+            app:civ_fill_color="@android:color/white"/>
 
         <TextView
             android:id="@+id/instantFeedback"

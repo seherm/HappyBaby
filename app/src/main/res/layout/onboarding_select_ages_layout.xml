@@ -38,10 +38,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:buttonTint="@color/white"
+                android:buttonTint="@android:color/white"
                 android:onClick="addYoungChild"
                 android:text="@string/children_young_category"
-                android:textColor="@color/white"
+                android:textColor="@android:color/white"
                 android:textSize="24dp" />
 
             <CheckBox
@@ -50,10 +50,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginTop="10dp"
-                android:buttonTint="@color/white"
+                android:buttonTint="@android:color/white"
                 android:onClick="addMiddleChild"
                 android:text="@string/children_middle_category"
-                android:textColor="@color/white"
+                android:textColor="@android:color/white"
                 android:textSize="24dp" />
 
             <CheckBox
@@ -62,10 +62,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginTop="10dp"
-                android:buttonTint="@color/white"
+                android:buttonTint="@android:color/white"
                 android:onClick="addOldChild"
                 android:text="@string/children_old_category"
-                android:textColor="@color/white"
+                android:textColor="@android:color/white"
                 android:textSize="24dp" />
 
         </LinearLayout>

@@ -26,7 +26,7 @@
         android:id="@+id/imageViewChild"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        app:civ_fill_color="@color/white"
+        app:civ_fill_color="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/buttonStart"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

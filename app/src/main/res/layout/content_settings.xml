@@ -114,7 +114,7 @@
             android:layout_width="200dp"
             android:layout_margin="20dp"
             android:layout_gravity="center_horizontal"
-            app:civ_fill_color="@color/white"/>
+            app:civ_fill_color="@android:color/white"/>
 
         <android.support.design.widget.FloatingActionButton
             android:layout_width="wrap_content"
@@ -122,7 +122,7 @@
             android:layout_margin="20dp"
             android:layout_gravity="bottom|end"
             android:src="@drawable/ic_photo_camera_black_24dp"
-            android:tint="@color/white"
+            android:tint="@android:color/white"
             android:onClick="selectPhoto"/>
     </FrameLayout>
 
