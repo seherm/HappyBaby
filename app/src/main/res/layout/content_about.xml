@@ -8,6 +8,15 @@
     tools:context="com.aah.selectingfood.activity.AboutActivity"
     tools:showIn="@layout/activity_about">
 
+
+    <ListView
+        android:id="@+id/aboutListView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/about_items_array"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
     <TextView
         android:id="@+id/textViewAbout"
         android:layout_width="wrap_content"
