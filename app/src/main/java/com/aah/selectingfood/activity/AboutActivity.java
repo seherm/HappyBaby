@@ -1,8 +1,11 @@
 package com.aah.selectingfood.activity;
 
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -45,7 +48,12 @@ public class AboutActivity extends BaseActivity {
         aboutListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                showLicenses();
+                if(position == 0){
+                    showLicenses();
+                }else if(position ==1){
+                    showCredits();
+                }
+
             }
         });
 
@@ -66,5 +74,20 @@ public class AboutActivity extends BaseActivity {
                 .setIncludeOwnLicense(true)
                 .build()
                 .show();
+    }
+
+    public void showCredits(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Credits");
+        String creditFreepick = "Icons made by <a href=http://www.freepik.com>Freepik</a> from <a href=http://www.flaticon.com>www.flaticon.com</a>";
+        String creditFlaticon = "Icons made by <a href=http://www.flaticon.com/authors/madebyoliver>Madebyoliver</a> from <a href=http://www.flaticon.com>www.flaticon.com</a>";
+        builder.setMessage(Html.fromHtml(creditFreepick + "<br><br>" + creditFlaticon));
+        builder.setNegativeButton(R.string.settings_alert_cancel, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int item) {
+                dialog.dismiss();
+            }
+        });
+        builder.show();
     }
 }
