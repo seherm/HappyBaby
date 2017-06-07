@@ -78,6 +78,7 @@
     <string name="error_write_ext_permission">External memory access Permission Error</string>
 
     <string name="about_open_source_lincenses">Open-Source Licenses</string>
+    <string name="about_credits">Credits</string>
 
     <!--String Arrays for selecting photo Alert Dialog-->
     <string-array name="select_photo_items_array">
@@ -93,7 +94,7 @@
     <!--String Array for Open-Source Licenses-->
     <string-array name="about_items_array">
         <item>@string/about_open_source_lincenses</item>
-
+        <item>@string/about_credits</item>
     </string-array>
 
     <!--Feedback overall Balanced/Unbalanced-->
