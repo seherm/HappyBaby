@@ -72,12 +72,12 @@ public class Child {
 
         for (Food food : foods) {
             if (food.getFoodGroup().equals("Junk Food") && !junkFoodCardAdded) {
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_junk_food_title, R.string.feedback_food_junk_food_message, "junkFood.png", false));
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_junk_food_title, R.string.feedback_food_junk_food_message, "drink_candy_junk_present.png", false));
                 junkFoodCardAdded = true;
             }
 
             if (food.getEnglishName().equals("Soft drink") && !softDrinkCardAdded) {
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_soft_drink_title, R.string.feedback_food_soft_drink_message, "softDrink.png", false));
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_soft_drink_title, R.string.feedback_food_soft_drink_message, "drink_candy_junk_present.png", false));
                 softDrinkCardAdded = true;
             }
 
@@ -94,26 +94,26 @@ public class Child {
             }
 
             if (food.isConsideredIronRich() && !ironRichCardAdded) {
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_iron_rich_present_title, R.string.feedback_food_iron_rich_present_message, "noFruit.png", false));
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_iron_rich_present_title, R.string.feedback_food_iron_rich_present_message, "iron_rich.png", false));
                 ironRichCardAdded = true;
             }
 
             if (food.isConsideredSalty() && !saltyCardAdded) {
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_salty_present_title, R.string.feedback_food_salty_present_message, "noFruit.png", false));
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_salty_present_title, R.string.feedback_food_salty_present_message, "salt_present.png", false));
                 saltyCardAdded = true;
             }
         }
 
         if (!containsFruit) {
-            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_fruit_title, R.string.feedback_food_lack_of_fruit_message, "noFruit.png", false));
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_fruit_title, R.string.feedback_food_lack_of_fruit_message, "lack_fruits_veg.png", false));
         }
 
         if (!containsVegetable) {
-            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_vegetable_title, R.string.feedback_food_lack_of_vegetable_message, "noFruit.png", false));
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_vegetable_title, R.string.feedback_food_lack_of_vegetable_message, "lack_fruits_veg.png", false));
         }
 
         if(!containsProtein){
-            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_protein_present_title, R.string.feedback_food_lack_of_protein_message, "noFruit.png", false));
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_protein_present_title, R.string.feedback_food_lack_of_protein_message, "lack_protein.png", false));
         }
 
         return finalFeedbackCardsFood;
@@ -155,7 +155,7 @@ public class Child {
      * @return          the resulting FeedbackCard
      */
     public FeedbackCard giveFeedbackFinalGeneral() {
-        return new FeedbackCard(R.string.feedback_general_title, feedbackFinalGeneralStringResourceId, "childHappyDefault.png", false);
+        return new FeedbackCard(R.string.feedback_general_title, feedbackFinalGeneralStringResourceId, "general_take_away.png", false);
     }
 
 }

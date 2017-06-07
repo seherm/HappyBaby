@@ -100,26 +100,27 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         User user = dataManagement.getUser();
         List<Child> children = user.getChildren();
         Child firstChild = children.get(0);
+        String feedbackImagesFolder = "feedbackImages";
 
         // Create all different feedback cards
 
         // Create summary feedback for children 1-3
         // TODO: Make sure the summary feedback is correct for 1-3 children.
         FeedbackCard finalFoodSummaryFeedback = firstChild.giveFeedbackFinalFoodSummary(dataManagement.getSelectedFood());
-        finalFoodSummaryFeedback.setImage(dataManagement.loadBitmapFromAssets(finalFoodSummaryFeedback.getImageName(), "feedbackImages"));
+        finalFoodSummaryFeedback.setImage(dataManagement.loadBitmapFromAssets(finalFoodSummaryFeedback.getImageName(), feedbackImagesFolder));
         feedbackCards.add(finalFoodSummaryFeedback);
 
         // Create individual food feedback for children 1-3
         List<FeedbackCard> finalFoodFeedbackCards = firstChild.giveFeedbackFinalFood(dataManagement.getSelectedFood());
         for (FeedbackCard card : finalFoodFeedbackCards){
-            card.setImage(dataManagement.loadBitmapFromAssets(card.getImageName(),"feedbackImages"));
+            card.setImage(dataManagement.loadBitmapFromAssets(card.getImageName(), feedbackImagesFolder));
             feedbackCards.add(card);
         }
 
         // Create general feedback for children 1-3
         for (Child child : DataManagement.getInstance(this).getUser().getChildren()) {
             FeedbackCard generalAgeFeedback = child.giveFeedbackFinalGeneral();
-            generalAgeFeedback.setImage(dataManagement.loadBitmapFromAssets(generalAgeFeedback.getImageName(), "childrenImages"));
+            generalAgeFeedback.setImage(dataManagement.loadBitmapFromAssets(generalAgeFeedback.getImageName(), feedbackImagesFolder));
             feedbackCards.add(generalAgeFeedback);
         }
         return feedbackCards;
