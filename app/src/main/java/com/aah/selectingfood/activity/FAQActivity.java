@@ -1,8 +1,13 @@
 package com.aah.selectingfood.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Spannable;
+import android.text.method.LinkMovementMethod;
 import android.text.method.ScrollingMovementMethod;
+import android.text.style.ClickableSpan;
+import android.view.View;
 import android.widget.TextView;
 
 import com.aah.selectingfood.R;
@@ -24,6 +29,21 @@ public class FAQActivity extends BaseActivity {
         setTitle(getString(R.string.title_activity_faq));
 
         TextView textView = (TextView) findViewById(R.id.textViewFAQ);
-        textView.setMovementMethod(new ScrollingMovementMethod());
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+        Spannable spans = (Spannable) textView.getText();
+
+        ClickableSpan clickSpan = new ClickableSpan() {
+
+            @Override
+            public void onClick(View widget)
+            {
+                Intent intent = new Intent(FAQActivity.this, RecipesActivity.class);
+                startActivity(intent);
+            }
+        };
+        String text = textView.getText().toString();
+        String linkText = "(link to recipe)";
+        int linkOccurence = text.indexOf(linkText);
+        spans.setSpan(clickSpan, linkOccurence, linkOccurence+linkText.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
     }
 }
