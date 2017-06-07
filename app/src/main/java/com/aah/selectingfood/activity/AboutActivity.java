@@ -78,17 +78,21 @@ public class AboutActivity extends BaseActivity {
     }
 
     public void showCredits(){
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Credits");
         String creditFreepick = "Icons made by <a href=http://www.freepik.com>Freepik</a> from <a href=http://www.flaticon.com>www.flaticon.com</a>";
         String creditFlaticon = "Icons made by <a href=http://www.flaticon.com/authors/madebyoliver>Madebyoliver</a> from <a href=http://www.flaticon.com>www.flaticon.com</a>";
         builder.setMessage(Html.fromHtml(creditFreepick + "<br><br>" + creditFlaticon));
-        builder.setNegativeButton(R.string.settings_alert_cancel, new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(R.string.about_alert_close, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int item) {
                 dialog.dismiss();
             }
         });
-        builder.show();
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        TextView messageText = (TextView)dialog.findViewById(android.R.id.message);
+        messageText.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }
