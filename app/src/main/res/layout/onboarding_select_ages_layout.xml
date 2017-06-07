@@ -15,7 +15,7 @@
         android:gravity="center"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
-        android:text="@string/select_age_of_your_child_title"
+        android:text="@string/onboarding_select_age_of_your_child_title"
         android:textColor="@android:color/white"
         android:textSize="@dimen/appIntroHeadingTextSize"
         android:textStyle="bold" />
@@ -40,7 +40,7 @@
                 android:layout_gravity="left"
                 android:buttonTint="@android:color/white"
                 android:onClick="addYoungChild"
-                android:text="@string/children_young_category"
+                android:text="@string/settings_children_young_category"
                 android:textColor="@android:color/white"
                 android:textSize="24dp" />
 
@@ -52,7 +52,7 @@
                 android:layout_marginTop="10dp"
                 android:buttonTint="@android:color/white"
                 android:onClick="addMiddleChild"
-                android:text="@string/children_middle_category"
+                android:text="@string/settings_children_middle_category"
                 android:textColor="@android:color/white"
                 android:textSize="24dp" />
 
@@ -64,7 +64,7 @@
                 android:layout_marginTop="10dp"
                 android:buttonTint="@android:color/white"
                 android:onClick="addOldChild"
-                android:text="@string/children_old_category"
+                android:text="@string/settings_children_old_category"
                 android:textColor="@android:color/white"
                 android:textSize="24dp" />
 
@@ -87,7 +87,7 @@
             android:layout_gravity="center"
             android:layout_weight="0.9"
             android:gravity="center"
-            android:text="@string/select_age_of_your_child_message"
+            android:text="@string/onboarding_select_age_of_your_child_message"
             android:textColor="@android:color/white"
             android:textSize="16sp" />
 

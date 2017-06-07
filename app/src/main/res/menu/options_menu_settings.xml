@@ -2,5 +2,5 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/restart_intro"
-        android:title="@string/restart_intro"/>
+        android:title="@string/options_menu_restart_intro"/>
 </menu>

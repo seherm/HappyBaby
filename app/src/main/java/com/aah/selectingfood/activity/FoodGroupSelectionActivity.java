@@ -100,42 +100,42 @@ public class FoodGroupSelectionActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.fruits:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Fruit");
-                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.fruits);
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.food_group_fruits);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.fruitsBlue);
                 break;
             case R.id.legumes:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Legumes");
-                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.legumes);
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.food_group_legumes);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.legumesBrown);
                 break;
             case R.id.herbs:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Herbs");
-                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.herbs);
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.food_group_herbs);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.herbsGreen);
                 break;
             case R.id.meat:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Meat");
-                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.meat);
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.food_group_meat);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.meatsRed);
                 break;
             case R.id.vegetables:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Vegetable");
-                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.vegetables);
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.food_group_vegetables);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.vegetablesGreen);
                 break;
             case R.id.junkFood:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Junk Food");
-                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.junk_food);
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.food_group_junk_food);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.junkFoodPink);
                 break;
             case R.id.carbohydrates:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Carbohydrate");
-                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.carbohydrates);
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.food_group_carbohydrates);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.carbohydratesYellow);
                 break;
             case R.id.lastUsed:
                 saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Last Used");
-                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.last_used);
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.food_group_last_used);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.lastUsedPurple);
                 break;
         }

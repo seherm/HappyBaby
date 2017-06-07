@@ -77,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/food_message"
+            android:text="@string/message_food_selection"
             android:textSize="@dimen/text_size_medium"/>
     </LinearLayout>
 

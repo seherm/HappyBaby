@@ -16,7 +16,7 @@
         android:gravity="center"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
-        android:text="@string/add_photo_of_your_child_title"
+        android:text="@string/onboarding_add_photo_of_your_child_title"
         android:textColor="@android:color/white"
         android:textSize="@dimen/appIntroHeadingTextSize"
         android:textStyle="bold" />
@@ -70,7 +70,7 @@
             android:layout_gravity="center"
             android:layout_weight="0.9"
             android:gravity="center"
-            android:text="@string/add_photo_of_your_child_message"
+            android:text="@string/onboarding_add_photo_of_your_child_message"
             android:textColor="@android:color/white"
             android:textSize="16sp" />
     </LinearLayout>

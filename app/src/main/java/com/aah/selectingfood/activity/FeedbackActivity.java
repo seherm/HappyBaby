@@ -183,11 +183,11 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
                 shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 shareIntent.putExtra(Intent.EXTRA_STREAM, bmpUri);
                 shareIntent.setType("image/png");
-                startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.share_this_tip)));
+                startActivity(Intent.createChooser(shareIntent, getResources().getText(R.string.title_activity_sharing_this_tip)));
             } else
-                Toast.makeText(this, R.string.writeext_permission_error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.error_write_ext_permission, Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
-            Toast.makeText(this, R.string.writeext_permission_error, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.error_write_ext_permission, Toast.LENGTH_SHORT).show();
         }
     }
 

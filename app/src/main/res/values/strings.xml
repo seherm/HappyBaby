@@ -1,26 +1,27 @@
 <resources>
+
     <string name="app_name">Selecting Food</string>
-    <string name="drawer_title">@string/app_name</string>
+    <string name="drawer_title" translatable="false">@string/app_name</string>
 
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
-    <!--Onboarding Text-->
+    <!--Onboarding-->
     <!-- todo insert app name instead of our app-->
     <string name="onboarding_intro_title">Welcome to our app!</string>
     <string name="onboarding_intro_title_2">Next steps</string>
     <string name="onboarding_intro_description">This App will help you feeding your child, such that it can grow big and strong.</string>
     <string name="onboarding_intro_description_2">Select all ingredients that you want to feed your child today and we will tell you what you can improve to help your child. Before you start, you can add a picture of your child and tell us about your children, to make the app more fun to use and our tips more accurate.</string>
-    <string name="add_photo_of_your_child_title">Select photo</string>
-    <string name="add_photo_of_your_child_message">Tap on the camera to add a picture of your child</string>
-    <string name="select_age_of_your_child_title">How old is your child?</string>
-    <string name="select_age_of_your_child_message">This will help us give customized advice for your childs age</string>
+    <string name="onboarding_add_photo_of_your_child_title">Select photo</string>
+    <string name="onboarding_add_photo_of_your_child_message">Tap on the camera to add a picture of your child</string>
+    <string name="onboarding_select_age_of_your_child_title">How old is your child?</string>
+    <string name="onboarding_select_age_of_your_child_message">This will help us give customized advice for your childs age</string>
 
     <!--Button Text-->
-    <string name="start">Start</string>
-    <string name="share_this_tip">Share this Tip</string>
+    <string name="button_start">Start</string>
+    <string name="button_share_this_tip">Share this Tip</string>
 
-    <!--Page Titles-->
+    <!--Activities Titles-->
     <string name="title_activity_food_group_selection">Select Food Group</string>
     <string name="title_activity_food_selection">Select Food</string>
     <string name="title_activity_about">About</string>
@@ -28,95 +29,96 @@
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_recipes">Porridge Recipes</string>
     <string name="title_activity_feedback">About your meal</string>
-
-    <!--Other Text-->
-    <string name="start_message">Tap on start to select the foods you will feed your baby today</string>
-    <string name="food_message">What foods will I eat today?</string>
-
-    <!--Navigation Drawer Items-->
-    <string name="porridge_recipes">Porridge Recipes</string>
-    <string name="FAQ">FAQ</string>
-    <string name="settings">Settings</string>
-    <string name="about">About</string>
-
-    <string name="search_title">Search</string>
-    <string name="restart_title">Restart</string>
-    <string name="clear_list">Clear List</string>
-
-    <string name="select_language">Select Language</string>
-    <string name="english">English</string>
-    <string name="khmer">ខ្មែរ</string>
-    <string name="ages_of_your_children">Age of your child</string>
-    <string name="children_young_category">6\u20138 months</string>
-    <string name="children_middle_category">9\u201311 months</string>
-    <string name="children_old_category">12\u201324 months</string>
-    <string name="change_photos_of_baby">Photo of your child</string>
-    <string name="restart_intro">Restart Intro</string>
-
-
-    <!--Food Groups-->
-    <string name="fruits">Fruits</string>
-    <string name="legumes">Legumes</string>
-    <string name="meat">Meat</string>
-    <string name="herbs">Herbs</string>
-    <string name="vegetables">Vegetables</string>
-    <string name="junk_food">Junk Food</string>
-    <string name="carbohydrates">Carbohydrates</string>
-    <string name="last_used">Last Used</string>
-
+    <string name="title_activity_sharing_this_tip">Share this Tip</string>
     <string name="title_activity_sharing" translatable="false">SharingActivity</string>
-
-    <string name="change_photo">Change photo</string>
-    <string name="cancel">Cancel</string>
-    <string name="camera_permission_error">Camera Permission Error</string>
-    <string name="writeext_permission_error">External memory access Permission Error</string>
-
-    <string name="select_new_photo">Select new photo</string>
-    <string name="delete_photo">Delete photo</string>
-    <string name="take_new_photo">Take new photo</string>
-
-    <string-array name="select_photo_items_array">
-        <item>@string/take_new_photo</item>
-        <item>@string/select_new_photo</item>
-    </string-array>
-    <string-array name="select_photo_items_array_with_delete">
-        <item>@string/take_new_photo</item>
-        <item>@string/select_new_photo</item>
-        <item>@string/delete_photo</item>
-    </string-array>
     <string name="title_activity_intro" translatable="false">IntroActivity</string>
 
-    <!--Feedback Balanced / Unbalanced-->
-    <string name="no_food_selected_title">No Food selected</string>
-    <string name="no_food_selected_message">You did not select any foods</string>
-    <string name="well_balanced_title">The meal is well balanced</string>
-    <string name="well_balanced_message">Your meal is well balanced! You are doing great! Try to vary the meal every day and encourage your child to taste new foods.</string>
-    <string name="not_well_balanced_title">The meal is not well balanced</string>
-    <string name="not_well_balanced_message">Your meal is not well balanced. Try to vary the meal every day and encourage your child to taste new foods.</string>
+    <!--Other Text-->
+    <string name="message_start">Tap on start to select the foods you will feed your baby today</string>
+    <string name="message_food_selection">What foods will I eat today?</string>
+
+    <!--Navigation Drawer Items-->
+    <string name="side_menu_item_porridge_recipes">Porridge Recipes</string>
+    <string name="side_menu_item_FAQ">FAQ</string>
+    <string name="side_menu_item_settings">Settings</string>
+    <string name="side_menu_item_about">About</string>
+
+    <string name="options_menu_search_title">Search</string>
+    <string name="options_menu_restart_title">Restart</string>
+    <string name="options_menu_clear_list">Clear List</string>
+    <string name="options_menu_restart_intro">Restart Intro</string>
+
+    <!--Settings Menu-->
+    <string name="settings_select_language">Select Language</string>
+    <string name="settings_english">English</string>
+    <string name="settings_khmer">ភាសាខ្មែរ</string>
+    <string name="settings_age_of_your_child">Age of your child</string>
+    <string name="settings_children_young_category">6\u20138 months</string>
+    <string name="settings_children_middle_category">9\u201311 months</string>
+    <string name="settings_children_old_category">12\u201324 months</string>
+    <string name="settings_change_photo_your_child">Photo of your child</string>
+    <string name="settings_alert_change_photo">Change photo</string>
+    <string name="settings_alert_cancel">Cancel</string>
+    <string name="settings_alert_select_new_photo">Select new photo</string>
+    <string name="settings_alert_delete_photo">Delete photo</string>
+    <string name="settings_alert_take_new_photo">Take new photo</string>
+
+    <!--Food Groups-->
+    <string name="food_group_fruits">Fruits</string>
+    <string name="food_group_legumes">Legumes</string>
+    <string name="food_group_meat">Meat</string>
+    <string name="food_group_herbs">Herbs</string>
+    <string name="food_group_vegetables">Vegetables</string>
+    <string name="food_group_junk_food">Junk Food</string>
+    <string name="food_group_carbohydrates">Carbohydrates</string>
+    <string name="food_group_last_used">Last Used</string>
+
+    <!--Error Messages-->
+    <string name="error_camera_permission">Camera Permission Error</string>
+    <string name="error_write_ext_permission">External memory access Permission Error</string>
+
+    <!--String Arrays for selecting photo Alert Dialog-->
+    <string-array name="select_photo_items_array">
+        <item>@string/settings_alert_take_new_photo</item>
+        <item>@string/settings_alert_select_new_photo</item>
+    </string-array>
+    <string-array name="select_photo_items_array_with_delete">
+        <item>@string/settings_alert_take_new_photo</item>
+        <item>@string/settings_alert_select_new_photo</item>
+        <item>@string/settings_alert_delete_photo</item>
+    </string-array>
+
+    <!--Feedback overall Balanced/Unbalanced-->
+    <string name="feedback_no_food_selected_title">No Food selected</string>
+    <string name="feedback_no_food_selected_message">You did not select any foods</string>
+    <string name="feedback_well_balanced_title">The meal is well balanced</string>
+    <string name="feedback_well_balanced_message">Your meal is well balanced! You are doing great! Try to vary the meal every day and encourage your child to taste new foods.</string>
+    <string name="feedback_not_well_balanced_title">The meal is not well balanced</string>
+    <string name="feedback_not_well_balanced_message">Your meal is not well balanced. Try to vary the meal every day and encourage your child to taste new foods.</string>
+
+    <!--Feedback individual Food selection-->
+    <string name="feedback_food_soft_drink_title">The meal contains Soft Drink</string>
+    <string name="feedback_food_soft_drink_message">This kind of drink is not the best for your child. It contain too much sugar and chemical. Fresh water is much more healthy. You can mix it with small amount of natural fruit juice.</string>
+    <string name="feedback_food_junk_food_title">The meal contains Junk Food</string>
+    <string name="feedback_food_junk_food_message">This kind of food is not the best for your child. Try to replace it by an health snack: a banana, a rice cake, fruit salad, a piece of bread.</string>
+    <string name="feedback_food_lack_of_fruit_title">No fruit</string>
+    <string name="feedback_food_lack_of_fruit_message">No fruit inside your meal</string>
+    <string name="feedback_food_lack_of_vegetable_title">No vegetable</string>
+    <string name="feedback_food_lack_of_vegetable_message">No vegetable inside your meal</string>
+    <string name="feedback_food_lack_of_protein_present_title">Lack of protein</string>
+    <string name="feedback_food_lack_of_protein_message">Your child needs a balanced diet to develop well and to be healthy. Try to add one of those foods in his/her meal (fish, meat, beans, crab). It will help him/her to be strong!</string>
+    <string name="feedback_food_iron_rich_present_title">Iron Rich present</string>
+    <string name="feedback_food_iron_rich_present_message">Great choice! This iron-rich food makes your baby strong!</string>
+    <string name="feedback_food_salty_present_title">Too salty!</string>
+    <string name="feedback_food_salty_present_message">Too salty! Be careful not to put too much salt in baby food. Tea prevents your child from taking iron from the food and growing well. It is also an excitant, that can disturb the sleep.</string>
 
     <!--Feedback General Take Away-->
     <string name="feedback_general_title">Take away</string>
-    <string name="final_feedback_general_young">At 6 months, feeding only breast milk is not enough anymore. Your child needs to start eating other foods. Encourage him/her to try new foods and new textures little by little.</string>
-    <string name="final_feedback_general_middle">Between 9 and 11 months, your child experiences a transition to grown up food. He/she wants to touch it. Make sure his/her hands are washed before eating.</string>
-    <string name="final_feedback_general_old">At 1 year, your child is starting to walk. He/she needs more energy! He/she can eat the family meals but will need additional snacks every day. He/she wants to do what grown ups do and discover the world!</string>
+    <string name="feedback_general_young">At 6 months, feeding only breast milk is not enough anymore. Your child needs to start eating other foods. Encourage him/her to try new foods and new textures little by little.</string>
+    <string name="feedback_general_middle">Between 9 and 11 months, your child experiences a transition to grown up food. He/she wants to touch it. Make sure his/her hands are washed before eating.</string>
+    <string name="feedback_general_old">At 1 year, your child is starting to walk. He/she needs more energy! He/she can eat the family meals but will need additional snacks every day. He/she wants to do what grown ups do and discover the world!</string>
 
-    <!--Feedback Final Food-->
-    <string name="final_feedback_soft_drink_title">The meal contains Soft Drink</string>
-    <string name="final_feedback_soft_drink_message">This kind of drink is not the best for your child. It contain too much sugar and chemical. Fresh water is much more healthy. You can mix it with small amount of natural fruit juice.</string>
-    <string name="final_feedback_junk_food_title">The meal contains Junk Food</string>
-    <string name="final_feedback_junk_food_message">This kind of food is not the best for your child. Try to replace it by an health snack: a banana, a rice cake, fruit salad, a piece of bread.</string>
-    <string name="final_feedback_lack_of_fruit_title">No fruit</string>
-    <string name="final_feedback_lack_of_fruit_message">No fruit inside your meal</string>
-    <string name="final_feedback_lack_of_vegetable_title">No vegetable</string>
-    <string name="final_feedback_lack_of_vegetable_message">No vegetable inside your meal</string>
-    <string name="final_lack_of_protein_present_title">Lack of protein</string>
-    <string name="final_feedback_lack_of_protein_message">Your child needs a balanced diet to develop well and to be healthy. Try to add one of those foods in his/her meal (fish, meat, beans, crab). It will help him/her to be strong!</string>
-    <string name="final_feedback_iron_rich_present_title">Iron Rich present</string>
-    <string name="final_feedback_iron_rich_present_message">Great choice! This iron-rich food makes your baby strong!</string>
-    <string name="final_feedback_salty_present_title">Too salty!</string>
-    <string name="final_feedback_salty_present_message">Too salty! Be careful not to put too much salt in baby food. Tea prevents your child from taking iron from the food and growing well. It is also an excitant, that can disturb the sleep.</string>
-
-
+    <!--Frequently Asked Questions-->
     <string name="FAQ_content">
         At what time, should I begin to feed my child with other foods, in addition to breastmilk?\n\n
         • At 6 months, the child need to begin to eat other foods to grow well, in addition to breastmilk.\n\n

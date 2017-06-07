@@ -88,8 +88,8 @@ public class IntroActivity extends AppIntro {
             if (hasPerm == PackageManager.PERMISSION_GRANTED) {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle(R.string.change_photo);
-                builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                builder.setTitle(R.string.settings_alert_change_photo);
+                builder.setNegativeButton(R.string.settings_alert_cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int item) {
                         dialog.dismiss();
@@ -112,10 +112,10 @@ public class IntroActivity extends AppIntro {
                 builder.show();
 
             } else {
-                Toast.makeText(this, R.string.camera_permission_error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.error_camera_permission, Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
-            Toast.makeText(this, R.string.camera_permission_error, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.error_camera_permission, Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
     }

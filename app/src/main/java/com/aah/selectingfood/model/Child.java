@@ -19,13 +19,13 @@ public class Child {
         this.ageGroup = ageGroup;
 
         if (ageGroup.equals("young")) {
-            feedbackFinalGeneralStringResourceId = R.string.final_feedback_general_young;
+            feedbackFinalGeneralStringResourceId = R.string.feedback_general_young;
         }
         if (ageGroup.equals("middle")) {
-            feedbackFinalGeneralStringResourceId = R.string.final_feedback_general_middle;
+            feedbackFinalGeneralStringResourceId = R.string.feedback_general_middle;
         }
         if (ageGroup.equals("old")) {
-            feedbackFinalGeneralStringResourceId = R.string.final_feedback_general_old;
+            feedbackFinalGeneralStringResourceId = R.string.feedback_general_old;
         }
     }
 
@@ -72,12 +72,12 @@ public class Child {
 
         for (Food food : foods) {
             if (food.getFoodGroup().equals("Junk Food") && !junkFoodCardAdded) {
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_junk_food_title, R.string.final_feedback_junk_food_message, "junkFood.png", false));
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_junk_food_title, R.string.feedback_food_junk_food_message, "junkFood.png", false));
                 junkFoodCardAdded = true;
             }
 
             if (food.getEnglishName().equals("Soft drink") && !softDrinkCardAdded) {
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_soft_drink_title, R.string.final_feedback_soft_drink_message, "softDrink.png", false));
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_soft_drink_title, R.string.feedback_food_soft_drink_message, "softDrink.png", false));
                 softDrinkCardAdded = true;
             }
 
@@ -94,26 +94,26 @@ public class Child {
             }
 
             if (food.isConsideredIronRich() && !ironRichCardAdded) {
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_iron_rich_present_title, R.string.final_feedback_iron_rich_present_message, "noFruit.png", false));
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_iron_rich_present_title, R.string.feedback_food_iron_rich_present_message, "noFruit.png", false));
                 ironRichCardAdded = true;
             }
 
             if (food.isConsideredSalty() && !saltyCardAdded) {
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_salty_present_title, R.string.final_feedback_salty_present_message, "noFruit.png", false));
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_salty_present_title, R.string.feedback_food_salty_present_message, "noFruit.png", false));
                 saltyCardAdded = true;
             }
         }
 
         if (!containsFruit) {
-            finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_lack_of_fruit_title, R.string.final_feedback_lack_of_fruit_message, "noFruit.png", false));
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_fruit_title, R.string.feedback_food_lack_of_fruit_message, "noFruit.png", false));
         }
 
         if (!containsVegetable) {
-            finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_feedback_lack_of_vegetable_title, R.string.final_feedback_lack_of_vegetable_message, "noFruit.png", false));
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_vegetable_title, R.string.feedback_food_lack_of_vegetable_message, "noFruit.png", false));
         }
 
         if(!containsProtein){
-            finalFeedbackCardsFood.add(new FeedbackCard(R.string.final_lack_of_protein_present_title, R.string.final_feedback_lack_of_protein_message, "noFruit.png", false));
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_protein_present_title, R.string.feedback_food_lack_of_protein_message, "noFruit.png", false));
         }
 
         return finalFeedbackCardsFood;
@@ -128,7 +128,7 @@ public class Child {
      */
     public FeedbackCard giveFeedbackFinalFoodSummary(List<Food> foods) {
         if (foods == null) {
-            return new FeedbackCard(R.string.no_food_selected_title, R.string.no_food_selected_message, "noFood.png", false);
+            return new FeedbackCard(R.string.feedback_no_food_selected_title, R.string.feedback_no_food_selected_message, "noFood.png", false);
         }
         List<String> selectedFoodGroups = new ArrayList<>();
         for (Food food : foods) {
@@ -138,12 +138,12 @@ public class Child {
         }
 
         if (selectedFoodGroups.size() >= 4) {
-            return new FeedbackCard(R.string.well_balanced_title, R.string.well_balanced_message, "balanced.png", true);
+            return new FeedbackCard(R.string.feedback_well_balanced_title, R.string.feedback_well_balanced_message, "balanced.png", true);
         } else {
             if (selectedFoodGroups.size() > 0) {
-                return new FeedbackCard(R.string.not_well_balanced_title, R.string.not_well_balanced_message, "unbalanced.png", true);
+                return new FeedbackCard(R.string.feedback_not_well_balanced_title, R.string.feedback_not_well_balanced_message, "unbalanced.png", true);
             } else {
-                return new FeedbackCard(R.string.no_food_selected_title, R.string.no_food_selected_message, "noFood.png", false);
+                return new FeedbackCard(R.string.feedback_no_food_selected_title, R.string.feedback_no_food_selected_message, "noFood.png", false);
             }
         }
     }
