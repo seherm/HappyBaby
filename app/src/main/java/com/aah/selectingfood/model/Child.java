@@ -155,7 +155,7 @@ public class Child {
      * @return          the resulting FeedbackCard
      */
     public FeedbackCard giveFeedbackFinalGeneral() {
-        return new FeedbackCard(R.string.feedback_general_title, feedbackFinalGeneralStringResourceId, null, false);
+        return new FeedbackCard(R.string.feedback_general_title, feedbackFinalGeneralStringResourceId, "childHappyDefault.png", false);
     }
 
 }

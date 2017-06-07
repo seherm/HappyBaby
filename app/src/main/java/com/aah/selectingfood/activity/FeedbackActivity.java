@@ -119,7 +119,7 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         // Create general feedback for children 1-3
         for (Child child : DataManagement.getInstance(this).getUser().getChildren()) {
             FeedbackCard generalAgeFeedback = child.giveFeedbackFinalGeneral();
-            generalAgeFeedback.setImage(DataManagement.getInstance(this).loadBitmapFromAssets("child_happy_defaultlt.png", "childrenImages"));
+            generalAgeFeedback.setImage(dataManagement.loadBitmapFromAssets(generalAgeFeedback.getImageName(), "childrenImages"));
             feedbackCards.add(generalAgeFeedback);
         }
         return feedbackCards;
