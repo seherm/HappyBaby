@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:buttonTint="@android:color/white"
-                android:onClick="addYoungChild"
+                android:onClick="changeChildrenAges"
                 android:text="@string/settings_children_young_category"
                 android:textColor="@android:color/white"
                 android:textSize="24dp" />
@@ -51,7 +51,7 @@
                 android:layout_gravity="left"
                 android:layout_marginTop="10dp"
                 android:buttonTint="@android:color/white"
-                android:onClick="addMiddleChild"
+                android:onClick="changeChildrenAges"
                 android:text="@string/settings_children_middle_category"
                 android:textColor="@android:color/white"
                 android:textSize="24dp" />
@@ -63,7 +63,7 @@
                 android:layout_gravity="left"
                 android:layout_marginTop="10dp"
                 android:buttonTint="@android:color/white"
-                android:onClick="addOldChild"
+                android:onClick="changeChildrenAges"
                 android:text="@string/settings_children_old_category"
                 android:textColor="@android:color/white"
                 android:textSize="24dp" />

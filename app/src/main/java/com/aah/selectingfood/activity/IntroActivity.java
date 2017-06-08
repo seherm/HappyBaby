@@ -37,6 +37,9 @@ public class IntroActivity extends AppIntro {
     private static final int CAMERA_PHOTO_REQUEST_CODE = 1;
     private static final int GALLERY_PHOTO_REQUEST_CODE = 2;
     private ImageView childPhoto;
+    private CheckBox checkBoxChildYoung;
+    private CheckBox checkBoxChildMiddle;
+    private CheckBox checkBoxChildOld;
     private DataManagement dataManagement;
     private User user;
 
@@ -77,6 +80,7 @@ public class IntroActivity extends AppIntro {
         setProgressButtonEnabled(true);
         // Enable swiping
         pager.setPagingEnabled(true);
+
     }
 
     public void selectPhoto(View view) {
@@ -174,45 +178,47 @@ public class IntroActivity extends AppIntro {
         }
     }
 
-    public void addYoungChild(View view) {
-        CheckBox checkBox = (CheckBox) view;
 
-        if (checkBox.isChecked()) {
+    public void changeChildrenAges(View view) {
+
+        checkBoxChildYoung = (CheckBox) pager.findViewById(R.id.checkBoxChildYoung);
+        checkBoxChildMiddle = (CheckBox) pager.findViewById(R.id.checkBoxChildMiddle);
+        checkBoxChildOld = (CheckBox) pager.findViewById(R.id.checkBoxChildOld);
+
+        // If no boxes are checked, return right away
+        // We do this because at least one child needs to be selected
+        if ((!checkBoxChildYoung.isChecked()) && (!checkBoxChildMiddle.isChecked()) && (!checkBoxChildOld.isChecked())) {
+            return;
+        }
+
+        if (checkBoxChildYoung.isChecked()) {
             if (!user.hasChildByAgeGroup("young")) {
                 Child child = new Child("young");
                 user.addChild(child);
-            } else {
-                user.removeChildByAgeGroup("young");
             }
+        } else {
+            user.removeChildByAgeGroup("young");
         }
-        dataManagement.storeUserPrefs(user);
-    }
 
-    public void addMiddleChild(View view) {
-        CheckBox checkBox = (CheckBox) view;
-
-        if (checkBox.isChecked()) {
+        if (checkBoxChildMiddle.isChecked()) {
             if (!user.hasChildByAgeGroup("middle")) {
                 Child child = new Child("middle");
                 user.addChild(child);
-            } else {
-                user.removeChildByAgeGroup("middle");
             }
+        } else {
+            user.removeChildByAgeGroup("middle");
         }
-        dataManagement.storeUserPrefs(user);
-    }
 
-    public void addOldChild(View view) {
-        CheckBox checkBox = (CheckBox) view;
-
-        if (checkBox.isChecked()) {
+        if (checkBoxChildOld.isChecked()) {
             if (!user.hasChildByAgeGroup("old")) {
                 Child child = new Child("old");
                 user.addChild(child);
-            } else {
-                user.removeChildByAgeGroup("old");
             }
+        } else {
+            user.removeChildByAgeGroup("old");
         }
+
+        // Store user and children
         dataManagement.storeUserPrefs(user);
     }
 
