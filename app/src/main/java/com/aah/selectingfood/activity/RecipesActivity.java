@@ -6,6 +6,8 @@ import android.widget.ImageView;
 
 import com.aah.selectingfood.R;
 import com.aah.selectingfood.helper.DataManagement;
+import com.aah.selectingfood.helper.LocaleHelper;
+import com.github.barteksc.pdfviewer.PDFView;
 
 /** This Activity is for showing some suggestions of recipes for good meals**/
 public class RecipesActivity extends BaseActivity {
@@ -21,7 +23,29 @@ public class RecipesActivity extends BaseActivity {
         }
         setTitle(getString(R.string.title_activity_recipes));
 
-        ImageView imageView = (ImageView) findViewById(R.id.imageViewRecipes);
-        imageView.setImageBitmap(DataManagement.getInstance(this).loadBitmapFromAssets("recipe1.png","recipes"));
+
+        String pdfFileEnglish = "recipes/recipes_en.pdf";
+        String pdfFileKhmer = "recipes/recipes_km.pdf";
+        PDFView pdfView = (PDFView) findViewById(R.id.pdfView);
+
+        String languageCode = LocaleHelper.getLanguage(this);
+        if(languageCode.equals("km")){
+            pdfView.fromAsset(pdfFileKhmer)
+                    .enableSwipe(true)
+                    .swipeHorizontal(false)
+                    .enableDoubletap(true)
+                    .defaultPage(0)
+                    .enableAntialiasing(true)
+                    .load();
+        }else{
+            pdfView.fromAsset(pdfFileEnglish)
+                    .enableSwipe(true)
+                    .swipeHorizontal(false)
+                    .enableDoubletap(true)
+                    .defaultPage(0)
+                    .enableAntialiasing(true)
+                    .load();
+        }
+
     }
 }

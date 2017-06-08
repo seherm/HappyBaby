@@ -67,6 +67,7 @@ public class AboutActivity extends BaseActivity {
 
         notices.addNotice(new Notice("CircleImageView", "https://github.com/hdodenhof/CircleImageView", "Copyright 2014 - 2017 Henning Dodenhof", new ApacheSoftwareLicense20()));
         notices.addNotice(new Notice("AppIntro", "https://github.com/apl-devs/AppIntro", "Copyright 2015 Paolo Rotolo\n" + "Copyright 2016 Maximilian Narr", new ApacheSoftwareLicense20()));
+        notices.addNotice(new Notice("Android PdfViewer", "https://github.com/barteksc/AndroidPdfViewer", "Copyright 2016 Bartosz Schiller", new ApacheSoftwareLicense20()));
 
         new LicensesDialog.Builder(this)
                 .setTitle("Remarks")
