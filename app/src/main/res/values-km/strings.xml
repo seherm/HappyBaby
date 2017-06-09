@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ជ្រើសរើសអាហារ</string>
+    <string name="app_name">កុមាររីករាយ</string>
     <string name="side_menu_item_FAQ">សំណួរចម្លើយតែងតែសួរ</string>
     <string name="side_menu_item_about">អំពី</string>
     <string name="onboarding_add_photo_of_your_child_title">ចូរជ្រើសរើសរូបភាព</string>
@@ -57,7 +57,7 @@
     <string name="feedback_vitamin_A_present_message">ការញាំអាហារដែលមានកម្រិតវីតាមីនអា ខ្ពស់និងជួយអោយកូនរបស់អ្នកមានភ្នែកភ្លឺថ្លា ស្បែកទន់ គួរអោយស្រឡាញ់។ ពេលដែលកុមារខ្វះវីតាមីនអា នោះវាអាចនិងនាំអោយការបង្កមេរោគធ្ងន់ធ្ងរដូចជាខ្វាក់ជាដើម។​</string>
     <string name="feedback_vitamin_A_present_title">ជំរើសសុខភាពល្អ</string>
     <string name="feedback_well_balanced_title">អាហារនេះគឺមានសមតុល្យល្អណាស់</string>
-    <string name="feedback_well_balanced_message">"អ្នកពិតជាធ្វើវាបានល្អណាស់!  សូមព្យាយាមផ្លាស់ប្តូរប្រភេទអាហារជារៀងរាល់ថ្ងៃ ហើយជំរុញកូនៗរបស់អ្នកសាកល្បងប្រភេទអាហារថ្មីៗ "</string>
+    <string name="feedback_well_balanced_message">អ្នកពិតជាធ្វើវាបានល្អណាស់!  សូមព្យាយាមផ្លាស់ប្តូរប្រភេទអាហារជារៀងរាល់ថ្ងៃ ហើយជំរុញកូនៗរបស់អ្នកសាកល្បងប្រភេទអាហារថ្មីៗ</string>
     <string name="message_food_selection">តើមានប្រភេទអាហារណាខ្លះដែលខ្ញុំនិងញាំនៅថ្ងៃនេះ?</string>
     <string name="message_start">សូមចុចលើពាក្យចាប់ផ្តើមដើម្បីជ្រើសរើសអាហារដែលអ្នកនិងផ្តល់អោយកូនៗរបស់អ្នកនៅថ្ងៃនេះ</string>
     <string name="onboarding_add_photo_of_your_child_message">សូមចុចលើរូបម៉ាស៊ីនថតដើម្បីបន្ថែមរូបថតកូនរបស់អ្នក</string>
@@ -69,4 +69,5 @@
     <string name="onboarding_select_age_of_your_child_title">តើកូនរបស់អ្នកអាយុប៉ុន្មាន?</string>
     <string name="settings_age_of_your_child">អាយុកូនរបស់អ្នក</string>
     <string name="settings_change_photo_your_child">រូបថតកូនរបស់អ្នក</string>
+    <string name="feedback_not_well_balanced_message">សូមព្យាយាមផ្លាស់ប្តូរប្រភេទអាហារជារៀងរាល់ថ្ងៃ ហើយជំរុញកូនៗរបស់អ្នកសាកល្បងប្រភេទអាហារថ្មីៗ</string>
 </resources>

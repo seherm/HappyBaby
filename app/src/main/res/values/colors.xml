@@ -8,10 +8,8 @@
     <color name="yellow">#f4b400</color>
     <color name="grey">#cccccc</color>
     <color name="lightGrey">#E5E5E5</color>
-    <color name="blue">#3F51B5</color>
-    <color name="lightBlue">#03A9F4</color>
-    <color name="veryLightBlue">#AACCEF</color>
-
+    <color name="darkBlue">#3F51B5</color>
+    <color name="blue">#03A9F4</color>
 
     <!-->Food Groups Colors<-->
     <color name="fruitsBlue">#3F51B5</color>

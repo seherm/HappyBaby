@@ -77,10 +77,10 @@
                 android:layout_weight="1"
                 android:drawableLeft="@drawable/ic_share_black_24dp"
                 android:drawableStart="@drawable/ic_share_black_24dp"
-                android:drawableTint="@color/lightBlue"
+                android:drawableTint="@color/blue"
                 android:onClick="ShareFeedbackCard"
                 android:text="@string/button_share_this_tip"
-                android:textColor="@color/lightBlue" />
+                android:textColor="@color/blue" />
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
