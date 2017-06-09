@@ -19,7 +19,9 @@ import de.psdev.licensesdialog.licenses.ApacheSoftwareLicense20;
 import de.psdev.licensesdialog.model.Notice;
 import de.psdev.licensesdialog.model.Notices;
 
-/** This Activity is for showing static content in an about page**/
+/**
+ * This Activity is for showing static content in an about page
+ **/
 public class AboutActivity extends BaseActivity {
 
     @Override
@@ -28,7 +30,7 @@ public class AboutActivity extends BaseActivity {
         setContentView(R.layout.activity_about);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        if(getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         setTitle(getString(R.string.title_activity_about));
@@ -36,7 +38,7 @@ public class AboutActivity extends BaseActivity {
         String versionName = "";
 
         try {
-            versionName = "Version " + getPackageManager().getPackageInfo(getPackageName(),0).versionName;
+            versionName = "Version " + getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
@@ -48,9 +50,9 @@ public class AboutActivity extends BaseActivity {
         aboutListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position == 0){
+                if (position == 0) {
                     showLicenses();
-                }else if(position ==1){
+                } else if (position == 1) {
                     showCredits();
                 }
 
@@ -58,10 +60,9 @@ public class AboutActivity extends BaseActivity {
         });
 
 
-
     }
 
-    public void showLicenses(){
+    public void showLicenses() {
 
         final Notices notices = new Notices();
 
@@ -77,13 +78,23 @@ public class AboutActivity extends BaseActivity {
                 .show();
     }
 
-    public void showCredits(){
+    public void showCredits() {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Credits");
-        String creditFreepick = "Icons made by <a href=http://www.freepik.com>Freepik</a> from <a href=http://www.flaticon.com>www.flaticon.com</a>";
-        String creditFlaticon = "Icons made by <a href=http://www.flaticon.com/authors/madebyoliver>Madebyoliver</a> from <a href=http://www.flaticon.com>www.flaticon.com</a>";
-        builder.setMessage(Html.fromHtml(creditFreepick + "<br><br>" + creditFlaticon));
+        String creditFreepickTitle = "Some of the images in this applications are used courtesy of Freepik";
+        String creditFreepick1 = "<a href=http://www.freepik.com>Designed by Terdpongvector / Freepik</a>";
+        String creditFreepick2 = "<a href=http://www.freepik.com>Designed by Kostolom3000 / Freepik</a>";
+        String creditFreepick3 = "<a href=http://www.freepik.com>Designed by Terdpongvector / Freepik</a>";
+        String creditFreepick4 = "<a href=http://www.freepik.com>Designed by Kostolom3000 / Freepik</a>";
+        String creditFreepick5 = "<a href=http://www.freepik.com>Designed by Freepik</a>";
+        String creditFreepick6 = "<a href=http://www.freepik.com>Designed by Elsystudio / Freepik</a>";
+        String creditFreepick7 = "<a href=http://www.freepik.com>Designed by Asier_Relampagoestudio / Freepik</a>";
+
+        String creditFlaticon1 = "Icons made by <a href=http://www.freepik.com>Freepik</a> from <a href=http://www.flaticon.com>www.flaticon.com</a>";
+        String creditFlaticon2 = "Icons made by <a href=http://www.flaticon.com/authors/madebyoliver>Madebyoliver</a> from <a href=http://www.flaticon.com>www.flaticon.com</a>";
+
+        builder.setMessage(Html.fromHtml(creditFreepickTitle + "<br><br>" + creditFreepick1 + "<br><br>" + creditFreepick2 + "<br><br>" + creditFreepick3 + "<br><br>" + creditFreepick4 + "<br><br>" + creditFreepick5 + "<br><br>" + creditFreepick6 + "<br><br>" + creditFreepick7 + "<br><br>" + creditFlaticon1 + "<br><br>" + creditFlaticon2));
         builder.setNegativeButton(R.string.about_alert_close, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int item) {
@@ -92,7 +103,7 @@ public class AboutActivity extends BaseActivity {
         });
         AlertDialog dialog = builder.create();
         dialog.show();
-        TextView messageText = (TextView)dialog.findViewById(android.R.id.message);
+        TextView messageText = (TextView) dialog.findViewById(android.R.id.message);
         messageText.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }
