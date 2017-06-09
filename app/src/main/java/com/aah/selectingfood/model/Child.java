@@ -11,22 +11,22 @@ import java.util.List;
 
 public class Child {
     private int id;
-    private String ageGroup;
+    private AgeGroup ageGroup;
     private int feedbackFinalGeneralTitleStringResourceId;
     private int feedbackFinalGeneralStringResourceId;
 
-    public Child(String ageGroup) {
+    public Child(AgeGroup ageGroup) {
         this.ageGroup = ageGroup;
 
-        if (ageGroup.equals("young")) {
+        if (ageGroup.equals(AgeGroup.YOUNG)) {
             feedbackFinalGeneralTitleStringResourceId = R.string.feedback_general_young_title;
             feedbackFinalGeneralStringResourceId = R.string.feedback_general_young;
         }
-        if (ageGroup.equals("middle")) {
+        if (ageGroup.equals(AgeGroup.MIDDLE)) {
             feedbackFinalGeneralTitleStringResourceId = R.string.feedback_general_middle_title;
             feedbackFinalGeneralStringResourceId = R.string.feedback_general_middle;
         }
-        if (ageGroup.equals("old")) {
+        if (ageGroup.equals(AgeGroup.OLD)) {
             feedbackFinalGeneralTitleStringResourceId = R.string.feedback_general_old_title;
             feedbackFinalGeneralStringResourceId = R.string.feedback_general_old;
         }
@@ -40,7 +40,7 @@ public class Child {
         this.id = id;
     }
 
-    public String getAgeGroup() {
+    public AgeGroup getAgeGroup() {
         return ageGroup;
     }
 

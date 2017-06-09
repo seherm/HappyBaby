@@ -24,6 +24,7 @@ import com.aah.selectingfood.helper.DataManagement;
 import com.aah.selectingfood.helper.ImageSaver;
 import com.aah.selectingfood.helper.LocaleHelper;
 import com.aah.selectingfood.helper.SampleSlide;
+import com.aah.selectingfood.model.AgeGroup;
 import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.model.User;
 import com.github.paolorotolo.appintro.AppIntro;
@@ -192,30 +193,30 @@ public class IntroActivity extends AppIntro {
         }
 
         if (checkBoxChildYoung.isChecked()) {
-            if (!user.hasChildByAgeGroup("young")) {
-                Child child = new Child("young");
+            if (!user.hasChildByAgeGroup(AgeGroup.YOUNG)) {
+                Child child = new Child(AgeGroup.YOUNG);
                 user.addChild(child);
             }
         } else {
-            user.removeChildByAgeGroup("young");
+            user.removeChildByAgeGroup(AgeGroup.YOUNG);
         }
 
         if (checkBoxChildMiddle.isChecked()) {
-            if (!user.hasChildByAgeGroup("middle")) {
-                Child child = new Child("middle");
+            if (!user.hasChildByAgeGroup(AgeGroup.MIDDLE)) {
+                Child child = new Child(AgeGroup.MIDDLE);
                 user.addChild(child);
             }
         } else {
-            user.removeChildByAgeGroup("middle");
+            user.removeChildByAgeGroup(AgeGroup.MIDDLE);
         }
 
         if (checkBoxChildOld.isChecked()) {
-            if (!user.hasChildByAgeGroup("old")) {
-                Child child = new Child("old");
+            if (!user.hasChildByAgeGroup(AgeGroup.OLD)) {
+                Child child = new Child(AgeGroup.OLD);
                 user.addChild(child);
             }
         } else {
-            user.removeChildByAgeGroup("old");
+            user.removeChildByAgeGroup(AgeGroup.OLD);
         }
 
         // Store user and children

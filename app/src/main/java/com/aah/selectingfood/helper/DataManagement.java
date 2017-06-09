@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 
+import com.aah.selectingfood.model.AgeGroup;
 import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.model.Food;
 import com.aah.selectingfood.model.User;
@@ -202,23 +203,23 @@ public class DataManagement {
             user.setChildPhoto(childPhoto);
             // Add children
             // Also remove them if they do not belong to user (needed for "young" child, as it is automatically added to the user)
-            if ((!user.hasChildByAgeGroup("young")) && hasChildYoung) {
-                Child child = new Child("young");
+            if ((!user.hasChildByAgeGroup(AgeGroup.YOUNG)) && hasChildYoung) {
+                Child child = new Child(AgeGroup.YOUNG);
                 user.addChild(child);
-            } else if (user.hasChildByAgeGroup("young") && (!hasChildYoung)) {
-                user.removeChildByAgeGroup("young");
+            } else if (user.hasChildByAgeGroup(AgeGroup.YOUNG) && (!hasChildYoung)) {
+                user.removeChildByAgeGroup(AgeGroup.YOUNG);
             }
-            if ((!user.hasChildByAgeGroup("middle")) && hasChildMiddle) {
-                Child child = new Child("middle");
+            if ((!user.hasChildByAgeGroup(AgeGroup.MIDDLE)) && hasChildMiddle) {
+                Child child = new Child(AgeGroup.MIDDLE);
                 user.addChild(child);
-            } else if (user.hasChildByAgeGroup("middle") && (!hasChildMiddle)) {
-                user.removeChildByAgeGroup("middle");
+            } else if (user.hasChildByAgeGroup(AgeGroup.MIDDLE) && (!hasChildMiddle)) {
+                user.removeChildByAgeGroup(AgeGroup.MIDDLE);
             }
-            if ((!user.hasChildByAgeGroup("old")) && hasChildOld) {
-                Child child = new Child("old");
+            if ((!user.hasChildByAgeGroup(AgeGroup.OLD)) && hasChildOld) {
+                Child child = new Child(AgeGroup.OLD);
                 user.addChild(child);
-            } else if (user.hasChildByAgeGroup("old") && (!hasChildOld)) {
-                user.removeChildByAgeGroup("old");
+            } else if (user.hasChildByAgeGroup(AgeGroup.OLD) && (!hasChildOld)) {
+                user.removeChildByAgeGroup(AgeGroup.OLD);
             }
             return user;
         }
@@ -232,9 +233,9 @@ public class DataManagement {
         SharedPreferences sharedPref = context.getSharedPreferences("user_storage", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString("childPhoto", user.getChildPhoto());
-        editor.putBoolean("hasChildYoung", user.hasChildByAgeGroup("young"));
-        editor.putBoolean("hasChildMiddle", user.hasChildByAgeGroup("middle"));
-        editor.putBoolean("hasChildOld", user.hasChildByAgeGroup("old"));
+        editor.putBoolean("hasChildYoung", user.hasChildByAgeGroup(AgeGroup.YOUNG));
+        editor.putBoolean("hasChildMiddle", user.hasChildByAgeGroup(AgeGroup.MIDDLE));
+        editor.putBoolean("hasChildOld", user.hasChildByAgeGroup(AgeGroup.OLD));
         editor.apply();
     }
 

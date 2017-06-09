@@ -21,7 +21,7 @@ public class User {
 
     public User(Context context) {
         this.context = context;
-        addChild(new Child("young"));
+        addChild(new Child(AgeGroup.YOUNG));
     }
 
     public int getId() {
@@ -48,7 +48,7 @@ public class User {
         return children;
     }
 
-    public Boolean hasChildByAgeGroup(String ageGroup) {
+    public Boolean hasChildByAgeGroup(AgeGroup ageGroup) {
         for (Child child : children) {
             if (child.getAgeGroup().equals(ageGroup)) {
                 return true;
@@ -57,7 +57,7 @@ public class User {
         return false;
     }
 
-    public void removeChildByAgeGroup(String ageGroup) {
+    public void removeChildByAgeGroup(AgeGroup ageGroup) {
         Child childToRemove = null;
         for (Child child : children) {
             if (child.getAgeGroup().equals(ageGroup)) {
