@@ -119,6 +119,7 @@ public class DataManagement {
                 }
             }
         }
+        Collections.sort(foodToSelect);
     }
 
     //Generate all foods used in the app
