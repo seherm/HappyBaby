@@ -65,12 +65,12 @@
 
     <!--Food Groups-->
     <string name="food_group_fruits">Fruits</string>
-    <string name="food_group_legumes">Legumes</string>
-    <string name="food_group_meat">Meat</string>
-    <string name="food_group_herbs">Herbs</string>
-    <string name="food_group_vegetables">Vegetables</string>
+    <string name="food_group_legumes">Lentils, Pulses and Nuts</string>
+    <string name="food_group_meat">Meat, Fish and Eggs</string>
+    <string name="food_group_herbs">Herbs and Spices</string>
+    <string name="food_group_vegetables">Vege\u00adtables</string>
     <string name="food_group_drinks">Drinks</string>
-    <string name="food_group_carbohydrates">Carbohydrates</string>
+    <string name="food_group_carbohydrates">Stable Foods</string>
     <string name="food_group_last_used">Last Used</string>
 
     <!--Error Messages-->
