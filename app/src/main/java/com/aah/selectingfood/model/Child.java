@@ -61,25 +61,23 @@ public class Child {
     public List<FeedbackCard> giveFeedbackFinalFood(List<Food> foods) {
 
         List<FeedbackCard> finalFeedbackCardsFood = new ArrayList<>();
-        boolean junkFoodCardAdded = false;
-        boolean softDrinkCardAdded = false;
-        boolean ironRichCardAdded = false;
-        boolean saltyCardAdded = false;
+        boolean vitaminACardAdded = false;
+        boolean notSuitableCardAdded = false;
 
         boolean containsFruit = false;
         boolean containsVegetable = false;
         boolean containsProtein = false;
 
-        /**
         for (Food food : foods) {
-            if (food.getFoodGroup().equals("Junk Food") && !junkFoodCardAdded) {
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_junk_food_title, R.string.feedback_food_junk_food_message, "drink_candy_junk_present.png", false));
-                junkFoodCardAdded = true;
+
+            if(food.isNotSuitable()){
+                notSuitableCardAdded = true;
+                //TODO: Add not suitable card
             }
 
-            if (food.getEnglishName().equals("Soft drink") && !softDrinkCardAdded) {
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_soft_drink_title, R.string.feedback_food_soft_drink_message, "drink_candy_junk_present.png", false));
-                softDrinkCardAdded = true;
+            if(food.isConsideredVitARich()){
+                vitaminACardAdded = true;
+                //TODO: Add vitamin A card
             }
 
             if (food.getFoodGroup().equals("Fruit")) {
@@ -93,30 +91,15 @@ public class Child {
             if (food.isConsideredProteinRich()) {
                 containsProtein = true;
             }
-
-            if (food.isConsideredIronRich() && !ironRichCardAdded) {
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_iron_rich_present_title, R.string.feedback_food_iron_rich_present_message, "iron_rich.png", false));
-                ironRichCardAdded = true;
-            }
-
-            if (food.isConsideredSalty() && !saltyCardAdded) {
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_salty_present_title, R.string.feedback_food_salty_present_message, "salt_present.png", false));
-                saltyCardAdded = true;
-            }
         }
 
-        if (!containsFruit) {
+        if (!containsFruit && !containsVegetable) {
             finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_fruit_title, R.string.feedback_food_lack_of_fruit_message, "lack_fruits_veg.png", false));
-        }
-
-        if (!containsVegetable) {
-            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_vegetable_title, R.string.feedback_food_lack_of_vegetable_message, "lack_fruits_veg.png", false));
         }
 
         if(!containsProtein){
             finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_protein_present_title, R.string.feedback_food_lack_of_protein_message, "lack_protein.png", false));
         }
-         **/
 
         return finalFeedbackCardsFood;
     }
