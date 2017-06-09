@@ -39,6 +39,6 @@
     <string name="error_write_ext_permission">អង់ចងចាំមិនដំណើរការ</string>
     <string name="food_group_fruits">ផ្លែឈើ</string>
     <string name="food_group_herbs">ពពួកជី</string>
-    <string name="food_group_junk_food">នំកញ្ចប់</string>
+    <string name="food_group_drinks">នំកញ្ចប់</string>
     <string name="title_activity_sharing_this_tip">ចែករំំលែកដំបូន្មាន</string>
 </resources>

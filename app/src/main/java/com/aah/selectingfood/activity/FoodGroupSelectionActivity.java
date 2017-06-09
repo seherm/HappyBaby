@@ -123,9 +123,9 @@ public class FoodGroupSelectionActivity extends BaseActivity {
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.food_group_vegetables);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.vegetablesGreen);
                 break;
-            case R.id.junkFood:
-                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Junk Food");
-                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.food_group_junk_food);
+            case R.id.drinks:
+                saveStringToSharedPreferences("SELECTED_FOOD_GROUP", "Drink");
+                saveIntToSharedPreferences("SELECTED_FOOD_GROUP_ID", R.string.food_group_drinks);
                 saveIntToSharedPreferences("SELECTED_FOOD_GROUP_COLOR", R.color.junkFoodPink);
                 break;
             case R.id.carbohydrates:

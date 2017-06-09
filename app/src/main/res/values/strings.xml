@@ -69,7 +69,7 @@
     <string name="food_group_meat">Meat</string>
     <string name="food_group_herbs">Herbs</string>
     <string name="food_group_vegetables">Vegetables</string>
-    <string name="food_group_junk_food">Junk Food</string>
+    <string name="food_group_drinks">Drinks</string>
     <string name="food_group_carbohydrates">Carbohydrates</string>
     <string name="food_group_last_used">Last Used</string>
 
