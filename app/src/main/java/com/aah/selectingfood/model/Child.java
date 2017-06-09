@@ -116,7 +116,7 @@ public class Child {
      */
     public FeedbackCard giveFeedbackFinalFoodSummary(List<Food> foods) {
         if (foods == null) {
-            return new FeedbackCard(R.string.feedback_no_food_selected_title, R.string.feedback_no_food_selected_message, "unbalanced.png", false);
+            return new FeedbackCard(R.string.feedback_no_food_selected_title, R.string.feedback_no_food_selected_message, "no_selection.png", false);
          }
         List<String> selectedFoodGroups = new ArrayList<>();
         for (Food food : foods) {
@@ -132,7 +132,7 @@ public class Child {
             if (selectedFoodGroups.size() > 0) {
                 return new FeedbackCard(R.string.feedback_not_well_balanced_title, R.string.feedback_not_well_balanced_message, "unbalanced.png", true);
             } else {
-                return new FeedbackCard(R.string.feedback_no_food_selected_title, R.string.feedback_no_food_selected_message, "unbalanced.png", false);
+                return new FeedbackCard(R.string.feedback_no_food_selected_title, R.string.feedback_no_food_selected_message, "no_selection.png", false);
             }
         }
     }
