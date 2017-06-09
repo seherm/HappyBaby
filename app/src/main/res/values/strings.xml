@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Selecting Food</string>
+    <string name="app_name">Happy Baby</string>
     <string name="drawer_title" translatable="false">@string/app_name</string>
 
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
@@ -8,12 +8,12 @@
 
     <!--Onboarding-->
     <!-- todo insert app name instead of our app-->
-    <string name="onboarding_intro_title">Welcome to our app!</string>
-    <string name="onboarding_intro_title_2">Next steps</string>
-    <string name="onboarding_intro_description">This App will help you feeding your child, such that it can grow big and strong.</string>
-    <string name="onboarding_intro_description_2">Select all ingredients that you want to feed your child today and we will tell you what you can improve to help your child. Before you start, you can add a picture of your child and tell us about your children, to make the app more fun to use and our tips more accurate.</string>
-    <string name="onboarding_add_photo_of_your_child_title">Select photo</string>
-    <string name="onboarding_add_photo_of_your_child_message">Tap on the camera to add a picture of your child</string>
+    <string name="onboarding_intro_title">Welcome to Happy Baby</string>
+    <string name="onboarding_intro_title_2">How it works</string>
+    <string name="onboarding_intro_description">Happy Baby will help you feeding your child, such that it can grow big and strong.</string>
+    <string name="onboarding_intro_description_2">Choose the foods you will feed your child today, and get advice on what you can do to improve his or her diet.</string>
+    <string name="onboarding_add_photo_of_your_child_title">Add a picture</string>
+    <string name="onboarding_add_photo_of_your_child_message">Tap on the camera icon to add a picture of your child</string>
     <string name="onboarding_select_age_of_your_child_title">How old is your child?</string>
     <string name="onboarding_select_age_of_your_child_message">This will help us give customized advice for your childs age</string>
 
@@ -77,9 +77,9 @@
     <string name="error_camera_permission">Camera Permission Error</string>
     <string name="error_write_ext_permission">External memory access Permission Error</string>
 
-    <string name="about_open_source_licenses">Open-Source Licenses</string>
-    <string name="about_credits">Credits</string>
-    <string name="about_alert_close">Close</string>
+    <string name="about_open_source_licenses" translatable="false">Open-Source Licenses</string>
+    <string name="about_credits" translatable="false">Credits</string>
+    <string name="about_alert_close" translatable="false">Close</string>
 
     <!--String Arrays for selecting photo Alert Dialog-->
     <string-array name="select_photo_items_array">

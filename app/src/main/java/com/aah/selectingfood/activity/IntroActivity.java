@@ -56,7 +56,7 @@ public class IntroActivity extends AppIntro {
         // Just set a title, description, background and image. AppIntro will do the rest.
         String title = getString(R.string.onboarding_intro_title); //TODO: Include app name
         String description = getString(R.string.onboarding_intro_description);
-        int image = R.drawable.onboarding_groceries;
+        int image = R.drawable.app_icon_happy_baby;
         int backgroundColor = Color.parseColor(getString(R.color.blue));
         addSlide(AppIntroFragment.newInstance(title, description, image, backgroundColor));
 
