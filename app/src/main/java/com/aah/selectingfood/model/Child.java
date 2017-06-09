@@ -12,19 +12,22 @@ import java.util.List;
 public class Child {
     private int id;
     private String ageGroup;
+    private int feedbackFinalGeneralTitleStringResourceId;
     private int feedbackFinalGeneralStringResourceId;
-
 
     public Child(String ageGroup) {
         this.ageGroup = ageGroup;
 
         if (ageGroup.equals("young")) {
+            feedbackFinalGeneralTitleStringResourceId = R.string.feedback_general_young_title;
             feedbackFinalGeneralStringResourceId = R.string.feedback_general_young;
         }
         if (ageGroup.equals("middle")) {
+            feedbackFinalGeneralTitleStringResourceId = R.string.feedback_general_middle_title;
             feedbackFinalGeneralStringResourceId = R.string.feedback_general_middle;
         }
         if (ageGroup.equals("old")) {
+            feedbackFinalGeneralTitleStringResourceId = R.string.feedback_general_old_title;
             feedbackFinalGeneralStringResourceId = R.string.feedback_general_old;
         }
     }
@@ -70,14 +73,14 @@ public class Child {
 
         for (Food food : foods) {
 
-            if(food.isNotSuitable()){
+            if (food.isNotSuitable() &&! notSuitableCardAdded) {
                 notSuitableCardAdded = true;
-                //TODO: Add not suitable card
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_not_suitable_present_title, R.string.feedback_not_suitable_present_message, "candy_junk_present.png", false));
             }
 
-            if(food.isConsideredVitARich()){
+            if (food.isConsideredVitARich() && !vitaminACardAdded) {
                 vitaminACardAdded = true;
-                //TODO: Add vitamin A card
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_vitamin_A_present_title, R.string.feedback_vitamin_A_present_message, null, false));
             }
 
             if (food.getFoodGroup().equals("Fruit")) {
@@ -94,11 +97,11 @@ public class Child {
         }
 
         if (!containsFruit && !containsVegetable) {
-            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_fruit_title, R.string.feedback_food_lack_of_fruit_message, "lack_fruits_veg.png", false));
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_fruit_vegetable_title, R.string.feedback_food_lack_of_fruit_vegetable_message, "lack_fruits_veg.png", false));
         }
 
-        if(!containsProtein){
-            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_protein_present_title, R.string.feedback_food_lack_of_protein_message, "lack_protein.png", false));
+        if (!containsProtein) {
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_iron_title, R.string.feedback_food_lack_of_iron_message, "lack_protein.png", false));
         }
 
         return finalFeedbackCardsFood;
@@ -140,7 +143,7 @@ public class Child {
      * @return          the resulting FeedbackCard
      */
     public FeedbackCard giveFeedbackFinalGeneral() {
-        return new FeedbackCard(R.string.feedback_general_title, feedbackFinalGeneralStringResourceId, "general_take_away.png", false);
+        return new FeedbackCard(feedbackFinalGeneralTitleStringResourceId, feedbackFinalGeneralStringResourceId, "general_take_away.png", false);
     }
 
 }

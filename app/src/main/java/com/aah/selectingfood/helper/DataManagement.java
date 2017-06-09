@@ -165,9 +165,9 @@ public class DataManagement {
                     tempFood.setEnglishName(eElement.getElementsByTagName("name").item(0).getTextContent());
                     tempFood.setKhmerName(eElement.getElementsByTagName("khmerName").item(0).getTextContent());
                     tempFood.setSound(eElement.getElementsByTagName("sound").item(0).getTextContent());
-                    tempFood.setNotSuitable(Boolean.getBoolean(eElement.getElementsByTagName("notSuitable").item(0).getTextContent()));
-                    tempFood.setConsideredProteinRich(Boolean.getBoolean(eElement.getElementsByTagName("consideredIronProteinRich").item(0).getTextContent()));
-                    tempFood.setConsideredVitARich(Boolean.getBoolean(eElement.getElementsByTagName("consideredVitARich").item(0).getTextContent()));
+                    tempFood.setNotSuitable(Boolean.valueOf(eElement.getElementsByTagName("notSuitable").item(0).getTextContent()));
+                    tempFood.setConsideredProteinRich(Boolean.valueOf(eElement.getElementsByTagName("consideredIronProteinRich").item(0).getTextContent()));
+                    tempFood.setConsideredVitARich(Boolean.valueOf(eElement.getElementsByTagName("consideredVitARich").item(0).getTextContent()));
                     tempFood.setInstantFeedback(instantFeedback);
                     tempFood.setInstantFeedbackEnglish(eElement.getElementsByTagName("instantFeedback").item(0).getTextContent());
                     tempFood.setInstantFeedbackKhmer(eElement.getElementsByTagName("khmerInstantFeedback").item(0).getTextContent());
