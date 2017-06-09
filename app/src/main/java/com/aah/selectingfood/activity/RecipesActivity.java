@@ -37,10 +37,11 @@ public class RecipesActivity extends BaseActivity implements OnLoadCompleteListe
 
         if(languageCode.equals("km")){
             pdfView.fromAsset(pdfFileKhmer)
+                    .defaultPage(0)
+                    .onLoad(this)
                     .enableSwipe(true)
                     .swipeHorizontal(false)
                     .enableDoubletap(true)
-                    .defaultPage(0)
                     .enableAntialiasing(true)
                     .load();
         }else{
