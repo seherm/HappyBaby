@@ -80,7 +80,7 @@ public class Child {
 
             if (food.isConsideredVitARich() && !vitaminACardAdded) {
                 vitaminACardAdded = true;
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_vitamin_A_present_title, R.string.feedback_vitamin_A_present_message, null, false));
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_vitamin_A_present_title, R.string.feedback_vitamin_A_present_message, "vitA_rich.png", false));
             }
 
             if (food.getFoodGroup().equals("Fruit")) {
