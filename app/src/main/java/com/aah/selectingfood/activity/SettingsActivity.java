@@ -110,17 +110,19 @@ public class SettingsActivity extends BaseActivity {
 
     private void updateViews(String languageCode) {
         LocaleHelper.setLocale(this, languageCode);
-        setFoodName(languageCode);
+        setFoodAttributes(languageCode);
         this.recreate();
 
     }
 
-    public void setFoodName(String languageCode) {
+    public void setFoodAttributes(String languageCode) {
         for (Food food : dataManagement.getAllFood()) {
             if (languageCode.equals("km")) {
                 food.setName(food.getKhmerName());
+                food.setInstantFeedback(food.getInstantFeedbackKhmer());
             } else {
                 food.setName(food.getEnglishName());
+                food.setInstantFeedback(food.getInstantFeedbackEnglish());
             }
         }
     }
