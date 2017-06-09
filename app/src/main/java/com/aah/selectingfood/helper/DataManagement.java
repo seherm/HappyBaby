@@ -149,10 +149,13 @@ public class DataManagement {
                     String languageCode = LocaleHelper.getLanguage(context);
                     // Create food
                     String name;
+                    String instantFeedback;
                     if (languageCode.equals("km")) {
                         name = eElement.getElementsByTagName("khmerName").item(0).getTextContent();
+                        instantFeedback = eElement.getElementsByTagName("khmerInstantFeedback").item(0).getTextContent();
                     }else{
                         name = eElement.getElementsByTagName("name").item(0).getTextContent();
+                        instantFeedback = eElement.getElementsByTagName("instantFeedback").item(0).getTextContent();
                     }
                     String foodgroup = eElement.getElementsByTagName("foodgroup").item(0).getTextContent();
                     Bitmap image = loadBitmapFromAssets(eElement.getElementsByTagName("image").item(0).getTextContent(), "foodImages");
@@ -161,10 +164,12 @@ public class DataManagement {
                     tempFood.setEnglishName(eElement.getElementsByTagName("name").item(0).getTextContent());
                     tempFood.setKhmerName(eElement.getElementsByTagName("khmerName").item(0).getTextContent());
                     tempFood.setSound(eElement.getElementsByTagName("sound").item(0).getTextContent());
-                    tempFood.setConsideredIronRich(Boolean.getBoolean(eElement.getElementsByTagName("consideredIronRich").item(0).getTextContent()));
-                    tempFood.setConsideredProteinRich(Boolean.getBoolean(eElement.getElementsByTagName("consideredProteinRich").item(0).getTextContent()));
-                    tempFood.setConsideredSalty(Boolean.getBoolean(eElement.getElementsByTagName("consideredSalty").item(0).getTextContent()));
-                    tempFood.setInstantFeedback(eElement.getElementsByTagName("instantFeedback").item(0).getTextContent());
+                    tempFood.setNotSuitable(Boolean.getBoolean(eElement.getElementsByTagName("notSuitable").item(0).getTextContent()));
+                    tempFood.setConsideredProteinRich(Boolean.getBoolean(eElement.getElementsByTagName("consideredIronProteinRich").item(0).getTextContent()));
+                    tempFood.setConsideredVitARich(Boolean.getBoolean(eElement.getElementsByTagName("consideredVitARich").item(0).getTextContent()));
+                    tempFood.setInstantFeedback(instantFeedback);
+                    tempFood.setInstantFeedbackEnglish(eElement.getElementsByTagName("instantFeedback").item(0).getTextContent());
+                    tempFood.setInstantFeedbackKhmer(eElement.getElementsByTagName("khmerInstantFeedback").item(0).getTextContent());
 
                     allFood.add(tempFood);
                 }
@@ -279,16 +284,6 @@ public class DataManagement {
 
     public ArrayList<Food> getSelectedFood() {
         return selectedFood;
-    }
-
-    //Todo fixflo
-    public ArrayList<String> getSelectedFoodNames() {
-        ArrayList<String> selectedFoodNames = new ArrayList<>();
-        for(Food food: selectedFood){
-            selectedFoodNames.add(food.getName());
-            Log.e("wuutwuut",food.getName());
-        }
-        return selectedFoodNames;
     }
 
     public ArrayList<Food> getAllFood() {

@@ -1,873 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<foods>
-	<food>
-		<name>Apple</name>
-		<khmerName>ផ្លែប៉ោម</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>apple.jpg</image>
-		<sound>apple.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Excellent choice! This ingredient is full of vitamin A which is good for your baby's eyes and skin.</instantFeedback>
-	</food>
-	<food>
-		<name>Avocado</name>
-		<khmerName>ផ្លែអាវ៉ូកាឌូ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>avocado.jpg</image>
-		<sound>avocado.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Baby Corn</name>
-		<khmerName>ស្នៀតពោត</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>baby_corn.jpg</image>
-		<sound>baby_corn.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Baby Eggplant</name>
-		<khmerName>ត្រប់ស្រួយ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>baby_eggplant.jpg</image>
-		<sound>baby_eggplant.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Bamboo Shoot</name>
-		<khmerName>ទំពាំង</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>bamboo_shoot.jpg</image>
-		<sound>bamboo_shot.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Banana</name>
-		<khmerName>ចេក</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>banana.jpg</image>
-		<sound>banana.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Banana Blossom</name>
-		<khmerName>ត្រួយ៉ូងចេក</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>banana_blossom.jpg</image>
-		<sound>banana_blossom.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Banana Stem</name>
-		<khmerName>ដើមចេក</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>banana_stem.jpg</image>
-		<sound>banana_stem.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Basil</name>
-		<khmerName>ជីក្រហម</khmerName>
-		<foodgroup>Herbs</foodgroup>
-		<image>basil.jpg</image>
-		<sound>basil.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Bean Sprout</name>
-		<khmerName>សណ្តែកបណ្តុះ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>bean_sprout.jpg</image>
-		<sound>bean_sprout.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Beef</name>
-		<khmerName>សាច់គោ</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>"empty"</image>
-		<sound>beef.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Black Eyed Peas</name>
-		<khmerName>សណ្តែកសៀង</khmerName>
-		<foodgroup>Legumes</foodgroup>
-		<image>black_eyed_peas.jpg</image>
-		<sound>black_eyed_peas.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
+<foods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<food>
 		<name>Bread</name>
 		<khmerName>នំប័ង</khmerName>
 		<foodgroup>Carbohydrate</foodgroup>
 		<image>bread.jpg</image>
 		<sound>bread.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Broccoli</name>
-		<khmerName>ផ្កាខាត់ណាខៀវ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>broccoli.jpg</image>
-		<sound>broccoli.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Cabbage</name>
-		<khmerName>ស្ពែក្តោប</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>cabbage.jpg</image>
-		<sound>cabbage.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Celery</name>
-		<khmerName>ភ្លៅកង្កែប</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>celery.jpg</image>
-		<sound>celery.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Chicken</name>
-		<khmerName>សាច់់មាន់</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>"empty"</image>
-		<sound>chicken.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Chicory</name>
-		<khmerName>ស្លឺកតាំងអោរ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>chicory.jpg</image>
-		<sound>chicory.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Chinese Cabbage</name>
-		<khmerName>ស្ពែបូកគោ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>chinese_cabbage.jpg</image>
-		<sound>chinese_cabbage.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Chive Flower</name>
-		<khmerName>ផ្កាគូឆាយ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>chive_flower.jpg</image>
-		<sound>chive_flower.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Choy Sum</name>
-		<khmerName>ស្ពៃចង្កឹះ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>choy_sum.jpg</image>
-		<sound>choy_sum.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Cinnamon</name>
-		<khmerName>ឈើអ៊ែម</khmerName>
-		<foodgroup>Herbs</foodgroup>
-		<image>cinnamon.jpg</image>
-		<sound>cinnamon.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Crisps</name>
-		<khmerName>នំំកញ្ចប់</khmerName>
-		<foodgroup>Junk Food</foodgroup>
-		<image>crisps.jpg</image>
-		<sound>crips.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Custard Apple</name>
-		<khmerName>ផ្លែទៀប</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>custard_apple.jpg</image>
-		<sound>custard_apple.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Dragonfruit</name>
-		<khmerName>ផ្លែស្រការនាគ</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>dragonfruit.jpg</image>
-		<sound>dragonfruit.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Duck</name>
-		<khmerName>សាច់ទា</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>"empty"</image>
-		<sound>duck.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Durian</name>
-		<khmerName>ផ្លែធុរ៉េន</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>durian.jpg</image>
-		<sound>durian.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Enoki Mushroom</name>
-		<khmerName>ផ្សិតម្ជុល</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>enoki_mushroom.jpg</image>
-		<sound>enoki_mushroom.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Escarole</name>
-		<khmerName>ស្ពៃក្រញាញ់</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>escarole.jpg</image>
-		<sound>escarole.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Fish</name>
-		<khmerName>សាច់ត្រី</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>"empty"</image>
-		<sound>fish.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Fish Herb</name>
-		<khmerName>ជីថ្ពាល់ត្រី</khmerName>
-		<foodgroup>Herbs</foodgroup>
-		<image>fish_herb.jpg</image>
-		<sound>fish_herb.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>French Bean</name>
-		<khmerName>សណ្តែកបារាំង</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>french_bean.jpg</image>
-		<sound>french_beans.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Garlic</name>
-		<khmerName>ខ្ទឹមស</khmerName>
-		<foodgroup>Herbs</foodgroup>
-		<image>garlic.jpg</image>
-		<sound>garlic.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Grapes</name>
-		<khmerName>ផ្លែទំពាំងបាយជូរ</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>grapes.jpg</image>
-		<sound>grapes.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Green bananas</name>
-		<khmerName>ចេកអំបូង</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>green_bananas.jpg</image>
-		<sound>green_banana.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Green Mung Beans</name>
-		<khmerName>សណ្តែកបាយខៀវ</khmerName>
-		<foodgroup>Legumes</foodgroup>
-		<image>green_mung_beans.jpg</image>
-		<sound>green_mung_beans.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Green Orange</name>
-		<khmerName>ផ្លែក្រូច</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>green_orange.jpg</image>
-		<sound>green_orange.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Green Papaya</name>
-		<khmerName>ល្ហុងខ្ចី</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>green_papaya.jpg</image>
-		<sound>green_papaya.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Green Peas</name>
-		<khmerName>គ្រាប់សណ្តែកខៀវ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>green_peas.jpg</image>
-		<sound>green_pease.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Green Tomato</name>
-		<khmerName>ប៉េងប៉ោះ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>green_tomato.jpg</image>
-		<sound>green_tomato.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Guava</name>
-		<khmerName>ផ្លែត្របែក</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>guava.jpg</image>
-		<sound>guava.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Holy Basil</name>
-		<khmerName>ម្រះព្រៅ</khmerName>
-		<foodgroup>Herbs</foodgroup>
-		<image>holy_basil.jpg</image>
-		<sound>holy_basil.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Ivy Gourd Leaves</name>
-		<khmerName>ស្លឺឹកបាស់</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>ivy_gourd_leaves.jpg</image>
-		<sound>ivy_gourd_leave.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Jackfruit</name>
-		<khmerName>ផ្លែខ្នុរ</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>jackfruit.jpg</image>
-		<sound>jackfruit.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Khmer cakes</name>
-		<khmerName>នំក្រូច</khmerName>
-		<foodgroup>Junk Food</foodgroup>
-		<image>coconut_rice_cake.jpg</image>
-		<sound>khmer_cakes.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Kidney Beans</name>
-		<khmerName>សណ្តែកគុយ</khmerName>
-		<foodgroup>Legumes</foodgroup>
-		<image>kidney_beans.jpg</image>
-		<sound>kidney_bean.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Ladyfinger Banana</name>
-		<khmerName>ចេកណាំវ៉ា</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>ladyfinger_banana.jpg</image>
-		<sound>ladyfinger_banana.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Lemon</name>
-		<khmerName>ផ្លែក្រូចស្ករ</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>lemon.jpg</image>
-		<sound>lemon.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Lettuce</name>
-		<khmerName>សាឡាត់</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>lettuce.jpg</image>
-		<sound>lettuce.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Lime</name>
-		<khmerName>ផ្លែក្រូចឆ្មា</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>lime.jpg</image>
-		<sound>lime.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Longan</name>
-		<khmerName>ផ្លែមៀន</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>longan.jpg</image>
-		<sound>longan.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Lotus Root</name>
-		<khmerName>មើមឈូក</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>lotus_root.jpg</image>
-		<sound>lotus_root.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Lotus Seed</name>
-		<khmerName>គ្រាប់ឈូក</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>lotus_seed.jpg</image>
-		<sound>lotus_seed.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Lotus Stem</name>
-		<khmerName>ក្រអៅឈូក</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>lotus_stem.jpg</image>
-		<sound>lotus_stem.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Luffa</name>
-		<khmerName>ននោង</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>luffa.jpg</image>
-		<sound>luffa.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Lychee</name>
-		<khmerName>ផ្លែគូលែន</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>lycee.jpg</image>
-		<sound>lychee.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Mango</name>
-		<khmerName>ផ្លែស្វាយ</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>mango.jpg</image>
-		<sound>mango.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Mangosteen</name>
-		<khmerName>ផ្លែមង្ឃុត</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>mangosteen.jpg</image>
-		<sound>mangosteen.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Margosa Leaves</name>
-		<khmerName>ត្រួយស្តៅ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>margosa_leaves.jpg</image>
-		<sound>margosa_leaves.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Melon</name>
-		<khmerName>ត្រសក់ផ្អែម</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>melon.jpg</image>
-		<sound>melon.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Moringa</name>
-		<khmerName>ស្លឹកម្រុំ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>moringa.jpg</image>
-		<sound>moringa.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Moustard Greens</name>
-		<khmerName>ស្ពៃទឿ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>mustard_greens.jpg</image>
-		<sound>moustard_green.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Ngob Leaves</name>
-		<khmerName>ស្លឹកងប់</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>ngob_leaves.jpg</image>
-		<sound>ngob_leave.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Okra</name>
-		<khmerName>ពោតបារាំង</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>okra.jpg</image>
-		<sound>okra.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Orange</name>
-		<khmerName>ផ្លែក្រូច</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>orange.jpg</image>
-		<sound>orange.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Oyster Mushroom</name>
-		<khmerName>ផ្សិតអំបោះ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>oyster_mushroom.jpg</image>
-		<sound>oyster_mushroom.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Palm Fruit</name>
-		<khmerName>ផ្លែត្នោត</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>palm_fruit.jpg</image>
-		<sound>palm_fruit.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Papaya</name>
-		<khmerName>ផ្លែល្ហុង</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>papaya.jpg</image>
-		<sound>papaya.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Passionfruit</name>
-		<khmerName>ផ្លែក្រូចទ្រើង</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>passionfruit.jpg</image>
-		<sound>passionfruit.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Pea Eggplant</name>
-		<khmerName>ត្រប់់ពុតញង</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>pea_eggplant.jpg</image>
-		<sound>pea_eggplant.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Peanut</name>
-		<khmerName>សណ្តែកដី</khmerName>
-		<foodgroup>Legumes</foodgroup>
-		<image>peanut.jpg</image>
-		<sound>peanut.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Pineapple</name>
-		<khmerName>ផ្លែម្នាស់</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>pineapple.jpg</image>
-		<sound>pineapple.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Pomegranate</name>
-		<khmerName>ផ្លែទទឺម</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>pomegranate.jpg</image>
-		<sound>pomegranate.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Pomelo</name>
-		<khmerName>ផ្លែក្រូចថ្លុង</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>pomelo.jpg</image>
-		<sound>pomelo.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Pork</name>
-		<khmerName>សាច់ជ្រូក</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>"empty"</image>
-		<sound>pork.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Rambutan</name>
-		<khmerName>ផ្លែសាវម៉ាវ</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>rumbutan.jpg</image>
-		<sound>rambutan.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Red Cabbage</name>
-		<khmerName>ស្ពៃក្តោបពណ៏ស្វាយ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>red_cabbage.jpg</image>
-		<sound>red_cabbage.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Red Mung Beans</name>
-		<khmerName>សណ្តែកបាយក្រហម</khmerName>
-		<foodgroup>Legumes</foodgroup>
-		<image>red_mung_beans.jpg</image>
-		<sound>red_mung_beans.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Rice</name>
-		<khmerName>បាយ</khmerName>
-		<foodgroup>Carbohydrate</foodgroup>
-		<image>rice.jpg</image>
-		<sound>rice_noodle.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
 	</food>
 	<food>
 		<name>Rice Noodles</name>
@@ -875,175 +18,35 @@
 		<foodgroup>Carbohydrate</foodgroup>
 		<image>rice_noodles.jpg</image>
 		<sound>rice.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
 	</food>
 	<food>
-		<name>Rice Paddy Herb</name>
-		<khmerName>ម្អម</khmerName>
-		<foodgroup>Herbs</foodgroup>
-		<image>rice_paddy_herb.jpg</image>
-		<sound>rice_paddy_herb.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
+		<name>Rice</name>
+		<khmerName>បាយ</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>rice.jpg</image>
+		<sound>rice_noodle.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
 	</food>
 	<food>
-		<name>Rose Apple</name>
-		<khmerName>ផ្លែជម្ពូរ</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>rose_apple.jpg</image>
-		<sound>rose_apple.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Santol</name>
-		<khmerName>ផ្លែកំពីងរាជ្យ់</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>santol.jpg</image>
-		<sound>santol.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Sapodilla</name>
-		<khmerName>ផ្លែល្មុត</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>sapodilla.jpg</image>
-		<sound>sapodilla.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Shemeji Mushroom</name>
-		<khmerName>ផ្សិតក្តាម</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>shemeji_mushroom.jpg</image>
-		<sound>shemeji_mushroom.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Shiitake Mushroom</name>
-		<khmerName>ផ្សិតខ្មៅ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>shiitake_mushroom.jpg</image>
-		<sound>shiitake_mushroom.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Snake Fruit</name>
-		<khmerName>ផ្លែអង្កាំ</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>snake_fruit.jpg</image>
-		<sound>snake_fruit.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Snow Pea</name>
-		<khmerName>ពពាយ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>snow_pea.jpg</image>
-		<sound>snow_pea.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Soft drink</name>
-		<khmerName>ភេសជ្ជះ</khmerName>
-		<foodgroup>Junk Food</foodgroup>
-		<image>soft_drink.jpg</image>
-		<sound>soft_drink.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Soursop</name>
-		<khmerName>ផ្លែទៀបបារាំង</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>soursop.jpg</image>
-		<sound>soursop.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Soy Beans</name>
-		<khmerName>សណ្តែកសៀង</khmerName>
-		<foodgroup>Legumes</foodgroup>
-		<image>soy_beans.jpg</image>
-		<sound>soy_bean.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Soy Beans</name>
-		<khmerName>សណ្តែកសៀង</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>soy_beans.jpg</image>
-		<sound>soy_beans.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Spinach</name>
-		<khmerName>ស្ពៃខ្មៅ</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>spinach.jpg</image>
-		<sound>spinach.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Straw Mushroom</name>
-		<khmerName>ផ្សិតចំបើង</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>straw_mushroom.jpg</image>
-		<sound>straw_mushroom.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Sweet Corn</name>
+		<name>Sweet Corn (corn on the cob)</name>
 		<khmerName>ពោត</khmerName>
 		<foodgroup>Carbohydrate</foodgroup>
 		<image>sweet_corn.jpg</image>
 		<sound>sweet_corn.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
 	</food>
 	<food>
 		<name>Sweet Potato</name>
@@ -1051,21 +54,11 @@
 		<foodgroup>Carbohydrate</foodgroup>
 		<image>sweet_potato.jpg</image>
 		<sound>sweet_potato.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Tangerine</name>
-		<khmerName>ផ្លែក្រូចខ្វិច</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>tangerine.jpg</image>
-		<sound>tangerine.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This fruit is full of vitamin A which is good for my eyes and skin.</instantFeedback>
+		<khmerInstantFeedback>ពិត​ជាត្រឹមត្រូវ! ផ្លែឈើនេះពោរពេញទៅដោយវីតាមីនអា ដែលជួយដល់ភ្នែកនិងស្បែករបស់ខ្ញុំ</khmerInstantFeedback>
 	</food>
 	<food>
 		<name>Taro</name>
@@ -1073,76 +66,11 @@
 		<foodgroup>Carbohydrate</foodgroup>
 		<image>taro.jpg</image>
 		<sound>taro.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Turmeric</name>
-		<khmerName>រមៀត</khmerName>
-		<foodgroup>Herbs</foodgroup>
-		<image>tumeric.jpg</image>
-		<sound>turmeric.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Water Lily</name>
-		<khmerName>ព្រលឹត</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>water_lily.jpg</image>
-		<sound>water_lily.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Water Pennywort</name>
-		<khmerName>ស្លឹកត្រចៀកក្រាញ់</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>water_pennywort.jpg</image>
-		<sound>water_pennywort.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Watermelon</name>
-		<khmerName>ផ្លែឪឡឹក</khmerName>
-		<foodgroup>Fruit</foodgroup>
-		<image>watermelon.jpg</image>
-		<sound>watermelon.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Winged Bean</name>
-		<khmerName>ពពាយជ្រុង</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>winged_bean.jpg</image>
-		<sound>winged_bean.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
-	</food>
-	<food>
-		<name>Winter Melon</name>
-		<khmerName>ត្រឡាច</khmerName>
-		<foodgroup>Vegetable</foodgroup>
-		<image>winter_melo.jpg</image>
-		<sound>winter_melon.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
 	</food>
 	<food>
 		<name>Yellow Noodle</name>
@@ -1150,10 +78,419 @@
 		<foodgroup>Carbohydrate</foodgroup>
 		<image>yellow_noodle.jpg</image>
 		<sound>yellow_noodle.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Apple</name>
+		<khmerName>ផ្លែប៉ោម</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>apple.jpg</image>
+		<sound>apple.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Banana</name>
+		<khmerName>ចេក</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>banana.jpg</image>
+		<sound>banana.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Custard Apple</name>
+		<khmerName>ផ្លែទៀប</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>custard_apple.jpg</image>
+		<sound>custard_apple.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Dragonfruit</name>
+		<khmerName>ផ្លែស្រការនាគ</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>dragonfruit.jpg</image>
+		<sound>dragonfruit.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Durian</name>
+		<khmerName>ផ្លែធុរ៉េន</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>durian.jpg</image>
+		<sound>durian.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Grapes</name>
+		<khmerName>ផ្លែទំពាំងបាយជូរ</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>grapes.jpg</image>
+		<sound>grapes.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Green bananas</name>
+		<khmerName>ចេកអំបូង</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>green_bananas.jpg</image>
+		<sound>green_banana.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Green Orange</name>
+		<khmerName>ផ្លែក្រូច</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>green_orange.jpg</image>
+		<sound>green_orange.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Guava</name>
+		<khmerName>ផ្លែត្របែក</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>guava.jpg</image>
+		<sound>guava.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Jackfruit</name>
+		<khmerName>ផ្លែខ្នុរ</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>jackfruit.jpg</image>
+		<sound>jackfruit.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Ladyfinger Banana</name>
+		<khmerName>ចេកណាំវ៉ា</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>ladyfinger_banana.jpg</image>
+		<sound>ladyfinger_banana.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Lemon</name>
+		<khmerName>ផ្លែក្រូចស្ករ</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>lemon.jpg</image>
+		<sound>lemon.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Lime</name>
+		<khmerName>ផ្លែក្រូចឆ្មា</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>lime.jpg</image>
+		<sound>lime.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Longan</name>
+		<khmerName>ផ្លែមៀន</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>longan.jpg</image>
+		<sound>longan.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Lotus Seed</name>
+		<khmerName>គ្រាប់ឈូក</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>lotus_seed.jpg</image>
+		<sound>lotus_seed.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Lychee</name>
+		<khmerName>ផ្លែគូលែន</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>lycee.jpg</image>
+		<sound>lychee.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Mango</name>
+		<khmerName>ផ្លែស្វាយ</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>mango.jpg</image>
+		<sound>mango.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This fruit is full of vitamin A which is good for my eyes and skin.</instantFeedback>
+		<khmerInstantFeedback>ពិត​ជាត្រឹមត្រូវ! ផ្លែឈើនេះពោរពេញទៅដោយវីតាមីនអា ដែលជួយដល់ភ្នែកនិងស្បែករបស់ខ្ញុំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Mangosteen</name>
+		<khmerName>ផ្លែមង្ឃុត</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>mangosteen.jpg</image>
+		<sound>mangosteen.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Melon</name>
+		<khmerName>ត្រសក់ផ្អែម</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>melon.jpg</image>
+		<sound>melon.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will love it!</instantFeedback>
+		<khmerInstantFeedback>អស្ចារ្យណាស់! ខ្ញុំនិងស្រឡាញ់វា</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Orange</name>
+		<khmerName>ផ្លែក្រូច</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>orange.jpg</image>
+		<sound>orange.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Palm Fruit</name>
+		<khmerName>ផ្លែត្នោត</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>palm_fruit.jpg</image>
+		<sound>palm_fruit.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Papaya</name>
+		<khmerName>ផ្លែល្ហុង</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>papaya.jpg</image>
+		<sound>papaya.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This fruit is full of vitamin A which is good for my eyes and skin.</instantFeedback>
+		<khmerInstantFeedback>ពិត​ជាត្រឹមត្រូវ! ផ្លែឈើនេះពោរពេញទៅដោយវីតាមីនអា ដែលជួយដល់ភ្នែកនិងស្បែករបស់ខ្ញុំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Passionfruit</name>
+		<khmerName>ផ្លែក្រូចទ្រើង</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>passionfruit.jpg</image>
+		<sound>passionfruit.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Pineapple</name>
+		<khmerName>ផ្លែម្នាស់</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>pineapple.jpg</image>
+		<sound>pineapple.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Pomegranate</name>
+		<khmerName>ផ្លែទទឺម</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>pomegranate.jpg</image>
+		<sound>pomegranate.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Pomelo</name>
+		<khmerName>ផ្លែក្រូចថ្លុង</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>pomelo.jpg</image>
+		<sound>pomelo.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Rose Apple</name>
+		<khmerName>ផ្លែជម្ពូរ</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>rose_apple.jpg</image>
+		<sound>rose_apple.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Rambutan</name>
+		<khmerName>ផ្លែសាវម៉ាវ</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>rumbutan.jpg</image>
+		<sound>rambutan.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Santol</name>
+		<khmerName>ផ្លែកំពីងរាជ្យ់</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>santol.jpg</image>
+		<sound>santol.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Sapodilla</name>
+		<khmerName>ផ្លែល្មុត</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>sapodilla.jpg</image>
+		<sound>sapodilla.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Snake Fruit</name>
+		<khmerName>ផ្លែអង្កាំ</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>snake_fruit.jpg</image>
+		<sound>snake_fruit.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Soursop</name>
+		<khmerName>ផ្លែទៀបបារាំង</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>soursop.jpg</image>
+		<sound>soursop.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Tangerine</name>
+		<khmerName>ផ្លែក្រូចខ្វិច</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>tangerine.jpg</image>
+		<sound>tangerine.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Watermelon</name>
+		<khmerName>ផ្លែឪឡឹក</khmerName>
+		<foodgroup>Fruit</foodgroup>
+		<image>watermelon.jpg</image>
+		<sound>watermelon.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
 	</food>
 	<food>
 		<name>Young Coconut</name>
@@ -1161,10 +498,851 @@
 		<foodgroup>Fruit</foodgroup>
 		<image>young_coconut.jpg</image>
 		<sound>young_coconut.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Basil</name>
+		<khmerName>ជីក្រហម</khmerName>
+		<foodgroup>Herbs</foodgroup>
+		<image>basil.jpg</image>
+		<sound>basil.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Cinnamon</name>
+		<khmerName>ឈើអ៊ែម</khmerName>
+		<foodgroup>Herbs</foodgroup>
+		<image>cinnamon.jpg</image>
+		<sound>cinnamon.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Garlic</name>
+		<khmerName>ខ្ទឹមស</khmerName>
+		<foodgroup>Herbs</foodgroup>
+		<image>garlic.jpg</image>
+		<sound>garlic.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Holy Basil</name>
+		<khmerName>ម្រះព្រៅ</khmerName>
+		<foodgroup>Herbs</foodgroup>
+		<image>holy_basil.jpg</image>
+		<sound>holy_basil.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Turmeric</name>
+		<khmerName>រមៀត</khmerName>
+		<foodgroup>Herbs</foodgroup>
+		<image>tumeric.jpg</image>
+		<sound>turmeric.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Fish Herb</name>
+		<khmerName>ជីថ្ពាល់ត្រី</khmerName>
+		<foodgroup>Herbs</foodgroup>
+		<image>fish_herb.jpg</image>
+		<sound>fish_herb.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Rice Paddy Herb</name>
+		<khmerName>ម្អម</khmerName>
+		<foodgroup>Herbs</foodgroup>
+		<image>rice_paddy_herb.jpg</image>
+		<sound>rice_paddy_herb.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Sugar</name>
+		<khmerName>-</khmerName>
+		<foodgroup>Herbs</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>No need to add sugar in my food.! Fruits and stapples contain enough natural sugar for your baby.</instantFeedback>
+		<khmerInstantFeedback>មិនត្រូវការបន្ថែមស្ករក្នុងអាហាររបស់ខ្ញុំទេ! ផ្លែឈើនិងបាយគឺមានផ្ទុកសារធាតុស្ករធម្មជាតិគ្រប់គ្រាន់សម្រាប់កូនរបស់ខ្ញុំហើយ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Salt</name>
+		<khmerName>-</khmerName>
+		<foodgroup>Herbs</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Be careful. Dont put too much salt in my food!</instantFeedback>
+		<khmerInstantFeedback>ចូរប្រុងប្រយ័ត្ន!កុំដាក់អំពិលច្រើនពេកនៅក្នុងម្ហូបរបស់ខ្ញុំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Honey</name>
+		<khmerName>-</khmerName>
+		<foodgroup>Herbs</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Be careful! Honey should not be given to babies less than 1 year of age.</instantFeedback>
+		<khmerInstantFeedback>ចូូរប្រុងប្រយ័ត្ន!ទឹកឃ្មុំមិនគួរផ្តល់អោយកុមារដែលមានអាយុក្រោម១ឆ្នាំឡើយ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Seasoaning (glutamate)</name>
+		<khmerName>-</khmerName>
+		<foodgroup>Herbs</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Be careful! Chemical seasoning is dangerous for my health. Try to replace it with natural hearbs and spices.</instantFeedback>
+		<khmerInstantFeedback>ចូរប្រុងប្្រយ័ត្ន!ប៊ីចេងគឺមានគ្រោះថ្នាក់ណាស់សម្រាប់សុខភាពខ្ញុំ។ សូមព្យាយាមដាក់ជំនួសនូវគ្រឿងផ្សំធម្មជាតិវិញ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Pork</name>
+		<khmerName>សាច់ជ្រូក</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>-</image>
+		<sound>pork.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Chicken</name>
+		<khmerName>សាច់់មាន់</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>-</image>
+		<sound>chicken.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Beef</name>
+		<khmerName>សាច់គោ</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>-</image>
+		<sound>beef.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Fish</name>
+		<khmerName>សាច់ត្រី</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>-</image>
+		<sound>fish.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Duck</name>
+		<khmerName>សាច់ទា</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>-</image>
+		<sound>duck.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Crab</name>
+		<khmerName>ក្តាម</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Be carefull. Shellfish are not recomended for babies less than 1 year.</instantFeedback>
+		<khmerInstantFeedback>ចូរប្រុងប្រយ័ត្ន!ពពួកលៀស គ្រុំ ខ្យង ខ្ចៅ គឺមិនគួរផ្តល់អោយកុមារដែលមានអាយុក្រោយម១ឆ្នាំឡើយ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Eggs</name>
+		<khmerName>-</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Liver</name>
+		<khmerName>-</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Peanut</name>
+		<khmerName>សណ្តែកដី</khmerName>
+		<foodgroup>Legumes</foodgroup>
+		<image>peanut.jpg</image>
+		<sound>peanut.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Black Eyed Peas</name>
+		<khmerName>សណ្តែកសៀង</khmerName>
+		<foodgroup>Legumes</foodgroup>
+		<image>black_eyed_peas.jpg</image>
+		<sound>black_eyed_peas.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Green Mung Beans</name>
+		<khmerName>សណ្តែកបាយខៀវ</khmerName>
+		<foodgroup>Legumes</foodgroup>
+		<image>green_mung_beans.jpg</image>
+		<sound>green_mung_beans.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Kidney Beans</name>
+		<khmerName>សណ្តែកគុយ</khmerName>
+		<foodgroup>Legumes</foodgroup>
+		<image>kidney_beans.jpg</image>
+		<sound>kidney_bean.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Red Mung Beans</name>
+		<khmerName>សណ្តែកបាយក្រហម</khmerName>
+		<foodgroup>Legumes</foodgroup>
+		<image>red_mung_beans.jpg</image>
+		<sound>red_mung_beans.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Soy Beans</name>
+		<khmerName>សណ្តែកសៀង</khmerName>
+		<foodgroup>Legumes</foodgroup>
+		<image>soy_beans.jpg</image>
+		<sound>soy_bean.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Pumpin seeds</name>
+		<khmerName>គ្រាប់ល្ពៅ</khmerName>
+		<foodgroup>Legumes</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Avocado</name>
+		<khmerName>ផ្លែអាវ៉ូកាឌូ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>avocado.jpg</image>
+		<sound>avocado.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Baby Corn</name>
+		<khmerName>ស្នៀតពោត</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>baby_corn.jpg</image>
+		<sound>baby_corn.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Baby Eggplant</name>
+		<khmerName>ត្រប់ស្រួយ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>baby_eggplant.jpg</image>
+		<sound>baby_eggplant.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Bamboo Shoot</name>
+		<khmerName>ទំពាំង</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>bamboo_shoot.jpg</image>
+		<sound>bamboo_shot.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Banana Blossom</name>
+		<khmerName>ត្រួយ៉ូងចេក</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>banana_blossom.jpg</image>
+		<sound>banana_blossom.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Banana Stem</name>
+		<khmerName>ដើមចេក</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>banana_stem.jpg</image>
+		<sound>banana_stem.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Bean Sprout</name>
+		<khmerName>សណ្តែកបណ្តុះ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>bean_sprout.jpg</image>
+		<sound>bean_sprout.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Broccoli</name>
+		<khmerName>ផ្កាខាត់ណាខៀវ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>broccoli.jpg</image>
+		<sound>broccoli.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Carrot</name>
+		<khmerName>ការ៉ុត</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This fruit is full of vitamin A which is good for my eyes and skin.</instantFeedback>
+		<khmerInstantFeedback>ពិត​ជាត្រឹមត្រូវ! ផ្លែឈើនេះពោរពេញទៅដោយវីតាមីនអា ដែលជួយដល់ភ្នែកនិងស្បែករបស់ខ្ញុំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Cabbage</name>
+		<khmerName>ស្ពែក្តោប</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>cabbage.jpg</image>
+		<sound>cabbage.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Celery</name>
+		<khmerName>ភ្លៅកង្កែប</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>celery.jpg</image>
+		<sound>celery.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Chicory</name>
+		<khmerName>ស្លឺកតាំងអោរ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>chicory.jpg</image>
+		<sound>chicory.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This fruit is full of vitamin A which is good for my eyes and skin.</instantFeedback>
+		<khmerInstantFeedback>ពិត​ជាត្រឹមត្រូវ! ផ្លែឈើនេះពោរពេញទៅដោយវីតាមីនអា ដែលជួយដល់ភ្នែកនិងស្បែករបស់ខ្ញុំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Chinese Cabbage</name>
+		<khmerName>ស្ពែបូកគោ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>chinese_cabbage.jpg</image>
+		<sound>chinese_cabbage.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Chive Flower</name>
+		<khmerName>ផ្កាគូឆាយ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>chive_flower.jpg</image>
+		<sound>chive_flower.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Choy Sum</name>
+		<khmerName>ស្ពៃចង្កឹះ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>choy_sum.jpg</image>
+		<sound>choy_sum.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which help me to avoid illnesses!</instantFeedback>
+		<khmerInstantFeedback>ពិត​ជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលជួយអោយខ្ញុំជៀសផុតពីជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Enoki Mushroom</name>
+		<khmerName>ផ្សិតម្ជុល</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>enoki_mushroom.jpg</image>
+		<sound>enoki_mushroom.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Escarole</name>
+		<khmerName>ស្ពៃក្រញាញ់</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>escarole.jpg</image>
+		<sound>escarole.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which help me to avoid illnesses!</instantFeedback>
+		<khmerInstantFeedback>ពិត​ជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលជួយអោយខ្ញុំជៀសផុតពីជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>French Bean</name>
+		<khmerName>សណ្តែកបារាំង</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>french_bean.jpg</image>
+		<sound>french_beans.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Green Papaya</name>
+		<khmerName>ល្ហុងខ្ចី</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>green_papaya.jpg</image>
+		<sound>green_papaya.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Green Peas</name>
+		<khmerName>គ្រាប់សណ្តែកខៀវ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>green_peas.jpg</image>
+		<sound>green_pease.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Green Tomato</name>
+		<khmerName>ប៉េងប៉ោះ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>green_tomato.jpg</image>
+		<sound>green_tomato.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Ivy Gourd Leaves</name>
+		<khmerName>ស្លឺឹកបាស់</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>ivy_gourd_leaves.jpg</image>
+		<sound>ivy_gourd_leave.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which prevents me from falling ill.</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Lettuce</name>
+		<khmerName>សាឡាត់</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>lettuce.jpg</image>
+		<sound>lettuce.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which prevents me from falling ill.</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Lotus Root</name>
+		<khmerName>មើមឈូក</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>lotus_root.jpg</image>
+		<sound>lotus_root.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Lotus Stem</name>
+		<khmerName>ក្រអៅឈូក</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>lotus_stem.jpg</image>
+		<sound>lotus_stem.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Luffa</name>
+		<khmerName>ននោង</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>luffa.jpg</image>
+		<sound>luffa.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Margosa Leaves</name>
+		<khmerName>ត្រួយស្តៅ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>margosa_leaves.jpg</image>
+		<sound>margosa_leaves.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which prevents me from falling ill.</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Moringa</name>
+		<khmerName>ស្លឹកម្រុំ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>moringa.jpg</image>
+		<sound>moringa.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which prevents me from falling ill.</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Moustard Greens</name>
+		<khmerName>ស្ពៃទឿ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>mustard_greens.jpg</image>
+		<sound>moustard_green.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which prevents me from falling ill.</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Ngub Leaves</name>
+		<khmerName>ស្លឹកងប់</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>ngob_leaves.jpg</image>
+		<sound>ngob_leave.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which prevents me from falling ill.</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Okra</name>
+		<khmerName>ពោតបារាំង</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>okra.jpg</image>
+		<sound>okra.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Oyster Mushroom</name>
+		<khmerName>ផ្សិតអំបោះ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>oyster_mushroom.jpg</image>
+		<sound>oyster_mushroom.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Great choice! This is nutritious food for my growing body!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាអស្ចារ្យ! អាហារូបត្ងម្ភនេះពិតជាជួយដល់ការរីកលូតលាស់រាងកាយរបស់ខ្ញុំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Pea Eggplant</name>
+		<khmerName>ត្រប់់ពុតញង</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>pea_eggplant.jpg</image>
+		<sound>pea_eggplant.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Red Cabbage</name>
+		<khmerName>ស្ពៃក្តោបពណ៏ស្វាយ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>red_cabbage.jpg</image>
+		<sound>red_cabbage.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Great choice! This is nutritious food for my growing body!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាអស្ចារ្យ! អាហារូបត្ងម្ភនេះពិតជាជួយដល់ការរីកលូតលាស់រាងកាយរបស់ខ្ញុំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Shemeji Mushroom</name>
+		<khmerName>ផ្សិតក្តាម</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>shemeji_mushroom.jpg</image>
+		<sound>shemeji_mushroom.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Shiitake Mushroom</name>
+		<khmerName>ផ្សិតខ្មៅ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>shiitake_mushroom.jpg</image>
+		<sound>shiitake_mushroom.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Great choice! This is nutritious food for my growing body!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាអស្ចារ្យ! អាហារូបត្ងម្ភនេះពិតជាជួយដល់ការរីកលូតលាស់រាងកាយរបស់ខ្ញុំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Snow Pea</name>
+		<khmerName>ពពាយ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>snow_pea.jpg</image>
+		<sound>snow_pea.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Soy Beans</name>
+		<khmerName>សណ្តែកសៀង</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>soy_beans.jpg</image>
+		<sound>soy_beans.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Spinach</name>
+		<khmerName>ស្ពៃខ្មៅ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>spinach.jpg</image>
+		<sound>spinach.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which prevents me from falling ill.</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Straw Mushroom</name>
+		<khmerName>ផ្សិតចំបើង</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>straw_mushroom.jpg</image>
+		<sound>straw_mushroom.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Water Lily</name>
+		<khmerName>ព្រលឹត</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>water_lily.jpg</image>
+		<sound>water_lily.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Water Pennywort</name>
+		<khmerName>ស្លឹកត្រចៀកក្រាញ់</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>water_pennywort.jpg</image>
+		<sound>water_pennywort.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which prevents me from falling ill.</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Winged Bean</name>
+		<khmerName>ពពាយជ្រុង</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>winged_bean.jpg</image>
+		<sound>winged_bean.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Winter Melon</name>
+		<khmerName>ត្រឡាច</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>winter_melo.jpg</image>
+		<sound>winter_melon.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
 	</food>
 	<food>
 		<name>Young Jackfruit</name>
@@ -1172,10 +1350,11 @@
 		<foodgroup>Vegetable</foodgroup>
 		<image>young_jackfruit.jpg</image>
 		<sound>young_jackfruit.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
 	</food>
 	<food>
 		<name>Zucchini</name>
@@ -1183,9 +1362,154 @@
 		<foodgroup>Vegetable</foodgroup>
 		<image>zucchini.jpg</image>
 		<sound>zucchini.m4a</sound>
-		<consideredSalty>false</consideredSalty>
-		<consideredProteinRich>false</consideredProteinRich>
-		<consideredIronRich>false</consideredIronRich>
-		<instantFeedback>Food selected</instantFeedback>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>-</instantFeedback>
+		<khmerInstantFeedback>-</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Morning glory</name>
+		<khmerName>ត្រគួន</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which prevents me from falling ill.</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Amaranth</name>
+		<khmerName>ផ្ទី</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which prevents me from falling ill.</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Pumpin leaves</name>
+		<khmerName>ត្រួយល្ពៅ</khmerName>
+		<foodgroup>Vegetable</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which prevents me from falling ill.</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Soft drink</name>
+		<khmerName>ភេសជ្ជះ</khmerName>
+		<foodgroup>Drink</foodgroup>
+		<image>soft_drink.jpg</image>
+		<sound>soft_drink.m4a</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Soft drinks are not good for me! They contain too much sugar and chemicals. It is better to give me water or breastmilk!</instantFeedback>
+		<khmerInstantFeedback>ភេសជ្ជៈគឺមិនល្អសម្រាប់ខ្ញុំទេ! ពួកវាមានផ្ទុកជាតិផ្អែម និង គីមីច្រើនណាស់។ ជាការប្រសើរគួរតែផ្តល់ទឹកនិងទឹកដោះដល់ខ្ញុំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Khmer cakes</name>
+		<khmerName>នំក្រូច</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>coconut_rice_cake.jpg</image>
+		<sound>khmer_cakes.m4a</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Sweet foods are not good for me! It contains too much sugar! Choose fruit or bread instead. I like them as well in moderation.</instantFeedback>
+		<khmerInstantFeedback>អាហារផ្អែមៗគឺមិនល្អសម្រាប់ខ្ញុំទេ!វាមានផ្ទុកសារធាតុខ្លាញ់ និងអំបិលច្រើនណាស់! គួរជំនួសដោយផ្លែឈើ ឬនំប័ុង។ ខ្ញុំត្រូវការពួកវាក្នុងកម្រិតសមរម្យ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Crisps</name>
+		<khmerName>នំំកញ្ចប់</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>crisps.jpg</image>
+		<sound>crips.m4a</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Be careful! This is not baby food. It contain too much fat and salt. Choose an other staple food.</instantFeedback>
+		<khmerInstantFeedback>ចូរប្រុងប្រយ័ត្ន!នេះមិនមែនជាអាហារសម្រាប់កុមារទេ។ វាមានផ្ទុកសារធាតុខ្លាញ់ និងអំបិលច្រើនណាស់។ គួរជ្រើសរើសយកប្រភេទអាហារផ្សេងវិញ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>French fries</name>
+		<khmerName>ដំឡូងបំពង</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Fried food is not good for a baby like me. It is too difficult to digest! Please, feed me something healthier such as bolied/steamed potatoes.</instantFeedback>
+		<khmerInstantFeedback>អាហារនេះគឺមិនល្អសម្រាប់កុមារដូចខ្ញុំទេ ពីព្រោះវាពិបាក់រំលាយ។ សូមផ្តល់ចំណីអាហារណាដែលធ្វើអោយមានសុខភាពដល់ខ្ញុំដូចជា ដំឡូងស្ងោរ ឬចំហុយ </khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Buffalo/Cow Milk</name>
+		<khmerName>ទឹកដោះគោ</khmerName>
+		<foodgroup>Drink</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Drinking milk will help me grow strong!</instantFeedback>
+		<khmerInstantFeedback>ការផឹកទឹកដោះនិងជួយខ្ញុំអោយមានការលូតលាស់និងរឺងមាំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Breast Milk</name>
+		<khmerName>ទឹកដោះម្តាយ</khmerName>
+		<foodgroup>Drink</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Your're doing great! Continue to breastfeed me!</instantFeedback>
+		<khmerInstantFeedback>ធ្វើបានល្អណាស់! សូមបន្តផ្តល់ការបំប៉ៅដោះដល់ខ្ញុំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Tea</name>
+		<khmerName>ទឹកតែ</khmerName>
+		<foodgroup>Drink</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Tea is not recommended for a small baby like me. It can disturb my sleep. I prefer water and breastmilk!</instantFeedback>
+		<khmerInstantFeedback>ទឹកតែគឺមិនល្អសម្រាប់កុមារតូចដូចរូបខ្ញុំទេ។ វាអាចរំខានដល់ការគេងរបស់ខ្ញុំ។ ខ្ញុំចូលចិត្តទឹកនិងទឹកដោះម្តាយជាងទឹកតែ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Soft drink</name>
+		<khmerName>ភេសជ្ជៈ</khmerName>
+		<foodgroup>Drink</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Soft drinks are not good for me! It contains too much sugar and chemicals! I prefer water and breastmilk!</instantFeedback>
+		<khmerInstantFeedback>ភេសជ្ជៈគឺមិនល្អសម្រាប់ខ្ញុំទេ! ពួកវាមានផ្ទុកជាតិផ្អែម និង គីមីច្រើនណាស់។ ខ្ញុំចូលចិត្តទឹកនិងទឹកដោះម្តាយជាងភេសជ្ជៈ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Water</name>
+		<khmerName>ទឹឹក</khmerName>
+		<foodgroup>Drink</foodgroup>
+		<image>-</image>
+		<sound>-</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Remember to give me clean water! Remember the water must be boiled and then cooled down to room temperature. Readily available or filtered bottled water works as well!</instantFeedback>
+		<khmerInstantFeedback>សូមចង់ចាំថាត្រូវផ្តល់ទឹកស្អាតដល់ខ្ញុំ! ត្រូវចាំថាទឹកត្រូវដាំឆ្អិន បន្ទាប់មកទុកអោយត្រជាក់នៅក្នុងបន្ទប់មួយដែលងាយស្រួលអាចប្រើប្រាស់បានឬច្រកក្នុងដបអោយបានត្រឹមត្រូវ</khmerInstantFeedback>
 	</food>
 </foods>

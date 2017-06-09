@@ -14,10 +14,12 @@ public class Food implements Comparable<Food> {
     private String foodGroup;
     private Bitmap image;
     private String sound;
-    private boolean consideredSalty;
+    private boolean notSuitable;
     private boolean consideredProteinRich;
-    private boolean consideredIronRich;
+    private boolean consideredVitARich;
     private String instantFeedback;
+    private String instantFeedbackEnglish;
+    private String instantFeedbackKhmer;
 
     public Food(String name, String foodGroup, Bitmap image) {
         this.name = name;
@@ -73,12 +75,12 @@ public class Food implements Comparable<Food> {
         this.sound = sound;
     }
 
-    public boolean isConsideredSalty() {
-        return consideredSalty;
+    public boolean isNotSuitable() {
+        return notSuitable;
     }
 
-    public void setConsideredSalty(boolean consideredSalty) {
-        this.consideredSalty = consideredSalty;
+    public void setNotSuitable(boolean notSuitable) {
+        this.notSuitable = notSuitable;
     }
 
     public boolean isConsideredProteinRich() {
@@ -89,12 +91,12 @@ public class Food implements Comparable<Food> {
         this.consideredProteinRich = consideredProteinRich;
     }
 
-    public boolean isConsideredIronRich() {
-        return consideredIronRich;
+    public boolean isConsideredVitARich() {
+        return consideredVitARich;
     }
 
-    public void setConsideredIronRich(boolean consideredIronRich) {
-        this.consideredIronRich = consideredIronRich;
+    public void setConsideredVitARich(boolean consideredVitARich) {
+        this.consideredVitARich = consideredVitARich;
     }
 
     public String getInstantFeedback() {
@@ -103,6 +105,22 @@ public class Food implements Comparable<Food> {
 
     public void setInstantFeedback(String instantFeedback) {
         this.instantFeedback = instantFeedback;
+    }
+
+    public String getInstantFeedbackEnglish() {
+        return instantFeedbackEnglish;
+    }
+
+    public void setInstantFeedbackEnglish(String instantFeedbackEnglish) {
+        this.instantFeedbackEnglish = instantFeedbackEnglish;
+    }
+
+    public String getInstantFeedbackKhmer() {
+        return instantFeedbackKhmer;
+    }
+
+    public void setInstantFeedbackKhmer(String instantFeedbackKhmer) {
+        this.instantFeedbackKhmer = instantFeedbackKhmer;
     }
 
     @Override

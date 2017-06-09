@@ -70,6 +70,7 @@ public class Child {
         boolean containsVegetable = false;
         boolean containsProtein = false;
 
+        /**
         for (Food food : foods) {
             if (food.getFoodGroup().equals("Junk Food") && !junkFoodCardAdded) {
                 finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_junk_food_title, R.string.feedback_food_junk_food_message, "drink_candy_junk_present.png", false));
@@ -115,6 +116,7 @@ public class Child {
         if(!containsProtein){
             finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_protein_present_title, R.string.feedback_food_lack_of_protein_message, "lack_protein.png", false));
         }
+         **/
 
         return finalFeedbackCardsFood;
     }
