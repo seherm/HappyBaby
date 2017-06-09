@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<foods>
+<foods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<food>
 		<name>Bread</name>
 		<khmerName>នំប័ង</khmerName>
@@ -37,7 +37,7 @@
 		<khmerInstantFeedback>តើមានប្រភេទអាហារណាខ្លះដែលខ្ញុំនិងញាំនៅថ្ងៃនេះ?</khmerInstantFeedback>
 	</food>
 	<food>
-		<name>Sweet Corn (corn on the cob)</name>
+		<name>Sweet Corn</name>
 		<khmerName>ពោត</khmerName>
 		<foodgroup>Carbohydrate</foodgroup>
 		<image>sweet_corn.jpg</image>
@@ -597,7 +597,7 @@
 		<notSuitable>true</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
-		<instantFeedback>No need to add sugar in my food.! Fruits and stapples contain enough natural sugar for your baby.</instantFeedback>
+		<instantFeedback>No need to add sugar in my food! Fruits and stapples contain enough natural sugar for your baby.</instantFeedback>
 		<khmerInstantFeedback>មិនត្រូវការបន្ថែមស្ករក្នុងអាហាររបស់ខ្ញុំទេ! ផ្លែឈើនិងបាយគឺមានផ្ទុកសារធាតុស្ករធម្មជាតិគ្រប់គ្រាន់សម្រាប់កូនរបស់ខ្ញុំហើយ</khmerInstantFeedback>
 	</food>
 	<food>
@@ -609,7 +609,7 @@
 		<notSuitable>true</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
-		<instantFeedback>Be careful. Dont put too much salt in my food!</instantFeedback>
+		<instantFeedback>Be careful. Don't put too much salt in my food!</instantFeedback>
 		<khmerInstantFeedback>ចូរប្រុងប្រយ័ត្ន!កុំដាក់អំពិលច្រើនពេកនៅក្នុងម្ហូបរបស់ខ្ញុំ</khmerInstantFeedback>
 	</food>
 	<food>
@@ -705,7 +705,7 @@
 		<notSuitable>true</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
 		<consideredIronProteinRich>true</consideredIronProteinRich>
-		<instantFeedback>Be carefull. Shellfish are not recomended for babies less than 1 year.</instantFeedback>
+		<instantFeedback>Be careful. Shellfish are not recomended for babies less than 1 year.</instantFeedback>
 		<khmerInstantFeedback>ចូរប្រុងប្រយ័ត្ន!ពពួកលៀស គ្រុំ ខ្យង ខ្ចៅ គឺមិនគួរផ្តល់អោយកុមារដែលមានអាយុក្រោយម១ឆ្នាំឡើយ</khmerInstantFeedback>
 	</food>
 	<food>
@@ -1437,7 +1437,7 @@
 		<notSuitable>true</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
-		<instantFeedback>Be careful! This is not baby food. It contain too much fat and salt. Choose an other staple food.</instantFeedback>
+		<instantFeedback>Be careful! This is not baby food. It contains too much fat and salt. Choose an other staple food.</instantFeedback>
 		<khmerInstantFeedback>ចូរប្រុងប្រយ័ត្ន!នេះមិនមែនជាអាហារសម្រាប់កុមារទេ។ វាមានផ្ទុកសារធាតុខ្លាញ់ និងអំបិលច្រើនណាស់។ គួរជ្រើសរើសយកប្រភេទអាហារផ្សេងវិញ</khmerInstantFeedback>
 	</food>
 	<food>
