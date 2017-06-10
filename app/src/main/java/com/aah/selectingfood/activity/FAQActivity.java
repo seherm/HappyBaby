@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.aah.selectingfood.R;
+import com.aah.selectingfood.helper.LocaleHelper;
 
 /**
  * This Activity is for showing static content in an frequently asked questions page
@@ -27,22 +28,24 @@ public class FAQActivity extends BaseActivity {
         }
         setTitle(getString(R.string.title_activity_faq));
 
-        TextView textView = (TextView) findViewById(R.id.textViewFAQ);
-        textView.setMovementMethod(LinkMovementMethod.getInstance());
-        Spannable spans = (Spannable) textView.getText();
+        if(LocaleHelper.getLanguage(this).equals("en")){
+            TextView textView = (TextView) findViewById(R.id.textViewFAQ);
+            textView.setMovementMethod(LinkMovementMethod.getInstance());
+            Spannable spans = (Spannable) textView.getText();
 
-        ClickableSpan clickSpan = new ClickableSpan() {
+            ClickableSpan clickSpan = new ClickableSpan() {
 
-            @Override
-            public void onClick(View widget)
-            {
-                Intent intent = new Intent(FAQActivity.this, RecipesActivity.class);
-                startActivity(intent);
-            }
-        };
-        String text = textView.getText().toString();
-        String linkText = "(link to recipe)";
-        int linkOccurence = text.indexOf(linkText);
-        spans.setSpan(clickSpan, linkOccurence, linkOccurence+linkText.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                @Override
+                public void onClick(View widget)
+                {
+                    Intent intent = new Intent(FAQActivity.this, RecipesActivity.class);
+                    startActivity(intent);
+                }
+            };
+            String text = textView.getText().toString();
+            String linkText = "(link to recipe)";
+            int linkOccurence = text.indexOf(linkText);
+            spans.setSpan(clickSpan, linkOccurence, linkOccurence+linkText.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
     }
 }

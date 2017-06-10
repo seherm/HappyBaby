@@ -85,6 +85,102 @@
 		<khmerInstantFeedback>តើមានប្រភេទអាហារណាខ្លះដែលខ្ញុំនិងញាំនៅថ្ងៃនេះ?</khmerInstantFeedback>
 	</food>
 	<food>
+		<name>Khmer cakes</name>
+		<khmerName>នំក្រូច</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>coconut_rice_cake.jpg</image>
+		<sound>khmer_cakes.m4a</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Sweet foods are not good for me! It contains too much sugar! Choose fruit or bread instead. I like them as well in moderation.</instantFeedback>
+		<khmerInstantFeedback>អាហារផ្អែមៗគឺមិនល្អសម្រាប់ខ្ញុំទេ!វាមានផ្ទុកសារធាតុខ្លាញ់ និងអំបិលច្រើនណាស់! គួរជំនួសដោយផ្លែឈើ ឬនំប័ុង។ ខ្ញុំត្រូវការពួកវាក្នុងកម្រិតសមរម្យ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Crisps</name>
+		<khmerName>នំំកញ្ចប់</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>crisps.jpg</image>
+		<sound>crips.m4a</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Be careful! This is not baby food. It contains too much fat and salt. Choose an other staple food.</instantFeedback>
+		<khmerInstantFeedback>ចូរប្រុងប្រយ័ត្ន!នេះមិនមែនជាអាហារសម្រាប់កុមារទេ។ វាមានផ្ទុកសារធាតុខ្លាញ់ និងអំបិលច្រើនណាស់។ គួរជ្រើសរើសយកប្រភេទអាហារផ្សេងវិញ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>French fries</name>
+		<khmerName>ដំឡូងបំពង</khmerName>
+		<foodgroup>Carbohydrate</foodgroup>
+		<image>french_fries.jpg</image>
+		<sound>french_fries.m4a</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Fried food is not good for a baby like me. It is too difficult to digest! Please, feed me something healthier such as bolied/steamed potatoes.</instantFeedback>
+		<khmerInstantFeedback>អាហារនេះគឺមិនល្អសម្រាប់កុមារដូចខ្ញុំទេ ពីព្រោះវាពិបាក់រំលាយ។ សូមផ្តល់ចំណីអាហារណាដែលធ្វើអោយមានសុខភាពដល់ខ្ញុំដូចជា ដំឡូងស្ងោរ ឬចំហុយ </khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Soft drink</name>
+		<khmerName>ភេសជ្ជះ</khmerName>
+		<foodgroup>Drink</foodgroup>
+		<image>soft_drink.jpg</image>
+		<sound>soft_drink.m4a</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Soft drinks are not good for me! They contain too much sugar and chemicals. It is better to give me water or breastmilk!</instantFeedback>
+		<khmerInstantFeedback>ភេសជ្ជៈគឺមិនល្អសម្រាប់ខ្ញុំទេ! ពួកវាមានផ្ទុកជាតិផ្អែម និង គីមីច្រើនណាស់។ ជាការប្រសើរគួរតែផ្តល់ទឹកនិងទឹកដោះដល់ខ្ញុំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Buffalo/Cow Milk</name>
+		<khmerName>ទឹកដោះគោ</khmerName>
+		<foodgroup>Drink</foodgroup>
+		<image>milk.jpg</image>
+		<sound>buffalo_cow_milk.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Drinking milk will help me grow strong!</instantFeedback>
+		<khmerInstantFeedback>ការផឹកទឹកដោះនិងជួយខ្ញុំអោយមានការលូតលាស់និងរឺងមាំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Breast Milk</name>
+		<khmerName>ទឹកដោះម្តាយ</khmerName>
+		<foodgroup>Drink</foodgroup>
+		<image>breastmilk.jpg</image>
+		<sound>-</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>true</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Your're doing great! Continue to breastfeed me!</instantFeedback>
+		<khmerInstantFeedback>ធ្វើបានល្អណាស់! សូមបន្តផ្តល់ការបំប៉ៅដោះដល់ខ្ញុំ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Tea</name>
+		<khmerName>ទឹកតែ</khmerName>
+		<foodgroup>Drink</foodgroup>
+		<image>tea.jpg</image>
+		<sound>tea.m4a</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Tea is not recommended for a small baby like me. It can disturb my sleep. I prefer water and breastmilk!</instantFeedback>
+		<khmerInstantFeedback>ទឹកតែគឺមិនល្អសម្រាប់កុមារតូចដូចរូបខ្ញុំទេ។ វាអាចរំខានដល់ការគេងរបស់ខ្ញុំ។ ខ្ញុំចូលចិត្តទឹកនិងទឹកដោះម្តាយជាងទឹកតែ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Water</name>
+		<khmerName>ទឹឹក</khmerName>
+		<foodgroup>Drink</foodgroup>
+		<image>water.jpg</image>
+		<sound>water.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>false</consideredIronProteinRich>
+		<instantFeedback>Remember to give me clean water! Remember the water must be boiled and then cooled down to room temperature. Readily available or filtered bottled water works as well!</instantFeedback>
+		<khmerInstantFeedback>សូមចង់ចាំថាត្រូវផ្តល់ទឹកស្អាតដល់ខ្ញុំ! ត្រូវចាំថាទឹកត្រូវដាំឆ្អិន បន្ទាប់មកទុកអោយត្រជាក់នៅក្នុងបន្ទប់មួយដែលងាយស្រួលអាចប្រើប្រាស់បានឬច្រកក្នុងដបអោយបានត្រឹមត្រូវ</khmerInstantFeedback>
+	</food>
+	<food>
 		<name>Apple</name>
 		<khmerName>ផ្លែប៉ោម</khmerName>
 		<foodgroup>Fruit</foodgroup>
@@ -593,7 +689,7 @@
 		<khmerName>ស្ករ</khmerName>
 		<foodgroup>Herbs</foodgroup>
 		<image>sugar.jpg</image>
-		<sound>-</sound>
+		<sound>sugar.m4a</sound>
 		<notSuitable>true</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
@@ -604,7 +700,7 @@
 		<name>Salt</name>
 		<khmerName>អំបិល</khmerName>
 		<foodgroup>Herbs</foodgroup>
-		<image>-</image>
+		<image>salt.jpg</image>
 		<sound>-</sound>
 		<notSuitable>true</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
@@ -616,8 +712,8 @@
 		<name>Honey</name>
 		<khmerName>ទឹកឃ្មុំ</khmerName>
 		<foodgroup>Herbs</foodgroup>
-		<image>-</image>
-		<sound>-</sound>
+		<image>honey.jpg</image>
+		<sound>honey.m4a</sound>
 		<notSuitable>true</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
@@ -628,109 +724,13 @@
 		<name>Seasoaning (glutamate)</name>
 		<khmerName>ប៊ីចេង</khmerName>
 		<foodgroup>Herbs</foodgroup>
-		<image>-</image>
-		<sound>-</sound>
+		<image>seasoning_glutamate.jpg</image>
+		<sound>seasoning.m4a</sound>
 		<notSuitable>true</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
 		<instantFeedback>Be careful! Chemical seasoning is dangerous for my health. Try to replace it with natural hearbs and spices.</instantFeedback>
 		<khmerInstantFeedback>ចូរប្រុងប្្រយ័ត្ន!ប៊ីចេងគឺមានគ្រោះថ្នាក់ណាស់សម្រាប់សុខភាពខ្ញុំ។ សូមព្យាយាមដាក់ជំនួសនូវគ្រឿងផ្សំធម្មជាតិវិញ</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Pork</name>
-		<khmerName>សាច់ជ្រូក</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>-</image>
-		<sound>pork.m4a</sound>
-		<notSuitable>false</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>true</consideredIronProteinRich>
-		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
-		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Chicken</name>
-		<khmerName>សាច់់មាន់</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>chicken.jpg</image>
-		<sound>chicken.m4a</sound>
-		<notSuitable>false</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>true</consideredIronProteinRich>
-		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
-		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Beef</name>
-		<khmerName>សាច់គោ</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>beef.jpg</image>
-		<sound>beef.m4a</sound>
-		<notSuitable>false</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>true</consideredIronProteinRich>
-		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
-		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Fish</name>
-		<khmerName>សាច់ត្រី</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>-</image>
-		<sound>fish.m4a</sound>
-		<notSuitable>false</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>true</consideredIronProteinRich>
-		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
-		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Duck</name>
-		<khmerName>សាច់ទា</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>duck.jpg</image>
-		<sound>duck.m4a</sound>
-		<notSuitable>false</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>true</consideredIronProteinRich>
-		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
-		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Crab</name>
-		<khmerName>ក្តាម</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>-</image>
-		<sound>-</sound>
-		<notSuitable>true</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>true</consideredIronProteinRich>
-		<instantFeedback>Be careful. Shellfish are not recomended for babies less than 1 year.</instantFeedback>
-		<khmerInstantFeedback>ចូរប្រុងប្រយ័ត្ន!ពពួកលៀស គ្រុំ ខ្យង ខ្ចៅ គឺមិនគួរផ្តល់អោយកុមារដែលមានអាយុក្រោយម១ឆ្នាំឡើយ</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Eggs</name>
-		<khmerName>ស៊ុត</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>egg.jpg</image>
-		<sound>-</sound>
-		<notSuitable>false</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>true</consideredIronProteinRich>
-		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
-		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Liver</name>
-		<khmerName>ថ្លើម</khmerName>
-		<foodgroup>Meat</foodgroup>
-		<image>-</image>
-		<sound>-</sound>
-		<notSuitable>false</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>true</consideredIronProteinRich>
-		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
-		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
 	</food>
 	<food>
 		<name>Peanut</name>
@@ -805,11 +805,107 @@
 		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
 	</food>
 	<food>
-		<name>Pumpin seeds</name>
+		<name>Pumpkin seeds</name>
 		<khmerName>គ្រាប់ល្ពៅ</khmerName>
 		<foodgroup>Legumes</foodgroup>
+		<image>pumpkin_seeds.jpg</image>
+		<sound>pumpkin_seeds.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Pork</name>
+		<khmerName>សាច់ជ្រូក</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>pork.jpg</image>
+		<sound>pork.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Chicken</name>
+		<khmerName>សាច់់មាន់</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>chicken.jpg</image>
+		<sound>chicken.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Beef</name>
+		<khmerName>សាច់គោ</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>beef.jpg</image>
+		<sound>beef.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Fish</name>
+		<khmerName>សាច់ត្រី</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>fish.jpg</image>
+		<sound>fish.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Duck</name>
+		<khmerName>សាច់ទា</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>duck.jpg</image>
+		<sound>duck.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Crab</name>
+		<khmerName>ក្តាម</khmerName>
+		<foodgroup>Meat</foodgroup>
 		<image>-</image>
-		<sound>-</sound>
+		<sound>crab.m4a</sound>
+		<notSuitable>true</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Be careful. Shellfish are not recomended for babies less than 1 year.</instantFeedback>
+		<khmerInstantFeedback>ចូរប្រុងប្រយ័ត្ន!ពពួកលៀស គ្រុំ ខ្យង ខ្ចៅ គឺមិនគួរផ្តល់អោយកុមារដែលមានអាយុក្រោយម១ឆ្នាំឡើយ</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Eggs</name>
+		<khmerName>ស៊ុត</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>egg.jpg</image>
+		<sound>eggs.m4a</sound>
+		<notSuitable>false</notSuitable>
+		<consideredVitARich>false</consideredVitARich>
+		<consideredIronProteinRich>true</consideredIronProteinRich>
+		<instantFeedback>Great choice! I will grow fast and strong grow strong!</instantFeedback>
+		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ!ខ្ញុំនិងមានការលូតលាស់លឿននិងកាន់តែរឹងមាំង!</khmerInstantFeedback>
+	</food>
+	<food>
+		<name>Liver</name>
+		<khmerName>ថ្លើម</khmerName>
+		<foodgroup>Meat</foodgroup>
+		<image>liver.jpg</image>
+		<sound>liver.m4a</sound>
 		<notSuitable>false</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
 		<consideredIronProteinRich>true</consideredIronProteinRich>
@@ -917,7 +1013,7 @@
 		<khmerName>ការ៉ុត</khmerName>
 		<foodgroup>Vegetable</foodgroup>
 		<image>carrot.jpg</image>
-		<sound>-</sound>
+		<sound>carrot.m4a</sound>
 		<notSuitable>false</notSuitable>
 		<consideredVitARich>true</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
@@ -1372,8 +1468,8 @@
 		<name>Morning glory</name>
 		<khmerName>ត្រគួន</khmerName>
 		<foodgroup>Vegetable</foodgroup>
-		<image>-</image>
-		<sound>-</sound>
+		<image>morning_glory.jpg</image>
+		<sound>morning_glory.m4a</sound>
 		<notSuitable>false</notSuitable>
 		<consideredVitARich>true</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
@@ -1384,8 +1480,8 @@
 		<name>Amaranth</name>
 		<khmerName>ផ្ទី</khmerName>
 		<foodgroup>Vegetable</foodgroup>
-		<image>-</image>
-		<sound>-</sound>
+		<image>amaranth.jpg</image>
+		<sound>amaranth.m4a</sound>
 		<notSuitable>false</notSuitable>
 		<consideredVitARich>true</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
@@ -1393,111 +1489,15 @@
 		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
 	</food>
 	<food>
-		<name>Pumpin leaves</name>
+		<name>Pumpkin leaves</name>
 		<khmerName>ត្រួយល្ពៅ</khmerName>
 		<foodgroup>Vegetable</foodgroup>
-		<image>-</image>
-		<sound>-</sound>
+		<image>pumpkin_leaves.jpg</image>
+		<sound>pumpkin_leaves.m4a</sound>
 		<notSuitable>false</notSuitable>
 		<consideredVitARich>true</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
 		<instantFeedback>Excellent choice! This vegetable is full of vitamin A which prevents me from falling ill.</instantFeedback>
 		<khmerInstantFeedback>ពិតជាត្រឹមត្រូវ! បន្លៃនេះគឺពោរពេញទៅដោយវីតាមីនអា ដែលអាចការពារខ្ញុំមិនអោយមានជំងឺ</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Soft drink</name>
-		<khmerName>ភេសជ្ជះ</khmerName>
-		<foodgroup>Drink</foodgroup>
-		<image>soft_drink.jpg</image>
-		<sound>soft_drink.m4a</sound>
-		<notSuitable>true</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>false</consideredIronProteinRich>
-		<instantFeedback>Soft drinks are not good for me! They contain too much sugar and chemicals. It is better to give me water or breastmilk!</instantFeedback>
-		<khmerInstantFeedback>ភេសជ្ជៈគឺមិនល្អសម្រាប់ខ្ញុំទេ! ពួកវាមានផ្ទុកជាតិផ្អែម និង គីមីច្រើនណាស់។ ជាការប្រសើរគួរតែផ្តល់ទឹកនិងទឹកដោះដល់ខ្ញុំ</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Khmer cakes</name>
-		<khmerName>នំក្រូច</khmerName>
-		<foodgroup>Carbohydrate</foodgroup>
-		<image>coconut_rice_cake.jpg</image>
-		<sound>khmer_cakes.m4a</sound>
-		<notSuitable>true</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>false</consideredIronProteinRich>
-		<instantFeedback>Sweet foods are not good for me! It contains too much sugar! Choose fruit or bread instead. I like them as well in moderation.</instantFeedback>
-		<khmerInstantFeedback>អាហារផ្អែមៗគឺមិនល្អសម្រាប់ខ្ញុំទេ!វាមានផ្ទុកសារធាតុខ្លាញ់ និងអំបិលច្រើនណាស់! គួរជំនួសដោយផ្លែឈើ ឬនំប័ុង។ ខ្ញុំត្រូវការពួកវាក្នុងកម្រិតសមរម្យ</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Crisps</name>
-		<khmerName>នំំកញ្ចប់</khmerName>
-		<foodgroup>Carbohydrate</foodgroup>
-		<image>crisps.jpg</image>
-		<sound>crips.m4a</sound>
-		<notSuitable>true</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>false</consideredIronProteinRich>
-		<instantFeedback>Be careful! This is not baby food. It contains too much fat and salt. Choose an other staple food.</instantFeedback>
-		<khmerInstantFeedback>ចូរប្រុងប្រយ័ត្ន!នេះមិនមែនជាអាហារសម្រាប់កុមារទេ។ វាមានផ្ទុកសារធាតុខ្លាញ់ និងអំបិលច្រើនណាស់។ គួរជ្រើសរើសយកប្រភេទអាហារផ្សេងវិញ</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>French fries</name>
-		<khmerName>ដំឡូងបំពង</khmerName>
-		<foodgroup>Carbohydrate</foodgroup>
-		<image>-</image>
-		<sound>-</sound>
-		<notSuitable>true</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>false</consideredIronProteinRich>
-		<instantFeedback>Fried food is not good for a baby like me. It is too difficult to digest! Please, feed me something healthier such as bolied/steamed potatoes.</instantFeedback>
-		<khmerInstantFeedback>អាហារនេះគឺមិនល្អសម្រាប់កុមារដូចខ្ញុំទេ ពីព្រោះវាពិបាក់រំលាយ។ សូមផ្តល់ចំណីអាហារណាដែលធ្វើអោយមានសុខភាពដល់ខ្ញុំដូចជា ដំឡូងស្ងោរ ឬចំហុយ </khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Buffalo/Cow Milk</name>
-		<khmerName>ទឹកដោះគោ</khmerName>
-		<foodgroup>Drink</foodgroup>
-		<image>milk.jpg</image>
-		<sound>-</sound>
-		<notSuitable>false</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>true</consideredIronProteinRich>
-		<instantFeedback>Drinking milk will help me grow strong!</instantFeedback>
-		<khmerInstantFeedback>ការផឹកទឹកដោះនិងជួយខ្ញុំអោយមានការលូតលាស់និងរឺងមាំ</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Breast Milk</name>
-		<khmerName>ទឹកដោះម្តាយ</khmerName>
-		<foodgroup>Drink</foodgroup>
-		<image>-</image>
-		<sound>-</sound>
-		<notSuitable>false</notSuitable>
-		<consideredVitARich>true</consideredVitARich>
-		<consideredIronProteinRich>true</consideredIronProteinRich>
-		<instantFeedback>Your're doing great! Continue to breastfeed me!</instantFeedback>
-		<khmerInstantFeedback>ធ្វើបានល្អណាស់! សូមបន្តផ្តល់ការបំប៉ៅដោះដល់ខ្ញុំ</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Tea</name>
-		<khmerName>ទឹកតែ</khmerName>
-		<foodgroup>Drink</foodgroup>
-		<image>tea.jpg</image>
-		<sound>-</sound>
-		<notSuitable>true</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>false</consideredIronProteinRich>
-		<instantFeedback>Tea is not recommended for a small baby like me. It can disturb my sleep. I prefer water and breastmilk!</instantFeedback>
-		<khmerInstantFeedback>ទឹកតែគឺមិនល្អសម្រាប់កុមារតូចដូចរូបខ្ញុំទេ។ វាអាចរំខានដល់ការគេងរបស់ខ្ញុំ។ ខ្ញុំចូលចិត្តទឹកនិងទឹកដោះម្តាយជាងទឹកតែ</khmerInstantFeedback>
-	</food>
-	<food>
-		<name>Water</name>
-		<khmerName>ទឹឹក</khmerName>
-		<foodgroup>Drink</foodgroup>
-		<image>water.jpg</image>
-		<sound>-</sound>
-		<notSuitable>false</notSuitable>
-		<consideredVitARich>false</consideredVitARich>
-		<consideredIronProteinRich>false</consideredIronProteinRich>
-		<instantFeedback>Remember to give me clean water! Remember the water must be boiled and then cooled down to room temperature. Readily available or filtered bottled water works as well!</instantFeedback>
-		<khmerInstantFeedback>សូមចង់ចាំថាត្រូវផ្តល់ទឹកស្អាតដល់ខ្ញុំ! ត្រូវចាំថាទឹកត្រូវដាំឆ្អិន បន្ទាប់មកទុកអោយត្រជាក់នៅក្នុងបន្ទប់មួយដែលងាយស្រួលអាចប្រើប្រាស់បានឬច្រកក្នុងដបអោយបានត្រឹមត្រូវ</khmerInstantFeedback>
 	</food>
 </foods>
