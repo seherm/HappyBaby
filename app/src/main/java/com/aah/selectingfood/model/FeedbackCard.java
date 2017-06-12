@@ -9,8 +9,6 @@ import android.graphics.Bitmap;
 public class FeedbackCard {
 
     private int id;
-    private String backgroundColor;
-    private String textColor;
     private int titleStringResourceId;
     private int textStringResourceId;
     private String imageName;
@@ -30,22 +28,6 @@ public class FeedbackCard {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getBackgroundColor() {
-        return backgroundColor;
-    }
-
-    public void setBackgroundColor(String backgroundColor) {
-        this.backgroundColor = backgroundColor;
-    }
-
-    public String getTextColor() {
-        return textColor;
-    }
-
-    public void setTextColor(String textColor) {
-        this.textColor = textColor;
     }
 
     public Bitmap getImage() {

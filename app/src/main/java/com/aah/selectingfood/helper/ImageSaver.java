@@ -34,11 +34,6 @@ public class ImageSaver {
         return this;
     }
 
-    public ImageSaver setExternal(boolean external) {
-        this.external = external;
-        return this;
-    }
-
     public ImageSaver setDirectoryName(String directoryName) {
         this.directoryName = directoryName;
         return this;
@@ -84,17 +79,6 @@ public class ImageSaver {
             Log.e("ImageSaver", "Directory not created");
         }
         return file;
-    }
-
-    public static boolean isExternalStorageWritable() {
-        String state = Environment.getExternalStorageState();
-        return Environment.MEDIA_MOUNTED.equals(state);
-    }
-
-    public static boolean isExternalStorageReadable() {
-        String state = Environment.getExternalStorageState();
-        return Environment.MEDIA_MOUNTED.equals(state) ||
-                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state);
     }
 
     public Bitmap load() {

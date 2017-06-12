@@ -47,6 +47,7 @@ public class AboutActivity extends BaseActivity {
         List<String> list = Arrays.asList(array);
         ArrayList<String> arrayList = new ArrayList<>(list);
         arrayList.add(0, versionName);
+
         ListView aboutListView = (ListView) findViewById(R.id.aboutListView);
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrayList);
         aboutListView.setAdapter(listViewAdapter);

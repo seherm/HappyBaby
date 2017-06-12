@@ -16,14 +16,6 @@ public class GlobalState extends Application {
 
     }
 
-    public boolean getFirstRun() {
-        return firstRun;
-    }
-
-    public void setFirstRun(boolean firstRun) {
-        this.firstRun = firstRun;
-    }
-
     //Here you can define the default app language
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(LocaleHelper.onAttach(base, "km"));

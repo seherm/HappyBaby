@@ -80,7 +80,7 @@ public class Child {
 
             if (food.isConsideredVitARich() && !vitaminACardAdded) {
                 vitaminACardAdded = true;
-                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_vitamin_A_present_title, R.string.feedback_vitamin_A_present_message, "vitA_rich.png", false));
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_vitamin_A_present_title, R.string.feedback_vitamin_A_present_message, "vitA_rich_present.png", false));
             }
 
             if (food.getFoodGroup().equals("Fruit")) {
@@ -126,11 +126,11 @@ public class Child {
         }
 
         if (selectedFoodGroups.size() >= 4) {
-            return new FeedbackCard(R.string.feedback_well_balanced_title, R.string.feedback_well_balanced_message, "balanced.png", true);
+            return new FeedbackCard(R.string.feedback_well_balanced_title, R.string.feedback_well_balanced_message, "meal_balanced.png", true);
             } else {
 
             if (selectedFoodGroups.size() > 0) {
-                return new FeedbackCard(R.string.feedback_not_well_balanced_title, R.string.feedback_not_well_balanced_message, "unbalanced.png", true);
+                return new FeedbackCard(R.string.feedback_not_well_balanced_title, R.string.feedback_not_well_balanced_message, "meal_not_balanced.png", true);
             } else {
                 return new FeedbackCard(R.string.feedback_no_food_selected_title, R.string.feedback_no_food_selected_message, "no_selection.png", false);
             }
