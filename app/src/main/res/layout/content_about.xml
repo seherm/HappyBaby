@@ -8,32 +8,33 @@
     tools:context="com.aah.selectingfood.activity.AboutActivity"
     tools:showIn="@layout/activity_about">
 
-    <ImageView
-        android:id="@+id/imageViewAbout"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/aah_logo"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/aboutListView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewAbout" >
+        <ImageView
+            android:id="@+id/imageViewAbout"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/aah_logo"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/textViewAbout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:maxHeight="350dp"
+            android:maxLines="30"
             android:padding="@dimen/text_margin"
-            android:text="@string/about_acknowledgements" />
-    </ScrollView>
+            android:scrollbars="vertical"
+            android:text="@string/about_acknowledgements"/>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/aboutListView"

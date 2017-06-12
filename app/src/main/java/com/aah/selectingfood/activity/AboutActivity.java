@@ -6,6 +6,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -39,6 +40,9 @@ public class AboutActivity extends BaseActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         setTitle(getString(R.string.title_activity_about));
+
+        TextView textViewAbout = (TextView) findViewById(R.id.textViewAbout);
+        textViewAbout.setMovementMethod(new ScrollingMovementMethod());
 
         String versionName = "Version " + BuildConfig.VERSION_NAME;
 
