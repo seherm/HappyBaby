@@ -10,6 +10,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -42,6 +43,8 @@ public class FoodSelectionActivity extends BaseActivity {
     private MenuItem item;
     private String selectedFoodGroup;
     private MediaPlayer m = new MediaPlayer();
+    private TextView instantFeedback;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +64,9 @@ public class FoodSelectionActivity extends BaseActivity {
         dataManagement = DataManagement.getInstance(this);
         dataManagement.generateFoodList(selectedFoodGroup);
         setTitle(getString(selectedFoodGroupResourceId));
+
+        instantFeedback = (TextView) findViewById(R.id.instantFeedback);
+        instantFeedback.setMovementMethod(new ScrollingMovementMethod());
 
         //Configure Food to Select View
         foodToSelectArrayAdapter = new FoodToSelectArrayAdapter(this, R.layout.food_to_select_item_layout, dataManagement.getFoodToSelect());
@@ -115,10 +121,10 @@ public class FoodSelectionActivity extends BaseActivity {
         ImageView imageViewChild = (ImageView) findViewById(R.id.childImageView);
         Bitmap childImage = dataManagement.getUser().getChildPhotoBitmap();
         imageViewChild.setImageBitmap(childImage);
+
     }
 
     public void checkForImmediateFeedback(Food food) {
-        TextView instantFeedback = (TextView) findViewById(R.id.instantFeedback);
         List<Child> children = dataManagement.getUser().getChildren();
         for (Child child : children) {
             FeedbackInstant feedbackInstant = child.giveFeedbackInstantFood(food);

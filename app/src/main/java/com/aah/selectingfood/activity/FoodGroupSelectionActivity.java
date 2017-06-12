@@ -2,12 +2,15 @@ package com.aah.selectingfood.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -16,14 +19,21 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.aah.selectingfood.R;
 import com.aah.selectingfood.adapter.FoodToSelectArrayAdapter;
 import com.aah.selectingfood.adapter.SelectedFoodRecyclerViewAdapter;
 import com.aah.selectingfood.helper.DataManagement;
+import com.aah.selectingfood.model.Child;
+import com.aah.selectingfood.model.FeedbackInstant;
 import com.aah.selectingfood.model.Food;
 
-/** In this Activity the user selects the food group of the food he wants to select**/
+import java.util.List;
+
+/**
+ * In this Activity the user selects the food group of the food he wants to select
+ **/
 public class FoodGroupSelectionActivity extends BaseActivity {
 
     private DataManagement dataManagement;
@@ -34,6 +44,8 @@ public class FoodGroupSelectionActivity extends BaseActivity {
     private MenuItem item;
     private LinearLayout foodGroup1;
     private LinearLayout foodGroup2;
+    private MediaPlayer m = new MediaPlayer();
+    private TextView instantFeedback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +53,13 @@ public class FoodGroupSelectionActivity extends BaseActivity {
         setContentView(R.layout.activity_food_group_selection);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        if(getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         setTitle(getString(R.string.title_activity_food_group_selection));
+
+        instantFeedback = (TextView) findViewById(R.id.instantFeedback);
+        instantFeedback.setMovementMethod(new ScrollingMovementMethod());
 
         //Configure Selected Food View
         dataManagement = DataManagement.getInstance(this);
@@ -73,6 +88,7 @@ public class FoodGroupSelectionActivity extends BaseActivity {
         foodToSelectGridView = (GridView) findViewById(R.id.foodToSelect);
         foodToSelectGridView.setAdapter(foodToSelectArrayAdapter);
         foodToSelectGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 //collapse searchView
@@ -80,19 +96,60 @@ public class FoodGroupSelectionActivity extends BaseActivity {
                     item.collapseActionView();
                     searchView.setQuery("", false);
                 }
+
                 Food selectedFood = foodToSelectArrayAdapter.getItemAtPosition(position);
-                dataManagement.addSelectedFood(selectedFood);
-                foodToSelectArrayAdapter.notifyDataSetChanged();
-                selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
+
+                if (v.getId() == R.id.soundButton) {
+                    playSound(selectedFood.getSound());
+                } else {
+
+                    dataManagement.addSelectedFood(selectedFood);
+                    dataManagement.storeLastUsedFoodToPrefs();
+                    foodToSelectArrayAdapter.notifyDataSetChanged();
+                    selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
+                    checkForImmediateFeedback(selectedFood);
+                }
             }
         });
     }
 
+    public void checkForImmediateFeedback(Food food) {
+        List<Child> children = dataManagement.getUser().getChildren();
+        for (Child child : children) {
+            FeedbackInstant feedbackInstant = child.giveFeedbackInstantFood(food);
+            instantFeedback.setText(feedbackInstant.getText());
+        }
+    }
+
+
+    public void playSound(String fileName) {
+        try {
+            m.release();
+            m = new MediaPlayer();
+
+            if (m.isPlaying()) {
+                m.stop();
+                m.release();
+                m = new MediaPlayer();
+            }
+            AssetFileDescriptor descriptor = getAssets().openFd("foodSound/" + fileName);
+            m.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
+            descriptor.close();
+
+            m.prepare();
+            m.setVolume(1f, 1f);
+            m.setLooping(false);
+            m.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         selectedFoodRecyclerViewAdapter.notifyDataSetChanged();
-        overridePendingTransition(0,0);
+        overridePendingTransition(0, 0);
     }
 
 
@@ -141,7 +198,7 @@ public class FoodGroupSelectionActivity extends BaseActivity {
         }
         Intent intent = new Intent(this, FoodSelectionActivity.class);
         startActivity(intent);
-        overridePendingTransition(0,0);
+        overridePendingTransition(0, 0);
     }
 
     public void goToFeedbackPage(View view) {
