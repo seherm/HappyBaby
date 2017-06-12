@@ -33,6 +33,7 @@
         <activity
             android:name=".activity.FoodGroupSelectionActivity"
             android:label="@string/title_activity_food_group_selection"
+            android:windowSoftInputMode="adjustPan"
             android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -78,6 +79,7 @@
         <activity
             android:name=".activity.FoodSelectionActivity"
             android:label="@string/title_activity_food_selection"
+            android:windowSoftInputMode="adjustPan"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
