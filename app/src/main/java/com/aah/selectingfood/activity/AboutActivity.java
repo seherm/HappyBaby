@@ -9,10 +9,16 @@ import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.aah.selectingfood.BuildConfig;
 import com.aah.selectingfood.R;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import de.psdev.licensesdialog.LicensesDialog;
 import de.psdev.licensesdialog.licenses.ApacheSoftwareLicense20;
@@ -35,27 +41,23 @@ public class AboutActivity extends BaseActivity {
         }
         setTitle(getString(R.string.title_activity_about));
 
-        String versionName = "";
+        String versionName = "Version " + BuildConfig.VERSION_NAME;
 
-        try {
-            versionName = "Version " + getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        TextView aboutTextView = (TextView) findViewById(R.id.textViewAbout);
-        aboutTextView.setText(versionName);
-
+        String[] array = getResources().getStringArray(R.array.about_items_array);
+        List<String> list = Arrays.asList(array);
+        ArrayList<String> arrayList = new ArrayList<>(list);
+        arrayList.add(0, versionName);
         ListView aboutListView = (ListView) findViewById(R.id.aboutListView);
+        ArrayAdapter<String> listViewAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrayList);
+        aboutListView.setAdapter(listViewAdapter);
         aboutListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {
+                if (position == 1) {
                     showLicenses();
-                } else if (position == 1) {
+                } else if (position == 2) {
                     showCredits();
                 }
-
             }
         });
 

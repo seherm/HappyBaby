@@ -85,8 +85,10 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
 
         TextView titleTextView = (TextView) itemView.findViewById(R.id.title_pager_item);
         titleTextView.setText(feedbacks.get(position).getTitleStringResourceId());
-        ImageView imageView = (ImageView) itemView.findViewById(R.id.img_pager_item);
-        imageView.setImageBitmap(feedbacks.get(position).getImage());
+        if(selectedFood.size()<=8){
+            ImageView imageView = (ImageView) itemView.findViewById(R.id.img_pager_item);
+            imageView.setImageBitmap(feedbacks.get(position).getImage());
+        }
         TextView textView = (TextView) itemView.findViewById(R.id.text_pager_item);
         textView.setText(feedbacks.get(position).getTextStringResourceId());
         container.addView(itemView);

@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:text="@string/settings_select_language"
         android:textSize="@dimen/text_size_large"
         app:layout_constraintLeft_toLeftOf="parent"
