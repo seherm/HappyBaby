@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -28,7 +29,7 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
     private Context context;
     private List<FeedbackCard> feedbacks;
     private DataManagement dataManagement;
-    private SelectedFoodRecyclerViewAdapter selectedFoodRecyclerViewAdapter;
+    private SelectedFoodFeedbackRecyclerViewAdapter selectedFoodFeedbackRecyclerViewAdapter;
 
     public FeedbackViewPagerAdapter(Context context, List<FeedbackCard> feedbacks) {
         this.context = context;
@@ -51,33 +52,24 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
 
         dataManagement = DataManagement.getInstance(context);
         List<Food> selectedFood = dataManagement.getSelectedFood();
+
+        //Show selected Food on first feedback card
         RecyclerView selectedFoodRecyclerView = (RecyclerView) itemView.findViewById(R.id.selectedFoodFeedbackRecyclerView);
         if (feedbacks.get(position).isShowFoodOnCard() && !selectedFood.isEmpty()) {
             //Configure Selected Food View
             final int MAX_FOOD_CARDS = 12;
-            if(selectedFood.size() >= MAX_FOOD_CARDS){
-                List<Food> foodToShowOnCard = new ArrayList<>(selectedFood.subList(0,MAX_FOOD_CARDS-1));
-                Food placeHolder = new Food("...","empty",null);
+            if (selectedFood.size() >= MAX_FOOD_CARDS) {
+                List<Food> foodToShowOnCard = new ArrayList<>(selectedFood.subList(0, MAX_FOOD_CARDS - 1));
+                Food placeHolder = new Food("...", "empty", null);
                 foodToShowOnCard.add(placeHolder);
-                selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(foodToShowOnCard, context, new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(Food item) {
-                        //TODO: create other adapter where no click event listener necessary
-                    }
-                });
-
-            }else{
-                selectedFoodRecyclerViewAdapter = new SelectedFoodRecyclerViewAdapter(selectedFood, context, new SelectedFoodRecyclerViewAdapter.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(Food item) {
-                        //TODO: create other adapter where no click event listener necessary
-                    }
-                });
+                selectedFoodFeedbackRecyclerViewAdapter = new SelectedFoodFeedbackRecyclerViewAdapter(foodToShowOnCard);
+            } else {
+                selectedFoodFeedbackRecyclerViewAdapter = new SelectedFoodFeedbackRecyclerViewAdapter(selectedFood);
             }
 
             GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 4);
             selectedFoodRecyclerView.setLayoutManager(gridLayoutManager);
-            selectedFoodRecyclerView.setAdapter(selectedFoodRecyclerViewAdapter);
+            selectedFoodRecyclerView.setAdapter(selectedFoodFeedbackRecyclerViewAdapter);
 
         } else {
             selectedFoodRecyclerView.setVisibility(View.GONE);
@@ -85,10 +77,8 @@ public class FeedbackViewPagerAdapter extends PagerAdapter {
 
         TextView titleTextView = (TextView) itemView.findViewById(R.id.title_pager_item);
         titleTextView.setText(feedbacks.get(position).getTitleStringResourceId());
-        if(selectedFood.size()<=8){
-            ImageView imageView = (ImageView) itemView.findViewById(R.id.img_pager_item);
-            imageView.setImageBitmap(feedbacks.get(position).getImage());
-        }
+        ImageView imageView = (ImageView) itemView.findViewById(R.id.img_pager_item);
+        imageView.setImageBitmap(feedbacks.get(position).getImage());
         TextView textView = (TextView) itemView.findViewById(R.id.text_pager_item);
         textView.setText(feedbacks.get(position).getTextStringResourceId());
         container.addView(itemView);
