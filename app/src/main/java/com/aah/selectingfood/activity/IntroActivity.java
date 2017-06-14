@@ -13,7 +13,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -35,6 +37,7 @@ import com.github.paolorotolo.appintro.AppIntroFragment;
  **/
 public class IntroActivity extends AppIntro {
 
+    private static final int CAMERA_PERMISSION_REQUEST_CODE = 1;
     private static final int CAMERA_PHOTO_REQUEST_CODE = 1;
     private static final int GALLERY_PHOTO_REQUEST_CODE = 2;
     private ImageView childPhoto;
@@ -85,7 +88,7 @@ public class IntroActivity extends AppIntro {
     }
 
     public void selectPhoto(View view) {
-        //askForPermissions(new String[]{Manifest.permission.CAMERA}, 1);
+        checkPermissions();
         childPhoto = (ImageView) pager.findViewById(R.id.childPhoto);
         try {
             PackageManager packageManager = getPackageManager();
@@ -221,6 +224,38 @@ public class IntroActivity extends AppIntro {
 
         // Store user and children
         dataManagement.storeUserPrefs(user);
+    }
+
+    public void checkPermissions() {
+        if (ContextCompat.checkSelfPermission(IntroActivity.this,
+                Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            if (ActivityCompat.shouldShowRequestPermissionRationale(IntroActivity.this,
+                    Manifest.permission.CAMERA)) {
+            }
+            ActivityCompat.requestPermissions(IntroActivity.this,
+                    new String[]{Manifest.permission.CAMERA},
+                    CAMERA_PERMISSION_REQUEST_CODE);
+        }
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case CAMERA_PERMISSION_REQUEST_CODE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                } else {
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                }
+            }
+        }
     }
 
     @Override
