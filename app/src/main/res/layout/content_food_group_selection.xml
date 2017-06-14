@@ -303,16 +303,6 @@
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         android:layout_marginStart="20dp" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:onClick="goToFeedbackPage"
-        android:src="@drawable/ic_arrow_forward"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
-
         <TextView
             android:id="@+id/instantFeedback"
             android:layout_width="0dp"
