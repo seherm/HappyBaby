@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<foods>
+<foods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<food>
 		<name>Bread</name>
 		<khmerName>នំប័ង</khmerName>
@@ -149,7 +149,7 @@
 		<khmerName>ទឹកដោះម្តាយ</khmerName>
 		<foodgroup>Drink</foodgroup>
 		<image>breastmilk.jpg</image>
-		<sound>-</sound>
+		<sound>breastmilk.m4a</sound>
 		<notSuitable>false</notSuitable>
 		<consideredVitARich>true</consideredVitARich>
 		<consideredIronProteinRich>true</consideredIronProteinRich>
@@ -701,7 +701,7 @@
 		<khmerName>អំបិល</khmerName>
 		<foodgroup>Herbs</foodgroup>
 		<image>salt.jpg</image>
-		<sound>-</sound>
+		<sound>salt.m4a</sound>
 		<notSuitable>true</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
@@ -880,7 +880,7 @@
 		<name>Crab</name>
 		<khmerName>ក្តាម</khmerName>
 		<foodgroup>Meat</foodgroup>
-		<image>-</image>
+		<image>crab.jpg</image>
 		<sound>crab.m4a</sound>
 		<notSuitable>true</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
