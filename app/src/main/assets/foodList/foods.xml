@@ -17,7 +17,7 @@
 		<khmerName>នំំបញ្ចុក</khmerName>
 		<foodgroup>Carbohydrate</foodgroup>
 		<image>rice_noodles.jpg</image>
-		<sound>rice.m4a</sound>
+		<sound>rice_noodle.m4a</sound>
 		<notSuitable>false</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
@@ -29,7 +29,7 @@
 		<khmerName>បាយ</khmerName>
 		<foodgroup>Carbohydrate</foodgroup>
 		<image>rice.jpg</image>
-		<sound>rice_noodle.m4a</sound>
+		<sound>rice.m4a</sound>
 		<notSuitable>false</notSuitable>
 		<consideredVitARich>false</consideredVitARich>
 		<consideredIronProteinRich>false</consideredIronProteinRich>
@@ -86,7 +86,7 @@
 	</food>
 	<food>
 		<name>Khmer cakes</name>
-		<khmerName>នំក្រូច</khmerName>
+		<khmerName>នំក្រួក</khmerName>
 		<foodgroup>Carbohydrate</foodgroup>
 		<image>coconut_rice_cake.jpg</image>
 		<sound>khmer_cakes.m4a</sound>
@@ -98,7 +98,7 @@
 	</food>
 	<food>
 		<name>Crisps</name>
-		<khmerName>នំំកញ្ចប់</khmerName>
+		<khmerName>នំស្រួយៗ</khmerName>
 		<foodgroup>Carbohydrate</foodgroup>
 		<image>crisps.jpg</image>
 		<sound>crips.m4a</sound>
