@@ -40,6 +40,8 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
     private ImageView[] dots;
     private FeedbackViewPagerAdapter pagerAdapter;
     private ViewPager viewPager;
+    private ImageView buttonLeft;
+    private ImageView buttonRight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,24 +65,33 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         viewPager.addOnPageChangeListener(this);
         viewPager.setOffscreenPageLimit(getFeedbackCards().size());
         setUiPageViewController();
+
+        buttonRight = (ImageView) findViewById(R.id.buttonRight);
+        buttonLeft = (ImageView) findViewById(R.id.buttonLeft);
+        buttonLeft.setVisibility(View.GONE);
+        int itemsCount = pagerAdapter.getCount();
+        if (itemsCount == 1) {
+            buttonLeft.setVisibility(View.GONE);
+            buttonRight.setVisibility(View.GONE);
+        }
     }
 
     public void ShareFeedbackCard(View v) {
         final int position = viewPager.getCurrentItem();
         View view = viewPager.getChildAt(position);
-        view = ((ViewGroup)((ViewGroup)((ViewGroup) view).getChildAt(0)).getChildAt(0)).getChildAt(0);
+        view = ((ViewGroup) ((ViewGroup) ((ViewGroup) view).getChildAt(0)).getChildAt(0)).getChildAt(0);
         Bitmap image = getBitmapFromView(view);
         shareGeneral(image);
     }
 
     public static Bitmap getBitmapFromView(View view) {
         //Define a bitmap with the same size as the view
-        Bitmap returnedBitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(),Bitmap.Config.ARGB_8888);
+        Bitmap returnedBitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
         //Bind a canvas to it
         Canvas canvas = new Canvas(returnedBitmap);
         //Get the view's background
-        Drawable bgDrawable =view.getBackground();
-        if (bgDrawable!=null)
+        Drawable bgDrawable = view.getBackground();
+        if (bgDrawable != null)
             //has background drawable, then draw it on the canvas
             bgDrawable.draw(canvas);
         else
@@ -91,7 +102,6 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         //return the bitmap
         return returnedBitmap;
     }
-
 
 
     private List<FeedbackCard> getFeedbackCards() {
@@ -111,7 +121,7 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
 
         // Create individual food feedback for children
         List<FeedbackCard> finalFoodFeedbackCards = firstChild.giveFeedbackFinalFood(dataManagement.getSelectedFood());
-        for (FeedbackCard card : finalFoodFeedbackCards){
+        for (FeedbackCard card : finalFoodFeedbackCards) {
             card.setImage(dataManagement.loadBitmapFromAssets(card.getImageName(), feedbackImagesFolder));
             feedbackCards.add(card);
         }
@@ -206,6 +216,16 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         }
 
         dots[position].setImageDrawable(getResources().getDrawable(R.drawable.dot_selecteditem));
+
+        buttonLeft.setVisibility(View.VISIBLE);
+        buttonRight.setVisibility(View.VISIBLE);
+
+        if (viewPager.getCurrentItem() == pagerAdapter.getCount() - 1) {
+            buttonRight.setVisibility(View.GONE);
+        }
+        if (viewPager.getCurrentItem() == 0) {
+            buttonLeft.setVisibility(View.GONE);
+        }
     }
 
 
@@ -217,6 +237,24 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.restart_menu, menu);
         return true;
+    }
+
+    public void swipePage(View view) {
+        buttonLeft.setVisibility(View.VISIBLE);
+        buttonRight.setVisibility(View.VISIBLE);
+
+        if (view.getId() == R.id.buttonRight) {
+            viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
+        }
+        if (view.getId() == R.id.buttonLeft) {
+            viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
+        }
+        if (viewPager.getCurrentItem() == pagerAdapter.getCount() - 1) {
+            buttonRight.setVisibility(View.GONE);
+        }
+        if (viewPager.getCurrentItem() == 0) {
+            buttonLeft.setVisibility(View.GONE);
+        }
     }
 
     @Override
