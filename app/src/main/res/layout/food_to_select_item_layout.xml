@@ -35,7 +35,7 @@
                     android:layout_gravity="center"
                     android:padding="8dp"
                     android:background="@null"
-                    android:tint="@android:color/secondary_text_dark"
+                    android:tint="@android:color/tab_indicator_text"
                     android:src="@drawable/ic_play_circle_filled_black_24dp" />
 
                 <TextView
