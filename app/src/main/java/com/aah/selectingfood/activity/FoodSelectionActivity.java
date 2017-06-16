@@ -86,9 +86,8 @@ public class FoodSelectionActivity extends BaseActivity {
                 Food selectedFood = foodToSelectArrayAdapter.getItemAtPosition(position);
 
                 if (v.getId() == R.id.soundButton) {
-                    playSound(selectedFood.getSound());
+                    playSound(selectedFood.getSound(), "foodSound");
                 } else {
-
                     dataManagement.addSelectedFood(selectedFood);
                     dataManagement.storeLastUsedFoodToPrefs();
                     foodToSelectArrayAdapter.notifyDataSetChanged();
@@ -130,10 +129,15 @@ public class FoodSelectionActivity extends BaseActivity {
             FeedbackInstant feedbackInstant = child.giveFeedbackInstantFood(food);
             instantFeedback.setText(feedbackInstant.getText());
         }
+        if (food.isNotSuitable()) {
+            playSound("bad_sound.mp3", "feedbackSound");
+        } else {
+            playSound("good_sound.mp3", "feedbackSound");
+        }
     }
 
 
-    public void playSound(String fileName) {
+    public void playSound(String fileName, String folderName) {
         try {
             m.release();
             m = new MediaPlayer();
@@ -143,7 +147,7 @@ public class FoodSelectionActivity extends BaseActivity {
                 m.release();
                 m = new MediaPlayer();
             }
-            AssetFileDescriptor descriptor = getAssets().openFd("foodSound/" + fileName);
+            AssetFileDescriptor descriptor = getAssets().openFd(folderName + "/" + fileName);
             m.setDataSource(descriptor.getFileDescriptor(), descriptor.getStartOffset(), descriptor.getLength());
             descriptor.close();
 
