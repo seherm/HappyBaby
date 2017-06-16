@@ -69,7 +69,7 @@
     <string name="onboarding_select_age_of_your_child_title">តើកូនរបស់អ្នកអាយុប៉ុន្មាន?</string>
     <string name="settings_age_of_your_child">អាយុកូនរបស់អ្នក</string>
     <string name="settings_change_photo_your_child">រូបថតកូនរបស់អ្នក</string>
-    <string name="feedback_not_well_balanced_message">សូមព្យាយាមផ្លាស់ប្តូរប្រភេទអាហារជារៀងរាល់ថ្ងៃ ហើយជំរុញកូនៗរបស់អ្នកសាកល្បងប្រភេទអាហារថ្មីៗ</string>
+    <string name="feedback_not_well_balanced_message">" កូនរបស់អ្នកនឹងចង់ញុាំអាហារជាងមុន ប្រសិនបើអ្នកបញ្ចុកកូនជាមួយ អាហារខុសៗគ្នា ប្រចាំថ្ងៃ។ កូនរបស់អ្នកនឹងញុាំអាហារបានច្រើន ហើយលូតលាស់ល្អ។"</string>
     <string name="FAQ_content">
         <b>តើពេលណា ដែលខ្ញុំគួរតែចាប់ផ្តើមបញ្ចុកចំណីអាហារផ្សេងៗអោយកូនរបស់ខ្ញុំបន្ថែមពីលើការបំប៉ៅដោះ?</b>\n\n
         នៅពេលមានអាយុ០៦ខែ កុមារគឺត្រូវការញាំអាហារផ្សេងៗទៀតក្រៅពីទឹកដោះម្តាយដើម្បីការលូតលាស់បានល្អ\n\n

@@ -104,7 +104,7 @@
     <string name="feedback_well_balanced_title">The meal is well balanced</string>
     <string name="feedback_well_balanced_message">You are doing great! Try to vary the meal every day and encourage your child to taste new foods.</string>
     <string name="feedback_not_well_balanced_title">The meal is not well balanced</string>
-    <string name="feedback_not_well_balanced_message">Try to vary the meal every day and encourage your child to taste new foods.</string>
+    <string name="feedback_not_well_balanced_message">Your child will have more appetite, if you feed him/her different foods daily. He/she will eat more and grow well.</string>
 
     <!--Feedback individual Food selection-->
     <string name="feedback_food_lack_of_fruit_vegetable_title">And what about fruits and vegetables?</string>
