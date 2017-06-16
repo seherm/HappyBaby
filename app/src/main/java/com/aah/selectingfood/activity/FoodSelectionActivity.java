@@ -131,7 +131,7 @@ public class FoodSelectionActivity extends BaseActivity {
         }
         if (food.isNotSuitable()) {
             playSound("bad_sound.mp3", "feedbackSound");
-        } else {
+        } else if(food.isConsideredProteinRich() || food.isConsideredVitARich()) {
             playSound("good_sound.mp3", "feedbackSound");
         }
     }
