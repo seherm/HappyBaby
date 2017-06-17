@@ -105,6 +105,8 @@
     <string name="feedback_well_balanced_message">You are doing great! Try to vary the meal every day and encourage your child to taste new foods.</string>
     <string name="feedback_not_well_balanced_title">The meal is not well balanced</string>
     <string name="feedback_not_well_balanced_message">Your child will have more appetite, if you feed him/her different foods daily. He/she will eat more and grow well.</string>
+    <string name="feedback_not_well_balanced_title2">Remember! The more the variety, the more the child eats</string>
+    <string name="feedback_not_well_balanced_message2">Choose one food item from each group to make different types of enriched borbor.</string>
 
     <!--Feedback individual Food selection-->
     <string name="feedback_food_lack_of_fruit_vegetable_title">And what about fruits and vegetables?</string>
@@ -115,6 +117,8 @@
     <string name="feedback_vitamin_A_present_message">Eating food with high doses of vitamin A helps to give your babys better eyesight and lovely skin. When babies lack vitamin A this can lead to serious infections such as blindness.</string>
     <string name="feedback_not_suitable_present_title">Be careful!</string>
     <string name="feedback_not_suitable_present_message">Some foods are not suitable for your baby because they contain too many sugars, too much salt or chemicals. Try to replace with a healthier choice.</string>
+    <string name="feedback_lack_of_fruit_title">Remember! The more the variety, the more the child eats</string>
+    <string name="feedback_lack_of_fruit_message">Feed your child enough borbor, and give different fruits every day.</string>
 
     <!--Feedback General Take Away-->
     <string name="feedback_general_young_title">Baby is growing!</string>

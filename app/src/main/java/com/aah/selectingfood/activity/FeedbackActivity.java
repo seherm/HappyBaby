@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.aah.selectingfood.R;
 import com.aah.selectingfood.adapter.FeedbackViewPagerAdapter;
 import com.aah.selectingfood.helper.DataManagement;
+import com.aah.selectingfood.helper.LocaleHelper;
 import com.aah.selectingfood.model.Child;
 import com.aah.selectingfood.model.FeedbackCard;
 import com.aah.selectingfood.model.User;
@@ -115,14 +116,26 @@ public class FeedbackActivity extends BaseActivity implements ViewPager.OnPageCh
         // Create all different feedback cards
 
         // Create summary feedback for children
-        FeedbackCard finalFoodSummaryFeedback = firstChild.giveFeedbackFinalFoodSummary(dataManagement.getSelectedFood());
-        finalFoodSummaryFeedback.setImage(dataManagement.loadBitmapFromAssets(finalFoodSummaryFeedback.getImageName(), feedbackImagesFolder));
-        feedbackCards.add(finalFoodSummaryFeedback);
+        List<FeedbackCard> finalFoodSummaryFeedbackCards = firstChild.giveFeedbackFinalFoodSummary(dataManagement.getSelectedFood());
+        for (FeedbackCard card : finalFoodSummaryFeedbackCards) {
+            card.setImage(dataManagement.loadBitmapFromAssets(card.getImageName(), feedbackImagesFolder));
+            if (card.getTitleStringResourceId() == R.string.feedback_not_well_balanced_title2) {
+                if (LocaleHelper.getLanguage(this).equals("km")) {
+                    card.setImage(dataManagement.loadBitmapFromAssets("foodgroups_km.jpg", feedbackImagesFolder));
+                }
+            }
+        }
+        feedbackCards.addAll(finalFoodSummaryFeedbackCards);
 
         // Create individual food feedback for children
         List<FeedbackCard> finalFoodFeedbackCards = firstChild.giveFeedbackFinalFood(dataManagement.getSelectedFood());
         for (FeedbackCard card : finalFoodFeedbackCards) {
             card.setImage(dataManagement.loadBitmapFromAssets(card.getImageName(), feedbackImagesFolder));
+            if (card.getTitleStringResourceId() == R.string.feedback_lack_of_fruit_title) {
+                if (LocaleHelper.getLanguage(this).equals("km")) {
+                    card.setImage(dataManagement.loadBitmapFromAssets("healthysnacks_km.jpg", feedbackImagesFolder));
+                }
+            }
             feedbackCards.add(card);
         }
 

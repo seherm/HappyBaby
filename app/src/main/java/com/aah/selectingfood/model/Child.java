@@ -1,6 +1,7 @@
 package com.aah.selectingfood.model;
 
 import com.aah.selectingfood.R;
+import com.aah.selectingfood.helper.LocaleHelper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +74,7 @@ public class Child {
 
         for (Food food : foods) {
 
-            if (food.isNotSuitable() &&! notSuitableCardAdded) {
+            if (food.isNotSuitable() && !notSuitableCardAdded) {
                 notSuitableCardAdded = true;
                 finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_not_suitable_present_title, R.string.feedback_not_suitable_present_message, "candy_junk_present.png", false));
             }
@@ -104,6 +105,10 @@ public class Child {
             finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_food_lack_of_iron_title, R.string.feedback_food_lack_of_iron_message, "lack_protein.png", false));
         }
 
+        if (!containsFruit) {
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_lack_of_fruit_title, R.string.feedback_lack_of_fruit_message, "healthysnacks.jpg", false));
+        }
+
         return finalFeedbackCardsFood;
     }
 
@@ -114,10 +119,12 @@ public class Child {
      * @param   foods    a set of foods the child should give Feedback about
      * @return          the resulting FeedbackCard
      */
-    public FeedbackCard giveFeedbackFinalFoodSummary(List<Food> foods) {
+    public List<FeedbackCard> giveFeedbackFinalFoodSummary(List<Food> foods) {
+        List<FeedbackCard> finalFeedbackCardsFood = new ArrayList<>();
         if (foods == null) {
-            return new FeedbackCard(R.string.feedback_no_food_selected_title, R.string.feedback_no_food_selected_message, "no_selection.png", false);
-         }
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_no_food_selected_title, R.string.feedback_no_food_selected_message, "no_selection.png", false));
+        }
+
         List<String> selectedFoodGroups = new ArrayList<>();
         for (Food food : foods) {
             if (!selectedFoodGroups.contains(food.getFoodGroup())) {
@@ -126,15 +133,16 @@ public class Child {
         }
 
         if (selectedFoodGroups.size() >= 4) {
-            return new FeedbackCard(R.string.feedback_well_balanced_title, R.string.feedback_well_balanced_message, "meal_balanced.png", true);
-            } else {
-
+            finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_well_balanced_title, R.string.feedback_well_balanced_message, "meal_balanced.png", true));
+        } else {
             if (selectedFoodGroups.size() > 0) {
-                return new FeedbackCard(R.string.feedback_not_well_balanced_title, R.string.feedback_not_well_balanced_message, "meal_not_balanced.png", true);
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_not_well_balanced_title, R.string.feedback_not_well_balanced_message, "meal_not_balanced.png", true));
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_not_well_balanced_title2, R.string.feedback_not_well_balanced_message2, "foodgroups.jpg", false));
             } else {
-                return new FeedbackCard(R.string.feedback_no_food_selected_title, R.string.feedback_no_food_selected_message, "no_selection.png", false);
+                finalFeedbackCardsFood.add(new FeedbackCard(R.string.feedback_no_food_selected_title, R.string.feedback_no_food_selected_message, "no_selection.png", false));
             }
         }
+        return finalFeedbackCardsFood;
     }
 
 
