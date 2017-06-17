@@ -1,7 +1,6 @@
 package com.aah.selectingfood.model;
 
 import com.aah.selectingfood.R;
-import com.aah.selectingfood.helper.LocaleHelper;
 
 import java.util.ArrayList;
 import java.util.List;
