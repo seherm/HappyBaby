@@ -62,7 +62,7 @@
     <string name="message_start">សូមចុចលើពាក្យចាប់ផ្តើមដើម្បីជ្រើសរើសអាហារដែលអ្នកនិងផ្តល់អោយកូនៗរបស់អ្នកនៅថ្ងៃនេះ</string>
     <string name="onboarding_add_photo_of_your_child_message">សូមចុចលើរូបម៉ាស៊ីនថតដើម្បីបន្ថែមរូបថតកូនរបស់អ្នក</string>
     <string name="onboarding_intro_title_2">ពីដំណើរការ</string>
-    <string name="onboarding_intro_description">\'កម្មវិធីកុមាររីករាយ ៉ និងជួយអ្នកក្នុងការផ្តល់អាហារដល់កូនៗរបស់អ្នកដើម្បីអោយរីកលូតលាស់ និងរឹងមាំល្អ</string>
+    <string name="onboarding_intro_description">កម្មវិធីកុមាររីករាយ និងជួយអ្នកក្នុងការផ្តល់អាហារដល់កូនៗរបស់អ្នកដើម្បីអោយរីកលូតលាស់ និងរឹងមាំល្អ</string>
     <string name="onboarding_intro_description_2">សូមជ្រើសរើសប្រភេទអាហារដែលអ្នកនិងផ្តល់អោយកូនរបស់ក្នុងថ្ងៃនេះ​  នោះនិងទទួលបាននូវដំបូន្មានល្អៗពីអ្វីដែលអ្នកអាចធ្វើបានក្នុងការធ្វើអោយប្រសើរឡើងដល់របបអាហាររបសកូនៗ</string>
     <string name="onboarding_intro_title">សូមស្វាគមន៏មកកាន់កម្មវីធី  កុមាររីករាយ</string>
     <string name="onboarding_select_age_of_your_child_message">វានិងជួយអោយយើងផ្តល់ដំបូន្មានបានត្រឹមត្រូវទៅតាមអាយុកូនៗរបស់អ្នក</string>
@@ -104,5 +104,5 @@
     <string name="feedback_lack_of_fruit_title">សូមចាំថា! អាហារកាន់តែចម្រុះមុខ កុមារនឹងកាន់តែចូលចិត្តញុាំ</string>
     <string name="feedback_lack_of_fruit_message">" ការបញ្ចុកអាហារបនែ្ថមឲ្យបានគ្រប់គ្រាន់ដល់កូនរបស់អ្នក ហើយផ្ដល់ផ្លែឈើផ្សេងៗទៀតរៀងរាល់ថ្ងៃ"</string>
     <string name="feedback_not_well_balanced_title2">សូមចាំថា! អាហារកាន់តែចម្រុះមុខ កុមារនឹងកាន់តែចូលចិត្តញុាំ</string>
-    <string name="feedback_not_well_balanced_message2">ជសើ្រ រសើ អាហារមយួ មខុ (មយួ ណាកបា៏ ន) ពកី មុ្រ នមិ យួ ៗ ខសុ ៗគ ្នាដមើ ្បធី អាើ្វ ហារបន្ថែម។ ផ្លាស់ប្ដូរមុខអាហាររបស់កុមាររៀងរាល់ថ្ងៃ។</string>
+    <string name="feedback_not_well_balanced_message2">ជ្រើសរើសអាហារមួយមុខ(មួយណាក៏បាន)ពីក្រុមនីមួយៗខុសៗគ្នាដើម្បីធ្វើជាអាហារបន្ថែម។ ផ្លាស់ប្តូរមុខអាហាររបស់កុមារជារៀងរាល់ថ្ងៃ។</string>
 </resources>
