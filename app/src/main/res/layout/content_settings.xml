@@ -121,8 +121,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_gravity="bottom|end"
-            android:src="@drawable/ic_photo_camera_black_24dp"
-            android:tint="@android:color/white"
+            android:src="@drawable/ic_camera"
             android:onClick="selectPhoto"/>
     </FrameLayout>
 
